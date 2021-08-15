@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Linux换源</title>
+      <link href="/2021/08/14/Linux%E6%8D%A2%E6%BA%90/"/>
+      <url>/2021/08/14/Linux%E6%8D%A2%E6%BA%90/</url>
+      
+        <content type="html"><![CDATA[<h1 id="（kali）Linux更换源-其他源也可通过这种方式添加"><a href="#（kali）Linux更换源-其他源也可通过这种方式添加" class="headerlink" title="（kali）Linux更换源(其他源也可通过这种方式添加)"></a>（kali）Linux更换源(其他源也可通过这种方式添加)</h1><hr><h3 id="1-进入源列表文件夹"><a href="#1-进入源列表文件夹" class="headerlink" title="1.进入源列表文件夹"></a>1.进入源列表文件夹</h3><ul><li>可能不同的Linux下文件夹的结构不同，可以通过一级一级向下递进找到sources.list。</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo cd /etc/apt/sources.list</span><br></pre></td></tr></table></figure><h2 id="2-打开-point-right-这个-point-left-网站，复制源的链接。"><a href="#2-打开-point-right-这个-point-left-网站，复制源的链接。" class="headerlink" title="2. 打开:point_right:这个:point_left:网站，复制源的链接。"></a>2. 打开:point_right:<a href="https://developer.aliyun.com/mirror/kali?spm=a2c6h.13651102.0.0.1d231b115YDKhc">这个</a>:point_left:网站，复制源的链接。</h2><hr><hr><h2 id="3-回到Linux，打开sources-list文件"><a href="#3-回到Linux，打开sources-list文件" class="headerlink" title="3. 回到Linux，打开sources.list文件"></a>3. 回到Linux，打开sources.list文件</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vi sources.list</span><br></pre></td></tr></table></figure><h2 id="4-进入插入模式（点击‘i’进入编辑模式）"><a href="#4-进入插入模式（点击‘i’进入编辑模式）" class="headerlink" title="4.进入插入模式（点击‘i’进入编辑模式）"></a>4.进入插入模式（点击‘i’进入编辑模式）</h2><hr><p>如果3中没有管理员权限会保存失败。</p><p>删除其他源，如果原来就没有的话直接添加进去（Linux命令行中Ctrl+shift+v复制）。</p><img src="https://gitee.com/xiaoxiaoxiaodada/blog-photo/raw/master/imag/Linux%E6%8D%A2%E6%BA%901.png" style="zoom:67%;" /><h2 id="5-然后Esc退出编辑模式，点击‘：’输入‘wq’进行保存并退出（write-，quit）。"><a href="#5-然后Esc退出编辑模式，点击‘：’输入‘wq’进行保存并退出（write-，quit）。" class="headerlink" title="5.然后Esc退出编辑模式，点击‘：’输入‘wq’进行保存并退出（write ，quit）。"></a>5.然后Esc退出编辑模式，点击‘：’输入‘wq’进行保存并退出（write ，quit）。</h2><h2 id="6-输入下列命令进行一些更新。"><a href="#6-输入下列命令进行一些更新。" class="headerlink" title="6. 输入下列命令进行一些更新。"></a>6. 输入下列命令进行一些更新。</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get upgrade</span><br><span class="line">sudo apt-get dist-upgrade</span><br><span class="line">sudo apt-get clean</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2021/08/14/hello-world/"/>
+      <url>/2021/08/14/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>欢迎使用 <a href="https://hexo.io/">Hexo</a>! 这是你第一篇文章。去<a href="https://hexo.io/docs/">documentation</a>可查看更多信息。如果你使用hexo时有问题，可以去 <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> 解决疑问，或者到 <a href="https://github.com/hexojs/hexo/issues">GitHub</a>咨询我。</p><h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="创建另一篇文章"><a href="#创建另一篇文章" class="headerlink" title="创建另一篇文章"></a>创建另一篇文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>了解更多: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="运行服务"><a href="#运行服务" class="headerlink" title="运行服务"></a>运行服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>更多信息: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>了解更多: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="部署至远程网站"><a href="#部署至远程网站" class="headerlink" title="部署至远程网站"></a>部署至远程网站</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>了解更多: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Hello World </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>win添加开机启动</title>
+      <link href="/2021/08/14/win%E6%B7%BB%E5%8A%A0%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/"/>
+      <url>/2021/08/14/win%E6%B7%BB%E5%8A%A0%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/</url>
+      
+        <content type="html"><![CDATA[<h1 id="如何添加开机启动项"><a href="#如何添加开机启动项" class="headerlink" title="如何添加开机启动项"></a>如何添加开机启动项</h1><pre><code>   一般应用都有开机启动的选项，但是有的应用就偏偏没有，或者一些破解软件的开机启动无法启动，再或者3x0等管家就把开机启动弄坏了（还真有，要不怎么会有这个文章呢:sweat_smile:）。</code></pre><hr><h2 id="step-1"><a href="#step-1" class="headerlink" title="step 1"></a>step 1</h2><ul><li><p>在微软标志上右键，或者开始菜单找 “运行” 这一项，运行。</p><p>  （或者 “win+R” ）</p></li></ul><p>  ! <a href="https://gitee.com/xiaoxiaoxiaodada/blog-photo/raw/master/imag/win%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A82.jpg"></a></p><h2 id="step-2"><a href="#step-2" class="headerlink" title="step 2"></a>step 2</h2><ul><li><p>在输入框输入</p><pre class=" language-shell"><code class="language-shell">shell:startup</code></pre></li></ul><p><img src="https://gitee.com/xiaoxiaoxiaodada/blog-photo/raw/master/imag/win%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A83.png"></p><p>然后点 “确定”。</p><h2 id="step-3"><a href="#step-3" class="headerlink" title="step 3"></a>step 3</h2><ul><li>在打开的文件夹里拖入想要开机启动的程序的快捷方式。</li></ul><p><img src="https://gitee.com/xiaoxiaoxiaodada/blog-photo/raw/master/imag/win%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A84.png"></p><h1 id="如果想关闭开机启动项……"><a href="#如果想关闭开机启动项……" class="headerlink" title="如果想关闭开机启动项……"></a>如果想关闭开机启动项……</h1><ul><li>有 N 种方式，我就不多说了。</li><li>如果觉得360管理打开太麻烦，可以用任务管理器。:point_down:</li></ul><p><img src="https://gitee.com/xiaoxiaoxiaodada/blog-photo/raw/master/imag/win%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A85.png"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> windows </tag>
+            
+            <tag> win10 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>正则语法整理</title>
+      <link href="/2021/08/14/%E6%AD%A3%E5%88%99%E8%AF%AD%E6%B3%95%E6%95%B4%E7%90%86/"/>
+      <url>/2021/08/14/%E6%AD%A3%E5%88%99%E8%AF%AD%E6%B3%95%E6%95%B4%E7%90%86/</url>
+      
+        <content type="html"><![CDATA[<h1 id="正则表达式简单说明"><a href="#正则表达式简单说明" class="headerlink" title="正则表达式简单说明"></a>正则表达式简单说明</h1><h3 id="先了解两个文中用到的概念，一些语言中也有类似的功能。"><a href="#先了解两个文中用到的概念，一些语言中也有类似的功能。" class="headerlink" title="先了解两个文中用到的概念，一些语言中也有类似的功能。"></a><strong>先了解两个文中用到的概念，一些语言中也有类似的功能。</strong></h3><ul><li><p>贪婪模式    ：贪婪模式则尽可能多的匹配所搜索的字符串。</p></li><li><p>非贪婪模式：尽可能少的匹配所搜索的字符串。</p></li></ul><h3 id="常用字符"><a href="#常用字符" class="headerlink" title="常用字符"></a>常用字符</h3><table><thead><tr><th align="center">符号</th><th align="center">释义</th></tr></thead><tbody><tr><td align="center">\</td><td align="center">将下一个字符标记为一个特殊字符、或一个原义字符、或一个向后引用、或一个八进制转义符。例如，“<code>n</code>”匹配字符“<code>n</code>”。“<code>\n</code>”匹配一个换行符。串行“<code>\\</code>”匹配“<code>\</code>”而“<code>\(</code>”则匹配“<code>(</code>”。</td></tr><tr><td align="center">^</td><td align="center">匹配输入字符串的开始位置。</td></tr><tr><td align="center">$</td><td align="center">匹配输入字符串的结束位置。</td></tr><tr><td align="center">*</td><td align="center">匹配前面的子表达式零次或多次。* 等价于{0,}。</td></tr><tr><td align="center">+</td><td align="center">匹配前面的子表达式一次或多次。+ 等价于{1,}。</td></tr><tr><td align="center">?</td><td align="center">匹配前面的子表达式零次或一次。? 等价于{0,1}。</td></tr><tr><td align="center">{<em>n</em>,<em>m</em>}</td><td align="center"><em>m</em>和<em>n</em>均为非负整数，其中<em>n</em>&lt;=<em>m</em>，m可省略。最少匹配<em>n</em>次且最多匹配<em>m</em>次。逗号和两个数之间不能有空格。</td></tr><tr><td align="center">?</td><td align="center">当该字符紧跟在任何一个其他限制符（*,+,?，{<em>n</em>}，{<em>n</em>,}，{<em>n</em>,<em>m</em>}）后面时，匹配模式是非贪婪的。例如，对于字符串“<code>oooo</code>”，“<code>o+?</code>”将匹配单个“<code>o</code>”，而“<code>o+</code>”将匹配所有“<code>o</code>”。</td></tr><tr><td align="center">.</td><td align="center">匹配除“<code>\</code>*<code>n</code><em>”之外的任何单个字符。要匹配包括“<code>\</code></em><code>n</code>*”在内的任何字符，请使用像“`(.</td></tr><tr><td align="center">(pattern)</td><td align="center">匹配pattern并获取这一匹配。要匹配圆括号字符，请使用“<code>\(</code>”或“<code>\)</code>”。可内嵌  “x|y”</td></tr><tr><td align="center">x|y</td><td align="center">匹配x或y。可结合  “(pattern)”   使用。</td></tr><tr><td align="center">[xyz]</td><td align="center">匹配括号内任意一个字符。</td></tr><tr><td align="center">[^xyz]</td><td align="center">不匹配括号内任意一个字符。</td></tr><tr><td align="center">[a-z]</td><td align="center">字符范围。匹配指定范围内的任意字符。<br />如：[0-9]匹配数字，[a-zA-Z]匹配所有字母</td></tr><tr><td align="center">[^a-z]</td><td align="center">排除指定范围。<br />如：[^0-9]匹配数字外的任意字符</td></tr><tr><td align="center">\b</td><td align="center">匹配单词边界。<br />如：d\b    匹配以d结尾的单词。</td></tr><tr><td align="center">\s</td><td align="center">匹配任何空白字符，包括空格、制表符、换页符等等。等价于[ \f\n\r\t\v]。</td></tr><tr><td align="center">\d</td><td align="center">匹配数字字符。等价于[0-9]。</td></tr><tr><td align="center">\w</td><td align="center">匹配包括下划线的任何单词字符。等价于“<code>[A-Za-z0-9_]</code>”。</td></tr><tr><td align="center">\B</td><td align="center">匹配非单词边界。不匹配指定条件字符结尾的字符串</td></tr><tr><td align="center">\S</td><td align="center">匹配任何非空白字符。等价于[^ \f\n\r\t\v]。</td></tr><tr><td align="center">\D</td><td align="center">匹配非数字字符。等价于[^0-9]。</td></tr><tr><td align="center">\W</td><td align="center">匹配任何非单词字符。等价于“<code>[^A-Za-z0-9_]</code>”。</td></tr><tr><td align="center">\f</td><td align="center">匹配换页符。等价于\x0c和\cL。</td></tr><tr><td align="center">\n</td><td align="center">匹配换行符。等价于\x0a和\cJ。</td></tr><tr><td align="center">\r</td><td align="center">匹配回车符。等价于\x0d和\cM。</td></tr><tr><td align="center">\v</td><td align="center">匹配一个垂直制表符。等价于\x0b和\cK。</td></tr><tr><td align="center">\t</td><td align="center">匹配一个制表符。等价于\x09和\cI。</td></tr></tbody></table><h3 id="比较难理解的字符"><a href="#比较难理解的字符" class="headerlink" title="比较难理解的字符"></a>比较难理解的字符</h3><table><thead><tr><th align="center">符号</th><th align="left">释义</th></tr></thead><tbody><tr><td align="center">\cx</td><td align="left">匹配由x指明的控制字符。例如，\cM匹配一个Control-M或回车符。x的值必须为A-Z或a-z之一。否则，将c视为一个原义的“<code>c</code>”字符。</td></tr><tr><td align="center">\x<em>n</em></td><td align="left">匹配<em>n</em>，其中<em>n</em>为十六进制转义值。十六进制转义值必须为确定的两个数字长。例如，“<code>\x41</code>”匹配“<code>A</code>”。“<code>\x041</code>”则等价于“<code>\x04&amp;1</code>”。正则表达式中可以使用ASCII编码。.</td></tr><tr><td align="center">*num*</td><td align="left">匹配<em>num</em>，其中<em>num</em>是一个正整数。对所获取的匹配的引用。例如，“<code>(.)\1</code>”匹配两个连续的相同字符。</td></tr><tr><td align="center">*n*</td><td align="left">标识一个八进制转义值或一个向后引用。如果*n<em>之前至少</em>n<em>个获取的子表达式，则</em>n<em>为向后引用。否则，如果</em>n<em>为八进制数字（0-7），则</em>n*为一个八进制转义值。</td></tr><tr><td align="center">*nm*</td><td align="left">标识一个八进制转义值或一个向后引用。如果*nm<em>之前至少有</em>nm<em>个获得子表达式，则</em>nm<em>为向后引用。如果*nm</em>之前至少有<em>n</em>个获取，则<em>n</em>为一个后跟文字<em>m</em>的向后引用。如果前面的条件都不满足，若<em>n</em>和<em>m</em>均为八进制数字（0-7），则*nm<em>将匹配八进制转义值</em>nm*。</td></tr><tr><td align="center">*nml*</td><td align="left">如果<em>n</em>为八进制数字（0-3），且<em>m和l</em>均为八进制数字（0-7），则匹配八进制转义值<em>nm</em>l。</td></tr><tr><td align="center">\u<em>n</em></td><td align="left">匹配<em>n</em>，其中<em>n</em>是一个用四个十六进制数字表示的Unicode字符。例如，\u00A9匹配版权符号（©）。</td></tr></tbody></table><h3 id="常用正则表达式"><a href="#常用正则表达式" class="headerlink" title="常用正则表达式"></a>常用正则表达式</h3><p>==正则表达式筛选式不唯一，有的简单，有的复杂，不要惊讶。==</p><p>==更新中==</p><table><thead><tr><th align="center">用户名</th><th align="left"><code>/^[a-z0-9_-]&#123;3,16&#125;$/</code></th></tr></thead><tbody><tr><td align="center">密码</td><td align="left"><code>/^[a-z0-9_-]&#123;6,18&#125;$/</code></td></tr><tr><td align="center">十六进制值</td><td align="left"><code>/^#?([a-f0-9]&#123;6&#125;|[a-f0-9]&#123;3&#125;)$/</code></td></tr><tr><td align="center">电子邮箱</td><td align="left"><code>/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]&#123;2,6&#125;)$/ /^[a-z\d]+(\.[a-z\d]+)*@([\da-z](-[\da-z])?)+(\.&#123;1,2&#125;[a-z]+)+$/</code></td></tr><tr><td align="center">URL</td><td align="left"><code>/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]&#123;2,6&#125;)([\/\w \.-]*)*\/?$/</code></td></tr><tr><td align="center">IP 地址</td><td align="left"><code>/((2[0-4]\d|25[0-5]|[01]?\d\d?)\.)&#123;3&#125;(2[0-4]\d|25[0-5]|[01]?\d\d?)/ /^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.)&#123;3&#125;(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/</code></td></tr><tr><td align="center">HTML 标签</td><td align="left"><code>/^&lt;([a-z]+)([^&lt;]+)*(?:&gt;(.*)&lt;\/\1&gt;|\s+\/&gt;)$/</code></td></tr><tr><td align="center">删除代码\注释</td><td align="left"><code>(?&lt;!http:|\S)//.*$</code></td></tr><tr><td align="center">Unicode编码中的汉字范围</td><td align="left"><code>/^[\u2E80-\u9FFF]+$/</code></td></tr><tr><td align="center">…</td><td align="left">…</td></tr></tbody></table><p>​     </p><p>  声明：本文对一篇文章进行加工，简化，美化产生的。</p><p>原文如下：<a href="https://tool.oschina.net/uploads/apidocs/jquery/regexp.html">点我传送</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 正则表达式 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
