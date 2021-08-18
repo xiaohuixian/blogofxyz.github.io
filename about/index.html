@@ -2,6 +2,24 @@
 <html lang="zh-CN">
 
 
+<!--浏览器搞笑标题-->
+ var OriginTitle = document.title;
+ var titleTime;
+ document.addEventListener('visibilitychange', function () {
+     if (document.hidden) {
+         $('[rel="icon"]').attr('href', "https://cdn.jsdelivr.net/gh/Yafine/cdn@2.5/source/favicon.png");
+         document.title = 'ヽ(●-`Д´-)ノ客人，咋走了';
+         clearTimeout(titleTime);
+     }
+     else {
+         $('[rel="icon"]').attr('href', "https://cdn.jsdelivr.net/gh/Yafine/cdn@2.5/source/favicon.png");
+         document.title = 'ヾ(Ő∀Ő3)ノ呀，又回来了！' + OriginTitle;
+         titleTime = setTimeout(function () {
+             document.title = OriginTitle;
+         }, 2000);
+     }
+ });
+
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="关于, 想学啥学点啥">
@@ -46,6 +64,7 @@
 
 
 <body>
+
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
@@ -331,7 +350,7 @@
         <div class="brand">
             <div class="title center-align">
                 
-                    subtitle
+						(＾Ｕ＾)ノ~ＹＯ，来了,里边请
                 
             </div>
 
@@ -425,13 +444,13 @@
                                 <div class="career">Software Engineer</div>
                                 <div class="social-link hide-on-large-only" data-aos="zoom-in-left">
                                     
-    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="visit my GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
 
 
-    <a href="mailto:1970476603@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <a href="mailto:1970476603@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
 
@@ -463,13 +482,13 @@
                     <div class="col l4 hide-on-med-and-down" data-aos="zoom-in-left">
                         <div class="social-link">
                             
-    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="visit my GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
 
 
-    <a href="mailto:1970476603@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <a href="mailto:1970476603@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
 
@@ -625,7 +644,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["Linux","windows","win10","正则表达式","Hello World"]
+                data: ["Hello World","Linux","windows","win10","正则表达式"]
             }
         ],
         yAxis: [
@@ -819,6 +838,12 @@
         <div class="tag-chips center-align">
             
             
+            <a href="/tags/Hello-World/">
+                <span class="chip center-align waves-effect waves-light chip-default">Hello World</span>
+            </a>
+            
+            
+            
             <a href="/tags/Linux/">
                 <span class="chip center-align waves-effect waves-light chip-default">Linux</span>
             </a>
@@ -839,12 +864,6 @@
             
             <a href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
                 <span class="chip center-align waves-effect waves-light chip-default">正则表达式</span>
-            </a>
-            
-            
-            
-            <a href="/tags/Hello-World/">
-                <span class="chip center-align waves-effect waves-light chip-default">Hello World</span>
             </a>
             
             
@@ -1112,13 +1131,13 @@
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="visit my GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
 
 
-    <a href="mailto:1970476603@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <a href="mailto:1970476603@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
 
@@ -1314,7 +1333,13 @@ $(function () {
     
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
-
+	<script type="text/javascript">
+	//只在桌面版网页启用特效
+	var windowWidth = $(window).width();
+	if (windowWidth > 768) {
+		document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
+	}
+	</script>
 </body>
 
 </html>
