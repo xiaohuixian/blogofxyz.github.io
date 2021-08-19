@@ -1213,8 +1213,8 @@ sudo apt-get clean<span aria-hidden="true" class="line-numbers-rows"><span></spa
             tocSelector: '#toc-content',
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('1'),
-            headingSelector: 'h2, h3, h4'
+            collapseDepth: Number('2'),
+            headingSelector: 'h1,h2, h3, h4'
         });
 
         // modify the toc link href to support Chinese.
@@ -1226,7 +1226,7 @@ sudo apt-get clean<span aria-hidden="true" class="line-numbers-rows"><span></spa
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
+        $('#articleContent').children('h1,h2, h3, h4').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 
