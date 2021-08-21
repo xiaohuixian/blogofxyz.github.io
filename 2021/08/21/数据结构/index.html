@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-    <meta name="keywords" content="Hello World, 想学啥学点啥">
+    <meta name="keywords" content="数据结构, 想学啥学点啥">
     <meta name="description" content="C# | Web | html | python |">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | X-Y-Z`s Blog</title>
+    <title>数据结构 | X-Y-Z`s Blog</title>
 	
     <link rel="icon" type="image/png" href="/favicon.png">
 
@@ -336,12 +336,12 @@ var _hmt = _hmt || [];
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">数据结构</h1>
                 </div>
             </div>
         </div>
@@ -457,8 +457,8 @@ var _hmt = _hmt || [];
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Hello-World/">
-                                <span class="chip bg-color">Hello World</span>
+                            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+                                <span class="chip bg-color">数据结构</span>
                             </a>
                         
                     </div>
@@ -473,28 +473,28 @@ var _hmt = _hmt || [];
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-08-14
+                    2021-08-21
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-08-18
+                    2021-08-21
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    108
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 
@@ -522,19 +522,96 @@ var _hmt = _hmt || [];
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>欢迎使用 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! 这是你第一篇文章。去<a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a>可查看更多信息。如果你使用hexo时有问题，可以去 <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> 解决疑问，或者到 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>咨询我。</p>
-<h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="创建另一篇文章"><a href="#创建另一篇文章" class="headerlink" title="创建另一篇文章"></a>创建另一篇文章</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new &quot;My New Post&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <h1 id="常用数据类型"><a href="#常用数据类型" class="headerlink" title="常用数据类型"></a>常用数据类型</h1><hr>
+<p>常见的数据类型有：<br>[byte](#1. tyte)，[char](#2. char)，<a href="#3.short">short</a>，[int](#4. int)，[float](# 5.float)，[long](#6. long)，[double](#7. double)，[date](#8. date)，[datetime](#8. date)，[other](#9. other)</p>
+<h2 id="1-byte"><a href="#1-byte" class="headerlink" title="1. byte"></a>1. byte</h2><ul>
+<li><p>byte 为字节。有点常识就知道   1字（节）=8位。即用八个二进制位来表示，所以有</p>
+</li>
+<li><p> (-2<suP>7</sup>)~(2<sup>7</sup>-1)</p>
+</li>
+</ul>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c">byte a&#x3D;1;&#x2F;&#x2F;  -128~127<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>了解更多: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="运行服务"><a href="#运行服务" class="headerlink" title="运行服务"></a>运行服务</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li><p><u>？？？为啥整数比负数少一个？？？</u></p>
+</li>
+<li><p>是因为   -128<del>-1可以用 10000000</del>11111111 来表示</p>
+</li>
+<li><p>开头的 ‘1’ 表示此数为负，只能用 00000000~01111111来表示0~127，因为再加一就是-128啦。</p>
+</li>
+</ul>
+<h2 id="2-char"><a href="#2-char" class="headerlink" title="2. char"></a>2. char</h2><ul>
+<li><p> char 类型占用一字节，8个二进制位。</p>
+</li>
+<li><p>char为字符型，学过几门语言的人都知道：在程序中大小写英文字母，以及数字的数据大小就是一个字符。与 byte 所占内存一样为一字节。如：</p>
+</li>
+</ul>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c">char b&#x3D;&#39;a&#39;;&#x2F;&#x2F;也就是ASCII表示的字符。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>就是声明一个字符变量 a，给其赋值为字符 “a”。</p>
+<h2 id="3-short"><a href="#3-short" class="headerlink" title="3. short"></a>3. short</h2><p> short 用来定义数字变量。一般很少用，其大小为两个字节，也就是16个二进制位。</p>
+ <pre class="line-numbers language-c" data-language="c"><code class="language-c">short c;&#x2F;&#x2F; -32,768~   32,768-1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>更多信息: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p> 可表示 (-2<suP>15</sup>)~(2<sup>15</sup>-1)</p>
+<p> 理解过程看 byte型。</p>
+<h2 id="4-int"><a href="#4-int" class="headerlink" title="4. int"></a>4. int</h2><p>int 类型占用两字节，32个二进制位。</p>
+<p>可表示 (-2<suP>31</sup>)~(2<sup>31</sup>-1)</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c">int d;&#x2F;&#x2F;-2,147,483,648  ~  2,147,483,647····就是正负2十多亿<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>了解更多: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="部署至远程网站"><a href="#部署至远程网站" class="headerlink" title="部署至远程网站"></a>部署至远程网站</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>int类型较为常用，相比较short，int表示的数更不容易溢出，切占用内存不大。</p>
+<h2 id="5-float"><a href="#5-float" class="headerlink" title="5. float"></a>5. float</h2><p>float类型占用四字节，32个二进制位。</p>
+<p>可表示 (-3.4x10<suP>38</sup>)~(3.4x10<sup>38</sup>)</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c">float e;&#x2F;&#x2F;省略，这个不好说清。大概就是越偏离0，越不精确。32位进制位分别用作字符位（正负），整数位和尾数。建议先了解编程中的多位数科学技术法。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>了解更多: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/albertsh/article/details/92385277">精确度以及表示范围详解（点我！点我！）</a></p>
+<p>float类型为唯二的能表示小数的数据类型之一，另一个就是double类型。相比较double的64位，float占的内存更小。</p>
+<h2 id="6-long"><a href="#6-long" class="headerlink" title="6. long"></a>6. long</h2><p>long类型占用64个二进制位。</p>
+<p>可表示 (-2<suP>63</sup>)~(2<sup>63</sup>-1)</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c">long f;&#x2F;&#x2F;-9,223,372,036,854,775,8078  ~  9,223,372,036,854,775,807<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>long类型一般用于特殊用途，毕竟这么大的数生活中不怎么用得到。但是，联想一下，64位。。。<br>能否想到我们的电脑。同为64位。所以long类型就是我们的64位机的单个读取单位。</p>
+<h2 id="7-double"><a href="#7-double" class="headerlink" title="7. double"></a>7. double</h2><p>double类型  8字节，64个二进制位。</p>
+<p>float的升级版。升级版说明 double 的特点。</p>
+<p>一般刚学编程语言的人做题时自己定义 float 型无法通过，可以换成 double 试试。因为 double 的精度更高。所以根据自己的需求选择 double 还是 float 。</p>
+<h2 id="8-date"><a href="#8-date" class="headerlink" title="8. date"></a>8. date</h2><p>此类型与datetime，localtime，关系紧密。在各个语言中，有的只有一种，有的都存在。不同语言规定不同。比如在JavaScript 中只有date，没有datetime。date的格式如下</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> time<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>time<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">2021-08-21T05:12:39.827Z<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>但在C#中，没有date类型，只有datetime类型。</p>
+<pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">using System;
+namespace ConsoleApp1
+&#123;
+    class Program
+    &#123;
+        static void Main(string[] args)
+        &#123;
+            DateTime time &#x3D; DateTime.Now;
+            Console.WriteLine(time);
+            Console.ReadKey();
+        &#125;
+    &#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">2021&#x2F;8&#x2F;21 13:19:29<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>而HTML中，这三种又都存在。特别在input中。</p>
+<p>指定为date类型时，只能输入年月日。</p>
+<input type="date">
+
+<p>指定为datetime时，只能输入年月日时分。但现在浏览器已不支持此控件。[详细见](<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/Input/datetime"> - HTML（超文本标记语言） | MDN (mozilla.org)</a>)</p>
+<p>指定为datetime-local时，只能输入年月日时分。</p>
+<input type="datetime-local">
+
+<p>具体数据显示格式根据语言不通也不同。</p>
+<h2 id="9-other"><a href="#9-other" class="headerlink" title="9. other"></a>9. other</h2><p>other 是指这几种类型可以与 sign，unsign，还有叠加形式。</p>
+<p>如：</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c">long long g;&#x2F;&#x2F;128位
+unsign int h;&#x2F;&#x2F;无符号整型。划负为正，正数的范围乘2.
+long int i；&#x2F;&#x2F;还是int<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>除此之外，个别语言还有 WORD 型（字，两字节。），DWORD 型，等。</p>
+<hr>
+<p>不同的语言也有自己特有的，比如数据库一般都有的 datetime类型，text类型，decimal类型（也是表示小数的），imag类型（不错，就是存图片的）等等。 了解每个数据类型，就是为了根据自己的需求定义适合的数据类型。不能计算 1 + 1 就定义两个 long 类型 。养成好习惯，才能更高效合理的利用计算机有限的内存资源。</p>
 
                 
             </div>
@@ -561,7 +638,7 @@ var _hmt = _hmt || [];
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://blogofxyz.top/2021/08/14/hello-world/">https://blogofxyz.top/2021/08/14/hello-world/</a>
+                    <a href="https://blogofxyz.top/2021/08/21/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">https://blogofxyz.top/2021/08/21/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -599,8 +676,8 @@ var _hmt = _hmt || [];
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Hello-World/">
-                                    <span class="chip bg-color">Hello World</span>
+                                <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+                                    <span class="chip bg-color">数据结构</span>
                                 </a>
                             
                         </div>
@@ -1045,17 +1122,18 @@ var _hmt = _hmt || [];
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/08/14/Linux%E6%8D%A2%E6%BA%90/">
+                <a href="/2021/08/21/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Linux换源">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="数据结构">
                         
-                        <span class="card-title">Linux换源</span>
+                        <span class="card-title">数据结构</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1065,9 +1143,9 @@ var _hmt = _hmt || [];
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-14
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-21
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1076,11 +1154,12 @@ var _hmt = _hmt || [];
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Linux/">
-                        <span class="chip bg-color">Linux</span>
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+                        <span class="chip bg-color">数据结构</span>
                     </a>
                     
                 </div>
@@ -1094,13 +1173,13 @@ var _hmt = _hmt || [];
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/08/14/win%E6%B7%BB%E5%8A%A0%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/">
+                <a href="/2021/08/21/win%E6%B7%BB%E5%8A%A0%E5%8F%B3%E9%94%AE%E6%96%B0%E5%BB%BA%E9%A1%B9/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="win添加开机启动">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="win添加右键新建项.md">
                         
-                        <span class="card-title">win添加开机启动</span>
+                        <span class="card-title">win添加右键新建项.md</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1111,7 +1190,7 @@ var _hmt = _hmt || [];
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-14
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-21
                             </span>
                         <span class="publish-author">
                             
@@ -1124,12 +1203,8 @@ var _hmt = _hmt || [];
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/windows/">
-                        <span class="chip bg-color">windows</span>
-                    </a>
-                    
-                    <a href="/tags/win10/">
-                        <span class="chip bg-color">win10</span>
+                    <a href="/tags/windows-win/">
+                        <span class="chip bg-color">-windows -win</span>
                     </a>
                     
                 </div>
