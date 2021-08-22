@@ -3450,6 +3450,7 @@ nav ul a {
   transition: background-color 0.3s;
   font-size: 1.25rem;
   color: #fff;
+  font-family: "kaiti";
   display: block;
   padding: 0 15px;
   cursor: pointer;
