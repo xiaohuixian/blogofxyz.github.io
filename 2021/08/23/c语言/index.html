@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-    <meta name="keywords" content="Hello World, 想学啥学点啥">
+    <meta name="keywords" content="c语言与cmd, 想学啥学点啥">
     <meta name="description" content="C# | Web | html | python |">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | X-Y-Z`s Blog</title>
+    <title>c语言与cmd | X-Y-Z`s Blog</title>
 	
     <link rel="icon" type="image/png" href="/favicon.png">
 
@@ -336,12 +336,12 @@ var _hmt = _hmt || [];
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">c语言与cmd</h1>
                 </div>
             </div>
         </div>
@@ -457,8 +457,8 @@ var _hmt = _hmt || [];
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Hello-World/">
-                                <span class="chip bg-color">Hello World</span>
+                            <a href="/tags/C%E8%AF%AD%E8%A8%80-cmd/">
+                                <span class="chip bg-color">C语言 cmd</span>
                             </a>
                         
                     </div>
@@ -473,28 +473,28 @@ var _hmt = _hmt || [];
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-08-14
+                    2021-08-23
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-08-18
+                    2021-08-25
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    108
+                    510
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -522,19 +522,53 @@ var _hmt = _hmt || [];
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>欢迎使用 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! 这是你第一篇文章。去<a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a>可查看更多信息。如果你使用hexo时有问题，可以去 <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> 解决疑问，或者到 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>咨询我。</p>
-<h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="创建另一篇文章"><a href="#创建另一篇文章" class="headerlink" title="创建另一篇文章"></a>创建另一篇文章</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new &quot;My New Post&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <h1 id="1-C语言执行cmd命令"><a href="#1-C语言执行cmd命令" class="headerlink" title="1. C语言执行cmd命令"></a>1. C语言执行cmd命令</h1><h2 id="1-1-启动程序"><a href="#1-1-启动程序" class="headerlink" title="1. 1 启动程序"></a>1. 1 启动程序</h2><ul>
+<li><p>start  path+.exe /.exe</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c">
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
 
-<p>了解更多: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="运行服务"><a href="#运行服务" class="headerlink" title="运行服务"></a>运行服务</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+int main()
+&#123;
+    system(&quot;start explorer.exe&quot;);
+    system(&quot;start S:\\S_Chat\\WeChat\\WeChat.exe&quot;);
+    return 0;
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ul>
+<h2 id="1-2-关机"><a href="#1-2-关机" class="headerlink" title="1.2 关机"></a>1.2 关机</h2><h3 id="1-2-1-shutdown-s-t-time"><a href="#1-2-1-shutdown-s-t-time" class="headerlink" title="1.2.1  shutdown  -s -t  time"></a>1.2.1  shutdown  -s -t  time</h3><p>  ​    -s 为shutdown命令中关机的指令，还可以是  “-f：强制关机” , “-r：重启”,“-h：休眠”，“-l：注销”。</p>
+<p>  ​    -t 为倒计时形式。</p>
+<p>  ​    time为倒计时的时间，单位为秒。</p>
+  <pre class="line-numbers language-c" data-language="c"><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
 
-<p>更多信息: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+int main()
+&#123;
+    system(&quot;shutdown -f -t 300&quot;); &#x2F;&#x2F;五分钟后强制关机
+    &#x2F;&#x2F;system(&quot;shutdown -s -t 300&quot;);&#x2F;&#x2F;五分钟后关机
+    &#x2F;&#x2F; system(&quot;shutdown -r -t 300&quot;);&#x2F;&#x2F;五分钟后重启
 
-<p>了解更多: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="部署至远程网站"><a href="#部署至远程网站" class="headerlink" title="部署至远程网站"></a>部署至远程网站</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+    return 0;
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>了解更多: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h3 id="1-2-2-在某时刻关机"><a href="#1-2-2-在某时刻关机" class="headerlink" title="1.2.2 在某时刻关机"></a>1.2.2 在某时刻关机</h3><p><a target="_blank" rel="noopener" href="https://answers.microsoft.com/zh-hans/windows/forum/all/at%E8%A2%AB%E5%BC%83%E7%94%A8%E5%90%8E%E5%A6%82/f2fd63e0-7f52-49cb-854f-1f505a6edee1">在11:11时刻关机</a></p>
+<h2 id="1-3-取消上边的关机命令"><a href="#1-3-取消上边的关机命令" class="headerlink" title="1.3 取消上边的关机命令"></a>1.3 取消上边的关机命令</h2><p>命令行输入：</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">shutdown -a<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>回车。</p>
+<h1 id="2-有啥用呢？"><a href="#2-有啥用呢？" class="headerlink" title="2. 有啥用呢？"></a>2. 有啥用呢？</h1><p>首先说启动那个。</p>
+<h2 id="2-1-cmd启动命令"><a href="#2-1-cmd启动命令" class="headerlink" title="2.1 cmd启动命令"></a>2.1 cmd启动命令</h2><h3 id="2-1-1-恶搞。"><a href="#2-1-1-恶搞。" class="headerlink" title="2.1.1 恶搞。"></a>2.1.1 恶搞。</h3><p>可以写一个for循环连续打开同一个程序多次。吓唬一下。当然。别弄成百上千次。我没试过，也不敢试。</p>
+<p>但前提是你需要了解他（她）电脑程序安装的布局。如果他（她）没有整理电脑的习惯。那就好说了，每个程序都安装在 C 盘，不需要去了解。</p>
+<pre class="line-numbers language-none"><code class="language-none">C:\Program Files
+C:\Program Files (x86)
+&#x2F;&#x2F;懂得都懂<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>QQ，微信，各个视频软件不给他安排上？让他开开眼？</p>
+<h3 id="2-1-2-桌面启动程序"><a href="#2-1-2-桌面启动程序" class="headerlink" title="2.1.2 桌面启动程序"></a>2.1.2 桌面启动程序</h3><p>可以用c++或C语言的桌面开发，写一个自己的桌面启动程序。一个图标，一个点击事件，一个启动就建成了。</p>
+<h2 id="2-2-cmd-关机命令"><a href="#2-2-cmd-关机命令" class="headerlink" title="2.2 cmd 关机命令"></a>2.2 cmd 关机命令</h2><h3 id="2-2-1-恶搞"><a href="#2-2-1-恶搞" class="headerlink" title="2.2.1 恶搞"></a>2.2.1 恶搞</h3><p>也是恶搞。</p>
+<h3 id="2-2-2-平时省劲"><a href="#2-2-2-平时省劲" class="headerlink" title="2.2.2 平时省劲"></a>2.2.2 平时省劲</h3><p>平时关机需要点至少两下。如果是个生成的exe程序，或者bat文件，双击即可。</p>
+<h3 id="2-2-3-省电"><a href="#2-2-3-省电" class="headerlink" title="2.2.3 省电"></a>2.2.3 省电</h3><p>有的时候下载东西。但是自己有事不能看着，这个命令就能用了。大概估算时间。然后设置下就行了。</p>
 
                 
             </div>
@@ -561,7 +595,7 @@ var _hmt = _hmt || [];
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://blogofxyz.top/2021/08/14/hello-world/">https://blogofxyz.top/2021/08/14/hello-world/</a>
+                    <a href="https://blogofxyz.top/2021/08/23/c%E8%AF%AD%E8%A8%80/">https://blogofxyz.top/2021/08/23/c%E8%AF%AD%E8%A8%80/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -599,8 +633,8 @@ var _hmt = _hmt || [];
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Hello-World/">
-                                    <span class="chip bg-color">Hello World</span>
+                                <a href="/tags/C%E8%AF%AD%E8%A8%80-cmd/">
+                                    <span class="chip bg-color">C语言 cmd</span>
                                 </a>
                             
                         </div>
@@ -1045,17 +1079,18 @@ var _hmt = _hmt || [];
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/08/14/Linux%E6%8D%A2%E6%BA%90/">
+                <a href="/2021/08/23/c%E8%AF%AD%E8%A8%80/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Linux换源">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="c语言与cmd">
                         
-                        <span class="card-title">Linux换源</span>
+                        <span class="card-title">c语言与cmd</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1065,26 +1100,23 @@ var _hmt = _hmt || [];
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-14
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-23
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Linux/" class="post-category">
-                                    Linux
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Zhang-little-white
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Linux/">
-                        <span class="chip bg-color">Linux</span>
+                    <a href="/tags/C%E8%AF%AD%E8%A8%80-cmd/">
+                        <span class="chip bg-color">C语言 cmd</span>
                     </a>
                     
                 </div>
@@ -1098,13 +1130,13 @@ var _hmt = _hmt || [];
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/08/14/win%E6%B7%BB%E5%8A%A0%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/">
+                <a href="/2021/08/21/python%E5%85%A5%E9%97%A8/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="win添加开机启动">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="python入门">
                         
-                        <span class="card-title">win添加开机启动</span>
+                        <span class="card-title">python入门</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1115,14 +1147,14 @@ var _hmt = _hmt || [];
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-14
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-21
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/windows/" class="post-category">
-                                    windows
+                            <a href="/categories/python/" class="post-category">
+                                    python
                                 </a>
                             
                             
@@ -1132,12 +1164,12 @@ var _hmt = _hmt || [];
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/windows/">
-                        <span class="chip bg-color">windows</span>
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
                     </a>
                     
-                    <a href="/tags/win10/">
-                        <span class="chip bg-color">win10</span>
+                    <a href="/tags/%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8/">
+                        <span class="chip bg-color">语言入门</span>
                     </a>
                     
                 </div>
