@@ -400,7 +400,7 @@ var _hmt = _hmt || [];
     #toc-content {
         padding-bottom: 30px;
         overflow: auto;
-		height:700px;
+		height:600px;
     }
 
     #toc-content ol {
@@ -1293,7 +1293,7 @@ C:\Program Files (x86)
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
             collapseDepth: Number('2'),
-            headingSelector: 'h1,h2, h3, h4'
+            headingSelector: 'h1,h2, h3, h4, h5'
         });
 
         // modify the toc link href to support Chinese.
@@ -1305,7 +1305,7 @@ C:\Program Files (x86)
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h1,h2, h3, h4').each(function () {
+        $('#articleContent').children('h1,h2, h3, h4, h5').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 
