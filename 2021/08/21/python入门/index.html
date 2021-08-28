@@ -493,21 +493,21 @@ var _hmt = _hmt || [];
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-08-21
+                    2021-08-28
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    8k
+                    8.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    37 分
+                    38 分
                 </div>
                 
 
@@ -555,32 +555,70 @@ else:
     print(&quot;输入非数字或 “0” &quot;)
   <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="2-逻辑运算符、文件写入、id"><a href="#2-逻辑运算符、文件写入、id" class="headerlink" title="2. 逻辑运算符、文件写入、id()"></a>2. 逻辑运算符、文件写入、id()</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  encoding:utf-8
-#  keyword:“文件写入”，“input”，“open”，“逻辑运算符”，“&gt;&gt;”，“&lt;&lt;”，“|”，“^”,
+<h1 id="2-运算符、文件写入、id"><a href="#2-运算符、文件写入、id" class="headerlink" title="2. 运算符、文件写入、id()"></a>2. 运算符、文件写入、id()</h1><h2 id="2-1运算符"><a href="#2-1运算符" class="headerlink" title="2.1运算符"></a>2.1运算符</h2><ul>
+<li><h3 id="2-1-1-算数与赋值运算符"><a href="#2-1-1-算数与赋值运算符" class="headerlink" title="2.1.1 算数与赋值运算符"></a>2.1.1 算数与赋值运算符</h3><p>​    几个与其他语言不同，或比较特殊的几个。</p>
+<p>​      ** ：幂，如2**5为2^5^ 。</p>
+<p>​      //  ：取整除，“/”，所得结果带小数部分。“//”，结果只有整数部分。</p>
+<p>​      /=、//=、**=：类比理解。</p>
+</li>
+<li><h3 id="2-1-2-逻辑运算符"><a href="#2-1-2-逻辑运算符" class="headerlink" title="2.1.2 逻辑运算符"></a>2.1.2 逻辑运算符</h3><p>​    在条件组合时不是其他语言那样  “||”, “&amp;&amp;”,  “!”。</p>
+<ul>
+<li>“||” 用 “or” 替换</li>
+<li>“&amp;&amp;” 用 “and” 替换</li>
+<li>“!” 用 “not” 替换</li>
+</ul>
+</li>
+<li><h3 id="2-1-3-位运算符"><a href="#2-1-3-位运算符" class="headerlink" title="2.1.3 位运算符"></a>2.1.3 位运算符</h3><p>​    &amp; ^与^ ， | ^或^， ^ ^异或^ ， ~ ^取反^， &lt;&lt; ^左移^， &gt;&gt; ^右移^。运算只针对于二进制数，运算逻辑与其他语言相同。</p>
+<p>其中用到  ==格式化输出字符串== 。可通过目录前往了解学习。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">#  encoding:utf-8
+#  keyword:“input”，“逻辑运算符”，“&gt;&gt;”，“&lt;&lt;”，“|”，“^”,
 #      “变量地址”
-fp &#x3D; open(r&#39;.&#x2F;新建文件夹&#x2F;123.txt&#39;,&#39;a+&#39;)
-# 文件写入
-a &#x3D; input(&quot;输入字符串&quot;)
-print(a,file&#x3D;fp)
-fp.close()
-x&#x3D;input(&quot;输入一个数 X:&quot;)
-y&#x3D;input(&quot;输入另一个数Y:&quot;)
-# if(int(x)&gt;&#x3D;5):
-#   print(&quot;you are right&quot;,id(x))
-# else:
-x&#x3D;int(x)
-y&#x3D;int(y)
-print(
-   &quot;x:原数 &quot;+  &quot;\t&quot;,str(x)+&quot;\t&quot;,          &quot;&quot;,
-   &quot;y:原数 &quot;+  &quot;\t&quot;,str(y)+&quot;\t&quot;,          &quot;&quot;,
-   &quot;x:id(x)&quot;+  &quot;\t&quot;,str(id(x))+&quot;\t&quot;,        &quot;&quot;,
-   &quot;x:二进制&quot;+ &quot;\t&quot;,bin(x)+&quot;\t&quot;,          &quot;&quot;,
-   &quot;y:二进制&quot;+ &quot;\t&quot;,bin(y)+&quot;\t&quot;,          &quot;&quot;,
-   &quot;右移x&gt;&gt;&quot;+  &quot;\t&quot;,bin(x&gt;&gt;2)+&quot;\t&quot;,&quot;\t&quot;+str(x&gt;&gt;2), &quot;&quot;,
-   &quot;左移x&lt;&lt;&quot;+  &quot;\t&quot;,bin(x&lt;&lt;2)+&quot;\t&quot;,&quot;\t&quot;+str(x&lt;&lt;2), &quot;&quot;,
-   &quot;x^y：异或&quot;+ &quot;\t&quot;,bin(x^y)+&quot;\t&quot;,&quot;\t&quot;+str(x^y),  &quot;&quot;,
-   &quot;x|y：或&quot;+  &quot;\t&quot;,bin(x|y)+&quot;\t&quot;,&quot;\t&quot;+str(x|y),  &quot;&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+from os import error
 
+a &#x3D; input(&quot;输入字符串&quot;)
+x &#x3D; input(&quot;输入一个数 X:&quot;)
+
+# 输入x
+try:
+    x &#x3D; int(x)
+except:
+    print(&quot;输入数据有误!&quot;)
+    exit(0)
+# 输入y
+y &#x3D; input(&quot;输入一个数Y:&quot;)
+try:
+    y &#x3D; int(y)
+except:
+    print(&quot;输入数据有误!&quot;)
+    exit(0)
+
+templea &#x3D; &quot;% 8s\n% 10d\n&quot;
+templeb &#x3D; &quot;&#123;0: &gt;9s&#125;\n&#123;1: &gt;#20b&#125;\n&quot;
+templec &#x3D; &quot;&#123;0: &gt;9s&#125;\n&#123;1: &gt;#20b&#125;\n&#123;2: &gt;#20b&#125;\n&quot;
+
+a +&#x3D; &quot;\n&quot;
+prs1 &#x3D; [
+    (&quot;原数(x):&quot;, x),
+    (&quot;原数(y):&quot;, y),
+    (&quot;值id(x)：&quot;, id(x)),
+]
+prs2 &#x3D; [
+    (&quot;二进制(x):&quot;, x),
+    (&quot;二进制(y):&quot;, y),
+    (&quot;右，移(x&gt;&gt;2):&quot;, x &gt;&gt; 2),
+    (&quot;左，移(x&lt;&lt;2):&quot;, x &lt;&lt; 2),
+]
+prs3 &#x3D; [
+    (&quot;异或(x^y,y^x):&quot;, x ^ y, y ^ x),
+    (&quot;_或(x|y，y|x):&quot;, x | y, y | x),
+]
+for item in prs1:
+    a +&#x3D; templea % item
+for item in prs2:
+    a +&#x3D; templeb.format(item[0], item[1])
+for item in prs3:
+    a +&#x3D; templec.format(item[0], item[1], item[2])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ul>
 <h1 id="3-while"><a href="#3-while" class="headerlink" title="3. while"></a>3. while</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  keyword: “while”，“ascll转字符”，“字符转ascll”，
 #      “ord()”，“chr()”，
 
@@ -601,12 +639,9 @@ while i &lt; 60:
   a &#x3D; a + 1
 print(string)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="4-序列"><a href="#4-序列" class="headerlink" title="4. 序列"></a>4. 序列</h1><h2 id="4-1-序列的加，乘，切片，索引"><a href="#4-1-序列的加，乘，切片，索引" class="headerlink" title="4.1 序列的加，乘，切片，索引"></a>4.1 序列的加，乘，切片，索引</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  encoding:utf-8
-#  序列支持负数索引, 当序数为负时从右向左数
+<h1 id="4-序列"><a href="#4-序列" class="headerlink" title="4. 序列"></a>4. 序列</h1><h2 id="4-1-序列的加，乘，切片，索引"><a href="#4-1-序列的加，乘，切片，索引" class="headerlink" title="4.1 序列的加，乘，切片，索引"></a>4.1 序列的加，乘，切片，索引</h2><p> 序列支持负数索引, 当序数为负时从右向左数<br>        list(start,end.stop)<br>         序列为’[]’,元组为’()’,字典为’{}’。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">#  encoding:utf-8
 #  keyword：“序列加”，“序列乘”，“序列切片”，“序列索引”
-#  list(start,end.stop)
-#  序列为&#39;[]&#39;,元组为&#39;()&#39;,字典为&#39;&#123;&#125;&#39;。
-
 
 print(&quot;&quot;)
 name&#x3D;[&quot;张三&quot;,&quot;张四&quot;,&quot;张五&quot;,&quot;李四&quot;,&quot;李五&quot;]
@@ -618,7 +653,7 @@ print(&quot;name+number&quot;, name+number,&quot;&quot;)
 #  切片【从第二个开始，到第六个以前，间隔为2】
 namenum&#x3D;name+number
 print(&quot;namenum[1:5:2]&quot;,namenum[1:5:2],&quot;&quot;)
-print(&quot;namenum[:5:]&quot;,namenum[:5:],&quot;&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+print(&quot;namenum[:5:]&quot;,namenum[:5:],&quot;&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
@@ -1144,7 +1179,7 @@ print(mulanshi.endswith(&quot;雄雌？&quot;))<span aria-hidden="true" class="l
 <td align="center">字符”%”</td>
 </tr>
 </tbody></table>
-<p>format 格式化<br>{[index][:[[fill]align][sign][#][width][.precision][type]]}</p>
+<p>format 格式化<br>{ [index] <b style="color:red"> [:[ <b style="color:yellow">[fill] align] [sign] [#] [width] [.precision] [type] </b> ]</b>  }</p>
 <table>
 <thead>
 <tr>
@@ -1244,13 +1279,13 @@ print(mulanshi.endswith(&quot;雄雌？&quot;))<span aria-hidden="true" class="l
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">import math
 
 template_a &#x3D; &quot;编号:%-08d\t 网站名：%s \t 网站：https:&#x2F;&#x2F;www.%s.com\t 公司老总:%4s\t&quot;
-temp &#x3D; [
+temps &#x3D; [
     (1, &quot;百度&quot;, &quot;baidu&quot;, &quot;李彦宏&quot;),
     (2, &quot;淘宝&quot;, &quot;taobao&quot;, &quot;马云&quot;),
     (3, &quot;腾讯&quot;, &quot;tencent&quot;, &quot;马化腾&quot;),
 ]
 print(template_a)
-for ls in temp:
+for ls in temps:
     print(template_a % ls)
 
 strin1 &#x3D; &quot;马云,\t身价:\t&#123;0:,.5f&#125;&quot;.format(5621684.1531516)
@@ -2514,7 +2549,7 @@ print(spend.total_cost)<span aria-hidden="true" class="line-numbers-rows"><span>
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">11.7k</span>
+                        class="white-color">11.8k</span>
             
             
             
