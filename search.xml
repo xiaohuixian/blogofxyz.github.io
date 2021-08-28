@@ -110,6 +110,31 @@
     
     
     <entry>
+      <title>Linux换源</title>
+      <link href="/2021/08/14/Linux%E6%8D%A2%E6%BA%90/"/>
+      <url>/2021/08/14/Linux%E6%8D%A2%E6%BA%90/</url>
+      
+        <content type="html"><![CDATA[<h1 id="（kali）Linux更换源-其他源也可通过这种方式添加"><a href="#（kali）Linux更换源-其他源也可通过这种方式添加" class="headerlink" title="（kali）Linux更换源(其他源也可通过这种方式添加)"></a>（kali）Linux更换源(其他源也可通过这种方式添加)</h1><hr><h3 id="1-找配置文件"><a href="#1-找配置文件" class="headerlink" title="1.找配置文件"></a>1.找配置文件</h3><p>进入源列表文件夹</p><ul><li>可能不同的Linux下文件夹的结构不同，可以通过一级一级向下递进找到sources.list。</li></ul><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo cd /etc/apt/sources.list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="2-找链接"><a href="#2-找链接" class="headerlink" title="2.找链接"></a>2.找链接</h2><p>打开<span class="github-emoji"><span>👉</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f449.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><a href="https://developer.aliyun.com/mirror/kali?spm=a2c6h.13651102.0.0.1d231b115YDKhc">这个</a><span class="github-emoji"><span>👈</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f448.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>网站，复制源的链接。</p><h2 id="3-修改配置文件"><a href="#3-修改配置文件" class="headerlink" title="3.修改配置文件"></a>3.修改配置文件</h2><p>回到Linux，打开sources.list文件</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo vi sources.list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p> 进入插入模式（点击‘i’进入编辑模式）</p><p>如果没有管理员权限会保存失败。</p><p>删除其他源，如果原来就没有的话直接添加进去（Linux命令行中Ctrl+shift+v复制）。</p><h2 id="5-保存"><a href="#5-保存" class="headerlink" title="5.保存"></a>5.保存</h2><p>Esc退出编辑模式，点击‘：’输入‘wq’进行保存并退出（write ，quit）。</p><h2 id="6-更新"><a href="#6-更新" class="headerlink" title="6.更新"></a>6.更新</h2><p>输入下列命令进行一些更新。</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo apt-get updatesudo apt-get upgradesudo apt-get dist-upgradesudo apt-get clean<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2021/08/14/hello-world/"/>
       <url>/2021/08/14/hello-world/</url>
@@ -239,22 +264,22 @@
     
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>小伙伴与大佬</title>
+      <link href="/friends/index.html"/>
+      <url>/friends/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h1 id="赞赏名单"><a href="#赞赏名单" class="headerlink" title="赞赏名单"></a>赞赏名单</h1><p>感谢所有赞赏过我的小伙伴啦，你们的支持是我最大的动力！<br><code>panakot</code></p><h1 id="友链交换"><a href="#友链交换" class="headerlink" title="友链交换"></a>友链交换</h1><p>想要交换友链的小伙伴，欢迎在留言板留言，留言格式：</p><ul><li><strong>名称：</strong>你的博客名称</li><li><strong>地址：</strong>你的博客地址</li><li><strong>简介：</strong>一句话简介</li><li><strong>头像：</strong>你的头像地址</li></ul><p>例如我的博客友链，大家可以加到自己博客里哦：</p><ul><li><strong>名称：</strong>Zhang-little-white</li><li><strong>地址：</strong><a href="https://www.blogofxyz.top/">https://www.blogofxyz.top</a></li><li><strong>简介：</strong>小白一个</li><li><strong>头像：</strong><a href="https://github.com/xiaohuixian/blogofxyz.github.io/blob/master/medias/avatar.jpg">https://github.com/xiaohuixian/blogofxyz.github.io/blob/master/medias/avatar.jpg</a></li></ul>]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>小伙伴与大佬</title>
-      <link href="/friends/index.html"/>
-      <url>/friends/index.html</url>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
-        <content type="html"><![CDATA[<h1 id="赞赏名单"><a href="#赞赏名单" class="headerlink" title="赞赏名单"></a>赞赏名单</h1><p>感谢所有赞赏过我的小伙伴啦，你们的支持是我最大的动力！<br><code>panakot</code></p><h1 id="友链交换"><a href="#友链交换" class="headerlink" title="友链交换"></a>友链交换</h1><p>想要交换友链的小伙伴，欢迎在留言板留言，留言格式：</p><ul><li><strong>名称：</strong>你的博客名称</li><li><strong>地址：</strong>你的博客地址</li><li><strong>简介：</strong>一句话简介</li><li><strong>头像：</strong>你的头像地址</li></ul><p>例如我的博客友链，大家可以加到自己博客里哦：</p><ul><li><strong>名称：</strong>Zhang-little-white</li><li><strong>地址：</strong><a href="https://www.blogofxyz.top/">https://www.blogofxyz.top</a></li><li><strong>简介：</strong>小白一个</li><li><strong>头像：</strong><a href="https://github.com/xiaohuixian/blogofxyz.github.io/blob/master/medias/avatar.jpg">https://github.com/xiaohuixian/blogofxyz.github.io/blob/master/medias/avatar.jpg</a></li></ul>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
