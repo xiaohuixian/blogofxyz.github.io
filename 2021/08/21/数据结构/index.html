@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-    <meta name="keywords" content="数据结构, 想学啥学点啥">
+    <meta name="keywords" content="数据结构">
     <meta name="description" content="C# | Web | html | python |">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -30,7 +30,9 @@
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
     <script src="/libs/jquery/jquery.min.js"></script>
-<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
@@ -398,6 +400,7 @@ var _hmt = _hmt || [];
     #toc-content {
         padding-bottom: 30px;
         overflow: auto;
+		height:700px;
     }
 
     #toc-content ol {
@@ -466,6 +469,15 @@ var _hmt = _hmt || [];
                 </div>
                 <div class="col s5 right-align">
                     
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="post-category">
+                                数据结构
+                            </a>
+                        
+                    </div>
+                    
                 </div>
             </div>
 
@@ -480,14 +492,14 @@ var _hmt = _hmt || [];
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-08-21
+                    2021-08-28
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    1k
                 </div>
                 
 
@@ -527,34 +539,34 @@ var _hmt = _hmt || [];
 <div id="byte"></div>
 
 <h2 id="1-byte"><a href="#1-byte" class="headerlink" title="1. byte"></a>1. byte</h2><p>​    byte 为字节。有点常识就知道   1字（节）=8位。即用八个二进制位来表示，所以有</p>
-<p>​    (-2<suP>7</sup>)~(2<sup>7</sup>-1)</p>
-<pre class="line-numbers language-c" data-language="c"><code class="language-c">byte a&#x3D;1;&#x2F;&#x2F;  -128~127<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>​    (-2<sup>7</sup>)~(2<sup>7</sup>-1)</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c">byte a=1;//  -128~127<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>​    <u>？？？为啥整数比负数少一个？？？</u></p>
 <p>​    是因为   -128<del>-1可以用 10000000</del>11111111 来表示</p>
 <p>​    开头的 ‘1’ 表示此数为负，只能用 00000000~01111111来表示0~127，因为再加一就是-128啦。</p>
-<p>​    <div id="char"></div></p>
+<p>​    </p><div id="char"></div><p></p>
 <h2 id="2-char"><a href="#2-char" class="headerlink" title="2. char"></a>2. char</h2><p>​    char 类型占用一字节，8个二进制位。</p>
 <p>​    char为字符型，学过几门语言的人都知道：在程序中大小写英文字母，以及数字的数据大小就是一个字符。与 byte 所占内存一样为一字节。如：</p>
-<pre class="line-numbers language-c" data-language="c"><code class="language-c">char b&#x3D;&#39;a&#39;;&#x2F;&#x2F;也就是ASCII表示的字符。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c">char b='a';//也就是ASCII表示的字符。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>就是声明一个字符变量 a，给其赋值为字符 “a”。</p>
 <div id="short"></div>
 
 <h2 id="3-short"><a href="#3-short" class="headerlink" title="3. short"></a>3. short</h2><p> short 用来定义数字变量。一般很少用，其大小为两个字节，也就是16个二进制位。</p>
-<pre class="line-numbers language-c" data-language="c"><code class="language-c">short c;&#x2F;&#x2F; -32,768 ~ 32,768-1。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>  可表示 (-2<suP>15</sup>)~(2<sup>15</sup>-1)</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c">short c;// -32,768 ~ 32,768-1。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>  可表示 (-2<sup>15</sup>)~(2<sup>15</sup>-1)</p>
 <p>  理解过程看 byte型。</p>
 <div id="int"></div>
 
-<h2 id="4-int"><a href="#4-int" class="headerlink" title="4. int"></a>4. int</h2><p>  int 类型占用两字节，32个二进制位。<br>  可表示 (-2<suP>31</sup>)~(2<sup>31</sup>-1)</p>
-<pre class="line-numbers language-C" data-language="C"><code class="language-C">int d; &#x2F;&#x2F;-2,147,483,648 ~ 2,147,483,647    正负2十多亿<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="4-int"><a href="#4-int" class="headerlink" title="4. int"></a>4. int</h2><p>  int 类型占用两字节，32个二进制位。<br>  可表示 (-2<sup>31</sup>)~(2<sup>31</sup>-1)</p>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">int d; //-2,147,483,648 ~ 2,147,483,647    正负2十多亿<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>  int类型较为常用，相比较short，int表示的数更不容易溢出，切占用内存不大。</p>
 <div id="float"></div>
 
 <h2 id="5-float"><a href="#5-float" class="headerlink" title="5. float"></a>5. float</h2><p>  float类型占用四字节，32个二进制位。</p>
-<p>  可表示 (-3.4x10<suP>38</sup>)~(3.4x10<sup>38</sup>)</p>
-  <pre class="line-numbers language-c" data-language="c"><code class="language-c">float e;&#x2F;&#x2F;大概情况为越偏离0，越不精确。32位进制位分别用作字符位（正负），整数位和尾数。建议先了解编程中的多位数科学技术法。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>  可表示 (-3.4x10<sup>38</sup>)~(3.4x10<sup>38</sup>)</p>
+  <pre class="line-numbers language-c" data-language="c"><code class="language-c">float e;//大概情况为越偏离0，越不精确。32位进制位分别用作字符位（正负），整数位和尾数。建议先了解编程中的多位数科学技术法。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>  <a target="_blank" rel="noopener" href="https://blog.csdn.net/albertsh/article/details/92385277">精确度以及表示范围详解（点我！点我！）</a></p>
 <pre><code>      float类型为唯二的能表示小数的数据类型之一，另一个就是double类型。相比较double的64位，float占的内存更小。
@@ -562,10 +574,10 @@ var _hmt = _hmt || [];
 <div id="long"></div>
 
 <h2 id="6-long"><a href="#6-long" class="headerlink" title="6. long"></a>6. long</h2><p>  long类型占用64个二进制位。</p>
-<p>可表示 (-2<suP>63</sup>)~(2<sup>63</sup>-1)</p>
-  <pre class="line-numbers language-c" data-language="c"><code class="language-c">long f;&#x2F;&#x2F;-9,223,372,036,854,775,8078  ~  9,223,372,036,854,775,807<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>可表示 (-2<sup>63</sup>)~(2<sup>63</sup>-1)</p>
+  <pre class="line-numbers language-c" data-language="c"><code class="language-c">long f;//-9,223,372,036,854,775,8078  ~  9,223,372,036,854,775,807<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>  long类型一般用于特殊用途，毕竟这么大的数生活中不怎么用得到。但是，联想一下，64位。。。<br>  能否想到我们的电脑。同为64位。所以long类型就是我们的64位机的单个读取单位。<br>  <div id="double"></div></p>
+<p>  long类型一般用于特殊用途，毕竟这么大的数生活中不怎么用得到。但是，联想一下，64位。。。<br>  能否想到我们的电脑。同为64位。所以long类型就是我们的64位机的单个读取单位。<br>  </p><div id="double"></div><p></p>
 <h2 id="7-double"><a href="#7-double" class="headerlink" title="7. double"></a>7. double</h2><p>  double类型  8字节，64个二进制位。</p>
 <p>  float的升级版。升级版说明 double 的特点。</p>
 <pre><code>     一般刚学编程语言的人做题时自己定义 float 型无法通过，可以换成 double 试试。因为 double 的精度更高。所以根据自己的需求选择 double 还是 float 。
@@ -583,21 +595,21 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>  但在C#中，没有date类型，只有datetime类型。</p>
   <pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">using System;
 namespace ConsoleApp1
-&#123;
+{
     class Program
-    &#123;
+    {
         static void Main(string[] args)
-        &#123;
-            DateTime time &#x3D; DateTime.Now;
+        {
+            DateTime time = DateTime.Now;
             Console.WriteLine(time);
             Console.ReadKey();
-        &#125;
-    &#125;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+        }
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
-   <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">2021&#x2F;8&#x2F;21 13:19:29<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+   <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">2021/8/21 13:19:29<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
@@ -613,13 +625,13 @@ namespace ConsoleApp1
 <ul>
 <li>指定为datetime-local时，只能输入年月日时分。<input type="datetime-local" style="width:50%;margin:0 auto"></li>
 </ul>
-<p>  具体数据显示格式根据语言不同也不同。<br>  <div id="other"></div></p>
+<p>  具体数据显示格式根据语言不同也不同。<br>  </p><div id="other"></div><p></p>
 <h2 id="9-other"><a href="#9-other" class="headerlink" title="9. other"></a>9. other</h2><p>  other 是指这几种类型可以与 sign，unsign，还有叠加形式。</p>
 <pre><code>如：
 </code></pre>
-  <pre class="line-numbers language-c" data-language="c"><code class="language-c">long long g;&#x2F;&#x2F;128位
-unsign int h;&#x2F;&#x2F;无符号整型。划负为正，正数的范围乘2.
-long int i；&#x2F;&#x2F;还是int<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+  <pre class="line-numbers language-c" data-language="c"><code class="language-c">long long g;//128位
+unsign int h;//无符号整型。划负为正，正数的范围乘2.
+long int i；//还是int<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>  除此之外，个别语言还有 WORD 型（字，两字节。），DWORD 型，等。</p>
 <hr>
@@ -640,7 +652,7 @@ long int i；&#x2F;&#x2F;还是int<span aria-hidden="true" class="line-numbers-r
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">Zhang-little-white</a>
+                    <a href="/about" rel="external nofollow noreferrer">张小白</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -663,7 +675,7 @@ long int i；&#x2F;&#x2F;还是int<span aria-hidden="true" class="line-numbers-r
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">Zhang-little-white</a>
+                    <a href="/about" target="_blank">张小白</a>
                     !
                 </span>
             </div>
@@ -1418,7 +1430,7 @@ long int i；&#x2F;&#x2F;还是int<span aria-hidden="true" class="line-numbers-r
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">11.8k</span>
+                        class="white-color">10.3k</span>
             
             
             

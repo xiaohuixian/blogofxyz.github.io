@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-    <meta name="keywords" content="win添加右键新建项, 想学啥学点啥">
+    <meta name="keywords" content="win">
     <meta name="description" content="C# | Web | html | python |">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -30,7 +30,9 @@
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
     <script src="/libs/jquery/jquery.min.js"></script>
-<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
@@ -398,6 +400,7 @@ var _hmt = _hmt || [];
     #toc-content {
         padding-bottom: 30px;
         overflow: auto;
+		height:700px;
     }
 
     #toc-content ol {
@@ -493,7 +496,7 @@ var _hmt = _hmt || [];
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-08-21
+                    2021-08-28
                 </div>
                 
 
@@ -537,21 +540,21 @@ var _hmt = _hmt || [];
             <div id="articleContent">
                 <h1 id="右键新建菜单添加新项"><a href="#右键新建菜单添加新项" class="headerlink" title="右键新建菜单添加新项"></a>右键新建菜单添加新项</h1><hr>
 <p>​    **<code>|ू･ω･</code> )检查下道具（没有js的添加项）`</p>
-<img src="https://gitee.com/blogofxyz/blog-photo/raw/master/imag1/1.png" style="zoom: 67%;" />
+<img src="https://gitee.com/blogofxyz/blog-photo/raw/master/imag1/1.png" style="zoom: 67%;">
 
 <hr>
 <h2 id="1-打开注册表编辑器（regedit）"><a href="#1-打开注册表编辑器（regedit）" class="headerlink" title="1. 打开注册表编辑器（regedit）"></a>1. 打开注册表编辑器（regedit）</h2><p>​         win+R召唤“运行”对话框-》输入”regedit”-》回车。或者在开始菜单的搜索框输入“注册表编辑器”or“regedit”。</p>
-<img src="https://gitee.com/blogofxyz/blog-photo/raw/master/imag1/2.png" style="zoom: 67%;" />
+<img src="https://gitee.com/blogofxyz/blog-photo/raw/master/imag1/2.png" style="zoom: 67%;">
 
 <h2 id="2-找到系统已统计目标后缀名"><a href="#2-找到系统已统计目标后缀名" class="headerlink" title="2. 找到系统已统计目标后缀名"></a>2. 找到系统已统计目标后缀名</h2><p>​        Ctrl+F召唤“搜索对话框”-》输入想要添加的新建文件的后缀名，前加‘.’，（eg：.js）</p>
-<img src="https://gitee.com/blogofxyz/blog-photo/raw/master/imag1/3.png" style="zoom: 50%;" />
+<img src="https://gitee.com/blogofxyz/blog-photo/raw/master/imag1/3.png" style="zoom: 50%;">
 
 
 <p>​        如图：</p>
-<img src="https://gitee.com/blogofxyz/blog-photo/raw/master/imag1/4.png" style="zoom:67%;" />
+<img src="https://gitee.com/blogofxyz/blog-photo/raw/master/imag1/4.png" style="zoom:67%;">
 
 <h2 id="3-添加右键新建项"><a href="#3-添加右键新建项" class="headerlink" title="3. 添加右键新建项"></a>3. 添加右键新建项</h2><p>​        找到后缀文件夹-》右键新建项（命名为“ShellNew”）-》      ▲！别输入空格</p>
-<img src="https://gitee.com/blogofxyz/blog-photo/raw/master/imag1/5.png"  style="zoom:67%;" />
+<img src="https://gitee.com/blogofxyz/blog-photo/raw/master/imag1/5.png" style="zoom:67%;">
 
 
 
@@ -559,19 +562,19 @@ var _hmt = _hmt || [];
 <p>​    </p>
 <pre><code>     [==也可以新建成特定样版文件==](#补充) 
 </code></pre>
-<img src="https://gitee.com/blogofxyz/blog-photo/raw/master/imag1/6.png"  style="zoom:67%;" />
+<img src="https://gitee.com/blogofxyz/blog-photo/raw/master/imag1/6.png" style="zoom:67%;">
 
 
 
 <h2 id="4-验证是否成功"><a href="#4-验证是否成功" class="headerlink" title="4. 验证是否成功"></a>4. 验证是否成功</h2><p>​    返回桌面右键查看应该就出现了。</p>
-<img src="https://gitee.com/blogofxyz/blog-photo/raw/master/imag1/7.png" style="zoom:120%;" />
+<img src="https://gitee.com/blogofxyz/blog-photo/raw/master/imag1/7.png" style="zoom:120%;">
 
 
 
 <ul>
 <li>(命名为“filename”时的效果！！注意文件名：默认还是“新建xxx.js”)</li>
 </ul>
-<img src="https://gitee.com/blogofxyz/blog-photo/raw/master/imag1/8.png" style="zoom:67%;" />
+<img src="https://gitee.com/blogofxyz/blog-photo/raw/master/imag1/8.png" style="zoom:67%;">
 
 
 
@@ -584,10 +587,10 @@ var _hmt = _hmt || [];
 
 <h1 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h1><p>​    <strong><strong>补充内容</strong></strong>：</p>
 <h2 id="1-新建文件并输入模板。"><a href="#1-新建文件并输入模板。" class="headerlink" title="1. 新建文件并输入模板。"></a>1. 新建文件并输入模板。</h2><p>​    在一个偏僻的位置新建一个与添加的格式后缀相同的文件.(eg：123.js)</p>
-<img src="https://gitee.com/blogofxyz/blog-photo/raw/master/imag1/9.png" style="zoom:67%;" />
+<img src="https://gitee.com/blogofxyz/blog-photo/raw/master/imag1/9.png" style="zoom:67%;">
 
 <h2 id="2-指定文件路径。"><a href="#2-指定文件路径。" class="headerlink" title="2. 指定文件路径。"></a>2. 指定文件路径。</h2><p>​    在添加字符串值时重命名为“filename”-》右键filename项修改，填入刚刚新建的文件的path+文件名。</p>
-<img src="https://gitee.com/blogofxyz/blog-photo/raw/master/imag1/10.png" style="zoom:67%;" />
+<img src="https://gitee.com/blogofxyz/blog-photo/raw/master/imag1/10.png" style="zoom:67%;">
 
                 
             </div>
@@ -1127,8 +1130,12 @@ var _hmt = _hmt || [];
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Zhang-little-white
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="post-category">
+                                    数据结构
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -1151,13 +1158,13 @@ var _hmt = _hmt || [];
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/08/14/Linux%E6%8D%A2%E6%BA%90/">
+                <a href="/2021/08/14/hello-world/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Linux换源">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Hello World">
                         
-                        <span class="card-title">Linux换源</span>
+                        <span class="card-title">Hello World</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1172,12 +1179,8 @@ var _hmt = _hmt || [];
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Linux/" class="post-category">
-                                    Linux
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            张小白
                             
                         </span>
                     </div>
@@ -1185,8 +1188,8 @@ var _hmt = _hmt || [];
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Linux/">
-                        <span class="chip bg-color">Linux</span>
+                    <a href="/tags/Hello-World/">
+                        <span class="chip bg-color">Hello World</span>
                     </a>
                     
                 </div>
@@ -1374,7 +1377,7 @@ var _hmt = _hmt || [];
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">11.8k</span>
+                        class="white-color">10.3k</span>
             
             
             

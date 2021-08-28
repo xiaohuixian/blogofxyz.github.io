@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-    <meta name="keywords" content="c语言与cmd, 想学啥学点啥">
+    <meta name="keywords" content="C语言,CMD">
     <meta name="description" content="C# | Web | html | python |">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -30,7 +30,9 @@
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
     <script src="/libs/jquery/jquery.min.js"></script>
-<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
@@ -398,6 +400,7 @@ var _hmt = _hmt || [];
     #toc-content {
         padding-bottom: 30px;
         overflow: auto;
+		height:700px;
     }
 
     #toc-content ol {
@@ -470,6 +473,15 @@ var _hmt = _hmt || [];
                 </div>
                 <div class="col s5 right-align">
                     
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/C/" class="post-category">
+                                C
+                            </a>
+                        
+                    </div>
+                    
                 </div>
             </div>
 
@@ -484,21 +496,21 @@ var _hmt = _hmt || [];
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-08-25
+                    2021-08-28
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    510
+                    484
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -533,11 +545,11 @@ var _hmt = _hmt || [];
 #include &lt;stdlib.h&gt;
 
 int main()
-&#123;
-    system(&quot;start explorer.exe&quot;);
-    system(&quot;start S:\\S_Chat\\WeChat\\WeChat.exe&quot;);
+{
+    system("start explorer.exe");
+    system("start S:\\S_Chat\\WeChat\\WeChat.exe");
     return 0;
-&#125;
+}
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ul>
 <h2 id="1-2-关机"><a href="#1-2-关机" class="headerlink" title="1.2 关机"></a>1.2 关机</h2><h3 id="1-2-1-shutdown-s-t-time"><a href="#1-2-1-shutdown-s-t-time" class="headerlink" title="1.2.1  shutdown  -s -t  time"></a>1.2.1  shutdown  -s -t  time</h3><p>  ​    -s 为shutdown命令中关机的指令，还可以是  “-f：强制关机” , “-r：重启”,“-h：休眠”，“-l：注销”。</p>
@@ -547,13 +559,13 @@ int main()
 #include &lt;stdlib.h&gt;
 
 int main()
-&#123;
-    system(&quot;shutdown -f -t 300&quot;); &#x2F;&#x2F;五分钟后强制关机
-    &#x2F;&#x2F;system(&quot;shutdown -s -t 300&quot;);&#x2F;&#x2F;五分钟后关机
-    &#x2F;&#x2F; system(&quot;shutdown -r -t 300&quot;);&#x2F;&#x2F;五分钟后重启
+{
+    system("shutdown -f -t 300"); //五分钟后强制关机
+    //system("shutdown -s -t 300");//五分钟后关机
+    // system("shutdown -r -t 300");//五分钟后重启
 
     return 0;
-&#125;
+}
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="1-2-2-在某时刻关机"><a href="#1-2-2-在某时刻关机" class="headerlink" title="1.2.2 在某时刻关机"></a>1.2.2 在某时刻关机</h3><p><a target="_blank" rel="noopener" href="https://answers.microsoft.com/zh-hans/windows/forum/all/at%E8%A2%AB%E5%BC%83%E7%94%A8%E5%90%8E%E5%A6%82/f2fd63e0-7f52-49cb-854f-1f505a6edee1">在11:11时刻关机</a></p>
@@ -566,7 +578,7 @@ int main()
 <p>但前提是你需要了解他（她）电脑程序安装的布局。如果他（她）没有整理电脑的习惯。那就好说了，每个程序都安装在 C 盘，不需要去了解。</p>
 <pre class="line-numbers language-none"><code class="language-none">C:\Program Files
 C:\Program Files (x86)
-&#x2F;&#x2F;懂得都懂<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+//懂得都懂<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>QQ，微信，各个视频软件不给他安排上？让他开开眼？</p>
 <h3 id="2-1-2-桌面启动程序"><a href="#2-1-2-桌面启动程序" class="headerlink" title="2.1.2 桌面启动程序"></a>2.1.2 桌面启动程序</h3><p>可以用c++或C语言的桌面开发，写一个自己的桌面启动程序。一个图标，一个点击事件，一个启动就建成了。</p>
@@ -589,7 +601,7 @@ C:\Program Files (x86)
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">Zhang-little-white</a>
+                    <a href="/about" rel="external nofollow noreferrer">张小白</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -612,7 +624,7 @@ C:\Program Files (x86)
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">Zhang-little-white</a>
+                    <a href="/about" target="_blank">张小白</a>
                     !
                 </span>
             </div>
@@ -1113,8 +1125,12 @@ C:\Program Files (x86)
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Zhang-little-white
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/C/" class="post-category">
+                                    C
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -1369,7 +1385,7 @@ C:\Program Files (x86)
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">11.8k</span>
+                        class="white-color">10.3k</span>
             
             
             
