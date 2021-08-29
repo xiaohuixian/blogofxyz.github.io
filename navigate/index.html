@@ -367,9 +367,6 @@ var _hmt = _hmt || [];
                             <li class="this_s">百 · 度</li>
                             <li class="bing_s">必 · 应</li>
                             <li class="google_s">谷 · 歌</li>
-                            <li class="baidu_s">百 · 度</li>
-                            <li class="baidu_s">搜 · 狗</li>
-                            <li class="baidu_s">duckduckgo</li>
                         </ul>
                     </div> <input name="wd" id="kw-2" maxlength="100" autocomplete="off" type="text">
                 </div>
@@ -502,14 +499,7 @@ var _hmt = _hmt || [];
 		        _tihs = 'https://www.bing.com/search';
 		        _name = 'q';
 		    }
-		    if (_tihs == 'bing_s') {
-		        _tihs = 'https://www.sogou.com/search';
-		        _name = 'q';
-		    }
-		    if (_tihs == 'bing_s') {
-		        _tihs = 'https://www.duckduckgo.com/search';
-		        _name = 'q';
-		    }
+			
 		    $('.baidu form').attr('action', _tihs);
 		    $('.this_s').html(_html);
 		    $('#kw').attr('name', _name);
@@ -528,13 +518,6 @@ var _hmt = _hmt || [];
 		    }
 		    if (_tihs == 'bing_s') {
 		        _tihs = 'https://www.bing.com/search';
-		        _name = 'q';
-		    }
-			if (_tihs == 'bing_s') {
-		        _tihs = 'https://www.sogou.com/search';
-		        _name = 'q';
-		    }if (_tihs == 'bing_s') {
-		        _tihs = 'https://www.duckduckgo.com/search';
 		        _name = 'q';
 		    }
 		    $('.baidu form').attr('action', _tihs);

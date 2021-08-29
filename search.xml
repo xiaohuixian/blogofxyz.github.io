@@ -256,9 +256,9 @@
     
     
     <entry>
-      <title>小成就</title>
-      <link href="/archives/index.html"/>
-      <url>/archives/index.html</url>
+      <title>类别</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -278,9 +278,20 @@
     
     
     <entry>
-      <title>类别</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>小成就</title>
+      <link href="/archives/index.html"/>
+      <url>/archives/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>导航</title>
+      <link href="/navigate/index.html"/>
+      <url>/navigate/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -303,17 +314,6 @@
       <title>tags</title>
       <link href="/tags/index.html"/>
       <url>/tags/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>导航</title>
-      <link href="/navigate/index.html"/>
-      <url>/navigate/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
