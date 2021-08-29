@@ -601,11 +601,11 @@ var _hmt = _hmt || [];
 </tr>
 <tr>
 <td align="center">?</td>
-<td align="center">当该字符紧跟在任何一个其他限制符（*,+,?，{<em>n</em>}，{<em>n</em>,}，{<em>n</em>,<em>m</em>}）后面时，匹配模式是非贪婪的。例如，对于字符串“<code>oooo</code>”，“<code>o+?</code>”将匹配单个“<code>o</code>”，而“<code>o+</code>”将匹配所有“<code>o</code>”。</td>
+<td align="center">当该字符紧跟在任何一个其他限制符（*,+,?，{n}，{n,}，{n,m}）后面时，匹配模式是非贪婪的。例如，对于字符串“<code>oooo</code>”，“<code>o+?</code>”将匹配单个“<code>o</code>”，而“<code>o+</code>”将匹配所有“<code>o</code>”。</td>
 </tr>
 <tr>
 <td align="center">.</td>
-<td align="center">匹配除“<code>\</code>*<code>n</code><em>”之外的任何单个字符。要匹配包括“<code>\</code></em><code>n</code>*”在内的任何字符，请使用像“`(.</td>
+<td align="center">匹配除“\n”之外的任何单个字符。要匹配包括“\n”在内的任何字符，请使用像“`(.</td>
 </tr>
 <tr>
 <td align="center">(pattern)</td>
@@ -693,31 +693,31 @@ var _hmt = _hmt || [];
 </thead>
 <tbody><tr>
 <td align="center">\cx</td>
-<td align="left">匹配由x指明的控制字符。例如，\cM匹配一个Control-M或回车符。x的值必须为A-Z或a-z之一。否则，将c视为一个原义的“<code>c</code>”字符。</td>
+<td align="left">匹配由x指明的控制字符。例如，\cM匹配一个Control-M或回车符。x的值必须为A-Z或a-z之一。否则，将c视为一个原义的“c”字符。</td>
 </tr>
 <tr>
-<td align="center">\x<em>n</em></td>
-<td align="left">匹配<em>n</em>，其中<em>n</em>为十六进制转义值。十六进制转义值必须为确定的两个数字长。例如，“<code>\x41</code>”匹配“<code>A</code>”。“<code>\x041</code>”则等价于“<code>\x04&amp;1</code>”。正则表达式中可以使用ASCII编码。.</td>
+<td align="center">\xn</td>
+<td align="left">匹配n，其中n为十六进制转义值。十六进制转义值必须为确定的两个数字长。例如，“\x41”匹配“A”。“\x041”则等价于“\x04&amp;1”。正则表达式中可以使用ASCII编码。.</td>
 </tr>
 <tr>
-<td align="center">*num*</td>
-<td align="left">匹配<em>num</em>，其中<em>num</em>是一个正整数。对所获取的匹配的引用。例如，“<code>(.)\1</code>”匹配两个连续的相同字符。</td>
+<td align="center">\num</td>
+<td align="left">匹配num，其中num 是一个正整数。对所获取的匹配的引用。例如，“(.)\1”匹配两个连续的相同字符。</td>
 </tr>
 <tr>
-<td align="center">*n*</td>
-<td align="left">标识一个八进制转义值或一个向后引用。如果*n<em>之前至少</em>n<em>个获取的子表达式，则</em>n<em>为向后引用。否则，如果</em>n<em>为八进制数字（0-7），则</em>n*为一个八进制转义值。</td>
+<td align="center">\n</td>
+<td align="left">标识一个八进制转义值或一个向后引用。如果\n之前至少n个获取的子表达式，则n为向后引用。否则，如果<em>n</em>为八进制数字（0-7），则n为一个八进制转义值。</td>
 </tr>
 <tr>
-<td align="center">*nm*</td>
-<td align="left">标识一个八进制转义值或一个向后引用。如果*nm<em>之前至少有</em>nm<em>个获得子表达式，则</em>nm<em>为向后引用。如果*nm</em>之前至少有<em>n</em>个获取，则<em>n</em>为一个后跟文字<em>m</em>的向后引用。如果前面的条件都不满足，若<em>n</em>和<em>m</em>均为八进制数字（0-7），则*nm<em>将匹配八进制转义值</em>nm*。</td>
+<td align="center">\nm</td>
+<td align="left">标识一个八进制转义值或一个向后引用。如果\nm之前至少有nm个获得子表达式，则nm为向后引用。如果\nm之前至少有n个获取，则n为一个后跟文字m的向后引用。如果前面的条件都不满足，若n和m均为八进制数字（0-7），则\nm将匹配八进制转义值nm。</td>
 </tr>
 <tr>
-<td align="center">*nml*</td>
-<td align="left">如果<em>n</em>为八进制数字（0-3），且<em>m和l</em>均为八进制数字（0-7），则匹配八进制转义值<em>nm</em>l。</td>
+<td align="center">\nml</td>
+<td align="left">如果n为八进制数字（0-3），且m和l均为八进制数字（0-7），则匹配八进制转义值nml。</td>
 </tr>
 <tr>
-<td align="center">\u<em>n</em></td>
-<td align="left">匹配<em>n</em>，其中<em>n</em>是一个用四个十六进制数字表示的Unicode字符。例如，\u00A9匹配版权符号（©）。</td>
+<td align="center">\un</td>
+<td align="left">匹配n，其中n是一个用四个十六进制数字表示的Unicode字符。例如，\u00A9匹配版权符号（©）。</td>
 </tr>
 </tbody></table>
 <h1 id="3-常用正则表达式"><a href="#3-常用正则表达式" class="headerlink" title="3. 常用正则表达式"></a>3. 常用正则表达式</h1><p>==正则表达式筛选式不唯一，有的简单，有的复杂，不要惊讶。==</p>
