@@ -367,6 +367,7 @@ var _hmt = _hmt || [];
                             <li class="this_s">百 · 度</li>
                             <li class="bing_s">必 · 应</li>
                             <li class="google_s">谷 · 歌</li>
+                            <li class="baidu_s">百 · 度</li>
                         </ul>
                     </div> <input name="wd" id="kw-2" maxlength="100" autocomplete="off" type="text">
                 </div>
@@ -380,6 +381,10 @@ var _hmt = _hmt || [];
                 <div class="card">
                     <div class="jj-list-tit">娱乐 · 影视</div>
                     <ul class="jj-list-con">
+                        <li><a href="https://www.jd.com/" class="link-3" target="_blank">京东</a>
+                        <li><a href="https://www.taobao.com/" class="link-3" target="_blank">淘宝</a></li>
+                        <li><a href="https://www.tmall.com/" class="link-3" target="_blank">天猫</a></li>
+                        </li>
                         <li><a href="https://v.qq.com/" class="link-3" target="_blank">腾讯视频</a></li>
                         <li><a href="http://www.iqiyi.com/" class="link-3" target="_blank">爱奇艺</a></li>
                         <li><a href="https://www.bilibili.com/" class="link-3" target="_blank">哔哩哔哩</a> </li>
@@ -433,8 +438,6 @@ var _hmt = _hmt || [];
                         <li><a href="https://www.runoob.com/" class="link-3" target="_blank">菜鸟教程</a></li>
                         <li><a href="https://blog.51cto.com/" class="link-3" target="_blank">51CTO</a></li>
                         <li><a href="https://www.shiyanlou.com/library/" class="link-3" target="_blank">实验楼</a></li>
-						<li><a href="https://developer.mozilla.org/zh-CN/" class="link-3" target="_blank">MDN</a></li>
-												
                         <li><a href="https://spring.io/" class="link-3" target="_blank">Spring</a></li>
                     </ul>
                 </div>
@@ -473,86 +476,7 @@ var _hmt = _hmt || [];
                 </div>
             </div>
         </div>
-        <script> /*选择搜索引擎*/
-		$('.Select-box ul').hover(function () {
-		    $(this).css('height', 'auto')
-		}, function () {
-		    $(this).css('height', '40px')
-		});
-		$('.Select-box-2 ul').hover(function () {
-		    $(this).css('height', 'auto')
-		}, function () {
-		    $(this).css('height', '46px')
-		});
-		$('.Select-box li').click(function () {
-		    var _tihs = $(this).attr('class');
-		    var _html = $(this).html();
-		    if (_tihs == 'baidu_s') {
-		        _tihs = 'https://www.baidu.com/s';
-		        _name = 'wd';
-		    }
-		    if (_tihs == 'google_s') {
-		        _tihs = 'https://www.google.com/search';
-		        _name = 'q';
-		    }
-		    if (_tihs == 'bing_s') {
-		        _tihs = 'https://www.bing.com/search';
-		        _name = 'q';
-		    }
-			
-		    $('.baidu form').attr('action', _tihs);
-		    $('.this_s').html(_html);
-		    $('#kw').attr('name', _name);
-		    $('.Select-box ul').css('height', '40px')
-		});
-		$('.Select-box-2 li').click(function () {
-		    var _tihs = $(this).attr('class');
-		    var _html = $(this).html();
-		    if (_tihs == 'baidu_s') {
-		        _tihs = 'https://www.baidu.com/s';
-		        _name = 'wd';
-		    }
-		    if (_tihs == 'google_s') {
-		        _tihs = 'https://www.google.com/search';
-		        _name = 'q';
-		    }
-		    if (_tihs == 'bing_s') {
-		        _tihs = 'https://www.bing.com/search';
-		        _name = 'q';
-		    }
-		    $('.baidu form').attr('action', _tihs);
-		    $('.this_s').html(_html);
-		    $('#kw-2').attr('name', _name);
-		    $('.Select-box-2 ul').css('height', '48px')
-		});
-		//清空输入框内容
-		$('.qingkong').click(function () {
-		    cls();
-		    $(this).css('display', 'none')
-		});
-		function cls() {
-		    var sum = 0;
-		    var t = document.getElementsByTagName("INPUT");
-		    for (var i = 0; i < t.length; i++) {
-		        if (t[i].type == 'text') {
-		            ++sum;
-		            t[i].value = ""; //清空 } } } //清空输入框按钮的显示和隐藏 function if_btn() { var btn_obj = document.getElementById("kw") || document.getElementById("kw-2"); var cls_btn = document.getElementById("qingkong"); var btn_obj_val; var times;
-		            //当元素获得焦点时 if (btn_obj == '' || btn_obj == null) 	{
-		            return false;
-		            //如果没有找到这个元素，则将函数返回，不继续执行
-		        }
-		        btn_obj.onfocus = function () {
-		            times = setInterval(function () {
-		                btn_obj_val = btn_obj.value;
-		                if (btn_obj_val != 0) {
-		                    cls_btn.style.display = "block";
-		                } else {
-		                    cls_btn.style.display = "none";
-		                }
-		            }, 200);
-		        } //元素失去焦点时 btn_obj.onblur = function () { clearInterval(times); }
-		    }
-		</script>
+        <script> /*选择搜索引擎*/ $('.Select-box ul').hover(function () { $(this).css('height', 'auto') }, function () { $(this).css('height', '40px') }); $('.Select-box-2 ul').hover(function () { $(this).css('height', 'auto') }, function () { $(this).css('height', '46px') }); $('.Select-box li').click(function () { var _tihs = $(this).attr('class'); var _html = $(this).html(); if (_tihs == 'baidu_s') { _tihs = 'https://www.baidu.com/s'; _name = 'wd'; } if (_tihs == 'google_s') { _tihs = 'https://www.google.com/search'; _name = 'q'; } if (_tihs == 'bing_s') { _tihs = 'https://www.bing.com/search'; _name = 'q'; } $('.baidu form').attr('action', _tihs); $('.this_s').html(_html); $('#kw').attr('name', _name); $('.Select-box ul').css('height', '40px') }); $('.Select-box-2 li').click(function () { var _tihs = $(this).attr('class'); var _html = $(this).html(); if (_tihs == 'baidu_s') { _tihs = 'https://www.baidu.com/s'; _name = 'wd'; } if (_tihs == 'google_s') { _tihs = 'https://www.google.com/search'; _name = 'q'; } if (_tihs == 'bing_s') { _tihs = 'https://www.bing.com/search'; _name = 'q'; } $('.baidu form').attr('action', _tihs); $('.this_s').html(_html); $('#kw-2').attr('name', _name); $('.Select-box-2 ul').css('height', '48px') }); //清空输入框内容 $('.qingkong').click(function () { cls(); $(this).css('display', 'none') }); function cls() { var sum = 0; var t = document.getElementsByTagName("INPUT"); for (var i = 0; i < t.length; i++) { if (t[i].type == 'text') { ++sum; t[i].value = "";//清空 } } } //清空输入框按钮的显示和隐藏 function if_btn() { var btn_obj = document.getElementById("kw") || document.getElementById("kw-2"); var cls_btn = document.getElementById("qingkong"); var btn_obj_val; var times; //当元素获得焦点时 if (btn_obj == '' || btn_obj == null) { return false; //如果没有找到这个元素，则将函数返回，不继续执行 } btn_obj.onfocus = function () { times = setInterval(function () { btn_obj_val = btn_obj.value; if (btn_obj_val != 0) { cls_btn.style.display = "block"; } else { cls_btn.style.display = "none"; } }, 200); } //元素失去焦点时 btn_obj.onblur = function () { clearInterval(times); } } </script>
     </div>
 </div>
 <style>
