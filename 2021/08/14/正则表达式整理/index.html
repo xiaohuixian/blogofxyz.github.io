@@ -103,12 +103,33 @@ var _hmt = _hmt || [];
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/categories" class="waves-effect waves-light">
+    <a href="" class="waves-effect waves-light">
+
       
-      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      <i class="fas fa-sitemap" style="zoom: 0.6;"></i>
       
       <span>分类</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
     </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/categories">
+          
+          <i class="fas fa-bookmark" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>type</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/archives">
+          
+          <span>totype</span>
+        </a>
+      </li>
+      
+    </ul>
     
   </li>
   
@@ -119,17 +140,6 @@ var _hmt = _hmt || [];
       <i class="fas fa-location-arrow" style="zoom: 0.6;"></i>
       
       <span>导航</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/archives" class="waves-effect waves-light">
-      
-      <i class="fas fa-archive" style="zoom: 0.6;"></i>
-      
-      <span>归档</span>
     </a>
     
   </li>
@@ -217,12 +227,34 @@ var _hmt = _hmt || [];
         
         <li class="m-nav-item">
 	  
-		<a href="/categories" class="waves-effect waves-light">
+		<a href="javascript:;">
 			
-			    <i class="fa-fw fas fa-bookmark"></i>
+				<i class="fa-fw fas fa-sitemap"></i>
 			
 			分类
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
 		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/categories " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-bookmark" style="position: absolute;left:50px" ></i>
+			      
+		          <span>type</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/archives " style="margin-left:75px">
+				  
+		          <span>totype</span>
+                  </a>
+                </li>
+              
+            </ul>
           
         </li>
         
@@ -233,17 +265,6 @@ var _hmt = _hmt || [];
 			    <i class="fa-fw fas fa-location-arrow"></i>
 			
 			Navigate
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/archives" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-archive"></i>
-			
-			归档
 		</a>
           
         </li>
@@ -514,7 +535,7 @@ var _hmt = _hmt || [];
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-08-29
+                    2021-08-30
                 </div>
                 
 
@@ -556,7 +577,7 @@ var _hmt = _hmt || [];
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="正则表达式基础语法字符"><a href="#正则表达式基础语法字符" class="headerlink" title="正则表达式基础语法字符"></a>正则表达式基础语法字符</h1><p>   <strong>先了解两个文中用到的概念，一些语言中也有类似的功能。</strong></p>
+                <h2 id="正则表达式基础语法字符"><a href="#正则表达式基础语法字符" class="headerlink" title="正则表达式基础语法字符"></a>正则表达式基础语法字符</h2><p>   <strong>先了解两个文中用到的概念，一些语言中也有类似的功能。</strong></p>
 <ul>
 <li><p>贪婪模式    ：贪婪模式则尽可能多的匹配所搜索的字符串。</p>
 </li>
@@ -564,7 +585,7 @@ var _hmt = _hmt || [];
 <hr>
 </li>
 </ul>
-<h1 id="1-常用字符"><a href="#1-常用字符" class="headerlink" title="1. 常用字符"></a>1. 常用字符</h1><table>
+<h2 id="1-常用字符"><a href="#1-常用字符" class="headerlink" title="1. 常用字符"></a>1. 常用字符</h2><table>
 <thead>
 <tr>
 <th align="left">符号</th>
@@ -704,7 +725,7 @@ var _hmt = _hmt || [];
 <td align="left">匹配一个制表符。等价于\x09和\cI。</td>
 </tr>
 </tbody></table>
-<h1 id="2-比较难理解的字符"><a href="#2-比较难理解的字符" class="headerlink" title="2. 比较难理解的字符"></a>2. 比较难理解的字符</h1><table>
+<h2 id="2-比较难理解的字符"><a href="#2-比较难理解的字符" class="headerlink" title="2. 比较难理解的字符"></a>2. 比较难理解的字符</h2><table>
 <thead>
 <tr>
 <th align="left">符号</th>
@@ -740,7 +761,7 @@ var _hmt = _hmt || [];
 <td align="left">匹配n，其中n是一个用四个十六进制数字表示的Unicode字符。例如，\u00A9匹配版权符号（©）。</td>
 </tr>
 </tbody></table>
-<h1 id="3-常用正则表达式"><a href="#3-常用正则表达式" class="headerlink" title="3. 常用正则表达式"></a>3. 常用正则表达式</h1><p><mark>正则表达式筛选式不唯一，有的简单，有的复杂，不要惊讶。</mark></p>
+<h2 id="3-常用正则表达式"><a href="#3-常用正则表达式" class="headerlink" title="3. 常用正则表达式"></a>3. 常用正则表达式</h2><p><mark>正则表达式筛选式不唯一，有的简单，有的复杂，不要惊讶。</mark></p>
 <p><mark>更新中</mark></p>
 <table>
 <thead>
@@ -1594,7 +1615,7 @@ var _hmt = _hmt || [];
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">10.9k</span>
+                        class="white-color">11.2k</span>
             
             
             

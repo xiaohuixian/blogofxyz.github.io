@@ -103,12 +103,33 @@ var _hmt = _hmt || [];
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/categories" class="waves-effect waves-light">
+    <a href="" class="waves-effect waves-light">
+
       
-      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      <i class="fas fa-sitemap" style="zoom: 0.6;"></i>
       
       <span>分类</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
     </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/categories">
+          
+          <i class="fas fa-bookmark" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>type</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/archives">
+          
+          <span>totype</span>
+        </a>
+      </li>
+      
+    </ul>
     
   </li>
   
@@ -119,17 +140,6 @@ var _hmt = _hmt || [];
       <i class="fas fa-location-arrow" style="zoom: 0.6;"></i>
       
       <span>导航</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/archives" class="waves-effect waves-light">
-      
-      <i class="fas fa-archive" style="zoom: 0.6;"></i>
-      
-      <span>归档</span>
     </a>
     
   </li>
@@ -217,12 +227,34 @@ var _hmt = _hmt || [];
         
         <li class="m-nav-item">
 	  
-		<a href="/categories" class="waves-effect waves-light">
+		<a href="javascript:;">
 			
-			    <i class="fa-fw fas fa-bookmark"></i>
+				<i class="fa-fw fas fa-sitemap"></i>
 			
 			分类
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
 		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/categories " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-bookmark" style="position: absolute;left:50px" ></i>
+			      
+		          <span>type</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/archives " style="margin-left:75px">
+				  
+		          <span>totype</span>
+                  </a>
+                </li>
+              
+            </ul>
           
         </li>
         
@@ -233,17 +265,6 @@ var _hmt = _hmt || [];
 			    <i class="fa-fw fas fa-location-arrow"></i>
 			
 			Navigate
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/archives" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-archive"></i>
-			
-			归档
 		</a>
           
         </li>
@@ -518,7 +539,7 @@ var _hmt = _hmt || [];
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-08-29
+                    2021-08-30
                 </div>
                 
 
@@ -560,10 +581,10 @@ var _hmt = _hmt || [];
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>假期自学，代码都是自己看视频时联想敲得，与任何教程无关。为了腾电脑的地方，顺便复习下，学习后边的内容，就整理了下之前敲得。注释与解释不太多（别幻想别人写一大堆注释，有写注释的习惯吗），看的话凑活看，不懂得可以联系me。其他内容持续更新。</p>
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>假期自学，代码都是自己看视频时联想敲得，与任何教程无关。为了腾电脑的地方，顺便复习下，学习后边的内容，就整理了下之前敲得。注释与解释不太多（别幻想别人写一大堆注释，有写注释的习惯吗），看的话凑活看，不懂得可以联系me。其他内容持续更新。</p>
 <p>python版本:3.6.6</p>
 <p>python在线运行代码：-&gt;&gt;&gt;&gt; [菜鸟在线 Editor](<a target="_blank" rel="noopener" href="https://www.runoob.com/try/runcode.php?filename=HelloWorld&amp;type=python3">菜鸟教程在线编辑器 (runoob.com)</a>)-&gt;&gt;&gt;&gt;</p>
-<h1 id="1-if…elif…else"><a href="#1-if…elif…else" class="headerlink" title="1. if…elif…else"></a>1. if…elif…else</h1><ul>
+<h2 id="1-if…elif…else"><a href="#1-if…elif…else" class="headerlink" title="1. if…elif…else"></a>1. if…elif…else</h2><ul>
 <li><p>if条件中 且 用‘and’ 或 用‘or’</p>
 </li>
 <li><p> keyword: “产生随机字符串”，</p>
@@ -580,7 +601,7 @@ else:
     print("输入非数字或 “0” ")
   <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="2-运算符、文件写入、id"><a href="#2-运算符、文件写入、id" class="headerlink" title="2. 运算符、文件写入、id()"></a>2. 运算符、文件写入、id()</h1><h2 id="2-1运算符"><a href="#2-1运算符" class="headerlink" title="2.1运算符"></a>2.1运算符</h2><h3 id="2-1-1-算数与赋值运算符"><a href="#2-1-1-算数与赋值运算符" class="headerlink" title="2.1.1 算数与赋值运算符"></a>2.1.1 算数与赋值运算符</h3><p>​    几个与其他语言不同，或比较特殊的几个。</p>
+<h2 id="2-运算符、文件写入、id"><a href="#2-运算符、文件写入、id" class="headerlink" title="2. 运算符、文件写入、id()"></a>2. 运算符、文件写入、id()</h2><h3 id="2-1运算符"><a href="#2-1运算符" class="headerlink" title="2.1运算符"></a>2.1运算符</h3><h4 id="2-1-1-算数与赋值运算符"><a href="#2-1-1-算数与赋值运算符" class="headerlink" title="2.1.1 算数与赋值运算符"></a>2.1.1 算数与赋值运算符</h4><p>​    几个与其他语言不同，或比较特殊的几个。</p>
 <p>​      ** ：幂，如2**5为2^5^ 。</p>
 <p>​      //  ：取整除，“/”，所得结果带小数部分。“//”，结果只有整数部分。</p>
 <p>​      /=、//=、**=：类比理解。</p>
@@ -643,7 +664,7 @@ for item in prs3:
 
 
 
-<h1 id="3-while"><a href="#3-while" class="headerlink" title="3. while"></a>3. while</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  keyword: “while”，“ascll转字符”，“字符转ascll”，
+<h2 id="3-while"><a href="#3-while" class="headerlink" title="3. while"></a>3. while</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  keyword: “while”，“ascll转字符”，“字符转ascll”，
 #      “ord()”，“chr()”，
 
 #  encoding:utf-8
@@ -663,7 +684,7 @@ while i &lt; 60:
   a = a + 1
 print(string)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="4-序列"><a href="#4-序列" class="headerlink" title="4. 序列"></a>4. 序列</h1><h2 id="4-1-序列的基本操作"><a href="#4-1-序列的基本操作" class="headerlink" title="4.1 序列的基本操作"></a>4.1 序列的基本操作</h2><p>加，乘，切片，索引</p>
+<h2 id="4-序列"><a href="#4-序列" class="headerlink" title="4. 序列"></a>4. 序列</h2><h3 id="4-1-序列的基本操作"><a href="#4-1-序列的基本操作" class="headerlink" title="4.1 序列的基本操作"></a>4.1 序列的基本操作</h3><p>加，乘，切片，索引</p>
 <p> 序列支持负数索引, 当序数为负时从右向左数<br>        list(start,end.stop)<br>         序列为’[]’,元组为’()’,字典为’{}’。</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">#  encoding:utf-8
 #  keyword：“序列加”，“序列乘”，“序列切片”，“序列索引”
@@ -684,7 +705,7 @@ print("namenum[:5:]",namenum[:5:],"")<span aria-hidden="true" class="line-number
 
 
 
-<h2 id="4-2-序列的常见方法"><a href="#4-2-序列的常见方法" class="headerlink" title="4.2 序列的常见方法"></a>4.2 序列的常见方法</h2><p>max，min，exist，unexist</p>
+<h3 id="4-2-序列的常见方法"><a href="#4-2-序列的常见方法" class="headerlink" title="4.2 序列的常见方法"></a>4.2 序列的常见方法</h3><p>max，min，exist，unexist</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">#  keyword:“序列最大值”，“序列最小值”，“序列存在判断”，
 
 #  encoding:utf-8
@@ -703,7 +724,7 @@ print("是否不存在",y,y not in numbers)<span aria-hidden="true" class="line-
 
 
 
-<h2 id="4-3-序列的遍历"><a href="#4-3-序列的遍历" class="headerlink" title="4.3 序列的遍历"></a>4.3 序列的遍历</h2><p>for…in…(enumerate())</p>
+<h3 id="4-3-序列的遍历"><a href="#4-3-序列的遍历" class="headerlink" title="4.3 序列的遍历"></a>4.3 序列的遍历</h3><p>for…in…(enumerate())</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"># for a b in c :
 #  表达式
 #  a:序列(index)，当前值得序号。
@@ -736,7 +757,7 @@ for xuhao, name in enumerate(name):
 
 
 
-<h2 id="4-4-序列的-增-删-改"><a href="#4-4-序列的-增-删-改" class="headerlink" title="4.4 序列的 增 删 改"></a>4.4 序列的 增 删 改</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">#!keyword: “序列修改”，“序列增”，“序列删”，“序列改”，
+<h3 id="4-4-序列的-增-删-改"><a href="#4-4-序列的-增-删-改" class="headerlink" title="4.4 序列的 增 删 改"></a>4.4 序列的 增 删 改</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">#!keyword: “序列修改”，“序列增”，“序列删”，“序列改”，
 #  定义:
 
 # encoding:utf-8
@@ -770,7 +791,7 @@ print(name)
 
 
 
-<h2 id="4-5-序列的统计求和"><a href="#4-5-序列的统计求和" class="headerlink" title="4.5 序列的统计求和"></a>4.5 序列的统计求和</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">#! keyword：“序列求和”，“序列统计出现次数”，
+<h3 id="4-5-序列的统计求和"><a href="#4-5-序列的统计求和" class="headerlink" title="4.5 序列的统计求和"></a>4.5 序列的统计求和</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">#! keyword：“序列求和”，“序列统计出现次数”，
 
 # encoding:utf-8
 
@@ -805,7 +826,7 @@ print("nums和为\t:"+str(sum(nums))+"\nnums_plus和为\t:"+str(sum(nums_plus)))
 
 
 
-<h2 id="4-6-序列的排序"><a href="#4-6-序列的排序" class="headerlink" title="4.6 序列的排序"></a>4.6 序列的排序</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"># / 1.sort(interable【序列名】，key=none【关键词，默认为none,-
+<h3 id="4-6-序列的排序"><a href="#4-6-序列的排序" class="headerlink" title="4.6 序列的排序"></a>4.6 序列的排序</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"># / 1.sort(interable【序列名】，key=none【关键词，默认为none,-
 # / -可设置为 “str.lower” 不区分大小写】，-
 # / -reverse【降序，boolean变量，默认为升序(false)】)
 # / 2.排序可用sorted()方法，也可用 “yigexulie.sort()” -
@@ -848,7 +869,7 @@ print(numbers)<span aria-hidden="true" class="line-numbers-rows"><span></span><s
 
 
 
-<h2 id="4-7-序列推导式"><a href="#4-7-序列推导式" class="headerlink" title="4.7 序列推导式"></a>4.7 序列推导式</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"># list= [a for b in c]
+<h3 id="4-7-序列推导式"><a href="#4-7-序列推导式" class="headerlink" title="4.7 序列推导式"></a>4.7 序列推导式</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"># list= [a for b in c]
 # a:表达式; b: 为迭代个数; c: 临时量,每次取出来东西都赋值给他.
 
 # encoding:utf-8
@@ -888,7 +909,7 @@ print(list4)<span aria-hidden="true" class="line-numbers-rows"><span></span><spa
 
 
 
-<h1 id="5-元组"><a href="#5-元组" class="headerlink" title="5. 元组"></a>5. 元组</h1><p>元组不能编辑，不能删除一个或多个元素，只能整个删除</p>
+<h2 id="5-元组"><a href="#5-元组" class="headerlink" title="5. 元组"></a>5. 元组</h2><p>元组不能编辑，不能删除一个或多个元素，只能整个删除</p>
 <p> 序列为’[]’,元组为’()’,字典为’{}’。</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"># encoding:utf-8
 
@@ -922,7 +943,7 @@ print(alltuple[int(t) - 1]) # 序号从 0 开始<span aria-hidden="true" class="
 
 
 
-<h1 id="6-字典"><a href="#6-字典" class="headerlink" title="6. 字典"></a>6. 字典</h1><h2 id="6-1-字典的生成"><a href="#6-1-字典的生成" class="headerlink" title="6.1 字典的生成"></a>6.1 字典的生成</h2><p>序列为’[]’,元组为’()’,字典为’{}’。</p>
+<h2 id="6-字典"><a href="#6-字典" class="headerlink" title="6. 字典"></a>6. 字典</h2><h3 id="6-1-字典的生成"><a href="#6-1-字典的生成" class="headerlink" title="6.1 字典的生成"></a>6.1 字典的生成</h3><p>序列为’[]’,元组为’()’,字典为’{}’。</p>
 <p>示例：</p>
 <p>​    声明两个序列，用于合成字典.</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">dicti_b = {"拉丁语": "Latin", "鸟语": "!&amp;*/"}<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -979,7 +1000,7 @@ finally:
 
 
 
-<h2 id="6-2-字典的基本操作"><a href="#6-2-字典的基本操作" class="headerlink" title="6.2. 字典的基本操作"></a>6.2. 字典的基本操作</h2><p> add &amp; delete &amp; 遍历</p>
+<h3 id="6-2-字典的基本操作"><a href="#6-2-字典的基本操作" class="headerlink" title="6.2. 字典的基本操作"></a>6.2. 字典的基本操作</h3><p> add &amp; delete &amp; 遍历</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"># keyword：“字典添加”，“字典删除”，“字典遍历”
 
 # encoding :utf-8
@@ -1054,7 +1075,7 @@ for key, value in roster.items():
 
 
 
-<h1 id="7-字符串"><a href="#7-字符串" class="headerlink" title="7. 字符串"></a>7. 字符串</h1><h2 id="7-1-字符串的基本操作"><a href="#7-1-字符串的基本操作" class="headerlink" title="7.1 字符串的基本操作"></a>7.1 字符串的基本操作</h2><p>“+”，“split”，“切片”</p>
+<h2 id="7-字符串"><a href="#7-字符串" class="headerlink" title="7. 字符串"></a>7. 字符串</h2><h3 id="7-1-字符串的基本操作"><a href="#7-1-字符串的基本操作" class="headerlink" title="7.1 字符串的基本操作"></a>7.1 字符串的基本操作</h3><p>“+”，“split”，“切片”</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">#  keyword:“字符串拼接”，“字符串分割”，“字符串切片”，
 #          “字符串计算长度”.
 
@@ -1124,7 +1145,7 @@ print("\nUTF-8计数长度为：" + str(len(poem_first.encode())))<span aria-hid
 
 
 
-<h1 id="7-2-字符串索引"><a href="#7-2-字符串索引" class="headerlink" title="7.2. 字符串索引"></a>7.2. 字符串索引</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  keyword:“字符串查找”，“字符串存在判断”，
+<h2 id="7-2-字符串索引"><a href="#7-2-字符串索引" class="headerlink" title="7.2. 字符串索引"></a>7.2. 字符串索引</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  keyword:“字符串查找”，“字符串存在判断”，
 
 mulanshi = "唧唧复唧唧，木兰当户织。不闻机杼声，唯闻女叹息。问女何所思，问女何所忆。女亦无所思，女亦无所忆。昨夜见军帖，可汗大点兵，军书十二卷，卷卷有爷名。阿爷无大儿，木兰无长兄，愿为市鞍马，从此替爷征。东市买骏马，西市买鞍鞯，南市买辔头，北市买长鞭。旦辞爷娘去，暮宿黄河边，不闻爷娘唤女声，但闻黄河流水鸣溅溅。旦辞黄河去，暮至黑山头，不闻爷娘唤女声，但闻燕山胡骑鸣啾啾。万里赴戎机，关山度若飞。朔气传金柝，寒光照铁衣。将军百战死，壮士十年归。归来见天子，天子坐明堂。策勋十二转，赏赐百千强。可汗问所欲，木兰不用尚书郎，愿驰千里足，送儿还故乡。爷娘闻女来，出郭相扶将；阿姊闻妹来，当户理红妆；小弟闻姊来，磨刀霍霍向猪羊。开我东阁门，坐我西阁床，脱我战时袍，著我旧时裳。当窗理云鬓，对镜帖花黄。出门看火伴，火伴皆惊忙：同行十二年，不知木兰是女郎。雄兔脚扑朔，雌兔眼迷离；双兔傍地走，安能辨我是雄雌？"
 mulan = "木兰"
@@ -1163,7 +1184,7 @@ print(mulanshi.endswith("雄雌？"))<span aria-hidden="true" class="line-number
 
 
 
-<h1 id="7-3-格式化字符串"><a href="#7-3-格式化字符串" class="headerlink" title="7.3. 格式化字符串"></a>7.3. 格式化字符串</h1><p>% 格式化</p>
+<h2 id="7-3-格式化字符串"><a href="#7-3-格式化字符串" class="headerlink" title="7.3. 格式化字符串"></a>7.3. 格式化字符串</h2><p>% 格式化</p>
 <p>% [命名] [宽度] . [精度度] typecode</p>
 <ul>
 <li>表示右对齐。- 表示左对齐。<br>‘ ‘ 一个空格，表示在正数的左侧填充一个空格，从而与负数对齐。<br>0 表示使用 0 填充。<br>“宽度”： 表示填充后的宽度。<br>精确度：表示小数点后精度 。</li>
@@ -1338,7 +1359,7 @@ print(
     )
 )<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="8-python数据存储原理"><a href="#8-python数据存储原理" class="headerlink" title="8. python数据存储原理"></a>8. python数据存储原理</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  keyword：“存储原理”，“id()”，“id”
+<h2 id="8-python数据存储原理"><a href="#8-python数据存储原理" class="headerlink" title="8. python数据存储原理"></a>8. python数据存储原理</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  keyword：“存储原理”，“id()”，“id”
 
 # encoding: utf-8
 
@@ -1385,8 +1406,8 @@ del (a, b)
 c = "451263"
 print("id(c)", id(c))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="9-正则表达式"><a href="#9-正则表达式" class="headerlink" title="9.正则表达式"></a>9.正则表达式</h1><p>基础正则了解：<a style="font-family:’kaiti’;">[点我]([正则语法整理 | X-Y-Z`s Blog (gitee.io)](https://blogofxyz.gitee.io/2021/08/14/正则语法整理/))</a></p>
-<h2 id="9-1-查找"><a href="#9-1-查找" class="headerlink" title="9.1 查找"></a>9.1 查找</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  match &amp; search &amp; findall
+<h2 id="9-正则表达式"><a href="#9-正则表达式" class="headerlink" title="9.正则表达式"></a>9.正则表达式</h2><p>基础正则了解：<a style="font-family:’kaiti’;">[点我]([正则语法整理 | X-Y-Z`s Blog (gitee.io)](https://blogofxyz.gitee.io/2021/08/14/正则语法整理/))</a></p>
+<h3 id="9-1-查找"><a href="#9-1-查找" class="headerlink" title="9.1 查找"></a>9.1 查找</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  match &amp; search &amp; findall
 #  match     匹配整个字符。
 #  search    在字符串中匹配
 #  findall 匹配字符串中所有符合表达式的字符串。
@@ -1449,7 +1470,7 @@ print(ret_c)<span aria-hidden="true" class="line-numbers-rows"><span></span><spa
 
 
 
-<h2 id="9-2-替换"><a href="#9-2-替换" class="headerlink" title="9.2 替换"></a>9.2 替换</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  keyword: “正则替换”，
+<h3 id="9-2-替换"><a href="#9-2-替换" class="headerlink" title="9.2 替换"></a>9.2 替换</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  keyword: “正则替换”，
 
 # encoding: utf-8
 
@@ -1465,7 +1486,7 @@ print(re.sub(regular_express[1], " --XXXn-- ", letters))<span aria-hidden="true"
 
 
 
-<h2 id="9-3-分割"><a href="#9-3-分割" class="headerlink" title="9.3 分割"></a>9.3 分割</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  keyword：“正则分割”，“分割”，
+<h3 id="9-3-分割"><a href="#9-3-分割" class="headerlink" title="9.3 分割"></a>9.3 分割</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  keyword：“正则分割”，“分割”，
 # encoding: utf-8
 
 import re
@@ -1483,7 +1504,7 @@ for index, item in enumerate(tup):
 
 
 
-<h1 id="10-函数"><a href="#10-函数" class="headerlink" title="10. 函数"></a>10. 函数</h1><h2 id="10-1普通函数"><a href="#10-1普通函数" class="headerlink" title="10.1普通函数"></a>10.1普通函数</h2><p>掺杂前边的知识，搞得有点多。就算做前边的复习了。</p>
+<h2 id="10-函数"><a href="#10-函数" class="headerlink" title="10. 函数"></a>10. 函数</h2><h3 id="10-1普通函数"><a href="#10-1普通函数" class="headerlink" title="10.1普通函数"></a>10.1普通函数</h3><p>掺杂前边的知识，搞得有点多。就算做前边的复习了。</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">#  keyword: “global”，“function”，“python中的switch”，
 #           “switch”，“列表各项相加”，“函数”，“正则运用”，
 #           “正方形面积”，“圆的面积”，“一次函数”，“二次函数”
@@ -1655,7 +1676,7 @@ else:
 
 
 
-<h2 id="10-2匿名函数"><a href="#10-2匿名函数" class="headerlink" title="10.2匿名函数"></a>10.2匿名函数</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  keyword：“匿名函数”，“关键字参数”，“默认值参数”，
+<h3 id="10-2匿名函数"><a href="#10-2匿名函数" class="headerlink" title="10.2匿名函数"></a>10.2匿名函数</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  keyword：“匿名函数”，“关键字参数”，“默认值参数”，
 #  当函数中出现有默认值时必须位于参数集的最后
 
 # encoding:utf-8
@@ -1694,7 +1715,7 @@ func(*strss)<span aria-hidden="true" class="line-numbers-rows"><span></span><spa
 
 
 
-<h1 id="11-class"><a href="#11-class" class="headerlink" title="11. class"></a>11. class</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  keyword：“class”，“从序列中取随机元素”，“从字典中取随机元素”
+<h2 id="11-class"><a href="#11-class" class="headerlink" title="11. class"></a>11. class</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  keyword：“class”，“从序列中取随机元素”，“从字典中取随机元素”
 #           “choice”，
 
 # encoding:utf-8
@@ -1754,7 +1775,7 @@ print("已成功生产", numb, "辆车")<span aria-hidden="true" class="line-num
 
 
 
-<h1 id="12-访问限制"><a href="#12-访问限制" class="headerlink" title="12. 访问限制"></a>12. 访问限制</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  keyword：“访问限制”，
+<h2 id="12-访问限制"><a href="#12-访问限制" class="headerlink" title="12. 访问限制"></a>12. 访问限制</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  keyword：“访问限制”，
 #  没多大用。。。。。。。
 
 # encoding:utf-8
@@ -1779,7 +1800,7 @@ print(vehicle.price)
 print(vehicle._brand)
 print(vehicle._car__color)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="13-property"><a href="#13-property" class="headerlink" title="13. property"></a>13. property</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  keyword：“属性变化”，“装饰器”，“property”
+<h2 id="13-property"><a href="#13-property" class="headerlink" title="13. property"></a>13. property</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  keyword：“属性变化”，“装饰器”，“property”
 
 # encoding:utf-8
 
@@ -1797,7 +1818,7 @@ class car:
 spend = car(203, 450)
 print(spend.total_cost)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="14-学习中……"><a href="#14-学习中……" class="headerlink" title="14.学习中……"></a>14.学习中……</h1>
+<h2 id="14-学习中……"><a href="#14-学习中……" class="headerlink" title="14.学习中……"></a>14.学习中……</h2>
                 
             </div>
             <hr/>
@@ -2605,7 +2626,7 @@ print(spend.total_cost)<span aria-hidden="true" class="line-numbers-rows"><span>
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">10.9k</span>
+                        class="white-color">11.2k</span>
             
             
             
