@@ -353,9 +353,9 @@
     
     
     <entry>
-      <title>关于‘俺’</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
+      <title>成就</title>
+      <link href="/archives/index.html"/>
+      <url>/archives/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -375,22 +375,11 @@
     
     
     <entry>
-      <title>成就</title>
-      <link href="/archives/index.html"/>
-      <url>/archives/index.html</url>
+      <title>关于‘俺’</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>小伙伴与大佬</title>
-      <link href="/friends/index.html"/>
-      <url>/friends/index.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="赞赏名单"><a href="#赞赏名单" class="headerlink" title="赞赏名单"></a>赞赏名单</h1><p>感谢所有赞赏过我的小伙伴啦，你们的支持是我最大的动力！</p><h1 id="友链交换"><a href="#友链交换" class="headerlink" title="友链交换"></a>友链交换</h1><p>想要交换友链的小伙伴，欢迎在留言板留言，留言格式：</p><ul><li><strong>名称：</strong>你的博客名称</li><li><strong>地址：</strong>你的博客地址</li><li><strong>简介：</strong>一句话简介</li><li><strong>头像：</strong>你的头像地址</li></ul><p>例如我的博客友链，大家可以加到自己博客里哦：</p><ul><li><p><strong>名称：</strong>Zhang-little-white</p></li><li><p><strong>地址：</strong><a href="https://blogofxyz.gitee.io/">https://blogofxyz.gitee.io</a> (gitee访问快)</p><p>​           <a href="https://blogofxyz.top/">https://blogofxyz.top/</a> (github部署)</p></li><li><p><strong>简介：</strong>小白一个</p></li><li><p><strong>头像：</strong><a href="https://blogofxyz.gitee.io/medias/avatar.jpg">https://blogofxyz.gitee.io/medias/avatar.jpg</a></p></li></ul>]]></content>
       
     </entry>
     
@@ -408,6 +397,17 @@
     
     
     <entry>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>导航</title>
       <link href="/navigate/index.html"/>
       <url>/navigate/index.html</url>
@@ -419,11 +419,11 @@
     
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>小伙伴与大佬</title>
+      <link href="/friends/index.html"/>
+      <url>/friends/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h1 id="赞赏名单"><a href="#赞赏名单" class="headerlink" title="赞赏名单"></a>赞赏名单</h1><p>感谢所有赞赏过我的小伙伴啦，你们的支持是我最大的动力！</p><h1 id="友链交换"><a href="#友链交换" class="headerlink" title="友链交换"></a>友链交换</h1><p>想要交换友链的小伙伴，欢迎在留言板留言，留言格式：</p><ul><li><strong>名称：</strong>你的博客名称</li><li><strong>地址：</strong>你的博客地址</li><li><strong>简介：</strong>一句话简介</li><li><strong>头像：</strong>你的头像地址</li></ul><p>例如我的博客友链，大家可以加到自己博客里哦：</p><ul><li><p><strong>名称：</strong>Zhang-little-white</p></li><li><p><strong>地址：</strong><a href="https://blogofxyz.gitee.io/">https://blogofxyz.gitee.io</a> (gitee访问快)</p><p>​           <a href="https://blogofxyz.top/">https://blogofxyz.top/</a> (github部署)</p></li><li><p><strong>简介：</strong>小白一个</p></li><li><p><strong>头像：</strong><a href="https://blogofxyz.gitee.io/medias/avatar.jpg">https://blogofxyz.gitee.io/medias/avatar.jpg</a></p></li></ul>]]></content>
       
     </entry>
     
