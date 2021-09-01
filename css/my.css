@@ -73,7 +73,7 @@ body.dark .loading-text {
     color: #000
 }
 /*一些细节背景*/
-body.dark .block-with-text:after, body.dark .card, body.dark .collapsible-header, body.dark .wxgzh, body.dark table tr:nth-child(2n), body.dark thead {
+body.dark .block-with-text:after, body.dark .card, body.dark .collapsible-header, body.dark .wxgzh, body.dark table tr:nth-child(2n), body.dark thead ,.toc-widget .card{
     background-color: #282c34
 }
 
