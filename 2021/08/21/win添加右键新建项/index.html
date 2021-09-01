@@ -446,8 +446,8 @@ var _hmt = _hmt || [];
 
     #toc-content {
         padding-bottom: 30px;
-        overflow: auto;
-		height:500px;
+		height: calc(100vh - 250px);
+		overflow: scroll;
     }
 
     #toc-content ol {
@@ -1675,7 +1675,9 @@ $(function () {
         <i class="fas fa-arrow-up"></i>
     </a>
 </div>
-
+<a onclick="switchNightMode()" id="sma" title="模式切换">
+    <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i>
+</a>
 
     <script src="/libs/materialize/materialize.min.js"></script>
     <script src="/libs/masonry/masonry.pkgd.min.js"></script>
