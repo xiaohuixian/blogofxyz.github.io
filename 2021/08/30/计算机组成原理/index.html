@@ -448,21 +448,21 @@ var _hmt = _hmt || [];
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-08-30
+                    2021-09-01
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    111
+                    596
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -490,7 +490,31 @@ var _hmt = _hmt || [];
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="1-冯诺依曼机结构"><a href="#1-冯诺依曼机结构" class="headerlink" title="1. 冯诺依曼机结构"></a>1. 冯诺依曼机结构</h1><ul>
+                <h2 id="⚪-计算机系统组成"><a href="#⚪-计算机系统组成" class="headerlink" title="⚪. 计算机系统组成"></a>⚪. 计算机系统组成</h2><pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid">graph TD
+a[计算机系统]--&gt;aa[硬件系统]
+aa--&gt;aaa[主机]
+aaa--&gt;aaaa[中央处理器]
+aaaa--&gt;aaaaa[运算器]
+aaaa--&gt;aaaab[控制器]
+aaa--&gt;aaab[内存]
+aaab--&gt;aaaba[只读存储器]
+aaab--&gt;aaabb[随机存储器]
+aaab--&gt;aaabc[高速存储器]
+aa--&gt;aab[外设]
+aab--&gt;aaba[I/O设备]
+aab--&gt;aabb[外存]
+aab--&gt;aabc[网络设备]
+a--&gt;ab[软件系统]
+ab--&gt;aba[系统软件]
+aba--&gt;abaa[操作系统]
+aba--&gt;abab[程序设计语言]
+aba--&gt;abac[实用程序]
+ab--&gt;abb[应用软件]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="1-计算机的结构体系"><a href="#1-计算机的结构体系" class="headerlink" title="1. 计算机的结构体系"></a>1. 计算机的结构体系</h2><h3 id="1-1-冯诺依曼机结构"><a href="#1-1-冯诺依曼机结构" class="headerlink" title="1.1 冯诺依曼机结构"></a>1.1 冯诺依曼机结构</h3><p>特指硬件。</p>
+<ul>
 <li><p>输入设备</p>
 </li>
 <li><p>存储器</p>
@@ -500,14 +524,37 @@ var _hmt = _hmt || [];
 <li><p>控制器</p>
 </li>
 <li><p>输出设备</p>
-<p>现在计算机–&gt;微型计算机</p>
-<p>​    CPU（运算器、控制器）、I\O接口（输入输出接口）、存储器（外存）</p>
-<h2 id="1-1存储器（外存）"><a href="#1-1存储器（外存）" class="headerlink" title="1.1存储器（外存）"></a>1.1存储器（外存）</h2><p>存储程序与数据。</p>
-<h2 id="1-2-运算器"><a href="#1-2-运算器" class="headerlink" title="1.2 运算器"></a>1.2 运算器</h2><p>功能：</p>
-<p>​    进行算数逻辑运算</p>
-<p>组成：</p>
-<p>​    算术逻辑运算单元（ALU）、累加器、其他寄存器 </p>
-<h2 id="1-3-控制器"><a href="#1-3-控制器" class="headerlink" title="1.3 控制器"></a>1.3 控制器</h2></li>
+<p>现在计算机–&gt;微型计算机，一般由CPU（运算器、控制器）、I\O接口（输入输出接口）、存储器（外存）组成。</p>
+</li>
+</ul>
+<h4 id="1-1存储器（外存）"><a href="#1-1存储器（外存）" class="headerlink" title="1.1存储器（外存）"></a>1.1存储器（外存）</h4><p>  存储程序与数据。</p>
+<h4 id="1-2-CPU"><a href="#1-2-CPU" class="headerlink" title="1.2 CPU"></a>1.2 CPU</h4><h5 id="1-2-1-运算器"><a href="#1-2-1-运算器" class="headerlink" title="1.2.1 运算器"></a>1.2.1 运算器</h5><p>功能：进行算数逻辑运算<br>        组成：算术逻辑运算单元（ALU）、累加器、其他寄存器 </p>
+<h5 id="1-2-2-控制器"><a href="#1-2-2-控制器" class="headerlink" title="1.2.2 控制器"></a>1.2.2 控制器</h5><h4 id="1-2-3-…"><a href="#1-2-3-…" class="headerlink" title="1.2.3 ….."></a>1.2.3 …..</h4><h2 id="2-计算机软件系统"><a href="#2-计算机软件系统" class="headerlink" title="2. 计算机软件系统"></a>2. 计算机软件系统</h2><h3 id="2-1-软件"><a href="#2-1-软件" class="headerlink" title="2.1 软件"></a>2.1 软件</h3><p>用于计算机的各种程序统称为软件。</p>
+<h4 id="2-1-1-系统程序"><a href="#2-1-1-系统程序" class="headerlink" title="2.1.1 系统程序"></a>2.1.1 系统程序</h4><p>用来简化程序设计，提高计算机的使用效率，发挥和扩大计算机的功能和用途。</p>
+<ul>
+<li><p>操作系统：用来管理计算机硬件、软件资源，自动调度用户的作业程序，使多个用户能有效地共用一套系统。</p>
+</li>
+<li><p>语言程序。如汇编程序、编译程序等。</p>
+</li>
+<li><p>各种服务性程序。</p>
+</li>
+</ul>
+<h4 id="2-1-2-应用程序"><a href="#2-1-2-应用程序" class="headerlink" title="2.1.2 应用程序"></a>2.1.2 应用程序</h4><p>   用户利用计算机来解决某些问题而编制的程序。</p>
+<h2 id="3-计算机的其他组成"><a href="#3-计算机的其他组成" class="headerlink" title="3. 计算机的其他组成"></a>3. 计算机的其他组成</h2><h3 id="3-1-数据"><a href="#3-1-数据" class="headerlink" title="3.1 数据"></a>3.1 数据</h3><p>能被计算机所能接收、在储、处理的数字、字符、字母、汉字、图片、图形、声音、动画、视频<br>等都称为计算机的数据。</p>
+<h4 id="3-1-1-数"><a href="#3-1-1-数" class="headerlink" title="3.1.1  数"></a>3.1.1  数</h4><h5 id="3-1-1-1-数的流通"><a href="#3-1-1-1-数的流通" class="headerlink" title="3.1.1.1 数的流通"></a>3.1.1.1 数的流通</h5><pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid">graph LR
+a[输入信息]==转换==&gt;b[二进制形式]==输出==&gt;c[信息]
+a--便于存储,运算--&gt;b
+b--输出--&gt;c
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="4-计算机的发展趋势"><a href="#4-计算机的发展趋势" class="headerlink" title="4. 计算机的发展趋势"></a>4. 计算机的发展趋势</h2><ul>
+<li>微型化。手机，智能手表等。 </li>
+<li>巨型化。超级计算机。</li>
+<li>网络化。通讯网络。</li>
+<li>智能化。机器人。</li>
+<li>多媒体化。声音，视频，动画等媒体的诞生。</li>
 </ul>
 
                 
@@ -1037,52 +1084,46 @@ var _hmt = _hmt || [];
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/08/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">
+                <a href="/2021/08/30/Java/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="计算机组成原理">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="Java">
                         
-                        <span class="card-title">计算机组成原理</span>
+                        <span class="card-title">Java</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            大学期间必修课《计算机组成原理》学习期间做的笔记，以及整理的心得。
+                            Java选修课与自学期间整理的知识点与心得。
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-30
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-30
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/" class="post-category">
-                                    计算机
+                            <a href="/categories/Java/" class="post-category">
+                                    Java
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%AC%94%E8%AE%B0-%E5%BF%83%E5%BE%97/">
-                        <span class="chip bg-color">笔记&amp;心得</span>
-                    </a>
-                    
-                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">
-                        <span class="chip bg-color">计算机组成原理</span>
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
                     </a>
                     
                 </div>
@@ -1229,7 +1270,7 @@ var _hmt = _hmt || [];
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">11.2k</span>
+                        class="white-color">12.1k</span>
             
             
             
