@@ -591,8 +591,7 @@ var _hmt = _hmt || [];
 
 <p>​    <u>？？？为啥整数比负数少一个？？？</u></p>
 <p>​    是因为   -128<del>-1可以用 10000000</del>11111111 来表示</p>
-<p>​    开头的 ‘1’ 表示此数为负，只能用 00000000~01111111来表示0~127，因为再加一就是-128啦。</p>
-<p>​    </p><div id="char"></div><p></p>
+<p>​    开头的 ‘1’ 表示此数为负，只能用 00000000~01111111来表示0~127，因为再加一就是-128啦。    </p><div id="char"></div><p></p>
 <h3 id="2-char"><a href="#2-char" class="headerlink" title="2. char"></a>2. char</h3><p>​    char 类型占用一字节，8个二进制位。</p>
 <p>​    char为字符型，学过几门语言的人都知道：在程序中大小写英文字母，以及数字的数据大小就是一个字符。与 byte 所占内存一样为一字节。如：</p>
 <pre class="line-numbers language-c" data-language="c"><code class="language-c">char b='a';//也就是ASCII表示的字符。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -616,8 +615,7 @@ var _hmt = _hmt || [];
   <pre class="line-numbers language-c" data-language="c"><code class="language-c">float e;//大概情况为越偏离0，越不精确。32位进制位分别用作字符位（正负），整数位和尾数。建议先了解编程中的多位数科学技术法。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>  <a target="_blank" rel="noopener" href="https://blog.csdn.net/albertsh/article/details/92385277">精确度以及表示范围详解（点我！点我！）</a></p>
-<pre><code>      float类型为唯二的能表示小数的数据类型之一，另一个就是double类型。相比较double的64位，float占的内存更小。
-</code></pre>
+<p>​    float类型为唯二的能表示小数的数据类型之一，另一个就是double类型。相比较double的64位，float占的内存更小。</p>
 <div id="long"></div>
 
 <h3 id="6-long"><a href="#6-long" class="headerlink" title="6. long"></a>6. long</h3><p><span id="long"></span></p>
@@ -630,8 +628,7 @@ var _hmt = _hmt || [];
 
 <h3 id="7-double"><a href="#7-double" class="headerlink" title="7. double"></a>7. double</h3><p>  double类型  8字节，64个二进制位。</p>
 <p>  float的升级版。升级版说明 double 的特点。</p>
-<pre><code>     一般刚学编程语言的人做题时自己定义 float 型无法通过，可以换成 double 试试。因为 double 的精度更高。所以根据自己的需求选择 double 还是 float 。
-</code></pre>
+<p>​    一般刚学编程语言的人做题时自己定义 float 型无法通过，可以换成 double 试试。因为 double 的精度更高。所以根据自己的需求选择 double 还是 float 。</p>
   <div id="date"></div>
 
 <h3 id="8-date"><a href="#8-date" class="headerlink" title="8. date"></a>8. date</h3><p>  此类型与datetime，localtime，关系紧密。在各个语言中，有的只有一种，有的都存在。不同语言规定不同。比如在JavaScript 中只有date，没有datetime。date的格式如下</p>
@@ -663,22 +660,20 @@ namespace ConsoleApp1
 
 
 
-<pre><code>而HTML中，这三种又都存在。特别在input中。
-</code></pre>
+<p>​    而HTML中，这三种又都存在。特别在input中。</p>
 <ul>
 <li><p>指定为date类型时，只能输入年月日。</p>
 <input type="date" style="width:50%;margin:0 auto"></li>
-<li><p>指定为datetime时，只能输入年月日时分。</p>
+<li><p>指定为datetime时，只能输入年月日时分。但现在浏览器已不支持此控件。<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/Input/datetime">详细声明见此</a></p>
+<input type="datetime-local" style="width:50%;margin:0 auto">    </li>
+<li><p>指定为datetime-local时，只能输入年月日时分。</p>
 <input type="datetime-local" style="width:50%;margin:0 auto"></li>
 </ul>
-<p>  但现在浏览器已不支持此控件。<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/Input/datetime">详细声明见此</a></p>
-<ul>
-<li>指定为datetime-local时，只能输入年月日时分。<input type="datetime-local" style="width:50%;margin:0 auto"></li>
-</ul>
-<p>  具体数据显示格式根据语言不同也不同。<br>  </p><div id="other"></div><p></p>
+<p>   具体数据显示格式根据语言不同也不同。</p>
+  <div id="other"></div>
+
 <h3 id="9-other"><a href="#9-other" class="headerlink" title="9. other"></a>9. other</h3><p>  other 是指这几种类型可以与 sign，unsign，还有叠加形式。</p>
-<pre><code>如：
-</code></pre>
+<p>如：</p>
   <pre class="line-numbers language-c" data-language="c"><code class="language-c">long long g;//128位
 unsign int h;//无符号整型。划负为正，正数的范围乘2.
 long int i；//还是int<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
