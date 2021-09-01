@@ -4,31 +4,31 @@
 #sma {
     box-shadow: #aaa 2px 5px 10px;
     background: #000;
-    width: 38px;
-    height: 38px;
+    width: 45px;
+    height: 45px;
     display: block;
     position: fixed;
     border-radius: 50%;
     right: 15px;
-    bottom: 100px;
+    top: 150px;
     padding-top: 15px;
     margin-bottom: 0;
-    z-index: 998;
-    cursor: pointer
+    z-index: 1;
+    cursor: pointer;
 }
 
 #sma .fa-moon-o {
     position: absolute;
-    right: 8px;
-    bottom: 8px;
+    right: 11px;
+    bottom: 10px;
     font-size: 1.48rem !important
 }
 
 #sma .fa-lightbulb {
     position: absolute;
-    right: 11px;
-    bottom: 8px;
-    font-size: 1.5rem !important
+    right: 14px;
+    bottom: 10px;
+    font-size: 1.5rem !important;
 }
 
 .fa-moon-o:before {
@@ -43,7 +43,7 @@
     color: rgba(255, 255, 255, .85)/*.85为透明度，可依据需求修改*/
 }
 /* 背景颜色变黑色 */
-body.dark, body.dark #rewardModal .modal-content, body.dark .archive-container, body.dark .modal, body.dark .v[data-class=v] .vcount, body.dark header .side-nav, body.dark header .side-nav .menu-list .m-nav-show {
+body.dark, body.dark #rewardModal .modal-content, body.dark .archive-container, body.dark .modal, body.dark .v[data-class=v] .vcount, body.dark header .side-nav, body.dark header .side-nav .menu-list .m-nav-show,.Select-box-2 .this_s  {
     background-color: #12121c
 }
 /*首页文章滑动卡片文字*/
