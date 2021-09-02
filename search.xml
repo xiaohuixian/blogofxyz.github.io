@@ -126,38 +126,9 @@
       
         <tags>
             
-            <tag> 笔记&amp;心得 </tag>
-            
             <tag> 计算机组成原理 </tag>
             
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>SEO &amp; SEM 笔记</title>
-      <link href="/2021/08/30/SEO&amp;SEM%E7%AC%94%E8%AE%B0/"/>
-      <url>/2021/08/30/SEO&amp;SEM%E7%AC%94%E8%AE%B0/</url>
-      
-        <content type="html"><![CDATA[<h2 id="1-SEO-认识"><a href="#1-SEO-认识" class="headerlink" title="1. SEO 认识"></a>1. SEO 认识</h2><p>SEO（Search Engine Optimization）：汉译为搜索引擎优化。是一种方式：利用<a href="https://baike.baidu.com/item/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/104812">搜索引擎</a>的规则提高网站在有关搜索引擎内的<a href="https://baike.baidu.com/item/%E8%87%AA%E7%84%B6%E6%8E%92%E5%90%8D/2092669">自然排名</a>。目的是让其在行业内占据领先地位，获得品牌收益。很大程度上是网站经营者的一种商业行为，将自己或自己公司的排名前移。</p><h2 id="2-SEO原理"><a href="#2-SEO原理" class="headerlink" title="2. SEO原理"></a>2. SEO原理</h2>]]></content>
-      
-      
-      <categories>
-          
-          <category> SEO SEM </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> SEO </tag>
-            
             <tag> 笔记&amp;心得 </tag>
-            
-            <tag> SEM </tag>
             
         </tags>
       
@@ -442,9 +413,9 @@
     
     
     <entry>
-      <title>导航</title>
-      <link href="/navigate/index.html"/>
-      <url>/navigate/index.html</url>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -464,22 +435,22 @@
     
     
     <entry>
-      <title>小伙伴与大佬</title>
-      <link href="/friends/index.html"/>
-      <url>/friends/index.html</url>
+      <title>导航</title>
+      <link href="/navigate/index.html"/>
+      <url>/navigate/index.html</url>
       
-        <content type="html"><![CDATA[<h1 id="赞赏名单"><a href="#赞赏名单" class="headerlink" title="赞赏名单"></a>赞赏名单</h1><p>感谢所有赞赏过我的小伙伴啦，你们的支持是我最大的动力！</p><h1 id="友链交换"><a href="#友链交换" class="headerlink" title="友链交换"></a>友链交换</h1><p>想要交换友链的小伙伴，欢迎在留言板留言，留言格式：</p><ul><li><strong>名称：</strong>你的博客名称</li><li><strong>地址：</strong>你的博客地址</li><li><strong>简介：</strong>一句话简介</li><li><strong>头像：</strong>你的头像地址</li></ul><p>例如我的博客友链，大家可以加到自己博客里哦：</p><ul><li><p><strong>名称：</strong>Zhang-little-white</p></li><li><p><strong>地址：</strong><a href="https://blogofxyz.gitee.io/">https://blogofxyz.gitee.io</a> (gitee访问快)</p><p>​           <a href="https://blogofxyz.top/">https://blogofxyz.top/</a> (github部署)</p></li><li><p><strong>简介：</strong>小白一个</p></li><li><p><strong>头像：</strong><a href="https://blogofxyz.gitee.io/medias/avatar.jpg">https://blogofxyz.gitee.io/medias/avatar.jpg</a></p></li></ul>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>小伙伴与大佬</title>
+      <link href="/friends/index.html"/>
+      <url>/friends/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h1 id="赞赏名单"><a href="#赞赏名单" class="headerlink" title="赞赏名单"></a>赞赏名单</h1><p>感谢所有赞赏过我的小伙伴啦，你们的支持是我最大的动力！</p><h1 id="友链交换"><a href="#友链交换" class="headerlink" title="友链交换"></a>友链交换</h1><p>想要交换友链的小伙伴，欢迎在留言板留言，留言格式：</p><ul><li><strong>名称：</strong>你的博客名称</li><li><strong>地址：</strong>你的博客地址</li><li><strong>简介：</strong>一句话简介</li><li><strong>头像：</strong>你的头像地址</li></ul><p>例如我的博客友链，大家可以加到自己博客里哦：</p><ul><li><p><strong>名称：</strong>Zhang-little-white</p></li><li><p><strong>地址：</strong><a href="https://blogofxyz.gitee.io/">https://blogofxyz.gitee.io</a> (gitee访问快)</p><p>​           <a href="https://blogofxyz.top/">https://blogofxyz.top/</a> (github部署)</p></li><li><p><strong>简介：</strong>小白一个</p></li><li><p><strong>头像：</strong><a href="https://blogofxyz.gitee.io/medias/avatar.jpg">https://blogofxyz.gitee.io/medias/avatar.jpg</a></p></li></ul>]]></content>
       
     </entry>
     
