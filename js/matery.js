@@ -183,6 +183,7 @@ if (localStorage.getItem("dark") === "1") {
     if (new Date().getHours() >= 19 || new Date().getHours() < 7) {
         document.body.classList.add("dark");
         $("#nightMode").removeClass("fa-lightbulb").addClass("fa-moon-o")
+		localStorage.setItem("dark", "1");
     } 
 	/* else {
         if (matchMedia("(prefers-color-scheme: dark)").matches) {
