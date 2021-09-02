@@ -184,7 +184,7 @@ if (localStorage.getItem("dark") === "1") {
         document.body.classList.add("dark");
         $("#nightMode").removeClass("fa-lightbulb").addClass("fa-moon-o")
 		localStorage.setItem("dark", "1");
-    } 
+    }
 	/* else {
         if (matchMedia("(prefers-color-scheme: dark)").matches) {
             document.body.classList.add("dark")
