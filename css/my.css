@@ -26,6 +26,7 @@
 }
 
 #sma .fa-lightbulb {
+  color: rgba(237, 255, 74, 0.9) !important;
   position: absolute;
   right: 18px;
   bottom: 15px;

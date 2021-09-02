@@ -1824,8 +1824,8 @@ ul:not(.browser-default) {
 ul:not(.browser-default) > li {
   list-style-type: none;
 }
-a {
-  color: #039be5;
+a .fa-3x{
+  color: #18e503;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
 }
