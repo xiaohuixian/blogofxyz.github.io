@@ -178,9 +178,9 @@ if (localStorage.getItem("dark") === "1") {
     document.body.classList.add("dark")
 } else {
     /*定时开启暗色模式<默认晚22点至早6点默认开启>*/
-    if (new Date().getHours() >= 22 || new Date().getHours() < 6) {
+    if (new Date().getHours() >= 19 || new Date().getHours() < 7) {
         document.body.classList.add("dark");
-        $("#nightMode").removeClass("fa-moon-o").addClass("fa-lightbulb")
+        $("#nightMode").removeClass("fa-lightbulb").addClass("fa-moon-o")
     } else {
         if (matchMedia("(prefers-color-scheme: dark)").matches) {
             document.body.classList.add("dark")
