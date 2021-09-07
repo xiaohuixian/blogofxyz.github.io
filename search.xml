@@ -4,6 +4,50 @@
   
     
     <entry>
+      <title>计算机中的数</title>
+      <link href="/2021/09/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E6%95%B0/"/>
+      <url>/2021/09/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E6%95%B0/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-源码"><a href="#1-源码" class="headerlink" title="1. 源码"></a>1. 源码</h2><p>符号位 0表示正数，1表示负数；其余各位等同于真值的绝对值（二进制）。</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[-3] -&gt;1 000 0110 [+0] -&gt;0 000 0000   <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h2 id="2-反码"><a href="#2-反码" class="headerlink" title="2. 反码"></a>2. 反码</h2><p>符号位的用法及正数的表示与“原码”相同；负数的表示是在“原码”表示的基础上，将符号位以外的各位取反。</p><p>特别的 “0” 。</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[+5]-&gt; 0 000 0101  [-5]-&gt; 1 111 1010 [+0]-&gt; 0 000 0000 [-0]-&gt; 1 111 1111 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h2 id="3-补码"><a href="#3-补码" class="headerlink" title="3. 补码"></a>3. 补码</h2><p>​        符号位的用法及正数的表示与“原码”相同；负数的表示是在“反码”表示的基础上，通过加1来获得的。</p><p>另，当原码为负时，补码即此负数对字节长所表示最大数（无符号位）取余。</p><p>如，-3-&gt;<code>1011</code> <sub>原码</sub>  -&gt; <code>1100</code> <sub>反码</sub>  -&gt; <code>1101</code> <sub>补码</sub> 。</p><p>​    等价于： -3 %16  = 13 -&gt; <code>1101</code> <sub>原码</sub></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 计算机原理 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ASCII码 </tag>
+            
+            <tag> 反码 </tag>
+            
+            <tag> 补码 </tag>
+            
+            <tag> 原码 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/2021/09/03/%E6%8A%80%E6%9C%AF%E8%83%96%E6%94%B6%E8%97%8F%E5%A4%B9/"/>
+      <url>/2021/09/03/%E6%8A%80%E6%9C%AF%E8%83%96%E6%94%B6%E8%97%8F%E5%A4%B9/</url>
+      
+        <content type="html"><![CDATA[<h1 id="自学前端程序-私藏工具和网站分享"><a href="#自学前端程序-私藏工具和网站分享" class="headerlink" title="自学前端程序 私藏工具和网站分享"></a>自学前端程序 私藏工具和网站分享</h1><p>转载于 B站 宝藏up主 —— <a href="https://space.bilibili.com/165659472/?spm_id_from=333.999.0.0">技术胖</a> 分享收藏夹。</p><h2 id="01-JavaScript"><a href="#01-JavaScript" class="headerlink" title="01.JavaScript"></a>01.JavaScript</h2><ul><li><a href="https://wangdoc.com/javascript/">JavaScript 教程 | 通俗易懂的JavaScript教程</a></li><li><a href="https://es6.ruanyifeng.com/">ES6 入门教程 | 通俗易懂的ES6入门教程</a></li><li><a href="https://javascript30.com/">JavaScript 30  |  使用原生JavaScript在30天内完成30个项目</a></li><li><a href="https://zh.javascript.info/">现代 JavaScript 教程 |  最近很流行的JavaScript教程</a></li><li><a href="https://blog.poetries.top/node-learning-notes/">Node.js学习指南 | 系统的Node.js学习教程和笔记系统整理</a></li><li><a href="https://github.com/ryanmcdermott/clean-code-javascript">JS 代码规范 | 优秀的 JS代码规范</a></li><li><a href="https://github.com/xcatliu/typescript-tutorial">TypeScript 教程 | 通俗易懂的TypeScript教程</a></li><li><a href="https://jspang.com/detailed?id=63">TypeScript 教程 |  最好的TypeScript 视频+图文教程</a></li></ul><h2 id="02-CSS样式"><a href="#02-CSS样式" class="headerlink" title="02.CSS样式"></a>02.CSS样式</h2><ul><li><a href="https://lhammer.cn/You-need-to-know-css/#/zh-cn/">CSS Tricks 效果大全 | CSS的各种效果实现 有很多动画效果</a></li><li><a href="https://github.com/chokcoco/CSS-Inspiration">CSS Inspiration |  CSS灵感的诞生地  我每天都的网站</a></li><li><a href="https://github.com/QiShaoXuan/css_tricks"> CSS 常用样式 |  有很多常用的CSS样式</a></li><li><a href="https://animista.net/"> Animista | CSS动画库  主打按需定制CSS动画效果</a></li><li><a href="https://cssminifier.com/"> CSS Minifier | 在线CSS代码简化/压缩工具</a></li><li><a href="https://sass.bootcss.com/documentation"> Sass: Sass 文档 | Sass 中文网  成熟、稳定、强大的CSS扩展语言</a></li><li><a href="https://less.bootcss.com/"> Less 快速入门 | Less.js 中文文档 将CSS赋予了动态语言特性的样式语言</a></li><li><a href="https://stylus-lang.com/"> stylus | CSS扩展  富有变现里、动态、健壮的CSS</a></li></ul><h2 id="03-算法数据"><a href="#03-算法数据" class="headerlink" title="03.算法数据"></a>03.算法数据</h2><ul><li><a href="http://github.com/trekhleb/javascript-algorithms"> JavaScript 算法与数据结构 | 多种基于JavaScript的算法与数据结构</a></li><li><a href="https://github.com/azl397985856/leetcode"> leetcode 解题之路 |  私藏LeetCode解题攻略 </a></li><li><a href="https://github.com/MisterBooo/LeetCodeAnimation"> 五分钟学算法 |  每天拿出五分钟  学学算法  比如上个厕所就学了 </a></li><li><a href="https://github.com/biaochenxuying/blog/issues/43">数据结构与算法项目推荐 | Github上170K+Star的前端学习数据结构和算法题目 </a></li><li><a href="https://github.com/biaochenxuying/blog/issues/42">JavaScript  十大经典排序算法 | JavaScript排序必会题目  作者功力很深 值得学习 </a></li><li><a href="https://github.com/algorithm-visualizer/algorithm-visualizer">算法可视化工具 |  用可视化工具和交互方式 让你从代码中可视化算法 </a></li><li><a href="https://visualgo.net/en">算法可视化来源 </a></li><li><a href="https://github.com/skidding/illustrated-algorithms">算法的工作方式 | 变量和操作的可视化表示 增强了控制流和实际源代码 </a></li></ul><h2 id="04-前端面试"><a href="#04-前端面试" class="headerlink" title="04.前端面试"></a>04.前端面试</h2><ul><li><a href="https://blog.poetries.top/FE-Interview-Questions/">前端面试常考问题整理 |  按模块和知识点分类</a></li><li><a href="https://github.com/markyun/My-blog/tree/master/Front-end-Developer-Questions">前端开发面试题</a></li><li><a href="https://github.com/h5bp/Front-end-Developer-Interview-Questions/">WEB前端面试宝典</a></li><li><a href="https://github.com/shfshanyue/blog/blob/master/post/juejin-interview.md">掘金前端面试题合集</a></li><li><a href="https://yuchengkai.cn/">前端面试图谱</a></li><li><a href="https://github.com/biaochenxuying/blog/issues/47">前端面试开源项目汇总 | Github上100K+ Star 的前端面试开源项目汇总</a></li></ul><h2 id="05-技术社区"><a href="#05-技术社区" class="headerlink" title="05.技术社区"></a>05.技术社区</h2><ul><li><a href="https://github.com/">GitHub  |  高质量内容创作和分享平台</a></li><li><a href="https://stackoverflow.com/">Stackoverflow |一个回答技术问题的网站</a></li><li><a href="https://juejin.cn/">掘金 | 国内的很多优质前端文章都掘金</a></li><li><a href="https://www.cnblogs.com/">博客园  | 一个很纯粹的技术博客平台</a></li><li><a href="https://www.zhihu.com/">知乎 |  很多程序人喜欢泡在知乎</a></li><li><a href="https://www.csdn.net/">CSDN  | 老牌社区  程序员必上的一个社区</a></li><li><a href="https://www.v2ex.com/">v2ex  | 程序员分享和探索的社区</a></li><li><a href="https://segmentfault.com/">segmentfault  | 低调技术博客社区</a></li><li><a href="https://cnodejs.org/">Node.js 中文社区 |  node专业中文社区</a></li><li><a href="https://www.smashingmagazine.com/">博客杂志站点 | 一个 web 技术类的博客杂志站点</a></li><li><a href="https://www.jstips.co/">JS 技术的网站 | 每天推出一个JS技巧的网站</a></li><li><a href="https://www.jstips.co/">W3Cplus | 推广国内行业的技术博客</a></li><li><a href="https://docschina.org/">印记中文 | 最权威的技术中文文档社区</a></li></ul><h2 id="06-前端博客"><a href="#06-前端博客" class="headerlink" title="06.前端博客"></a>06.前端博客</h2><ul><li><a href="https://jspang.com/">技术胖博客 |  专注前端 每年100集免费前端视频</a></li><li><a href="http://www.alloyteam.com/">腾讯Alloy Team  | 腾讯前端博客 每天必看</a></li><li><a href="https://isux.tencent.com/">腾讯用户体验博客 | 专注于前端用户体验</a></li><li><a href="https://fed.taobao.org/">淘系前端博客 |  淘宝前端博客 代表中国最强前端实力</a></li><li><a href="https://aotu.io/">京东凹凸实验室  |  京东前端技术博客</a></li><li><a href="https://zhuanlan.zhihu.com/ElemeFE">饿了么前端博客  |  知乎上的最强前端博客</a></li><li><a href="http://fex.baidu.com/">百度前端博客  |  百度前端团队旗下博客</a></li><li><a href="https://75.team/">360奇舞团  |  360公司前端团队</a></li><li><a href="https://tech.meituan.com/">美团技术博客  |  美团技术团队博客</a></li></ul><h2 id="07-构建工具"><a href="#07-构建工具" class="headerlink" title="07.构建工具"></a>07.构建工具</h2><ul><li><a href="https://www.npmjs.com/">NPM |  包管理 和 项目构建工具</a></li><li><a href="https://webpack.js.org/">webpack  | 前端最流行的项目构建工具</a></li><li><a href="https://yarnpkg.com/">Yarn  |  后起之秀 优秀的包管理和构建工具</a></li><li><a href="https://www.gulpjs.com.cn/">Gulp  |  老牌构建工具</a></li><li><a href="https://babeljs.io/">Babel  | ES6构建转换工具</a></li><li><a href="https://cn.eslint.org/">ESLint  | 可组装的JavaScript和JSX检查工具</a></li><li><a href="https://www.postcss.com.cn/">PostCSS | 用JavaScript转换CSS代码的工具</a></li></ul><h2 id="08-部署工具"><a href="#08-部署工具" class="headerlink" title="08.部署工具"></a>08.部署工具</h2><ul><li><a href="https://pages.github.com/">Github Page  | Github提供的免费静态网站托管服务</a></li><li><a href="https://www.netlify.com/">Netlify  |  30秒内部署你的网站</a></li><li><a href="https://vercel.com/">Vercel  |  快速部署你的网站 国外很流行</a></li><li><a href="https://surge.sh/">Surge  |  一个命令部署你的网站</a></li><li><a href="https://www.heroku.com/">Heroku  |  运动构建 、 运行你的网站和应用</a></li></ul><h2 id="09-静态站点搭建"><a href="#09-静态站点搭建" class="headerlink" title="09.静态站点搭建"></a>09.静态站点搭建</h2><ul><li><a href="https://hexo.io/zh-cn/">Hexo  |  最流行的静态博客程序 Markdown编写 生成静态站点</a></li><li><a href="https://www.vuepress.cn/">VuePress  |  Vue驱动的静态网站生成器</a></li><li><a href="https://www.gitbook.com/">GitBook  | 现代化的文档平台，支持团队协作</a></li></ul><h2 id="10-前端代码规范"><a href="#10-前端代码规范" class="headerlink" title="10.前端代码规范"></a>10.前端代码规范</h2><ul><li><a href="https://tgideas.qq.com/doc/index.html">Tgideas | 腾讯前端代码规范 值得参考</a></li><li><a href="https://guide.aotu.io/index.html">京东  |  京东前端代码规范文档 分类详细</a></li><li><a href="https://codeguide.bootcss.com/">Bootstrap编码规范  |  适合个人和小团队使用的代码规范 不复杂</a></li><li><a href="https://es6.ruanyifeng.com/#docs/style">ES6 编程风格  | 阮一峰编写的ES6代码规范  值得每个人阅读并参考</a></li><li><a href="https://github.com/airbnb/javascript">Airbnb  前端代码规范  |  国外企业的前端代码规范</a></li><li><a href="https://eslint.org/">ESLint  |  代码规范检查和格式化工具</a></li><li><a href="https://prettier.io/">Prettier  | VSCode 最热门的代码格式化工具  让你写出漂亮的代码</a></li></ul><h2 id="11-调试抓包"><a href="#11-调试抓包" class="headerlink" title="11.调试抓包"></a>11.调试抓包</h2><ul><li><a href="https://wproxy.org/whistle/">Whistle  |  代理抓包工具  我一直在用的工具 很好很强大</a></li><li><a href="https://www.telerik.com/fiddler">Fiddler  |  使用人数最多的抓包工具</a></li></ul><h2 id="12-在线工具"><a href="#12-在线工具" class="headerlink" title="12.在线工具"></a>12.在线工具</h2><ul><li><a href="https://codepen.io/">CodePen  |  前端在线测试和演示工具  国外站点</a></li><li><a href="https://caniuse.com/">Can  I  use |  Web前端兼容性列表</a></li><li><a href="https://tinypng.com/">TinyPNG  |  PNG/JPG 图片在线压缩工具</a></li><li><a href="https://www.umeng.com/">CNZZ |  老牌站点统计工具  5年前国内站长必上网站</a></li><li><a href="https://web.dev/measure/">web.dev  |  评测网站性能  基于Lighthouse</a></li><li><a href="https://www.shapedivider.app/">Shape Divider  | 定制各种形状SVG的工具</a></li><li><a href="https://gtmetrix.com/">GTmetrix  |  网页性能在线分析工具</a></li><li><a href="https://carbon.now.sh/">Carbon  |  代码转图片工具  </a></li><li><a href="https://www.wappalyzer.com/">Wappalyzer  |  检测某个网站的技术栈  </a></li><li><a href="https://unbug.github.io/codelf">CODEIF | 变量方法起名工具  人工智能加持  </a></li><li><a href="https://tool.lu/"> tool.lu  |  程序员在线工具大全   </a></li></ul><h2 id="13-开发工具"><a href="#13-开发工具" class="headerlink" title="13.开发工具"></a>13.开发工具</h2><ul><li><a href="https://code.visualstudio.com/"> VSCode  |  前端最流行的编辑器   </a></li><li><a href="https://www.sublimetext.com/"> Sublime Text  |  轻量级代码编辑工具 曾经我的最爱   </a></li><li><a href="https://www.jetbrains.com/webstorm/"> WebStom |  忠爱粉最多的编辑器 </a></li><li><a href="https://atom.io/"> Atom  |   用的人很多  我却不喜欢的编辑器 </a></li><li><a href="https://www.typora.io/"> Typora |  程序人Mrakdown笔记  一直在用的笔记工具 </a></li></ul><h2 id="14-开发者大会"><a href="#14-开发者大会" class="headerlink" title="14.开发者大会"></a>14.开发者大会</h2><ul><li><a href="https://fequan.com/"> Vue.js开发者大会 |  前端人必须关注的前端大会 </a></li><li><a href="https://jsconfchina.com/"> 中国JS开发者大会  |  公司每年必组织参加的技术大会 </a></li><li><a href="https://css.w3ctech.com/"> CSS开发者大会 |  提高CSS技术的开发者大会  打开视野 面向世界 </a></li><li><a href="https://www.alibabaf2e.com/"> D2前端开发者大会 |  阿里组织的大会 可以看直播  </a></li></ul><h2 id="15-WEB图标"><a href="#15-WEB图标" class="headerlink" title="15.WEB图标"></a>15.WEB图标</h2><ul><li><a href="http://www.fontawesome.com.cn/"> Font Awesome  |  网站开发最流行的图标集  </a></li><li><a href="https://feathericons.com/"> Feather |  简洁美观的开源图标  </a></li><li><a href="https://material.io/resources/icons/"> Material  Design Icons  |  轻快、精美的符号图标  </a></li><li><a href="https://tablericons.com/"> Tabler Icons | 681枚可定制的开源SVG图标  </a></li><li><a href="https://simpleicons.org/"> 常见品牌的SVG图标  </a></li></ul>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>SEM</title>
       <link href="/2021/09/02/SEM/"/>
       <url>/2021/09/02/SEM/</url>
@@ -58,12 +102,12 @@
       <link href="/2021/09/02/%E5%B0%8F%E6%95%B0%E8%BD%AC%E6%8D%A2%E4%BA%8C%E8%BF%9B%E5%88%B6/"/>
       <url>/2021/09/02/%E5%B0%8F%E6%95%B0%E8%BD%AC%E6%8D%A2%E4%BA%8C%E8%BF%9B%E5%88%B6/</url>
       
-        <content type="html"><![CDATA[<h2 id="二进制转换为小数"><a href="#二进制转换为小数" class="headerlink" title="二进制转换为小数"></a>二进制转换为小数</h2><p>直接开干。</p><p>  以<code>0.35</code>为例.</p><p>每次用小数部分乘2，所得积的整数部分作为二进制的一位。</p><ol><li><pre><code>  ​      0.35 x 2=0.7--&gt;0</code></pre></li><li>​      0.70 x 2=1.4–&gt;1</li><li>​      0.40 x 2=0.8–&gt;0</li><li>​      0.80 x 2=1.6–&gt;1</li><li>​      0.60 x 2=1.2–&gt;1</li><li>​      0.20 x 2=0.4–&gt;0<br>   ​    ​    ……</li></ol><p>然后就是<code>3~8</code>不停循环。</p><p>这就是<code>float</code>类型的数据不是很准确的原因。</p><p>这里就看是32位浮点数，还是64位浮点数。32位时，加上整数位取23位为止。64位同理。</p><p>所以0.35转换后为 <code>0101 1001 1001 1001 1001 ... </code></p><h3 id="符号位"><a href="#符号位" class="headerlink" title="符号位"></a>符号位</h3><p>然后，此数为正，S 位为0；</p><h3 id="指数位"><a href="#指数位" class="headerlink" title="指数位"></a>指数位</h3><p>此数二进制为1.011011011… x 2<sup>-2</sup>  ，故指数位为  -2 + 127=125<sub>D</sub> –&gt;<code>01111101</code><sub>b</sub></p><h3 id="基数位"><a href="#基数位" class="headerlink" title="基数位"></a>基数位</h3><p>循环着取23位即可。即 <code>0110 0110 0110 0110 0110 011</code></p><p>故<code>0.35</code> 转换为二进制为 <code>0 0111 1101  0110 0110 0110 0110 0110 011</code></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="小数转换为二进制"><a href="#小数转换为二进制" class="headerlink" title="小数转换为二进制"></a>小数转换为二进制</h2><p>直接开干。</p><p>  以<code>0.35</code>为例.</p><p>每次用小数部分乘2，所得积的整数部分作为二进制的一位。</p><ol><li><pre><code>  ​      0.35 x 2=0.7--&gt;0</code></pre></li><li>​      0.70 x 2=1.4–&gt;1</li><li>​      0.40 x 2=0.8–&gt;0</li><li>​      0.80 x 2=1.6–&gt;1</li><li>​      0.60 x 2=1.2–&gt;1</li><li>​      0.20 x 2=0.4–&gt;0<br>   ​    ​    ……</li></ol><p>然后就是<code>3~8</code>不停循环。</p><p>这就是<code>float</code>类型的数据不是很准确的原因。</p><p>这里就看是32位浮点数，还是64位浮点数。32位时，加上整数位取23位为止。64位同理。</p><p>所以0.35转换后为 <code>0101 1001 1001 1001 1001 ... </code></p><h3 id="符号位"><a href="#符号位" class="headerlink" title="符号位"></a>符号位</h3><p>然后，此数为正，S 位为0；</p><h3 id="指数位"><a href="#指数位" class="headerlink" title="指数位"></a>指数位</h3><p>此数二进制为1.011011011… x 2<sup>-2</sup>  ，故指数位为  -2 + 127=125<sub>D</sub> –&gt;<code>01111101</code><sub>b</sub></p><h3 id="基数位"><a href="#基数位" class="headerlink" title="基数位"></a>基数位</h3><p>循环着取23位即可。即 <code>0110 0110 0110 0110 0110 011</code></p><p>故<code>0.35</code> 转换为二进制为 <code>0 0111 1101  0110 0110 0110 0110 0110 011</code></p>]]></content>
       
       
       <categories>
           
-          <category> 数据类型 </category>
+          <category> 计算机原理 </category>
           
       </categories>
       
@@ -71,6 +115,10 @@
         <tags>
             
             <tag> 数据转换 </tag>
+            
+            <tag> 计算机组成原理 </tag>
+            
+            <tag> 二进制 </tag>
             
         </tags>
       
@@ -88,16 +136,16 @@
       
       <categories>
           
-          <category> 数据结构 </category>
+          <category> 计算机原理 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 浮点数 </tag>
-            
             <tag> 二进制 </tag>
+            
+            <tag> 浮点数 </tag>
             
             <tag> 数据结构 </tag>
             
@@ -169,7 +217,7 @@
       
       <categories>
           
-          <category> 计算机 </category>
+          <category> 计算机原理 </category>
           
       </categories>
       
@@ -277,7 +325,7 @@
       
       <categories>
           
-          <category> 数据结构 </category>
+          <category> 计算机原理 </category>
           
       </categories>
       
@@ -430,17 +478,6 @@
     
     
     <entry>
-      <title>关于‘俺’</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>成就</title>
       <link href="/archives/index.html"/>
       <url>/archives/index.html</url>
@@ -452,9 +489,9 @@
     
     
     <entry>
-      <title>类别</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>关于‘俺’</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -463,9 +500,20 @@
     
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>交流</title>
+      <link href="/contact/index.html"/>
+      <url>/contact/index.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="欢迎留言"><a href="#欢迎留言" class="headerlink" title="欢迎留言"></a>欢迎留言</h1><p>大家有任何问题，都可以在评论区给我留言，或者加我联系方式：</p><ul><li><strong>Q Q</strong>：<strong>1970476603</strong></li><li><strong>微信</strong>：<strong>i_19-99-666</strong></li></ul><p>欢迎来访<br><strong>当然不介意小jiejie加我~~</strong></p><h1 id="友链交换"><a href="#友链交换" class="headerlink" title="友链交换"></a>友链交换</h1><p>想要交换友链的小伙伴，欢迎在评论区留言，留言格式：</p><ul><li><strong>名称：</strong>你的博客名称</li><li><strong>地址：</strong>你的博客地址</li><li><strong>简介：</strong>一句话简介</li><li><strong>头像：</strong>你的头像地址</li></ul><p>例如我的博客友链，大家可以加到自己博客里哦：</p><ul><li><strong>名称：</strong>张小白</li><li><strong>地址：</strong><a href="https://blogofxyz.gitee.io/">https://blogofxyz.gitee.io</a> (国内访问快)/<a href="https://blogofxyz.top/">https://blogofxyz.top/</a> (github部署)</li><li><strong>简介：</strong>平时没少学没用东西的一个家伙。</li><li><strong>头像：</strong><a href="https://blogofxyz.gitee.io/medias/avatar.jpg">https://blogofxyz.gitee.io/medias/avatar.jpg</a></li></ul>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>类别</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -485,20 +533,20 @@
     
     
     <entry>
-      <title>交流</title>
-      <link href="/contact/index.html"/>
-      <url>/contact/index.html</url>
+      <title>导航</title>
+      <link href="/navigate/index.html"/>
+      <url>/navigate/index.html</url>
       
-        <content type="html"><![CDATA[<h1 id="欢迎留言"><a href="#欢迎留言" class="headerlink" title="欢迎留言"></a>欢迎留言</h1><p>大家有任何问题，都可以在评论区给我留言，或者加我联系方式：</p><ul><li><strong>Q Q</strong>：<strong>1970476603</strong></li><li><strong>微信</strong>：<strong>i_19-99-666</strong></li></ul><p>欢迎来访<br><strong>当然不介意小jiejie加我~~</strong></p><h1 id="友链交换"><a href="#友链交换" class="headerlink" title="友链交换"></a>友链交换</h1><p>想要交换友链的小伙伴，欢迎在评论区留言，留言格式：</p><ul><li><strong>名称：</strong>你的博客名称</li><li><strong>地址：</strong>你的博客地址</li><li><strong>简介：</strong>一句话简介</li><li><strong>头像：</strong>你的头像地址</li></ul><p>例如我的博客友链，大家可以加到自己博客里哦：</p><ul><li><strong>名称：</strong>张小白</li><li><strong>地址：</strong><a href="https://blogofxyz.gitee.io/">https://blogofxyz.gitee.io</a> (国内访问快)/<a href="https://blogofxyz.top/">https://blogofxyz.top/</a> (github部署)</li><li><strong>简介：</strong>平时没少学没用东西的一个家伙。</li><li><strong>头像：</strong><a href="https://blogofxyz.gitee.io/medias/avatar.jpg">https://blogofxyz.gitee.io/medias/avatar.jpg</a></li></ul>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>导航</title>
-      <link href="/navigate/index.html"/>
-      <url>/navigate/index.html</url>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       

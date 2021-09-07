@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-    <meta name="keywords" content="markdown,typora,进阶">
+    <meta name="keywords" content="想学啥学点啥">
     <meta name="description" content="C# | Web | html | python |">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>markdown进阶 | X-Y-Z`s Blog</title>
+    <title>X-Y-Z`s Blog</title>
 	
     <link rel="icon" type="image/png" href="/favicon.png">
 
@@ -385,12 +385,12 @@ var _hmt = _hmt || [];
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">markdown进阶</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -400,39 +400,117 @@ var _hmt = _hmt || [];
 
 
 
-<main class="container content">
+<main class="post-container content">
 
     
-    <!-- 文章内容详情 -->
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+		height: 500px;
+		overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/markdown/">
-                                <span class="chip bg-color">markdown</span>
-                            </a>
-                        
-                            <a href="/tags/typora/">
-                                <span class="chip bg-color">typora</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/markdown/" class="post-category">
-                                markdown
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -441,28 +519,28 @@ var _hmt = _hmt || [];
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-08-31
+                    2021-09-03
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-02
+                    2021-09-07
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    632
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    5 分
                 </div>
                 
 
@@ -490,105 +568,138 @@ var _hmt = _hmt || [];
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-文字"><a href="#1-文字" class="headerlink" title="1. 文字"></a>1. 文字</h2><h2 id="2-图进阶"><a href="#2-图进阶" class="headerlink" title="2. 图进阶"></a>2. 图进阶</h2><h3 id="2-1-绘制一般图"><a href="#2-1-绘制一般图" class="headerlink" title="2.1 绘制一般图"></a>2.1 绘制一般图</h3><p>可通过<code>markdown</code>支持部分<code>html</code>标签的方式来实现。</p>
-<p>此处以<code>svg</code>来举例。也可通过其他方法。</p>
-<h4 id="2-1-1-划块种菜"><a href="#2-1-1-划块种菜" class="headerlink" title="2.1.1 划块种菜"></a>2.1.1 划块种菜</h4><p><code>markdown</code> 中会自动对<code>html</code>进行转义。所以，如果你直接放置<code>svg</code>代码于一处，则会乱七八糟。除非你的svg代码只有一层且一个标签。</p>
-<p>解决方法为：</p>
-<p>先声明一个<code>&lt;div&gt; </code> 标签。然后将<code>svg</code>代码放置其中即可。<mark style="border-radius:10px;padding:5px;background-color:#47a6e8">代码中切勿存在空行</mark> </p>
-<p>推荐<code>svg</code>绘图网站：<a target="_blank" rel="noopener" href="https://c.runoob.com/more/svgeditor/">传送门</a>.</p>
-<h3 id="2-1-思维导图-amp-流程图"><a href="#2-1-思维导图-amp-流程图" class="headerlink" title="2.1 思维导图 &amp; 流程图"></a>2.1 思维导图 <code>&amp;</code> 流程图</h3><h4 id="2-1-1-语法"><a href="#2-1-1-语法" class="headerlink" title="2.1.1 语法"></a>2.1.1 语法</h4><p>看上去是思维导图。实际是代码块的一个进阶。</p>
-<ul>
-<li><p>用<code>mermaid</code>语言的代码块。</p>
-</li>
-<li><p><code>graph </code> 声明图的方向 。</p>
-<p>​    <code>LR</code>绘制横向图。<code>TD</code>绘制竖向图。还有个<code>RL</code> </p>
-</li>
-<li><p>用字符串区分节点。</p>
-<p>​    相当于各大语言中声明的变量名。</p>
-<p>​    每一节点只需声明一次即可。</p>
-</li>
-<li><p>用 <code>[ ]</code>、<code>()</code> 与 <code>{}</code> ，以及<code>//</code>与<code>\\</code> 组合呈现出不同的边框形状声明节点文本内容。</p>
-</li>
-<li><p>用<code>-</code> 、<code>=</code> 与 <code>&gt;</code> 组合在横线上显示文本</p>
-<p>​    <code>-</code>与<code>=</code>越多，连线越长。</p>
-<p>​    <code>&gt;</code>表示横线的箭头。</p>
-</li>
+                <h1 id="自学前端程序-私藏工具和网站分享"><a href="#自学前端程序-私藏工具和网站分享" class="headerlink" title="自学前端程序 私藏工具和网站分享"></a>自学前端程序 私藏工具和网站分享</h1><p>转载于 B站 宝藏up主 —— <a target="_blank" rel="noopener" href="https://space.bilibili.com/165659472/?spm_id_from=333.999.0.0">技术胖</a> 分享收藏夹。</p>
+<h2 id="01-JavaScript"><a href="#01-JavaScript" class="headerlink" title="01.JavaScript"></a>01.JavaScript</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://wangdoc.com/javascript/">JavaScript 教程 | 通俗易懂的JavaScript教程</a></li>
+<li><a target="_blank" rel="noopener" href="https://es6.ruanyifeng.com/">ES6 入门教程 | 通俗易懂的ES6入门教程</a></li>
+<li><a target="_blank" rel="noopener" href="https://javascript30.com/">JavaScript 30  |  使用原生JavaScript在30天内完成30个项目</a></li>
+<li><a target="_blank" rel="noopener" href="https://zh.javascript.info/">现代 JavaScript 教程 |  最近很流行的JavaScript教程</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.poetries.top/node-learning-notes/">Node.js学习指南 | 系统的Node.js学习教程和笔记系统整理</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/ryanmcdermott/clean-code-javascript">JS 代码规范 | 优秀的 JS代码规范</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/xcatliu/typescript-tutorial">TypeScript 教程 | 通俗易懂的TypeScript教程</a></li>
+<li><a target="_blank" rel="noopener" href="https://jspang.com/detailed?id=63">TypeScript 教程 |  最好的TypeScript 视频+图文教程</a></li>
 </ul>
-<h4 id="2-1-2-不同边框图"><a href="#2-1-2-不同边框图" class="headerlink" title="2.1.2 不同边框图"></a>2.1.2 不同边框图</h4><ul>
-<li>代码：</li>
+<h2 id="02-CSS样式"><a href="#02-CSS样式" class="headerlink" title="02.CSS样式"></a>02.CSS样式</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://lhammer.cn/You-need-to-know-css/#/zh-cn/">CSS Tricks 效果大全 | CSS的各种效果实现 有很多动画效果</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/chokcoco/CSS-Inspiration">CSS Inspiration |  CSS灵感的诞生地  我每天都的网站</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/QiShaoXuan/css_tricks"> CSS 常用样式 |  有很多常用的CSS样式</a></li>
+<li><a target="_blank" rel="noopener" href="https://animista.net/"> Animista | CSS动画库  主打按需定制CSS动画效果</a></li>
+<li><a target="_blank" rel="noopener" href="https://cssminifier.com/"> CSS Minifier | 在线CSS代码简化/压缩工具</a></li>
+<li><a target="_blank" rel="noopener" href="https://sass.bootcss.com/documentation"> Sass: Sass 文档 | Sass 中文网  成熟、稳定、强大的CSS扩展语言</a></li>
+<li><a target="_blank" rel="noopener" href="https://less.bootcss.com/"> Less 快速入门 | Less.js 中文文档 将CSS赋予了动态语言特性的样式语言</a></li>
+<li><a target="_blank" rel="noopener" href="https://stylus-lang.com/"> stylus | CSS扩展  富有变现里、动态、健壮的CSS</a></li>
 </ul>
-<pre class="line-numbers language-none"><code class="language-none">graph LR
-A[a_text]--&gt;B(b_text)--&gt;C([c_text])--&gt;D[(d_text)]--&gt;E((e_text)) 
-F&gt;f_text]--&gt;G{g_text}--&gt;H{{h_text}}--&gt;I[/i_text/]--&gt;J[\j_text\]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<ul>
-<li>效果：<pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid">graph LR
-A[a_text]--&gt;B(b_text)--&gt;C([c_text])--&gt;D[(d_text)]--&gt;E((e_text)) 
-F&gt;f_text]--&gt;G{g_text}--&gt;H{{h_text}}--&gt;I[/i_text/]--&gt;J[\j_text\]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
+<h2 id="03-算法数据"><a href="#03-算法数据" class="headerlink" title="03.算法数据"></a>03.算法数据</h2><ul>
+<li><a target="_blank" rel="noopener" href="http://github.com/trekhleb/javascript-algorithms"> JavaScript 算法与数据结构 | 多种基于JavaScript的算法与数据结构</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/azl397985856/leetcode"> leetcode 解题之路 |  私藏LeetCode解题攻略 </a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/MisterBooo/LeetCodeAnimation"> 五分钟学算法 |  每天拿出五分钟  学学算法  比如上个厕所就学了 </a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/biaochenxuying/blog/issues/43">数据结构与算法项目推荐 | Github上170K+Star的前端学习数据结构和算法题目 </a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/biaochenxuying/blog/issues/42">JavaScript  十大经典排序算法 | JavaScript排序必会题目  作者功力很深 值得学习 </a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/algorithm-visualizer/algorithm-visualizer">算法可视化工具 |  用可视化工具和交互方式 让你从代码中可视化算法 </a></li>
+<li><a target="_blank" rel="noopener" href="https://visualgo.net/en">算法可视化来源 </a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/skidding/illustrated-algorithms">算法的工作方式 | 变量和操作的可视化表示 增强了控制流和实际源代码 </a></li>
 </ul>
-<h4 id="2-1-3-横线显示文本"><a href="#2-1-3-横线显示文本" class="headerlink" title="2.1.3 横线显示文本"></a>2.1.3 横线显示文本</h4><ul>
-<li><p>代码：</p>
-<pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid">graph TB
-A1 --&gt; B1
-A2 ==&gt; B2
-A3 -.-&gt; B3<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
+<h2 id="04-前端面试"><a href="#04-前端面试" class="headerlink" title="04.前端面试"></a>04.前端面试</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://blog.poetries.top/FE-Interview-Questions/">前端面试常考问题整理 |  按模块和知识点分类</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/markyun/My-blog/tree/master/Front-end-Developer-Questions">前端开发面试题</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/h5bp/Front-end-Developer-Interview-Questions/">WEB前端面试宝典</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/shfshanyue/blog/blob/master/post/juejin-interview.md">掘金前端面试题合集</a></li>
+<li><a target="_blank" rel="noopener" href="https://yuchengkai.cn/">前端面试图谱</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/biaochenxuying/blog/issues/47">前端面试开源项目汇总 | Github上100K+ Star 的前端面试开源项目汇总</a></li>
 </ul>
-<h4 id="2-1-3-横向图演示："><a href="#2-1-3-横向图演示：" class="headerlink" title="2.1.3 横向图演示："></a>2.1.3 横向图演示：</h4><ul>
-<li><p>代码</p>
-<pre class="line-numbers language-none"><code class="language-none">graph LR
-a(中国)--&gt;aa(河南)
-aa--&gt;aaa{郑州}
-aa--&gt;aab{...}
-a--&gt;ab(北京)
-ab--&gt;aba{朝阳区}
-ab--&gt;abb{...}
-a--&gt;ad(...)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
-<li><p>思维导图</p>
-<pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid">graph LR
-a(中国)--&gt;aa(河南)
-aa--&gt;aaa{郑州}
-aa--&gt;aab{...}
-a--&gt;ab(北京)
-ab--&gt;aba{朝阳区}
-ab--&gt;abb{...}
-a--&gt;ad(...)
-  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<h2 id="05-技术社区"><a href="#05-技术社区" class="headerlink" title="05.技术社区"></a>05.技术社区</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/">GitHub  |  高质量内容创作和分享平台</a></li>
+<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/">Stackoverflow |一个回答技术问题的网站</a></li>
+<li><a target="_blank" rel="noopener" href="https://juejin.cn/">掘金 | 国内的很多优质前端文章都掘金</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/">博客园  | 一个很纯粹的技术博客平台</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.zhihu.com/">知乎 |  很多程序人喜欢泡在知乎</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.csdn.net/">CSDN  | 老牌社区  程序员必上的一个社区</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.v2ex.com/">v2ex  | 程序员分享和探索的社区</a></li>
+<li><a target="_blank" rel="noopener" href="https://segmentfault.com/">segmentfault  | 低调技术博客社区</a></li>
+<li><a target="_blank" rel="noopener" href="https://cnodejs.org/">Node.js 中文社区 |  node专业中文社区</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.smashingmagazine.com/">博客杂志站点 | 一个 web 技术类的博客杂志站点</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jstips.co/">JS 技术的网站 | 每天推出一个JS技巧的网站</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jstips.co/">W3Cplus | 推广国内行业的技术博客</a></li>
+<li><a target="_blank" rel="noopener" href="https://docschina.org/">印记中文 | 最权威的技术中文文档社区</a></li>
 </ul>
-<h4 id="2-1-4-纵向图演示"><a href="#2-1-4-纵向图演示" class="headerlink" title="2.1.4 纵向图演示"></a>2.1.4 纵向图演示</h4><ul>
-<li><p>代码</p>
-<pre class="line-numbers language-none"><code class="language-none">graph TD
-a(中国)--&gt;aa(河南)
-aa--&gt;aaa{郑州}
-aa--&gt;aab{...}
-a--&gt;ab(北京)
-ab--&gt;aba{朝阳区}
-ab--&gt;abb{...}
-a--&gt;ad(...)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
-<li><p>思维导图</p>
-<pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid">graph TD
-a(中国)--&gt;aa(河南)
-aa--&gt;aaa{郑州}
-aa--&gt;aab{...}
-a--&gt;ab(北京)
-ab--&gt;aba{朝阳区}
-ab--&gt;abb{...}
-a--&gt;ad(...)
-  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<h2 id="06-前端博客"><a href="#06-前端博客" class="headerlink" title="06.前端博客"></a>06.前端博客</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://jspang.com/">技术胖博客 |  专注前端 每年100集免费前端视频</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.alloyteam.com/">腾讯Alloy Team  | 腾讯前端博客 每天必看</a></li>
+<li><a target="_blank" rel="noopener" href="https://isux.tencent.com/">腾讯用户体验博客 | 专注于前端用户体验</a></li>
+<li><a target="_blank" rel="noopener" href="https://fed.taobao.org/">淘系前端博客 |  淘宝前端博客 代表中国最强前端实力</a></li>
+<li><a target="_blank" rel="noopener" href="https://aotu.io/">京东凹凸实验室  |  京东前端技术博客</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/ElemeFE">饿了么前端博客  |  知乎上的最强前端博客</a></li>
+<li><a target="_blank" rel="noopener" href="http://fex.baidu.com/">百度前端博客  |  百度前端团队旗下博客</a></li>
+<li><a target="_blank" rel="noopener" href="https://75.team/">360奇舞团  |  360公司前端团队</a></li>
+<li><a target="_blank" rel="noopener" href="https://tech.meituan.com/">美团技术博客  |  美团技术团队博客</a></li>
 </ul>
-<h3 id="2-2-饼图"><a href="#2-2-饼图" class="headerlink" title="2.2 饼图"></a>2.2 饼图</h3><p>​    同为<code>mermaid</code>的进阶</p>
-<p>​    语法更简单，直接看例子。</p>
-<ul>
-<li> 代码：</li>
+<h2 id="07-构建工具"><a href="#07-构建工具" class="headerlink" title="07.构建工具"></a>07.构建工具</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/">NPM |  包管理 和 项目构建工具</a></li>
+<li><a target="_blank" rel="noopener" href="https://webpack.js.org/">webpack  | 前端最流行的项目构建工具</a></li>
+<li><a target="_blank" rel="noopener" href="https://yarnpkg.com/">Yarn  |  后起之秀 优秀的包管理和构建工具</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.gulpjs.com.cn/">Gulp  |  老牌构建工具</a></li>
+<li><a target="_blank" rel="noopener" href="https://babeljs.io/">Babel  | ES6构建转换工具</a></li>
+<li><a target="_blank" rel="noopener" href="https://cn.eslint.org/">ESLint  | 可组装的JavaScript和JSX检查工具</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.postcss.com.cn/">PostCSS | 用JavaScript转换CSS代码的工具</a></li>
 </ul>
-   <pre class="line-numbers language-none"><code class="language-none">pie title 我班人数比
-	"男生":95
-	"女生":5<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<pre><code><pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid">pie title 我班人数比
-	"男生":95
-	"女生":5<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-</code></pre>
-<h2 id="n-参考"><a href="#n-参考" class="headerlink" title="n.参考"></a>n.参考</h2><p>参考链接：<a target="_blank" rel="noopener" href="https://iseex.github.io/2020-11/typora-diagram/">Typora也能做思维导图？做笔记的又一个绝佳选择？ </a></p>
+<h2 id="08-部署工具"><a href="#08-部署工具" class="headerlink" title="08.部署工具"></a>08.部署工具</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://pages.github.com/">Github Page  | Github提供的免费静态网站托管服务</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.netlify.com/">Netlify  |  30秒内部署你的网站</a></li>
+<li><a target="_blank" rel="noopener" href="https://vercel.com/">Vercel  |  快速部署你的网站 国外很流行</a></li>
+<li><a target="_blank" rel="noopener" href="https://surge.sh/">Surge  |  一个命令部署你的网站</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.heroku.com/">Heroku  |  运动构建 、 运行你的网站和应用</a></li>
+</ul>
+<h2 id="09-静态站点搭建"><a href="#09-静态站点搭建" class="headerlink" title="09.静态站点搭建"></a>09.静态站点搭建</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo  |  最流行的静态博客程序 Markdown编写 生成静态站点</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.vuepress.cn/">VuePress  |  Vue驱动的静态网站生成器</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.gitbook.com/">GitBook  | 现代化的文档平台，支持团队协作</a></li>
+</ul>
+<h2 id="10-前端代码规范"><a href="#10-前端代码规范" class="headerlink" title="10.前端代码规范"></a>10.前端代码规范</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://tgideas.qq.com/doc/index.html">Tgideas | 腾讯前端代码规范 值得参考</a></li>
+<li><a target="_blank" rel="noopener" href="https://guide.aotu.io/index.html">京东  |  京东前端代码规范文档 分类详细</a></li>
+<li><a target="_blank" rel="noopener" href="https://codeguide.bootcss.com/">Bootstrap编码规范  |  适合个人和小团队使用的代码规范 不复杂</a></li>
+<li><a target="_blank" rel="noopener" href="https://es6.ruanyifeng.com/#docs/style">ES6 编程风格  | 阮一峰编写的ES6代码规范  值得每个人阅读并参考</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/airbnb/javascript">Airbnb  前端代码规范  |  国外企业的前端代码规范</a></li>
+<li><a target="_blank" rel="noopener" href="https://eslint.org/">ESLint  |  代码规范检查和格式化工具</a></li>
+<li><a target="_blank" rel="noopener" href="https://prettier.io/">Prettier  | VSCode 最热门的代码格式化工具  让你写出漂亮的代码</a></li>
+</ul>
+<h2 id="11-调试抓包"><a href="#11-调试抓包" class="headerlink" title="11.调试抓包"></a>11.调试抓包</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://wproxy.org/whistle/">Whistle  |  代理抓包工具  我一直在用的工具 很好很强大</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.telerik.com/fiddler">Fiddler  |  使用人数最多的抓包工具</a></li>
+</ul>
+<h2 id="12-在线工具"><a href="#12-在线工具" class="headerlink" title="12.在线工具"></a>12.在线工具</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://codepen.io/">CodePen  |  前端在线测试和演示工具  国外站点</a></li>
+<li><a target="_blank" rel="noopener" href="https://caniuse.com/">Can  I  use |  Web前端兼容性列表</a></li>
+<li><a target="_blank" rel="noopener" href="https://tinypng.com/">TinyPNG  |  PNG/JPG 图片在线压缩工具</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.umeng.com/">CNZZ |  老牌站点统计工具  5年前国内站长必上网站</a></li>
+<li><a target="_blank" rel="noopener" href="https://web.dev/measure/">web.dev  |  评测网站性能  基于Lighthouse</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.shapedivider.app/">Shape Divider  | 定制各种形状SVG的工具</a></li>
+<li><a target="_blank" rel="noopener" href="https://gtmetrix.com/">GTmetrix  |  网页性能在线分析工具</a></li>
+<li><a target="_blank" rel="noopener" href="https://carbon.now.sh/">Carbon  |  代码转图片工具  </a></li>
+<li><a target="_blank" rel="noopener" href="https://www.wappalyzer.com/">Wappalyzer  |  检测某个网站的技术栈  </a></li>
+<li><a target="_blank" rel="noopener" href="https://unbug.github.io/codelf">CODEIF | 变量方法起名工具  人工智能加持  </a></li>
+<li><a target="_blank" rel="noopener" href="https://tool.lu/"> tool.lu  |  程序员在线工具大全   </a></li>
+</ul>
+<h2 id="13-开发工具"><a href="#13-开发工具" class="headerlink" title="13.开发工具"></a>13.开发工具</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://code.visualstudio.com/"> VSCode  |  前端最流行的编辑器   </a></li>
+<li><a target="_blank" rel="noopener" href="https://www.sublimetext.com/"> Sublime Text  |  轻量级代码编辑工具 曾经我的最爱   </a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jetbrains.com/webstorm/"> WebStom |  忠爱粉最多的编辑器 </a></li>
+<li><a target="_blank" rel="noopener" href="https://atom.io/"> Atom  |   用的人很多  我却不喜欢的编辑器 </a></li>
+<li><a target="_blank" rel="noopener" href="https://www.typora.io/"> Typora |  程序人Mrakdown笔记  一直在用的笔记工具 </a></li>
+</ul>
+<h2 id="14-开发者大会"><a href="#14-开发者大会" class="headerlink" title="14.开发者大会"></a>14.开发者大会</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://fequan.com/"> Vue.js开发者大会 |  前端人必须关注的前端大会 </a></li>
+<li><a target="_blank" rel="noopener" href="https://jsconfchina.com/"> 中国JS开发者大会  |  公司每年必组织参加的技术大会 </a></li>
+<li><a target="_blank" rel="noopener" href="https://css.w3ctech.com/"> CSS开发者大会 |  提高CSS技术的开发者大会  打开视野 面向世界 </a></li>
+<li><a target="_blank" rel="noopener" href="https://www.alibabaf2e.com/"> D2前端开发者大会 |  阿里组织的大会 可以看直播  </a></li>
+</ul>
+<h2 id="15-WEB图标"><a href="#15-WEB图标" class="headerlink" title="15.WEB图标"></a>15.WEB图标</h2><ul>
+<li><a target="_blank" rel="noopener" href="http://www.fontawesome.com.cn/"> Font Awesome  |  网站开发最流行的图标集  </a></li>
+<li><a target="_blank" rel="noopener" href="https://feathericons.com/"> Feather |  简洁美观的开源图标  </a></li>
+<li><a target="_blank" rel="noopener" href="https://material.io/resources/icons/"> Material  Design Icons  |  轻快、精美的符号图标  </a></li>
+<li><a target="_blank" rel="noopener" href="https://tablericons.com/"> Tabler Icons | 681枚可定制的开源SVG图标  </a></li>
+<li><a target="_blank" rel="noopener" href="https://simpleicons.org/"> 常见品牌的SVG图标  </a></li>
+</ul>
 
                 
             </div>
@@ -605,7 +716,7 @@ a--&gt;ad(...)
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">张小白</a>
+                    <a href="/about" rel="external nofollow noreferrer">Zhang-little-white</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -615,7 +726,7 @@ a--&gt;ad(...)
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://blogofxyz.gitee.io/2021/08/31/markdown%E8%BF%9B%E9%98%B6/">https://blogofxyz.gitee.io/2021/08/31/markdown%E8%BF%9B%E9%98%B6/</a>
+                    <a href="https://blogofxyz.gitee.io/2021/09/03/%E6%8A%80%E6%9C%AF%E8%83%96%E6%94%B6%E8%97%8F%E5%A4%B9/">https://blogofxyz.gitee.io/2021/09/03/%E6%8A%80%E6%9C%AF%E8%83%96%E6%94%B6%E8%97%8F%E5%A4%B9/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -628,7 +739,7 @@ a--&gt;ad(...)
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">张小白</a>
+                    <a href="/about" target="_blank">Zhang-little-white</a>
                     !
                 </span>
             </div>
@@ -652,15 +763,7 @@ a--&gt;ad(...)
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/markdown/">
-                                    <span class="chip bg-color">markdown</span>
-                                </a>
-                            
-                                <a href="/tags/typora/">
-                                    <span class="chip bg-color">typora</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -1121,24 +1224,24 @@ a--&gt;ad(...)
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/09/02/%E5%8D%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%B5%AE%E7%82%B9%E6%95%B0/">
+                <a href="/2021/09/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E6%95%B0/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="十进制转浮点数">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="计算机中的数">
                         
-                        <span class="card-title">十进制转浮点数</span>
+                        <span class="card-title">计算机中的数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            二进制转浮点数的方法，详解。觉得不详就举报（向我）。
+                            计算机中如何表示或者存储数据
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-02
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-07
                         </span>
                         <span class="publish-author">
                             
@@ -1155,16 +1258,20 @@ a--&gt;ad(...)
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6/">
-                        <span class="chip bg-color">二进制</span>
+                    <a href="/tags/ASCII%E7%A0%81/">
+                        <span class="chip bg-color">ASCII码</span>
                     </a>
                     
-                    <a href="/tags/%E6%B5%AE%E7%82%B9%E6%95%B0/">
-                        <span class="chip bg-color">浮点数</span>
+                    <a href="/tags/%E5%8F%8D%E7%A0%81/">
+                        <span class="chip bg-color">反码</span>
                     </a>
                     
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                        <span class="chip bg-color">数据结构</span>
+                    <a href="/tags/%E8%A1%A5%E7%A0%81/">
+                        <span class="chip bg-color">补码</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%8E%9F%E7%A0%81/">
+                        <span class="chip bg-color">原码</span>
                     </a>
                     
                 </div>
@@ -1178,31 +1285,31 @@ a--&gt;ad(...)
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/08/30/Java/">
+                <a href="/2021/09/02/SEM/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="Java">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="SEM">
                         
-                        <span class="card-title">Java</span>
+                        <span class="card-title">SEM</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Java选修课与自学期间整理的知识点与心得。
+                            大学必修课《`SEM`基础》学习期间的笔记与心得。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-30
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-02
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Java/" class="post-category">
-                                    Java
+                            <a href="/categories/SEM/" class="post-category">
+                                    SEM
                                 </a>
                             
                             
@@ -1212,8 +1319,8 @@ a--&gt;ad(...)
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
+                    <a href="/tags/SEM/">
+                        <span class="chip bg-color">SEM</span>
                     </a>
                     
                 </div>
@@ -1282,6 +1389,100 @@ a--&gt;ad(...)
 
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('2'),
+            headingSelector: 'h1,h2, h3, h4, h5'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1,h2, h3, h4, h5').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
 
     
 
