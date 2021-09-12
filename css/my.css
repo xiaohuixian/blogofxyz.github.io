@@ -159,3 +159,17 @@ body.dark .my-projects .info .info-title a {
 .swbk .label {
   color: currentColor;
 }
+
+body .dark a .selfurl{
+  text-decoration: none;
+    font-style: oblique;
+    color: rgb(143, 204, 30);
+    font-family: monospace;
+}
+
+body .dark a .selfurl:visited{
+  text-decoration: none;
+    font-style: oblique;
+    color: gold;
+    font-family: monospace;
+}
