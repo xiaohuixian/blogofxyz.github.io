@@ -151,11 +151,11 @@
       
         <tags>
             
+            <tag> 二进制 </tag>
+            
             <tag> 数据转换 </tag>
             
             <tag> 计算机组成原理 </tag>
-            
-            <tag> 二进制 </tag>
             
         </tags>
       
@@ -180,9 +180,9 @@
       
         <tags>
             
-            <tag> 二进制 </tag>
-            
             <tag> 浮点数 </tag>
+            
+            <tag> 二进制 </tag>
             
             <tag> 数据结构 </tag>
             
@@ -224,7 +224,7 @@
       <link href="/2021/08/30/Java/"/>
       <url>/2021/08/30/Java/</url>
       
-        <content type="html"><![CDATA[<h2 id="学前准备"><a href="#学前准备" class="headerlink" title="学前准备"></a>学前准备</h2><ul><li><p>安装JDK</p><p>​    浏览器搜索下载即可。</p></li><li><p>安装IDE，推荐idea。</p><p>​    网上有破解资源，但不推荐。</p><p>​    第一。学生时期可选择教育优惠，试用一年。或者社区版免费使用，功能并没有少多少。</p><p>​    第二。不利于以后就业。如果就业之后使用Java开发。则可能被追究法律责任，另外，公司也都会自行购买企业版本。</p><p>​    学生试用：<a href="https://www.jetbrains.com/shop/eform/students">传送门</a> 需要大学邮箱，另可能大多数学校需要提供学生证或其他学生身份证件。试用期为大学毕业前。</p><p>​    其他身份请前往浏览：<a href="https://www.jetbrains.com/zh-cn/idea/buy/#discounts?billing=yearly">传送门</a></p></li></ul><h2 id="1-数据类型（与其他语言相比）"><a href="#1-数据类型（与其他语言相比）" class="headerlink" title="1. 数据类型（与其他语言相比）"></a>1. 数据类型（与其他语言相比）</h2><h3 id="1-1-String类型"><a href="#1-1-String类型" class="headerlink" title="1.1 String类型"></a>1.1 String类型</h3><p>  ​    </p>]]></content>
+        <content type="html"><![CDATA[<h2 id="学前准备"><a href="#学前准备" class="headerlink" title="学前准备"></a>学前准备</h2><ul><li><p>安装JDK</p><p>​    浏览器搜索下载即可。</p></li><li><p>安装IDE，推荐idea。</p><p>​    网上有破解资源，但不推荐。</p><p>​    第一。学生时期可选择教育优惠，试用一年。或者社区版免费使用，功能并没有少多少。</p><p>​    第二。不利于以后就业。如果就业之后使用Java开发。则可能被追究法律责任，另外，公司也都会自行购买企业版本。</p><p>​    学生试用：<a href="https://www.jetbrains.com/shop/eform/students">传送门</a> 需要大学邮箱，另可能大多数学校需要提供学生证或其他学生身份证件。试用期为大学毕业前。</p><p>​    其他身份请前往浏览：<a href="https://www.jetbrains.com/zh-cn/idea/buy/#discounts?billing=yearly">传送门</a></p></li></ul><h2 id="1-数据类型（与其他语言相比）"><a href="#1-数据类型（与其他语言相比）" class="headerlink" title="1. 数据类型（与其他语言相比）"></a>1. 数据类型（与其他语言相比）</h2><h3 id="1-1-String类型"><a href="#1-1-String类型" class="headerlink" title="1.1 String类型"></a>1.1 String类型</h3><h2 id="2-for-、输入、输出"><a href="#2-for-、输入、输出" class="headerlink" title="2. for 、输入、输出"></a>2. for 、输入、输出</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">package com.company;import java.util.Scanner;public class Main {    public static void main(String[] args) {// write your code here        double Chinese;        double English;        double C;        double Csharp;        //      生成输入对象。        Scanner scan=new Scanner(System.in);//      nextline---字符串                C=scan.nextDouble();                Chinese=scan.nextDouble();        Csharp=scan.nextDouble();        English=scan.nextDouble();        System.out.println("args = " + avg(C,Chinese,Csharp,English));    }    public static double avg(double... score) {        double term = 0;        double max = 0, min = 0;        for (double v : score) {            System.out.println("v = " + v);            if (v &gt; max) max = v;            if (v &lt; min) min = v;            term += v;        }        System.out.println(term + ((term &gt;(max+min)/2)?"挺大的":"不算大"));        System.out.println("term = " + term);        return term / score.length;    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>  ​    </p>]]></content>
       
       
       <categories>
@@ -537,33 +537,22 @@
     
     
     <entry>
-      <title>交流</title>
-      <link href="/contact/index.html"/>
-      <url>/contact/index.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="欢迎留言"><a href="#欢迎留言" class="headerlink" title="欢迎留言"></a>欢迎留言</h1><p>大家有任何问题，都可以在评论区给我留言，或者加我联系方式：</p><ul><li><strong>Q Q</strong>：<strong>1970476603</strong></li><li><strong>微信</strong>：<strong>i_19-99-666</strong></li></ul><p>欢迎来访<br><strong>当然不介意小jiejie加我~~</strong></p><h1 id="友链交换"><a href="#友链交换" class="headerlink" title="友链交换"></a>友链交换</h1><p>想要交换友链的小伙伴，欢迎在评论区留言，留言格式：</p><ul><li><strong>名称：</strong>你的博客名称</li><li><strong>地址：</strong>你的博客地址</li><li><strong>简介：</strong>一句话简介</li><li><strong>头像：</strong>你的头像地址</li></ul><p>例如我的博客友链，大家可以加到自己博客里哦：</p><ul><li><strong>名称：</strong>张小白</li><li><strong>地址：</strong><a class="selfurl">https://blogofxyz.gitee.io</a> (国内访问快)/<a class="selfurl">https://blogofxyz.top/</a> (github部署)</li><li><strong>简介：</strong>平时没少学没用东西的一个家伙。</li><li><strong>头像：</strong><a class="selfurl">https://blogofxyz.gitee.io/medias/avatar.jpg</a></li></ul>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>小伙伴与大佬</title>
-      <link href="/friends/index.html"/>
-      <url>/friends/index.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="赞赏名单"><a href="#赞赏名单" class="headerlink" title="赞赏名单"></a>赞赏名单</h1><p>感谢所有赞赏过我的小伙伴啦，你们的支持是我最大的动力！</p><h1 id="友链交换"><a href="#友链交换" class="headerlink" title="友链交换"></a>友链交换</h1><p>想要交换友链的小伙伴，欢迎在留言板留言，留言格式：</p><ul><li><strong>名称：</strong>你的博客名称</li><li><strong>地址：</strong>你的博客地址</li><li><strong>简介：</strong>一句话简介</li><li><strong>头像：</strong>你的头像地址</li></ul><p>例如我的博客友链，大家可以加到自己博客里哦：</p><ul><li><p><strong>名称：</strong>Zhang-little-white</p></li><li><p><strong>地址：</strong> <a style="text-decoration:none" class="selfurl">https://blogofxyz.gitee.io</a> (gitee访问快)</p><p><a style="text-decoration:none;    white-space: pre;">   &nbsp; &nbsp; &nbsp;  &nbsp;</a>            <a style="text-decoration:none" class="selfurl">https://blogofxyz.top/ </a>(github部署)</p></li><li><p><strong>简介：</strong>小白一个</p></li><li><p><strong>头像：</strong><a style="text-decoration:none" class="selfurl">https://blogofxyz.gitee.io/medias/avatar.jpg</a></p></li></ul>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>类别</title>
       <link href="/categories/index.html"/>
       <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>交流</title>
+      <link href="/contact/index.html"/>
+      <url>/contact/index.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="欢迎留言"><a href="#欢迎留言" class="headerlink" title="欢迎留言"></a>欢迎留言</h1><p>大家有任何问题，都可以在评论区给我留言，或者加我联系方式：</p><ul><li><strong>Q Q</strong>：<strong>1970476603</strong></li><li><strong>微信</strong>：<strong>i_19-99-666</strong></li></ul><p>欢迎来访<br><strong>当然不介意小jiejie加我~~</strong></p><h1 id="友链交换"><a href="#友链交换" class="headerlink" title="友链交换"></a>友链交换</h1><p>想要交换友链的小伙伴，欢迎在评论区留言，留言格式：</p><ul><li><strong>名称：</strong>你的博客名称</li><li><strong>地址：</strong>你的博客地址</li><li><strong>简介：</strong>一句话简介</li><li><strong>头像：</strong>你的头像地址</li></ul><p>例如我的博客友链，大家可以加到自己博客里哦：</p><ul><li><strong>名称：</strong>张小白</li><li><strong>地址：</strong><a class="selfurl">https://blogofxyz.gitee.io</a> (国内访问快)/<a class="selfurl">https://blogofxyz.top/</a> (github部署)</li><li><strong>简介：</strong>平时没少学没用东西的一个家伙。</li><li><strong>头像：</strong><a class="selfurl">https://blogofxyz.gitee.io/medias/avatar.jpg</a></li></ul>]]></content>
       
     </entry>
     
@@ -586,6 +575,17 @@
       <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>小伙伴与大佬</title>
+      <link href="/friends/index.html"/>
+      <url>/friends/index.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="赞赏名单"><a href="#赞赏名单" class="headerlink" title="赞赏名单"></a>赞赏名单</h1><p>感谢所有赞赏过我的小伙伴啦，你们的支持是我最大的动力！</p><h1 id="友链交换"><a href="#友链交换" class="headerlink" title="友链交换"></a>友链交换</h1><p>想要交换友链的小伙伴，欢迎在留言板留言，留言格式：</p><ul><li><strong>名称：</strong>你的博客名称</li><li><strong>地址：</strong>你的博客地址</li><li><strong>简介：</strong>一句话简介</li><li><strong>头像：</strong>你的头像地址</li></ul><p>例如我的博客友链，大家可以加到自己博客里哦：</p><ul><li><p><strong>名称：</strong>Zhang-little-white</p></li><li><p><strong>地址：</strong> <a style="text-decoration:none" class="selfurl">https://blogofxyz.gitee.io</a> (gitee访问快)</p><p><a style="text-decoration:none;    white-space: pre;">   &nbsp; &nbsp; &nbsp;  &nbsp;</a>            <a style="text-decoration:none" class="selfurl">https://blogofxyz.top/ </a>(github部署)</p></li><li><p><strong>简介：</strong>小白一个</p></li><li><p><strong>头像：</strong><a style="text-decoration:none" class="selfurl">https://blogofxyz.gitee.io/medias/avatar.jpg</a></p></li></ul>]]></content>
       
     </entry>
     
