@@ -182,9 +182,9 @@
       
         <tags>
             
-            <tag> 计算机组成原理 </tag>
-            
             <tag> 二进制 </tag>
+            
+            <tag> 计算机组成原理 </tag>
             
             <tag> 数据转换 </tag>
             
@@ -535,17 +535,6 @@
     
     
     <entry>
-      <title>404</title>
-      <link href="/404.html"/>
-      <url>/404.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>关于‘俺’</title>
       <link href="/about/index.html"/>
       <url>/about/index.html</url>
@@ -568,9 +557,9 @@
     
     
     <entry>
-      <title>导航</title>
-      <link href="/navigate/index.html"/>
-      <url>/navigate/index.html</url>
+      <title>404</title>
+      <link href="/404.html"/>
+      <url>/404.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -582,6 +571,17 @@
       <title>类别</title>
       <link href="/categories/index.html"/>
       <url>/categories/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>导航</title>
+      <link href="/navigate/index.html"/>
+      <url>/navigate/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       

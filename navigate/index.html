@@ -640,9 +640,10 @@ var _hmt = _hmt || [];
         left: 0px;
         top: 1px;
         z-index: 9999;
-        background: rgba(255, 255, 255, 0.9);
+        background: rgb(221 149 60 / 14%);
         border: 1px solid #ccc;
         border-top: none;
+		border-radius:10px;
         overflow: hidden
     }
 
@@ -656,12 +657,13 @@ var _hmt = _hmt || [];
     }
 
     .Select-box-2 li:hover {
-        background: #3385ff;
+        background: #76117f85;
+		border-radius: 10px;
         color: #FFF;
     }
 
     .Select-box-2 .this_s {
-        color: #317ef3;
+        color: #08da6f;
     }
 
     .Select-box-2 .this_s:hover {
@@ -672,7 +674,8 @@ var _hmt = _hmt || [];
     #kw-2 {
         width: 335px;
         outline: 0;
-        border: 1px solid #ccc;
+        border: none;
+		border-radius:10px;
         background: rgba(255, 255, 255, 0.2);
         color: #000000;
         padding-left: 70px;
@@ -681,11 +684,13 @@ var _hmt = _hmt || [];
 
     /*修改搜索框样式*/
     #su-2 {
+		border-radius: 15px;
+		margin-left: 20px;
         width: 90px;
-        background: blue;
+        background: #a4b94e;
         border: none;
-        border-top: #3385ff 1px solid;
-        border-bottom: 1px solid #2d78f4;
+/*      border-top: #3385ff 1px solid;
+        border-bottom: 1px solid #2d78f4; */
         color: #FFF;
         cursor: pointer;
         /*去轮廓阴影*/
@@ -694,8 +699,9 @@ var _hmt = _hmt || [];
 
     /*光标移动到搜索框颜色*/
     #su-2:hover {
-        background: blue;
-        border-bottom: 1px solid blue;
+		background: #1288ec;
+		border-bottom: 1px solid #16b47f;
+		border-radius: 15px;
     }
 
     #su-2:active {
@@ -731,14 +737,15 @@ var _hmt = _hmt || [];
         text-align: center;
         line-height: 35px;
         padding: 4px 0;
-        border-radius: 2px;
+        border-radius: 5px;
         transition: all 0.2s
     }
 
     .link-3:hover {
         background: rgba(0, 0, 0, .45);
         font-size: 15px;
-        font-weight: bold
+        font-weight: bold;
+		border-radius:15px;
     }
 
     /*1栏 小于584*/
