@@ -182,9 +182,9 @@
       
         <tags>
             
-            <tag> 计算机组成原理 </tag>
-            
             <tag> 二进制 </tag>
+            
+            <tag> 计算机组成原理 </tag>
             
             <tag> 数据转换 </tag>
             
@@ -601,9 +601,9 @@
     
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>导航</title>
+      <link href="/navigate/index.html"/>
+      <url>/navigate/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -612,9 +612,9 @@
     
     
     <entry>
-      <title>导航</title>
-      <link href="/navigate/index.html"/>
-      <url>/navigate/index.html</url>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
