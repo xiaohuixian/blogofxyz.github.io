@@ -4,29 +4,25 @@
   
     
     <entry>
-      <title>变形补码二进制计算加减</title>
-      <link href="/2021/09/15/%E5%8F%98%E5%BD%A2%E8%A1%A5%E7%A0%81%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%AE%A1%E7%AE%97%E5%8A%A0%E5%87%8F/"/>
-      <url>/2021/09/15/%E5%8F%98%E5%BD%A2%E8%A1%A5%E7%A0%81%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%AE%A1%E7%AE%97%E5%8A%A0%E5%87%8F/</url>
+      <title>计算机怎么计算四则运算</title>
+      <link href="/2021/09/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%80%8E%E4%B9%88%E8%BF%9B%E8%A1%8C%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97/"/>
+      <url>/2021/09/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%80%8E%E4%B9%88%E8%BF%9B%E8%A1%8C%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h2 id="加"><a href="#加" class="headerlink" title="加"></a>加</h2><h2 id="减"><a href="#减" class="headerlink" title="减"></a>减</h2><h2 id="乘"><a href="#乘" class="headerlink" title="乘"></a>乘</h2><h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p>用原码进行乘法运算。在定点计算机中，用两个原码表示的数相乘，乘积的符号由两数的符号位异或（         ）得到，乘积的数值部分是两数的绝对值相乘之积。即，原码的乘法的实质是两个正数相乘。<br>         其运算规则是： 根据乘数Y绝对值每个数位上的值Yi是“1”还是“0”(从最低位Y0开始)，决定本次部分积是加上被乘数X的绝对值，还是加上全“0”，得到的新部分积右移一位，再重复上面的动作，直到乘法做完为止。</p><h2 id="除"><a href="#除" class="headerlink" title="除"></a>除</h2>]]></content>
       
       
       <categories>
           
-          <category> 计算机组成原理 </category>
+          <category> 计算机原理 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 计算机组成原理 </tag>
+            <tag> 计算机原理 </tag>
             
             <tag> 二进制运算 </tag>
-            
-            <tag> 补码 </tag>
-            
-            <tag> 溢出判断 </tag>
             
         </tags>
       
@@ -76,11 +72,11 @@
       
         <tags>
             
-            <tag> 补码 </tag>
-            
             <tag> ASCII码 </tag>
             
             <tag> 反码 </tag>
+            
+            <tag> 补码 </tag>
             
             <tag> 原码 </tag>
             
@@ -182,11 +178,11 @@
       
         <tags>
             
-            <tag> 计算机组成原理 </tag>
-            
             <tag> 二进制 </tag>
             
             <tag> 数据转换 </tag>
+            
+            <tag> 计算机组成原理 </tag>
             
         </tags>
       
@@ -319,9 +315,9 @@
       
         <tags>
             
-            <tag> cmd </tag>
-            
             <tag> windows </tag>
+            
+            <tag> cmd </tag>
             
         </tags>
       
@@ -546,6 +542,50 @@
     
     
     <entry>
+      <title>关于‘俺’</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>类别</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>小伙伴与大佬</title>
+      <link href="/friends/index.html"/>
+      <url>/friends/index.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="赞赏名单"><a href="#赞赏名单" class="headerlink" title="赞赏名单"></a>赞赏名单</h1><p>感谢所有赞赏过我的小伙伴啦，你们的支持是我最大的动力！</p><h1 id="友链交换"><a href="#友链交换" class="headerlink" title="友链交换"></a>友链交换</h1><p>想要交换友链的小伙伴，欢迎在留言板留言，留言格式：</p><ul><li><strong>名称：</strong>你的博客名称</li><li><strong>地址：</strong>你的博客地址</li><li><strong>简介：</strong>一句话简介</li><li><strong>头像：</strong>你的头像地址</li></ul><p>例如我的博客友链，大家可以加到自己博客里哦：</p><ul><li><p><strong>名称：</strong>Zhang-little-white</p></li><li><p><strong>地址：</strong> <a style="text-decoration:none" class="selfurl">https://blogofxyz.gitee.io</a> (gitee访问快)</p><p><a style="text-decoration:none;    white-space: pre;">   &nbsp; &nbsp; &nbsp;  &nbsp;</a>            <a style="text-decoration:none" class="selfurl">https://blogofxyz.top/ </a>(github部署)</p></li><li><p><strong>简介：</strong>小白一个</p></li><li><p><strong>头像：</strong><a style="text-decoration:none" class="selfurl">https://blogofxyz.gitee.io/medias/avatar.jpg</a></p></li></ul>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>交流</title>
+      <link href="/contact/index.html"/>
+      <url>/contact/index.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="欢迎留言"><a href="#欢迎留言" class="headerlink" title="欢迎留言"></a>欢迎留言</h1><p>大家有任何问题，都可以在评论区给我留言，或者加我联系方式：</p><ul><li><strong>Q Q</strong>：<strong>1970476603</strong></li><li><strong>微信</strong>：<strong>i_19-99-666</strong></li></ul><p>欢迎来访<br><strong>当然不介意小jiejie加我~~</strong></p><h1 id="友链交换"><a href="#友链交换" class="headerlink" title="友链交换"></a>友链交换</h1><p>想要交换友链的小伙伴，欢迎在评论区留言，留言格式：</p><ul><li><strong>名称：</strong>你的博客名称</li><li><strong>地址：</strong>你的博客地址</li><li><strong>简介：</strong>一句话简介</li><li><strong>头像：</strong>你的头像地址</li></ul><p>例如我的博客友链，大家可以加到自己博客里哦：</p><ul><li><strong>名称：</strong>张小白</li><li><strong>地址：</strong><a class="selfurl">https://blogofxyz.gitee.io</a> (国内访问快)/<a class="selfurl">https://blogofxyz.top/</a> (github部署)</li><li><strong>简介：</strong>平时没少学没用东西的一个家伙。</li><li><strong>头像：</strong><a class="selfurl">https://blogofxyz.gitee.io/medias/avatar.jpg</a></li></ul>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>成就</title>
       <link href="/archives/index.html"/>
       <url>/archives/index.html</url>
@@ -568,55 +608,11 @@
     
     
     <entry>
-      <title>类别</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>关于‘俺’</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>tags</title>
       <link href="/tags/index.html"/>
       <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>交流</title>
-      <link href="/contact/index.html"/>
-      <url>/contact/index.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="欢迎留言"><a href="#欢迎留言" class="headerlink" title="欢迎留言"></a>欢迎留言</h1><p>大家有任何问题，都可以在评论区给我留言，或者加我联系方式：</p><ul><li><strong>Q Q</strong>：<strong>1970476603</strong></li><li><strong>微信</strong>：<strong>i_19-99-666</strong></li></ul><p>欢迎来访<br><strong>当然不介意小jiejie加我~~</strong></p><h1 id="友链交换"><a href="#友链交换" class="headerlink" title="友链交换"></a>友链交换</h1><p>想要交换友链的小伙伴，欢迎在评论区留言，留言格式：</p><ul><li><strong>名称：</strong>你的博客名称</li><li><strong>地址：</strong>你的博客地址</li><li><strong>简介：</strong>一句话简介</li><li><strong>头像：</strong>你的头像地址</li></ul><p>例如我的博客友链，大家可以加到自己博客里哦：</p><ul><li><strong>名称：</strong>张小白</li><li><strong>地址：</strong><a class="selfurl">https://blogofxyz.gitee.io</a> (国内访问快)/<a class="selfurl">https://blogofxyz.top/</a> (github部署)</li><li><strong>简介：</strong>平时没少学没用东西的一个家伙。</li><li><strong>头像：</strong><a class="selfurl">https://blogofxyz.gitee.io/medias/avatar.jpg</a></li></ul>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>小伙伴与大佬</title>
-      <link href="/friends/index.html"/>
-      <url>/friends/index.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="赞赏名单"><a href="#赞赏名单" class="headerlink" title="赞赏名单"></a>赞赏名单</h1><p>感谢所有赞赏过我的小伙伴啦，你们的支持是我最大的动力！</p><h1 id="友链交换"><a href="#友链交换" class="headerlink" title="友链交换"></a>友链交换</h1><p>想要交换友链的小伙伴，欢迎在留言板留言，留言格式：</p><ul><li><strong>名称：</strong>你的博客名称</li><li><strong>地址：</strong>你的博客地址</li><li><strong>简介：</strong>一句话简介</li><li><strong>头像：</strong>你的头像地址</li></ul><p>例如我的博客友链，大家可以加到自己博客里哦：</p><ul><li><p><strong>名称：</strong>Zhang-little-white</p></li><li><p><strong>地址：</strong> <a style="text-decoration:none" class="selfurl">https://blogofxyz.gitee.io</a> (gitee访问快)</p><p><a style="text-decoration:none;    white-space: pre;">   &nbsp; &nbsp; &nbsp;  &nbsp;</a>            <a style="text-decoration:none" class="selfurl">https://blogofxyz.top/ </a>(github部署)</p></li><li><p><strong>简介：</strong>小白一个</p></li><li><p><strong>头像：</strong><a style="text-decoration:none" class="selfurl">https://blogofxyz.gitee.io/medias/avatar.jpg</a></p></li></ul>]]></content>
       
     </entry>
     
