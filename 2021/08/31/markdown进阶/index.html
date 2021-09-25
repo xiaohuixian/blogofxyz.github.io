@@ -544,14 +544,14 @@ var _hmt = _hmt || [];
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-12
+                    2021-09-23
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1k
+                    1.1k
                 </div>
                 
 
@@ -622,7 +622,11 @@ var _hmt = _hmt || [];
 <li><p>用<code>mermaid</code>语言的代码块。</p>
 </li>
 <li><p><code>graph </code> 声明图的方向 。</p>
-<p>​    <code>LR</code>绘制横向图。<code>TD</code>绘制竖向图。还有个<code>RL</code> </p>
+<p>TB : top to bottom</p>
+<p>TD : top-down/ same as top to bottom</p>
+<p>BT : bottom to top</p>
+<p>RL : right to left</p>
+<p>LR : left to right</p>
 </li>
 <li><p>用字符串区分节点。</p>
 <p>​    相当于各大语言中声明的变量名。</p>
@@ -630,22 +634,37 @@ var _hmt = _hmt || [];
 </li>
 <li><p>用 <code>[ ]</code>、<code>()</code> 与 <code>{}</code> ，以及<code>//</code>与<code>\\</code> 组合呈现出不同的边框形状声明节点文本内容。</p>
 </li>
-<li><p>用<code>-</code> 、<code>=</code> 与 <code>&gt;</code> 组合在横线上显示文本</p>
+<li><p>用<code>-</code> 、<code>.</code>、<code>=</code> 与 <code>&gt;</code> 组合在横线上显示文本</p>
 <p>​    <code>-</code>与<code>=</code>越多，连线越长。</p>
 <p>​    <code>&gt;</code>表示横线的箭头。</p>
-</li>
+<pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid">graph LR
+a--&gt;b.-c.-d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
 </ul>
 <h4 id="2-1-2-不同边框图"><a href="#2-1-2-不同边框图" class="headerlink" title="2.1.2 不同边框图"></a>2.1.2 不同边框图</h4><ul>
 <li>代码：</li>
 </ul>
-<pre class="line-numbers language-none"><code class="language-none">graph LR
+<pre class="line-numbers language-none"><code class="language-none">graph TD
+subgraph one
 A[a_text]--&gt;B(b_text)--&gt;C([c_text])--&gt;D[(d_text)]--&gt;E((e_text)) 
-F&gt;f_text]--&gt;G{g_text}--&gt;H{{h_text}}--&gt;I[/i_text/]--&gt;J[\j_text\]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+end
+subgraph two
+F&gt;f_text]--&gt;G{g_text}--&gt;H{{h_text}}--&gt;I[/i_text/].-&gt;J[\j_text\]
+end
+subgraph three
+k[/k_text\]--&gt;l[\l_text/].-m[[m_text]]-.-n[n_text]
+end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
-<li>效果：<pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid">graph LR
+<li>效果：<pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid">graph TD
+subgraph one
 A[a_text]--&gt;B(b_text)--&gt;C([c_text])--&gt;D[(d_text)]--&gt;E((e_text)) 
-F&gt;f_text]--&gt;G{g_text}--&gt;H{{h_text}}--&gt;I[/i_text/]--&gt;J[\j_text\]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
+end
+subgraph two
+F&gt;f_text]--&gt;G{g_text}--&gt;H{{h_text}}--&gt;I[/i_text/].-&gt;J[\j_text\]
+end
+subgraph three
+k[/k_text\]--&gt;l[\l_text/].-m[[m_text]]-.-n[n_text]
+end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ul>
 <h4 id="2-1-3-横线显示文本"><a href="#2-1-3-横线显示文本" class="headerlink" title="2.1.3 横线显示文本"></a>2.1.3 横线显示文本</h4><ul>
 <li><p>代码：</p>
@@ -1522,7 +1541,7 @@ a--&gt;ad(...)
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">20.2k</span>
+                        class="white-color">22k</span>
             
             
             

@@ -552,21 +552,21 @@ var _hmt = _hmt || [];
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-12
+                    2021-09-25
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.9k
+                    3.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    17 分
+                    18 分
                 </div>
                 
 
@@ -594,26 +594,29 @@ var _hmt = _hmt || [];
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-源码"><a href="#1-源码" class="headerlink" title="1. 源码"></a>1. 源码</h2><p>符号位 0表示正数，1表示负数；其余各位等同于真值的绝对值（二进制）。</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[-3] -&gt;1 000 0110 
-[+0] -&gt;0 000 0000   <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-
-
+                <p>为了区别一般书写表示的数和机器中这些编码表示的数,通常将前者称为真值,后者称为机器<br>数或机器码。类似于<code>-01110</code>、<code>+1001000</code>等就是真值。即前有<code>±</code>号，后有<code>0</code> <code>1</code>。。而机器码就是全部的 <code>0</code> <code>1</code>。</p>
+<hr>
+<h2 id="1-原码"><a href="#1-原码" class="headerlink" title="1. 原码"></a>1. 原码</h2><p>首先，原码没有<code>±</code>号。即<code>-01101</code> 与<code>+10010</code> 等属于真值。</p>
+<p>原码是最左侧第一位作为符号位 ，0表示正数，1表示负数；其余各位等与真值相同。</p>
+<p>(-3)<sub>D</sub> =(1110)<sub>原</sub> =(-110)<sub>真值</sub> </p>
+<p>特别的：（0）<sub>D</sub> = (0000)<sub>原</sub>=1000<sub>原</sub> </p>
 <h2 id="2-反码"><a href="#2-反码" class="headerlink" title="2. 反码"></a>2. 反码</h2><p>符号位的用法及正数的表示与“原码”相同；负数的表示是在“原码”表示的基础上，将符号位以外的各位取反。</p>
 <p>特别的 “0” 。</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[+5]-&gt; 0 000 0101  
-[-5]-&gt; 1 111 1010 
-[+0]-&gt; 0 000 0000 
-[-0]-&gt; 1 111 1111 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
+<p>（+5）<sub>D</sub>=  (0101)<sub>原</sub>=(0010)<sub>反</sub></p>
+<p>（-5）<sub>D</sub>=  (1101)<sub>原</sub>=(1010)<sub>反</sub></p>
+<p>  ( 0 )  <sub>D</sub>=  (0000)<sub>原</sub>=(0111)<sub>反</sub></p>
+<p>​            =  (1000)<sub>原</sub>=(1111)<sub>反</sub></p>
 <h2 id="3-补码"><a href="#3-补码" class="headerlink" title="3. 补码"></a>3. 补码</h2><p>​        符号位的用法及正数的表示与“原码”相同；负数的表示是在“反码”表示的基础上，通过加1来获得的。</p>
-<p>另，当原码为负时，补码即此负数对字节长所表示最大数（无符号位）取余。</p>
-<p>如，-3-&gt;<code>1011</code> <sub>原码</sub>  -&gt; <code>1100</code> <sub>反码</sub>  -&gt; <code>1101</code> <sub>补码</sub> 。</p>
+<p><u>巧的是，当原码为负时，补码即此负数对字节长所表示最大数（无符号位）取余。另，如果真值为负，则可对每一位求反得出补码。即，当真值小于零，原码与补码的各位相加，所有位皆为<code>0</code></u></p>
+<p>(-3)=(1011) <sub>原</sub> (1100)<sub>反</sub>   (1101) <sub>补</sub> 。</p>
+<p>( 0 )  <sub>D</sub>=  (0000)<sub>原</sub>=(0111)<sub>反</sub></p>
+<p>​          =  (1000)<sub>原</sub>=(1111)<sub>反</sub>=(0000)<sub>补</sub></p>
 <p>​    等价于： -3 %16  = 13 -&gt; <code>1101</code> <sub>原码</sub></p>
-<h2 id="4-ASCII-码"><a href="#4-ASCII-码" class="headerlink" title="4.  ASCII 码"></a>4.  ASCII 码</h2><h3 id="4-1-常用-ASCII-码"><a href="#4-1-常用-ASCII-码" class="headerlink" title="4.1 常用 ASCII 码"></a>4.1 常用 ASCII 码</h3><table>
+<h2 id="4-移码"><a href="#4-移码" class="headerlink" title="4.移码"></a>4.移码</h2><p>移码通常用于表示浮点数的阶码，32位浮点数中阶码范围为。先抛个公式，<br>$$<br>[e]移=2^k+e，2^k&gt;e≥-2^k,([e]移为机器码，e为真值，k为数据长度，如此移码为八位)<br>$$<br>在同一前提、环境下，k不变，比如在32位浮点数中，k为7（因为有一位需要表示正负，同时，）。举个计算例子。</p>
+<p>​            在一八位的移码标准下。(+100110)<sub>真值</sub>=2<sup>8</sup> + 100110=1 010 0110。</p>
+<p>​                                                    (- 110110)<sub>真值</sub>=2<sup>8</sup> -  110110=0 100 1010。       </p>
+<p>其中，最左侧为符号位。正好与其他几种码相反。</p>
+<h2 id="5-ASCII-码"><a href="#5-ASCII-码" class="headerlink" title="5.  ASCII 码"></a>5.  ASCII 码</h2><h3 id="5-1-常用-ASCII-码"><a href="#5-1-常用-ASCII-码" class="headerlink" title="5.1 常用 ASCII 码"></a>5.1 常用 ASCII 码</h3><table>
 <thead>
 <tr>
 <th align="right">DEC</th>
@@ -1778,7 +1781,7 @@ var _hmt = _hmt || [];
 <td align="left">Delete</td>
 </tr>
 </tbody></table>
-<h3 id="4-2-拓展ASCII码："><a href="#4-2-拓展ASCII码：" class="headerlink" title="4.2 拓展ASCII码："></a>4.2 拓展ASCII码：</h3><table>
+<h3 id="5-2-拓展ASCII码："><a href="#5-2-拓展ASCII码：" class="headerlink" title="5.2 拓展ASCII码："></a>5.2 拓展ASCII码：</h3><table>
 <thead>
 <tr>
 <th align="right">DEC</th>
@@ -2944,7 +2947,7 @@ var _hmt = _hmt || [];
 </tr>
 </tbody></table>
 <p>转载于网站：<a target="_blank" rel="noopener" href="https://tool.ip138.com/ascii_code/">传送门)</a></p>
-<h2 id="5-BCD-码"><a href="#5-BCD-码" class="headerlink" title="5. BCD 码"></a>5. BCD 码</h2><ul>
+<h2 id="6-BCD-码"><a href="#6-BCD-码" class="headerlink" title="6. BCD 码"></a>6. BCD 码</h2><ul>
 <li>BCD码与二进制无关</li>
 </ul>
 <p>BCD码也称为二进制编码的十进制数，是将十进制数码0—9分别用四位二进制数来表示，这四位二进制数的权从左到右分别展开后为8、4、2、1，故称为8421 BCD码。 只需将十进制数的各位数字用与其对应的一组（4位）二进制数代替即可得到BCD码形式。</p>
@@ -3763,7 +3766,7 @@ var _hmt = _hmt || [];
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">20.2k</span>
+                        class="white-color">22k</span>
             
             
             

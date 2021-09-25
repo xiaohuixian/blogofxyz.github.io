@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-    <meta name="keywords" content="浮点数,二进制">
+    <meta name="keywords" content="进程,线程,操作系统">
     <meta name="description" content="C# | Web | html | python |">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -18,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>十进制转浮点数 | X-Y-Z`s Blog</title>
+    <title>进程与线程 | X-Y-Z`s Blog</title>
 	
     <link rel="icon" type="image/png" href="/favicon.png">
 
@@ -386,12 +386,12 @@ var _hmt = _hmt || [];
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">十进制转浮点数</h1>
+                    <h1 class="description center-align post-title">进程与线程</h1>
                 </div>
             </div>
         </div>
@@ -508,16 +508,16 @@ var _hmt = _hmt || [];
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%B5%AE%E7%82%B9%E6%95%B0/">
-                                <span class="chip bg-color">浮点数</span>
+                            <a href="/tags/%E8%BF%9B%E7%A8%8B/">
+                                <span class="chip bg-color">进程</span>
                             </a>
                         
-                            <a href="/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6/">
-                                <span class="chip bg-color">二进制</span>
+                            <a href="/tags/%E7%BA%BF%E7%A8%8B/">
+                                <span class="chip bg-color">线程</span>
                             </a>
                         
-                            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                                <span class="chip bg-color">数据结构</span>
+                            <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+                                <span class="chip bg-color">操作系统</span>
                             </a>
                         
                     </div>
@@ -528,8 +528,8 @@ var _hmt = _hmt || [];
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/" class="post-category">
-                                计算机原理
+                            <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="post-category">
+                                操作系统
                             </a>
                         
                     </div>
@@ -541,28 +541,28 @@ var _hmt = _hmt || [];
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-09-02
+                    2021-09-22
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-25
+                    2021-09-22
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    450
+                    776
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -590,147 +590,162 @@ var _hmt = _hmt || [];
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-浮点数"><a href="#1-浮点数" class="headerlink" title="1. 浮点数"></a>1. 浮点数</h2><h3 id="1-1-优缺点"><a href="#1-1-优缺点" class="headerlink" title="1.1 优缺点"></a>1.1 优缺点</h3><p>优：相对于定点数来说可表达范围更大的数据类型。</p>
-<p>缺：失去了准确性。</p>
-<h3 id="1-2-组成"><a href="#1-2-组成" class="headerlink" title="1.2 组成"></a>1.2 组成</h3><p>浮点数由三部分组成。符号位，偏移位，数据位。</p>
-<p>专业的叫法为：</p>
+                <h2 id="1-进程"><a href="#1-进程" class="headerlink" title="1. 进程"></a>1. 进程</h2><h3 id="1-1-进程定义"><a href="#1-1-进程定义" class="headerlink" title="1.1 进程定义"></a>1.1 进程定义</h3><p>​    进程是进程实体的运行过程，是系统进行资源分配和调度的一个独立单位。</p>
+<p>​    可固体为：</p>
 <ul>
-<li><p>Sign：符号位，表示浮点数是正数或负数。0正，1负。</p>
+<li><p>进程是程序的一次执行。</p>
 </li>
-<li><p>Exponent：指数位–阶码。类似于科学技术法 1x10<sup>12</sup> 中的12的部分，但略有不同。这里是以2为底数而不是10。</p>
-<p> ​        当浮点数为32位时，指数位有8位。如0.00001531 之类的数，指数部分将会是负数。为了表示这些数。便将2<sup>8</sup> 平分，但还有<code>0</code>需要表示，所以就是  -(2<sup>7</sup>-1) <del>0 与1</del>2<sup>7</sup> 。但是还有个前提，需要表示正负，所以为了除去符号位就使所有数都偏移一个量，保证所有数为正，这样就可省略符号位。即偏移2<sup>7</sup> -1=127。</p>
+<li><p>进程是一个程序及其数据在处理机上顺序执行时所发生的活动。</p>
 </li>
-<li><p>Mantissa：基数位–尾数。浮点数具体数值的实际表示。</p>
+<li><p>进程是程序在一个数据集合上运行的过程，它是系统进行资源分配和调度的一个独立单位。</p>
 </li>
 </ul>
-<div>
-    <div>
-        <style>
-          th {
-              padding: 10px 20px;
-          }td {
-          border-style: inset;
-          border-width: 5px;
-          margin: 10px 15px;
-          padding: 10px 20px;
-      }
-      tr {
-          margin: 10px 15px;
-      }
-        </style>
-    </div>
-      <div>
-        <h3 id="1-3-种类"><a href="#1-3-种类" class="headerlink" title="1.3 种类"></a>1.3 种类</h3><p>目前标准的浮点数有两种 <code>32 bit</code> 与 <code>64 bit</code> 以后定会出现更高的。</p><ul>
-<li><code>32 bit</code></li>
-</ul><div style="text-align:center"><svg width="400" height="80" xmlns="http://www.w3.org/2000/svg">
- <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
- <g>
-  <title>background</title>
-  <rect fill="none" id="canvas_background" height="82" width="402" y="-1" x="-1"></rect>
-  <g display="none" id="canvasGrid">
-   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%" id="svg_7"></rect>
-  </g>
- </g>
- <g>
-  <title>Layer 1</title>
-  <g id="svg_14">
-   <rect id="svg_1" height="40" width="50" y="20.00001" x="36.3" stroke-width="1.5" stroke="#000" fill="#FABA6F"></rect>
-   <rect id="svg_2" height="40" width="100" y="20.00001" x="86.3" stroke-width="1.5" stroke="#000" fill="#FABA6F"></rect>
-   <rect id="svg_3" height="40" width="200" y="20.00001" x="186.3" stroke-width="1.5" stroke="#000" fill="#FABA6F"></rect>
-   <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="16" id="svg_4" y="45.60158" x="40.3" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">s:1位</text>
-   <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="16" id="svg_5" y="45.60158" x="111.3" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">E:8位</text>
-   <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="16" id="svg_6" y="45.60158" x="267.3" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">M:23位</text>
-  </g>
- </g>
-</svg>
-</div><ul>
-<li><code>64bit</code></li>
-</ul><div style="text-align:center">
-  <svg width="400" height="80" xmlns="http://www.w3.org/2000/svg">
-   <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
-   <g>
-    <title>background</title>
-    <rect x="-1" y="-1" width="402" height="82" id="canvas_background" fill="none"></rect>
-    <g id="canvasGrid" display="none">
-     <rect id="svg_7" width="100%" height="100%" x="0" y="0" stroke-width="0" fill="url(#gridpattern)"></rect>
+<h4 id="1-1-1进程控制块-PCB"><a href="#1-1-1进程控制块-PCB" class="headerlink" title="1.1.1进程控制块( PCB)"></a>1.1.1进程控制块( PCB)</h4><p>​    PCB ( process control block ) 是进程的一部分，是操作系统中最重要的记录型数据结构，是进程存在的唯一标志，常驻内存。</p>
+<p>​    作用：</p>
+<ul>
+<li>作为独立运行基本单位的标志；</li>
+<li>能实现间断性运行方式；</li>
+<li>提供进程管理所需要的信息；</li>
+<li>提供进程调度所需要的信息；</li>
+<li>实现与其他进程的同步与通信。</li>
+</ul>
+<h3 id="1-2-进程的几个特征"><a href="#1-2-进程的几个特征" class="headerlink" title="1.2 进程的几个特征"></a>1.2 进程的几个特征</h3><ul>
+<li>动态性（最基本的特征)–&gt;生命期</li>
+<li>并发性–&gt;一段时间内同时运行</li>
+<li>独立性–&gt;进程实体是一个能独立运行的基本单位,是系统中独立获得资     源和独立调度的基本单位</li>
+<li>异步性–&gt;按各自独立的、不可预知的速度向前推进</li>
+</ul>
+<h3 id="1-3-进程的状态与转换"><a href="#1-3-进程的状态与转换" class="headerlink" title="1.3 进程的状态与转换"></a>1.3 进程的状态与转换</h3><ul>
+<li><p>就绪状态</p>
+<p>​    一个较大的程序通常都由若干个程序段组成，程序在执行时，必须按照某种先后次序逐个执行，仅当前一操作执行完后，才能执行后继操作。</p>
+</li>
+<li><p>执行状态</p>
+<p>​    已获得CPU，正在执行的状态</p>
+</li>
+<li><p>阻塞状态</p>
+<p>​    正在执行的进程由于发生某事件而暂时无法继续执行的状态。如：请求I/O、申请缓冲空间</p>
+</li>
+</ul>
+<div style="text-align:center"> 
+<svg width="620" viewBox="0 0 620 294" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="294">
+    <defs></defs>
+    <g transform="translate(-146.87,-126.87)">
+        <g id="shape1" transform="translate(252.54,127.87)">
+            <path fill="#ffffff" fill-rule="nonzero" stroke="#323232" d="M.0,40.0C.0,17.9,26.9,.0,60.0,.0C93.1,.0,120.0,17.9,120.0,40.0C120.0,62.1,93.1,80.0,60.0,80.0C26.9,80.0,.0,62.1,.0,40.0z"></path>
+            <text xml:space="preserve" style="fill:#191919;font-family:Microsoft YaHei;font-size:16.00pt">
+                <tspan y="47.6" x="38.4">就绪</tspan>
+            </text>
+        </g>
+        <g id="shape2" transform="translate(535.28,127.87)">
+            <path fill="#ffffff" fill-rule="nonzero" stroke="#323232" d="M.0,40.0C.0,17.9,26.9,.0,60.0,.0C93.1,.0,120.0,17.9,120.0,40.0C120.0,62.1,93.1,80.0,60.0,80.0C26.9,80.0,.0,62.1,.0,40.0z"></path>
+            <text xml:space="preserve" style="fill:#191919;font-family:Microsoft YaHei;font-size:16.00pt">
+                <tspan y="47.6" x="38.4">执行</tspan>
+            </text>
+        </g>
+        <g id="shape3" transform="translate(396.85,340.16)">
+            <path fill="#ffffff" fill-rule="nonzero" stroke="#323232" d="M.0,40.0C.0,17.9,26.9,.0,60.0,.0C93.1,.0,120.0,17.9,120.0,40.0C120.0,62.1,93.1,80.0,60.0,80.0C26.9,80.0,.0,62.1,.0,40.0z"></path>
+            <text xml:space="preserve" style="fill:#191919;font-family:Microsoft YaHei;font-size:16.00pt">
+                <tspan y="47.6" x="38.4">阻塞</tspan>
+            </text>
+        </g>
+        <g id="shape4" transform="translate(369.17,181.12)">
+            <path fill="none" stroke="#191919" d="M.0,.0L163.5,-0.0"></path>
+            <path fill="#191919" stroke="#191919" stroke-width="1" d="M163.5,-3.0L169.5,-0.0L163.5,3.0L163.5,-3.0" stroke-linecap="round"></path>
+            <rect y="-13.3" width="73.6" fill="#ffffff" x="55.5" height="24.0"></rect>
+            <text xml:space="preserve" style="fill:#191919;font-family:Microsoft YaHei;font-size:14.00pt">
+                <tspan y="5.9" x="55.5">进程调度</tspan>
+            </text>
+        </g>
+        <g id="shape5" transform="translate(396.85,380.16)">
+            <path fill="none" stroke="#191919" d="M.0,.0L-81.7,-166.9"></path>
+            <path fill="#191919" stroke="#191919" stroke-width="1" d="M-84.4,-165.6L-84.3,-172.3L-79.0,-168.2L-84.4,-165.6" stroke-linecap="round"></path>
+            <rect y="-97.2" width="70.4" fill="#ffffff" x="-74.8" height="25.6"></rect>
+            <text xml:space="preserve" style="fill:#191919;font-family:Microsoft YaHei;font-size:15.00pt">
+                <tspan y="-76.4" x="-74.8">I/O完成</tspan>
+            </text>
+        </g>
+        <g id="shape6" transform="translate(552.43,195.87)">
+            <path fill="none" stroke="#191919" d="M.0,.0L-34.4,178.4"></path>
+            <path fill="#191919" stroke="#191919" stroke-width="1" d="M-31.5,179.0L-35.6,184.3L-37.4,177.8L-31.5,179.0" stroke-linecap="round"></path>
+            <rect y="66.4" width="70.4" fill="#ffffff" x="-49.8" height="25.6"></rect>
+            <text xml:space="preserve" style="fill:#191919;font-family:Microsoft YaHei;font-size:15.00pt">
+                <tspan y="87.2" x="-49.8">I/O请求</tspan>
+            </text>
+        </g>
+        <g id="shape7" transform="translate(542.40,148.95)">
+            <path fill="none" stroke="#191919" d="M.0,.0L-171.0,-0.0"></path>
+            <path fill="#191919" stroke="#191919" stroke-width="1" d="M-171.0,3.0L-177.0,-0.0L-171.0,-3.0L-171.0,3.0" stroke-linecap="round"></path>
+            <rect y="-14.3" width="80.0" fill="#ffffff" x="-119.3" height="25.6"></rect>
+            <text xml:space="preserve" style="fill:#191919;font-family:Microsoft YaHei;font-size:15.00pt">
+                <tspan y="6.5" x="-119.3">时间片完成</tspan>
+            </text>
+        </g>
+        <g id="shape8" transform="translate(640.69,194.01)">
+            <path fill="none" stroke="#191919" d="M.0,.0L62.7,140.7"></path>
+            <path fill="#191919" stroke="#191919" stroke-width="1" d="M65.4,139.4L65.1,146.1L59.9,141.9L65.4,139.4" stroke-linecap="round"></path>
+            <rect y="40.6" width="40.0" fill="#ffffff" x="5.5" height="25.6"></rect>
+            <text xml:space="preserve" style="fill:#191919;font-family:Microsoft YaHei;font-size:15.00pt">
+                <tspan y="61.4" x="5.5">释放</tspan>
+            </text>
+        </g>
+        <g id="shape9" transform="translate(268.07,194.73)">
+            <path fill="none" stroke="#191919" d=""></path>
+        </g>
+        <g id="shape10" transform="translate(207.87,340.16)">
+            <path fill="none" stroke="#191919" d="M.0,.0L57.2,-140.4"></path>
+            <path fill="#191919" stroke="#191919" stroke-width="1" d="M54.5,-141.5L59.5,-146.0L60.0,-139.3L54.5,-141.5" stroke-linecap="round"></path>
+            <rect y="-85.6" width="40.0" fill="#ffffff" x="10.1" height="25.6"></rect>
+            <text xml:space="preserve" style="fill:#191919;font-family:Microsoft YaHei;font-size:15.00pt">
+                <tspan y="-64.8" x="10.1">许可</tspan>
+            </text>
+        </g>
+        <g id="shape11" transform="translate(147.87,340.16)">
+            <path fill="#ffffff" fill-rule="nonzero" stroke="#323232" d="M.0,40.0C.0,17.9,26.9,.0,60.0,.0C93.1,.0,120.0,17.9,120.0,40.0C120.0,62.1,93.1,80.0,60.0,80.0C26.9,80.0,.0,62.1,.0,40.0z"></path>
+            <text xml:space="preserve" style="fill:#191919;font-family:Microsoft YaHei;font-size:15.00pt">
+                <tspan y="46.5" x="40.0">创建</tspan>
+            </text>
+        </g>
+        <g id="shape12" transform="translate(645.83,340.16)">
+            <path fill="#ffffff" fill-rule="nonzero" stroke="#323232" d="M.0,40.0C.0,17.9,26.9,.0,60.0,.0C93.1,.0,120.0,17.9,120.0,40.0C120.0,62.1,93.1,80.0,60.0,80.0C26.9,80.0,.0,62.1,.0,40.0z"></path>
+            <text xml:space="preserve" style="fill:#191919;font-family:Microsoft YaHei;font-size:15.00pt">
+                <tspan y="46.5" x="40.0">终止</tspan>
+            </text>
+        </g>
     </g>
-   </g>
-   <g>
-    <title>Layer 1</title>
-    <rect fill="#FABA6F" stroke="#000" stroke-width="1.5" x="36.3" y="20.00001" width="50" height="40" id="svg_1"></rect>
-    <rect fill="#FABA6F" stroke="#000" stroke-width="1.5" x="86.3" y="20.00001" width="100" height="40" id="svg_2"></rect>
-    <rect fill="#FABA6F" stroke="#000" stroke-width="1.5" x="186.3" y="20.00001" width="200" height="40" id="svg_3"></rect>
-    <text fill="#000000" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="40.3" y="45.60158" id="svg_4" font-size="16" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">s:1位</text>
-    <text style="cursor: move;" fill="#000000" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="111.3" y="45.60158" id="svg_5" font-size="16" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">E:11位</text>
-    <text style="cursor: move;" fill="#000000" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="267.3" y="45.60158" id="svg_6" font-size="16" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">M:52位</text>
-   </g>
-  </svg>    
-</div><p>此文以32位举例说明运算步骤。</p><h2 id="2-十进制转浮点数"><a href="#2-十进制转浮点数" class="headerlink" title="2. 十进制转浮点数"></a>2. 十进制转浮点数</h2><p>具体算法可参考<mark><a target="_blank" rel="noopener" href="https://blogofxyz.gitee.io/2021/09/02/%E5%B0%8F%E6%95%B0%E8%BD%AC%E6%8D%A2%E4%BA%8C%E8%BF%9B%E5%88%B6/">点这里</a></mark> </p><table style="text-align: center;margin:auto;">
-            <tbody><tr>
-            <th colspan="5">浮点数表示范围</th>
-            </tr>
-      <tr>
-          <th colspan="2">单精度32位</th>
-          <th colspan="2">双精度64位</th>
-          <th rowspan="2">表示的对象</th>
-       </tr>
-          <tr>
-      <td>指数</td>
-      <td>位数</td>
-      <td>指数</td>
-      <td>位数</td>
-  </tr>
-  <tr>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>s=0，表示0;s=1,表示-0</td>
-  </tr>
-  <tr>
-      <td>0</td>
-      <td>非0</td>
-      <td>0</td>
-      <td>非0</td>
-      <td>正负规格化数</td>
-  </tr>
-  <tr>
-      <td>1~254</td>
-      <td>任意数</td>
-      <td>1~2046</td>
-      <td>任意数</td>
-      <td>正负浮点数</td>
-  </tr>
-  <tr>
-      <td>255</td>
-      <td>0</td>
-      <td>2047</td>
-      <td>0</td>
-      <td>正负无穷</td>
-  </tr>
-  <tr>
-      <td>非零</td>
-      <td>0</td>
-      <td>非零</td>
-      <td>0</td>
-      <td>NaN(不是数)</td>
-  </tr>
+</svg>
+</div>
 
 
+<h3 id="1-4-进程控制"><a href="#1-4-进程控制" class="headerlink" title="1.4 进程控制"></a>1.4 进程控制</h3><p>​    一般由OS内核中的原语实现，是进程管理的基本功能。</p>
+<ul>
+<li><p>进程创建</p>
+</li>
+<li><p>进程终止</p>
+</li>
+<li><p>进程阻塞与唤醒 </p>
+</li>
+<li><p>进程挂起与激活</p>
+</li>
+</ul>
+<h4 id="1-4-1-进程创建"><a href="#1-4-1-进程创建" class="headerlink" title="1.4.1 进程创建"></a>1.4.1 进程创建</h4><p>  ​    引起进程创建的事件：用户登录、作业调度、提供服务、应用请求等。</p>
+  <pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid">graph LR
+a[申请空白PCB]--&gt;b[分配所需资源]--&gt;c[初始化PCB]--&gt;d[插入就绪队列]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-  
-
-
-
-
-
-
-
-
-
-
-
-</tbody></table></div></div>
+<h4 id="1-4-2-进程终止"><a href="#1-4-2-进程终止" class="headerlink" title="1.4.2 进程终止"></a>1.4.2 进程终止</h4><p>  ​    引起进程终止的事件：正常结束、异常结束、外界干预等。</p>
+<p>  ​    </p>
+<h4 id="1-4-3-进程阻塞与唤醒"><a href="#1-4-3-进程阻塞与唤醒" class="headerlink" title="1.4.3 进程阻塞与唤醒"></a>1.4.3 进程阻塞与唤醒</h4><p>  ​    向系统请求共享资源失败、等待某种操作的完成、新数据尚未到达、等待新任务的到达等。</p>
+<p>  ​    阻塞唤醒需要成对使用。</p>
+<ul>
+<li><p>阻塞：</p>
+<p>​    进程的阻塞是进程自身的一种主动行为。</p>
+<pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid">graph LR
+a[停止执行]--&gt;b[状态由执行改为阻塞]--&gt;c[将PCB插入阻塞队列]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+<li><p>唤醒：</p>
+<pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid">graph LR
+a[从阻塞队列中移出]--&gt;b[状态由阻塞改为就绪]--&gt;c[将PCB插入就绪队列]
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+</ul>
+<h4 id="1-4-4-进程挂起与激活"><a href="#1-4-4-进程挂起与激活" class="headerlink" title="1.4.4 进程挂起与激活"></a>1.4.4 进程挂起与激活</h4>
                 
             </div>
             <hr/>
@@ -756,7 +771,7 @@ var _hmt = _hmt || [];
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://blogofxyz.top/2021/09/02/%E5%8D%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%B5%AE%E7%82%B9%E6%95%B0/">https://blogofxyz.top/2021/09/02/%E5%8D%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%B5%AE%E7%82%B9%E6%95%B0/</a>
+                    <a href="https://blogofxyz.top/2021/09/22/%E8%BF%9B%E7%A8%8B/">https://blogofxyz.top/2021/09/22/%E8%BF%9B%E7%A8%8B/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -794,16 +809,16 @@ var _hmt = _hmt || [];
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%B5%AE%E7%82%B9%E6%95%B0/">
-                                    <span class="chip bg-color">浮点数</span>
+                                <a href="/tags/%E8%BF%9B%E7%A8%8B/">
+                                    <span class="chip bg-color">进程</span>
                                 </a>
                             
-                                <a href="/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6/">
-                                    <span class="chip bg-color">二进制</span>
+                                <a href="/tags/%E7%BA%BF%E7%A8%8B/">
+                                    <span class="chip bg-color">线程</span>
                                 </a>
                             
-                                <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                                    <span class="chip bg-color">数据结构</span>
+                                <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+                                    <span class="chip bg-color">操作系统</span>
                                 </a>
                             
                         </div>
@@ -1262,29 +1277,88 @@ var _hmt = _hmt || [];
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/09/02/%E5%B0%8F%E6%95%B0%E8%BD%AC%E6%8D%A2%E4%BA%8C%E8%BF%9B%E5%88%B6/">
+                <a href="/2021/09/22/%E8%BF%9B%E7%A8%8B/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="小数转换二进制">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="进程与线程">
                         
-                        <span class="card-title">小数转换二进制</span>
+                        <span class="card-title">进程与线程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            说明如何把一个小数转换为二进制。
+                            进程与线程的区别
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-02
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-22
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="post-category">
+                                    操作系统
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%BF%9B%E7%A8%8B/">
+                        <span class="chip bg-color">进程</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%BA%BF%E7%A8%8B/">
+                        <span class="chip bg-color">线程</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+                        <span class="chip bg-color">操作系统</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/09/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%80%8E%E4%B9%88%E8%BF%9B%E8%A1%8C%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="计算机怎么计算四则运算">
+                        
+                        <span class="card-title">计算机怎么计算四则运算</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            计算机运算加减乘除的原理。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-15
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1300,69 +1374,12 @@ var _hmt = _hmt || [];
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6/">
-                        <span class="chip bg-color">二进制</span>
+                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/">
+                        <span class="chip bg-color">计算机原理</span>
                     </a>
                     
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E8%BD%AC%E6%8D%A2/">
-                        <span class="chip bg-color">数据转换</span>
-                    </a>
-                    
-                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">
-                        <span class="chip bg-color">计算机组成原理</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/08/31/markdown%E8%BF%9B%E9%98%B6/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="markdown进阶">
-                        
-                        <span class="card-title">markdown进阶</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            最开始的 markdown 文件自己写完，除了字就是字。为了更美观，更高效简洁的表达自己，就总结了不少知识。
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-31
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/markdown/" class="post-category">
-                                    markdown
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/markdown/">
-                        <span class="chip bg-color">markdown</span>
-                    </a>
-                    
-                    <a href="/tags/typora/">
-                        <span class="chip bg-color">typora</span>
+                    <a href="/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%BF%90%E7%AE%97/">
+                        <span class="chip bg-color">二进制运算</span>
                     </a>
                     
                 </div>
