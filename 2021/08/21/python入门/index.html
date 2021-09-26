@@ -1,0 +1,2957 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+    <meta name="keywords" content="python,编程语言入门">
+    <meta name="description" content="C# | Web | html | python |">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="baidu-site-verification" content="code-c9IEbSDR1U" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>python入门 | X-Y-Z`s Blog</title>
+	
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+
+   <style>
+    body{
+       background-image: url(/medias/background.JPG);
+       background-repeat:no-repeat;
+       background-size:cover;
+       background-attachment:fixed;
+    }
+</style>
+
+
+
+<body>
+
+	
+    <header class="navbar-fixed">
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?b3593488200a34a873defcaa11fc888a";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">X-Y-Z`s Blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-sitemap" style="zoom: 0.6;"></i>
+      
+      <span>归类</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/categories">
+          
+          <i class="fas fa-bookmark" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>分类</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/archives">
+          
+          <i class="fas fa-archive" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>归档</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/navigate" class="waves-effect waves-light">
+      
+      <i class="fas fa-location-arrow" style="zoom: 0.6;"></i>
+      
+      <span>导航</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友链</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">X-Y-Z`s Blog</div>
+        <div class="logo-desc">
+            
+            C# | Web | html | python |
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-sitemap"></i>
+			
+			归类
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/categories " style="margin-left:50px">
+				  
+				   <i class="fa fas fa-bookmark" style="position: absolute;left:28px" ></i>
+			      
+		          <span>分类</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/archives " style="margin-left:50px">
+				  
+				   <i class="fa fas fa-archive" style="position: absolute;left:28px" ></i>
+			      
+		          <span>归档</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/navigate" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-location-arrow"></i>
+			
+			Navigate
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork He
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #4e9ef5;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork He" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">python入门</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+		height: 500px;
+		overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/python/">
+                                <span class="chip bg-color">python</span>
+                            </a>
+                        
+                            <a href="/tags/%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8/">
+                                <span class="chip bg-color">语言入门</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/python/" class="post-category">
+                                python
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-08-21
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-08-30
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    7k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    31 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+        <!-- 代码块折行 -->
+        <style type="text/css">
+            code[class*="language-"], pre[class*="language-"] { white-space: pre-wrap !important; }
+        </style>
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>假期自学，代码都是自己看视频时联想敲得，与任何教程无关。为了腾电脑的地方，顺便复习下，学习后边的内容，就整理了下之前敲得。注释与解释不太多（别幻想别人写一大堆注释，有写注释的习惯吗），看的话凑活看，不懂得可以联系me。其他内容持续更新。</p>
+<p>python版本:3.6.6</p>
+<p>python在线运行代码：-&gt;&gt;&gt;&gt; [菜鸟在线 Editor](<a target="_blank" rel="noopener" href="https://www.runoob.com/try/runcode.php?filename=HelloWorld&amp;type=python3">菜鸟教程在线编辑器 (runoob.com)</a>)-&gt;&gt;&gt;&gt;</p>
+<h2 id="1-if…elif…else"><a href="#1-if…elif…else" class="headerlink" title="1. if…elif…else"></a>1. if…elif…else</h2><ul>
+<li><p>if条件中 且 用‘and’ 或 用‘or’</p>
+</li>
+<li><p> keyword: “产生随机字符串”，</p>
+</li>
+</ul>
+ <pre class="line-numbers language-python" data-language="python"><code class="language-python"> ##  if条件中 且 用‘and’ 或 用‘or’
+  
+n = input("输入任意数字")
+if int(n) % 2 == 0 and n != "0":
+    print("输入为偶数")
+elif int(n) % 2 != 0:
+    print("输入为奇数")
+else:
+    print("输入非数字或 “0” ")
+  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="2-运算符、文件写入、id"><a href="#2-运算符、文件写入、id" class="headerlink" title="2. 运算符、文件写入、id()"></a>2. 运算符、文件写入、id()</h2><h3 id="2-1运算符"><a href="#2-1运算符" class="headerlink" title="2.1运算符"></a>2.1运算符</h3><h4 id="2-1-1-算数与赋值运算符"><a href="#2-1-1-算数与赋值运算符" class="headerlink" title="2.1.1 算数与赋值运算符"></a>2.1.1 算数与赋值运算符</h4><p>​    几个与其他语言不同，或比较特殊的几个。</p>
+<p>​      ** ：幂，如2**5为2^5^ 。</p>
+<p>​      //  ：取整除，“/”，所得结果带小数部分。“//”，结果只有整数部分。</p>
+<p>​      /=、//=、**=：类比理解。</p>
+<h3 id="2-1-2-逻辑运算符"><a href="#2-1-2-逻辑运算符" class="headerlink" title="2.1.2 逻辑运算符"></a>2.1.2 逻辑运算符</h3><p>​    在条件组合时不是其他语言那样  “||”, “&amp;&amp;”,  “!”。</p>
+<ul>
+<li>“||” 用 “or” 替换</li>
+<li>“&amp;&amp;” 用 “and” 替换</li>
+<li>“!” 用 “not” 替换</li>
+</ul>
+<h3 id="2-1-3-位运算符"><a href="#2-1-3-位运算符" class="headerlink" title="2.1.3 位运算符"></a>2.1.3 位运算符</h3><p>​    &amp; <sup>与</sup> ， | <sup>或</sup>， ^ <sup>异或</sup> ， ~ <sup>取反</sup>， &lt;&lt; <sup>左移</sup>， &gt;&gt; <sup>右移</sup>。运算只针对于二进制数，运算逻辑与其他语言相同。</p>
+<p>其中用到  <mark>格式化输出字符串</mark> 。可通过目录前往了解学习。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">#  encoding:utf-8
+#  keyword:“input”，“逻辑运算符”，“&gt;&gt;”，“&lt;&lt;”，“|”，“^”,
+#      “变量地址”
+from os import error
+
+a = input("输入字符串")
+x = input("输入一个数 X:")
+
+# 输入x
+try:
+    x = int(x)
+except:
+    print("输入数据有误!")
+    exit(0)
+# 输入y
+y = input("输入一个数Y:")
+try:
+    y = int(y)
+except:
+    print("输入数据有误!")
+    exit(0)
+
+templea = "% 8s\n% 10d\n"
+templeb = "{0: &gt;9s}\n{1: &gt;#20b}\n"
+templec = "{0: &gt;9s}\n{1: &gt;#20b}\n{2: &gt;#20b}\n"
+
+a += "\n"
+prs1 = [
+    ("原数(x):", x),
+    ("原数(y):", y),
+    ("值id(x)：", id(x)),
+]
+prs2 = [
+    ("二进制(x):", x),
+    ("二进制(y):", y),
+    ("右，移(x&gt;&gt;2):", x &gt;&gt; 2),
+    ("左，移(x&lt;&lt;2):", x &lt;&lt; 2),
+]
+prs3 = [
+    ("异或(x^y,y^x):", x ^ y, y ^ x),
+    ("_或(x|y，y|x):", x | y, y | x),
+]
+for item in prs1:
+    a += templea % item
+for item in prs2:
+    a += templeb.format(item[0], item[1])
+for item in prs3:
+    a += templec.format(item[0], item[1], item[2])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="3-while"><a href="#3-while" class="headerlink" title="3. while"></a>3. while</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  keyword: “while”，“ascll转字符”，“字符转ascll”，
+#      “ord()”，“chr()”，
+
+#  encoding:utf-8
+
+string = "A"
+
+#  根据字符取ascll码值
+a = ord("A")
+i = 0
+while i &lt; 60:
+  #  根据ascll码值取字符
+  st ring += chr(a)
+  if i % 3 == 0:
+	 print()
+  print(a, ":" + chr(a), end=" ")
+  i = i + 1
+  a = a + 1
+print(string)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="4-序列"><a href="#4-序列" class="headerlink" title="4. 序列"></a>4. 序列</h2><h3 id="4-1-序列的基本操作"><a href="#4-1-序列的基本操作" class="headerlink" title="4.1 序列的基本操作"></a>4.1 序列的基本操作</h3><p>加，乘，切片，索引</p>
+<p> 序列支持负数索引, 当序数为负时从右向左数<br>        list(start,end.stop)<br>         序列为’[]’,元组为’()’,字典为’{}’。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">#  encoding:utf-8
+#  keyword：“序列加”，“序列乘”，“序列切片”，“序列索引”
+
+print("")
+name=["张三","张四","张五","李四","李五"]
+number=[1,2,3,4]
+#  乘
+print(name*3)
+#  加
+print("name+number", name+number,"")
+#  切片【从第二个开始，到第六个以前，间隔为2】
+namenum=name+number
+print("namenum[1:5:2]",namenum[1:5:2],"")
+print("namenum[:5:]",namenum[:5:],"")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<h3 id="4-2-序列的常见方法"><a href="#4-2-序列的常见方法" class="headerlink" title="4.2 序列的常见方法"></a>4.2 序列的常见方法</h3><p>max，min，exist，unexist</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">#  keyword:“序列最大值”，“序列最小值”，“序列存在判断”，
+
+#  encoding:utf-8
+
+numbers=[1.2,123.1,456,486,456,156,111,222,333]
+print(numbers)
+print("最大值",max(numbers))
+print("最小值",min(numbers))
+print("长度",len(numbers))
+x=456
+print("是否存在",x,x in numbers)
+y=678
+print("是否不存在",y,y not in numbers)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<h3 id="4-3-序列的遍历"><a href="#4-3-序列的遍历" class="headerlink" title="4.3 序列的遍历"></a>4.3 序列的遍历</h3><p>for…in…(enumerate())</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"># for a b in c :
+#  表达式
+#  a:序列(index)，当前值得序号。
+#  b:临时量，取出来的值都赋值给他，
+#  c:序列
+#  keyword:"for循环","遍历",
+
+# encoding:utf-8
+
+name = ["dage", "erge", "sange", "laosi", "laowu", "xiaoliu"]
+print(name)
+a=0
+for linshide in name:
+  if a % 2==0 :
+    ## 换行
+    print("\n")
+  print("\t"+linshide,end="")
+	## 不换行打印
+  a=a+1 ## python不支持自增|自减运算
+for xuhao, name in enumerate(name):
+  if xuhao % 2==0 :
+    print("")
+  print("\t序号是：" + str(xuhao), "\t名字是" + name, end="")##不换行输出<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+
+
+
+
+<h3 id="4-4-序列的-增-删-改"><a href="#4-4-序列的-增-删-改" class="headerlink" title="4.4 序列的 增 删 改"></a>4.4 序列的 增 删 改</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">#!keyword: “序列修改”，“序列增”，“序列删”，“序列改”，
+#  定义:
+
+# encoding:utf-8
+
+name = ["dage", "erge", "sange", "laosi", "laowu", "xiaoliu"]
+print("\n定义的数组为：")
+print(name)
+
+#  添加:
+name.append("laomo")
+print("\n添加一个后的数组：" )
+print(name)
+
+#  通过索引获取指定值。直接重新赋值。
+strint=name[0]="dageda"
+print("\n添加一个后再修改下的数组：")
+print(name)
+
+# 删除指定“dage” 即 删除name[2]
+del name[0]
+print("\n删除 name[0] 的数组：")
+print(name)
+
+#  等效的代码
+#  name.remove("dage")
+#  print("\n删除“dage” 的数组：")
+#  print(name)
+# 二次删除会出错（删除不存在的元素会出错）
+#  name.remove("dage")
+#  print(name)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="4-5-序列的统计求和"><a href="#4-5-序列的统计求和" class="headerlink" title="4.5 序列的统计求和"></a>4.5 序列的统计求和</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">#! keyword：“序列求和”，“序列统计出现次数”，
+
+# encoding:utf-8
+
+nums=[123,456,789,321,951,654,789,123,654,987,147,258,
+654,852,147,369,741,852,963]
+nums_plus=nums*2
+
+# 统计某一元素出现次数
+if 147 in nums_plus :
+  print("147出现次数为\t:"+ str(nums_plus.count(147)))
+else:
+  print(str(147)+"不存在")
+
+# 全部元素求和（仅限元素全为数字类型）
+print("nums和为\t:"+str(sum(nums))+"\nnums_plus和为\t:"+str(sum(nums_plus)))
+
+# keyword：“序列求和”，“序列统计出现次数”，
+nums=[123,456,789,321,951,654,789,123,654,987,147,258,
+654,852,147,369,741,852,963]
+nums_plus=nums*2
+
+##? 统计某一元素出现次数
+if 147 in nums_plus :
+  print("147出现次数为\t:"+ str(nums_plus.count(147)))
+else:
+  print(str(147)+"不存在")
+
+##? 全部元素求和（仅限元素全为数字类型）
+print("nums和为\t:"+str(sum(nums))+"\nnums_plus和为\t:"+str(sum(nums_plus)))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<h3 id="4-6-序列的排序"><a href="#4-6-序列的排序" class="headerlink" title="4.6 序列的排序"></a>4.6 序列的排序</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"># / 1.sort(interable【序列名】，key=none【关键词，默认为none,-
+# / -可设置为 “str.lower” 不区分大小写】，-
+# / -reverse【降序，boolean变量，默认为升序(false)】)
+# / 2.排序可用sorted()方法，也可用 “yigexulie.sort()” -
+# / -sorted()三个参数（序列名，关键词，逆序）.返回一个序列-
+# / - sort()两个参数（关键词，逆序）
+#  keyword：“序列排序”，
+
+# encoding:utf-8
+
+# 定义俩序列
+names=["toms","Jone","Tony","alice","obma"]
+numbers=[123,456,789,321,951,654,789,123,654,
+987,147,258,654,852,147,369,741,852,963]
+
+print("\n原序列names:")
+print(names)
+print("\n原序列numbers:")
+print(numbers)
+
+#排序
+names.sort()
+numbers.sort()
+print("\n升序排列names(区分大小写)：")
+print(names)
+
+#添加key使不区分大小写
+names.sort(key=str.lower)
+print("\n升序排列names(不区分大小写)：")
+print(names)
+print("\n升序排列numbers：")
+print(numbers)
+names.sort(key=str.lower,reverse=True)
+print("\n降序排列names：")
+print(names)
+print("\n降序排列numbers：")
+numbers= sorted(numbers,reverse=True)
+print(numbers)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<h3 id="4-7-序列推导式"><a href="#4-7-序列推导式" class="headerlink" title="4.7 序列推导式"></a>4.7 序列推导式</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"># list= [a for b in c]
+# a:表达式; b: 为迭代个数; c: 临时量,每次取出来东西都赋值给他.
+
+# encoding:utf-8
+
+import math
+import random
+
+##example: 一般定义法
+list1 = []
+for i in range(20):
+  list1.append(random.randint(30, 99))
+print("list1")
+print(list1)
+
+##example:定义从30~99的20个随机数。
+list2 = []
+list2 = [random.randint(30, 99) for i in range(20)]
+print("\nlist2:")
+print(list2)
+
+##example:定义从2开始的偶数立方数列
+list3 = []
+list3 = [math.pow(i, 3) for i in range(1, 20, 3)]
+
+##//range(start，end，step)函数
+print("\nlist3:")
+print(list3)
+
+##example:从list4中运算后筛选符合条件的
+##//newlist=[expression for var in list if condition]
+list4 = []
+list4 = [math.sqrt(i) for i in list3 if math.sqrt(i) % 2 == 0]
+print("\nlist4:")
+print(list4)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<h2 id="5-元组"><a href="#5-元组" class="headerlink" title="5. 元组"></a>5. 元组</h2><p>元组不能编辑，不能删除一个或多个元素，只能整个删除</p>
+<p> 序列为’[]’,元组为’()’,字典为’{}’。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"># encoding:utf-8
+
+num = 156
+st = "string_a"
+one_index = [12, 45, 65, 78]
+
+##? 声明一个很杂的元组
+tup1 = (
+  num,
+  st,
+  one_index,
+)
+print("有一个元组为:")
+print(tup1)
+
+##! tuple 在声明是，如果只有一个值，必须在后边加逗号
+tup2 = ("123456321",)
+tup3 = ("ab", "cd", "ef", 98765132, "#$%$&amp;")
+print("组合后的元组：")
+
+##? 元组可进行 '+','*' 运算
+alltuple = tup1 + tup2 + tup3
+print(alltuple * 2)
+
+##? 输出指定序号元素
+t = input("请输入元组序数" + "0~" + str(len(alltuple)))
+print(alltuple[int(t) - 1]) # 序号从 0 开始<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<h2 id="6-字典"><a href="#6-字典" class="headerlink" title="6. 字典"></a>6. 字典</h2><h3 id="6-1-字典的生成"><a href="#6-1-字典的生成" class="headerlink" title="6.1 字典的生成"></a>6.1 字典的生成</h3><p>序列为’[]’,元组为’()’,字典为’{}’。</p>
+<p>示例：</p>
+<p>​    声明两个序列，用于合成字典.</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">dicti_b = {"拉丁语": "Latin", "鸟语": "!&amp;*/"}<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"># encoding:utf-8
+
+#  声明一个字典.
+dicti_a = {}
+dicti_b = {"拉丁语": "Latin", "鸟语": "!&amp;*/"}
+
+# 两种声明方法。
+dicti_c = dict()
+
+# 声明两个序列，用于合成字典.
+English = ["Chinese", "English", "Japanese", "Russian", "French", "German", "Korean"]
+Chinese = ["中文", "英语", "日语", "俄语", "法语", "德语", "韩语"]
+
+# zip函数压缩.
+didi = zip(Chinese, English)
+
+# 生成函数.
+dicti_d = dict(didi)
+print("声明的字典a")
+print(dicti_a)
+print("声明的字典b")
+print(dicti_b)
+print("声明的字典c")
+print(dicti_c)
+print("声明的字典d")
+print(dicti_d)
+
+# clear用于清除字典里的所有项。
+dicti_c.clear()
+
+# 输出 clear 后的字典 d 中的元素及个数
+print("dicti_c clear()后" + "dicti_c还有" + str(len(dicti_c)) + "个元素")
+print(dicti_c)
+
+# del用于删除对象
+del dicti_d
+print("delete后的 e")
+
+# 插入一个错误调试.
+try:
+  print(dicti_d)
+except NameError as error:
+  print(error)
+finally:
+  print("结束")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<h3 id="6-2-字典的基本操作"><a href="#6-2-字典的基本操作" class="headerlink" title="6.2. 字典的基本操作"></a>6.2. 字典的基本操作</h3><p> add &amp; delete &amp; 遍历</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"># keyword：“字典添加”，“字典删除”，“字典遍历”
+
+# encoding :utf-8
+
+name = { "吴晓咖","刘佳怡","徐之才","单久思","曹侃儿","开俊峰","倪吉本","苗人凤","荣家达","狄俊娥","牛春波","莫桑石",}
+sign = {"子鼠", "丑牛", "寅虎", "卯兔", "辰龙", "巳蛇", "午马", "未羊", "申猴", "酉鸡", "戌狗", "亥猪"}
+
+
+# 压缩。
+term = zip(name, sign)
+roster = dict(term)
+print(roster)
+
+# 遍历输出
+for xxoo in roster.items():
+    print(xxoo)
+print("你想要添加还是删除?")
+t = input("1.删除。\n2.添加。\n3.修改\n")
+if t == "1":
+    del_name = input("请输入删除人的名字:")
+
+    ## 删除操作
+    if del_name in roster:
+        del roster[del_name]
+    else:
+        print("输入人名不存在.操作结束!")
+
+elif t == "2":
+    add_name = input("请输入姓名:")
+
+    if add_name in roster:
+        print("此人已录入。操作结束!")
+    
+    else:
+        add_sign = input("请输入此人生肖:")
+    
+        if add_sign not in sign:
+            print("兄弟，十二生肖都不会背呀。")
+        else:
+            ## 添加操作。
+            roster[add_name] = add_sign
+
+elif t == "3":
+    edit_name = input("请输入修改人姓名：")
+
+    if edit_name in roster:
+        print(roster[edit_name])
+    
+        edit_sign = input("请输入修改人生肖：")
+    
+        if edit_sign not in sign:
+            print("兄弟，十二生肖都不会背呀。")
+        else:
+            roster[edit_name] = edit_sign
+
+else:
+    print("你好像没有按要求输入呦（1 or 2）！")
+
+## 只输出值，不输出标签的遍历。
+for ooxx in roster.keys():
+    print(ooxx)
+
+## 值与标签双遍历。
+for key, value in roster.items():
+    print("键是：" + key + "    值为：" + value)
+
+##  两种输出值的方法.假设输入要查询的人名变量为 find_name
+##  1.直接根据人名进行输出，没有后边的判断则会出错。
+##    print(roster[find_name] if edit_name in roster else print("没有此人"))
+##  2.根据人名判断是否存在，当不存在时输出后一位指定的值。默认为 “none”
+##    print(roster.get(find_name,"没有此人"))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="7-字符串"><a href="#7-字符串" class="headerlink" title="7. 字符串"></a>7. 字符串</h2><h3 id="7-1-字符串的基本操作"><a href="#7-1-字符串的基本操作" class="headerlink" title="7.1 字符串的基本操作"></a>7.1 字符串的基本操作</h3><p>“+”，“split”，“切片”</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">#  keyword:“字符串拼接”，“字符串分割”，“字符串切片”，
+#          “字符串计算长度”.
+
+# encoding: utf-8
+
+poem_first = "老夫聊发少年狂，左牵黄，右擎苍，锦帽貂裘，千骑卷平冈。为报倾城随太守，亲射虎，看孙郎。"
+poem_second = "酒酣胸胆尚开张。鬓微霜，又何妨！持节云中，何日遣冯唐？会挽雕弓如满月，西北望，射天狼。"
+letter = "        Transportation has been greatly changed in the past few years. In ancient days, people used to travel by horse or carriage. The journey was often tiring and tedious. Then people had buses, trains and ships, which could shorten the time of the long-distance trip. \n\n\t\t\t"
+
+
+#  字符串拼接
+all_poem = poem_first + poem_second
+print("整首诗如下：" + all_poem)
+
+
+#  字符串分割
+#  split(a,b):a为分割时的字符,b为分割次数，默认为无限（-1也是无限次）
+#  如果不指定第一个参数，默认以空白字符--
+#  --不管空多少，都算一个，eg：“   ”，“ ”，“\n” 都是一样的）
+
+strs = all_poem.split("。", -1)
+print("整首诗按句号分割为：")
+for linshi in strs:
+    print("@" + linshi)
+
+# 或者print(strs)
+#  截取字符串 poem_first[a:b:c]（同序列切片.）
+
+a = 2
+b = 30
+c = 3
+print(
+    "\n分片字符串为(开始" + str(a) + "，到" + str(b) + "，间隔为" + str(c) + ": ", poem_first[a:b:c]
+)
+
+
+#  去除空格
+# 去除开始与末尾的\t,\n,\r(回车)与" "空格可以去除多个。特殊字符只能去除一个。
+print("\n英语作文去空格:\t", letter.strip(" "))
+
+# 去除左侧空格或特殊字符
+# print("\n英语作文去空格:\t", letter.lstrip(" "))
+
+# 去除左侧空格或特殊字符
+# print("\n英语作文去空格:\t", letter.rstrip(" "))
+
+
+
+#  字母变为小写。
+print("\n英语作文变小写:\t", letter.lower())
+
+#  字母变大写。
+print("\n英语作文变大写:\t", letter.upper())
+
+#  替代字符。
+print("\n英语作文空格换位'@'：\t", letter.replace(" ", "@"))
+
+#  计算字符串长度.
+#  不区分字母与汉字。字母与汉字都算一个长度。
+print("\n不区分字母与汉字长度为：" + str(len(poem_first)))
+
+#  以 GBK 编码格式输出字符串长度
+print("\nUTF-8计数长度为：" + str(len(poem_first.encode("gbk"))))
+
+#  以 UTF-8 编码格式输出字符串长度
+print("\nUTF-8计数长度为：" + str(len(poem_first.encode())))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="7-2-字符串索引"><a href="#7-2-字符串索引" class="headerlink" title="7.2. 字符串索引"></a>7.2. 字符串索引</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  keyword:“字符串查找”，“字符串存在判断”，
+
+mulanshi = "唧唧复唧唧，木兰当户织。不闻机杼声，唯闻女叹息。问女何所思，问女何所忆。女亦无所思，女亦无所忆。昨夜见军帖，可汗大点兵，军书十二卷，卷卷有爷名。阿爷无大儿，木兰无长兄，愿为市鞍马，从此替爷征。东市买骏马，西市买鞍鞯，南市买辔头，北市买长鞭。旦辞爷娘去，暮宿黄河边，不闻爷娘唤女声，但闻黄河流水鸣溅溅。旦辞黄河去，暮至黑山头，不闻爷娘唤女声，但闻燕山胡骑鸣啾啾。万里赴戎机，关山度若飞。朔气传金柝，寒光照铁衣。将军百战死，壮士十年归。归来见天子，天子坐明堂。策勋十二转，赏赐百千强。可汗问所欲，木兰不用尚书郎，愿驰千里足，送儿还故乡。爷娘闻女来，出郭相扶将；阿姊闻妹来，当户理红妆；小弟闻姊来，磨刀霍霍向猪羊。开我东阁门，坐我西阁床，脱我战时袍，著我旧时裳。当窗理云鬓，对镜帖花黄。出门看火伴，火伴皆惊忙：同行十二年，不知木兰是女郎。雄兔脚扑朔，雌兔眼迷离；双兔傍地走，安能辨我是雄雌？"
+mulan = "木兰"
+
+#  检测某一字符创是否存在于目标字符串（可以加入切片操作）
+
+print(mulan in mulanshi[0:5:])
+print(mulan in mulanshi[0:10:])
+
+
+#  find()   输出指定 “木兰” 在 “木兰诗” 中第一次出现的索引 -1 。
+
+print(" “木兰” \t第一次\t出现位置为：\t", mulanshi.find(mulan, 7, 390))
+
+#  rfind()  输出指定 “木兰” 在 “木兰诗” 中最后一次出现的索引 -1
+
+print(" “木兰” \t第一次\t出现位置为：\t", mulanshi.rfind(mulan))
+
+#  index()  输出“女”第一次出现的位置。
+
+print(" “女” \t\t第一次\t出现位置为：\t", mulanshi.index("女"))
+
+#  count()  输出出现次数
+
+print(
+    "“木兰”\t\t出现次数为：\t", mulanshi.count("木兰"), "\n “女” \t\t出现次数为：\t", mulanshi.count("女")
+)
+
+#  判断是否以指定字符串结尾或者开始。同样可加入切片。
+
+print(mulanshi.startswith("唧唧复唧唧", 0, 20))
+
+print(mulanshi.startswith("唧唧复唧唧", 1, 20))
+
+print(mulanshi.endswith("雄雌？"))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="7-3-格式化字符串"><a href="#7-3-格式化字符串" class="headerlink" title="7.3. 格式化字符串"></a>7.3. 格式化字符串</h2><p>% 格式化</p>
+<p>% [命名] [宽度] . [精度度] typecode</p>
+<ul>
+<li>表示右对齐。- 表示左对齐。<br>‘ ‘ 一个空格，表示在正数的左侧填充一个空格，从而与负数对齐。<br>0 表示使用 0 填充。<br>“宽度”： 表示填充后的宽度。<br>精确度：表示小数点后精度 。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">typecode</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">%r</td>
+<td align="center">字符串 (repr()显示)</td>
+</tr>
+<tr>
+<td align="center">%g</td>
+<td align="center">指数(e)或浮点数 (根据显示长度)</td>
+</tr>
+<tr>
+<td align="center">%s</td>
+<td align="center">字符串(str()显示)</td>
+</tr>
+<tr>
+<td align="center">%G</td>
+<td align="center">指数(E)或浮点数 (根据显示长度)</td>
+</tr>
+<tr>
+<td align="center">%c</td>
+<td align="center">单个字符输出</td>
+</tr>
+<tr>
+<td align="center">%b(i)(d)(o)(x)</td>
+<td align="center">二、八、十、十六进制整数</td>
+</tr>
+<tr>
+<td align="center">%e（E）</td>
+<td align="center">指数(基底写为e(E))</td>
+</tr>
+<tr>
+<td align="center">%f(F)</td>
+<td align="center">浮点数,与上相同</td>
+</tr>
+<tr>
+<td align="center">%%</td>
+<td align="center">字符”%”</td>
+</tr>
+</tbody></table>
+<p>format 格式化<br>{ [index] <b style="color:red"> [ <b style="color:yellow">[:<b style="color:green">[fill] align</b> ] [sign] [#] [width] [.precision] [type] </b> ]</b>  }</p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">index</td>
+<td align="center">默认按顺序自动分配。可选参数，用于指定设置格式的对象在–<br>#           –参数列表中的索引位置，从0开始。</td>
+</tr>
+<tr>
+<td align="center">fill</td>
+<td align="center">可选参数，用于空白处填充的字符。</td>
+</tr>
+<tr>
+<td align="center">align</td>
+<td align="center">可选参数， 用于指定对齐方式。</td>
+</tr>
+<tr>
+<td align="center">&lt;</td>
+<td align="center">左对齐。</td>
+</tr>
+<tr>
+<td align="center">&gt;</td>
+<td align="center">右对齐。</td>
+</tr>
+<tr>
+<td align="center">^</td>
+<td align="center">居中对齐。需指定宽度。</td>
+</tr>
+<tr>
+<td align="center">=</td>
+<td align="center">右对齐。只对数字类型有用，尤其用于输出负数。</td>
+</tr>
+<tr>
+<td align="center"><br>sign</td>
+<td align="center">可选参数，用于指定有无符号数<br>‘+’：正数添加‘+’号,负数添加‘-’号。<br>‘-‘：只有负号添加符号。<br>‘ ‘:正数加空格补齐，负数加负号</td>
+</tr>
+<tr>
+<td align="center">#</td>
+<td align="center">可选参数，加#时输出二进制，八进制十六进制会添加  0b  0o  0x 前缀</td>
+</tr>
+<tr>
+<td align="center">type</td>
+<td align="center">…….</td>
+</tr>
+<tr>
+<td align="center">type</td>
+<td align="center">含义</td>
+</tr>
+<tr>
+<td align="center">:–:</td>
+<td align="center">:——————————–:</td>
+</tr>
+<tr>
+<td align="center">s</td>
+<td align="center">对字符串格式格式化</td>
+</tr>
+<tr>
+<td align="center">b</td>
+<td align="center">十进制数转换为二进制再格式化；</td>
+</tr>
+<tr>
+<td align="center">d</td>
+<td align="center">十进制数</td>
+</tr>
+<tr>
+<td align="center">o</td>
+<td align="center">十进制数转换为八进制再格式化；</td>
+</tr>
+<tr>
+<td align="center">c</td>
+<td align="center">十进制数转换为对应Unicode字符</td>
+</tr>
+<tr>
+<td align="center">%</td>
+<td align="center">显示百分比(默认小数后六位)</td>
+</tr>
+<tr>
+<td align="center">x,X</td>
+<td align="center">十进制数转换为十六进制再格式化</td>
+</tr>
+<tr>
+<td align="center">e,E</td>
+<td align="center">转换为科学计数法再格式化</td>
+</tr>
+<tr>
+<td align="center">f,F</td>
+<td align="center">转换为浮点数再格式化(默认六位小数)</td>
+</tr>
+<tr>
+<td align="center">g,G</td>
+<td align="center">e与f或E与F之间互换</td>
+</tr>
+</tbody></table>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">import math
+
+template_a = "编号:%-08d\t 网站名：%s \t 网站：https://www.%s.com\t 公司老总:%4s\t"
+temps = [
+    (1, "百度", "baidu", "李彦宏"),
+    (2, "淘宝", "taobao", "马云"),
+    (3, "腾讯", "tencent", "马化腾"),
+]
+print(template_a)
+for ls in temps:
+    print(template_a % ls)
+
+strin1 = "马云,\t身价:\t{0:,.5f}".format(5621684.1531516)
+strin2 = "刘强东,\t身价:\t{0:.10f}".format(464553126.89645321384932)
+print(strin1)
+print(strin2)
+
+print(
+    "π为：{:.12f}\n'1801001'\t的二进制为：\t{:#b}\n'86159452'\t的八进制为：\t{:#o}\n'4532154'\t的十六进制为：\t{:#x}".format(
+        math.pi, 1801001, 86159452, 4532154
+    )
+)
+
+print(
+    "这是abc：\t{abc}\n这是bcd：\t{bcd:#x}\n这是cde：\t{cde:}\n".format(
+        abc="1354632", bcd=8465123, cde=[123, 456, 789]
+    )
+)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="8-python数据存储原理"><a href="#8-python数据存储原理" class="headerlink" title="8. python数据存储原理"></a>8. python数据存储原理</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  keyword：“存储原理”，“id()”，“id”
+
+# encoding: utf-8
+
+def print_id(a, b):
+    print("a:{0: &gt;15s} id(a): {1: &gt;15s} ".format(str(a), str(id(a))))
+    print("b:{0: &gt;15s} id(b): {1: &gt;15s} ".format(str(b), str(id(b))))
+    print()
+
+print("{: ^40s}\n".format("-----------string测试----------"))
+
+a = "ss1263"
+b = "ssssss1263"
+print_id(a, b)
+
+a = "ssssss1263"
+print("修改a的值")
+print_id(a, b)
+
+print("修改b的值")
+b = "ss1263"
+print_id(a, b)
+
+print("删除a，b")
+del (a, b)
+c = "ss1263"
+print("id(c)", id(c))
+
+print("{: ^40s}\n".format("-----------number测试----------"))
+
+a = "451263"
+b = "1263"
+print_id(a, b)
+
+a = "1263"
+print("修改a")
+print_id(a, b)
+
+print("修改b")
+b = "451263"
+print_id(a, b)
+
+print("删除a与b")
+del (a, b)
+c = "451263"
+print("id(c)", id(c))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="9-正则表达式"><a href="#9-正则表达式" class="headerlink" title="9.正则表达式"></a>9.正则表达式</h2><p>基础正则了解：<a style="font-family:’kaiti’;">[点我]([正则语法整理 | X-Y-Z`s Blog (gitee.io)](https://blogofxyz.gitee.io/2021/08/14/正则语法整理/))</a></p>
+<h3 id="9-1-查找"><a href="#9-1-查找" class="headerlink" title="9.1 查找"></a>9.1 查找</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  match &amp; search &amp; findall
+#  match     匹配整个字符。
+#  search    在字符串中匹配
+#  findall 匹配字符串中所有符合表达式的字符串。
+#  keyword：“正则表达式”，“正则匹配”，“正则”
+
+# encoding: utf-8
+
+# !!!!!!!!!!导入re
+import re
+
+#  1.re.match(regular_express,string)
+#    比较字符串是否符合要求.
+
+elements = [
+    "19137934628",
+    "15946295618",
+    "78945631245",
+    "48651534582@qq.com",
+    "68453121@163.com",
+    "12348621@qweewq.com" "15648934529@gmail.com",
+    "萨博隔热垫石膏板",
+    "地方不对付认购",
+    "调查表身高多少",
+]
+regular_express_a = [
+    r"[0-9]{0,12}@(qq|gmail|163)\.com",
+    r"1[0-9]{10}$",
+    r"[^0-9a-zA-Z]",
+]
+for i in elements:
+    for index, j in enumerate(regular_express_a):
+        ret_a = re.match(j, i)
+        print(index)
+        if (ret_a != None) and (index == 0):
+            print("这是个可使用邮箱", i)
+        if (ret_a != None) and (index == 1):
+            print("这是个手机号", i)
+        if (ret_a != None) and (index == 2):
+            print("这是一串其他的", i)
+
+#  2.re.search(regular_express, string, [flags])
+#    从字符串中查找符合条件的第一个字符。
+#    flags:  re.l不区分字母大小写，
+#            re.A不匹配汉字
+
+string = "遥远两端，爱挂在天空飞。风停了也无所谓，只因为你总说。Everthing will be okay。准备好了three two one， I'm always Online。和你one to one ，爱开始扩散。我们连结了-穿越-天空-银河。oh~~。开始倒数three-two-one，删除我的孤单。more and more尽是深刻。爱亮了，爱笑了，I'm always online。变色的生活，任性的挑拨。疯狂的冒出了头。单方的守侯，试探的温柔，却还是少了点什么。遥远两端，爱挂在天空飞。风停了也无所谓，只因为你总说：Everthing Will Be okay。我准备好了three two one, I'm AlWays online，和你one to one 爱开始扩散。我们连结了，穿越-天空-银河-oh~~。开始倒数three two one ，删除我的孤单。"
+
+regular_express_b = r"(always|online|穿越-天空-银河)"
+ret_b = re.search(regular_express_b, string)
+print(ret_b.start())
+print(ret_b.end())
+print(ret_b.group())
+
+#  3.findall(regular_express, string, [flags])
+#    查找多个符合条件的字符串
+#    re.IGNORECASE:忽略大小写。
+#    re.LOCALE
+ret_c = re.findall(regular_express_b, string, re.IGNORECASE)
+print(ret_c)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="9-2-替换"><a href="#9-2-替换" class="headerlink" title="9.2 替换"></a>9.2 替换</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  keyword: “正则替换”，
+
+# encoding: utf-8
+
+import re
+
+string = "蒹葭苍苍，白露为霜。所谓伊人，在水一方。溯洄从之，道阻且长。溯游从之，宛在水中央。\n蒹葭萋萋，白露未晞。所谓伊人，在水之湄。溯洄从之，道阻且跻。溯游从之，宛在水中坻。\n蒹葭采采，白露未已。所谓伊人，在水之涘。溯洄从之，道阻且右。溯游从之，宛在水中沚。\n"
+
+letters = "     Transportation has been greatly changed in the past few years. In ancient days, people used to travel by horse or carriage. The journey was often tiring and tedious. Then people had buses, trains and ships, which could shorten the time of the long-distance trip."
+regular_express = [r"(蒹葭|伊人)", r"(en|in|an)"]
+
+print(re.sub(regular_express[0], "xx", string))
+print(re.sub(regular_express[1], " --XXXn-- ", letters))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="9-3-分割"><a href="#9-3-分割" class="headerlink" title="9.3 分割"></a>9.3 分割</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  keyword：“正则分割”，“分割”，
+# encoding: utf-8
+
+import re
+
+names = "焦英武、杨清双、吕纪领、张建春、焦灵卫、赵现伟\n陈秀荣、郎波、程磊、刘子祥、谢绍明 胡红军、张克龙、戴怀海 戴怀敏、张国勤\n李小璇、李军耐、张文博、赵联、肖鹏、边宪武、李伟、李宇、夏廷堂、韩世民、董燕平、张正银\n魏国琼、肖桂茂、李德安、白建永、张旭贵、李香明\n霍建辉、吴旭峰、陈云祥、丁连奇、王遂现、范小锋\n杨宗兵、向书章、李金民、戴家元、刘传禄、贺炳强、云秀芳\n刘善刚、姚海军、贾天义、李加有、方承、杨涛\n杨天海、王富军、张中华、王成林、秦振贵、尚鲜军、李友强、尚加聪"
+pattern = r"( |、|\n)"
+
+tup = re.split(pattern, names)
+for index, item in enumerate(tup):
+    if index % 2 == 0:
+        print("第", int(index / 2), "项：", item)
+
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="10-函数"><a href="#10-函数" class="headerlink" title="10. 函数"></a>10. 函数</h2><h3 id="10-1普通函数"><a href="#10-1普通函数" class="headerlink" title="10.1普通函数"></a>10.1普通函数</h3><p>掺杂前边的知识，搞得有点多。就算做前边的复习了。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">#  keyword: “global”，“function”，“python中的switch”，
+#           “switch”，“列表各项相加”，“函数”，“正则运用”，
+#           “正方形面积”，“圆的面积”，“一次函数”，“二次函数”
+
+# ---------------------function----------------------&gt;#
+#  函数次方运算
+
+import math
+import re
+# 输入用正则处理输入字符，筛选数字
+# python没有switch，用字典+函数实现
+
+def case1(lis):
+    """一次函数"""
+    if len(lis) &lt; 2:
+        lis.append(1)
+    if len(lis) &lt; 3:
+        lis.append(0)
+    print(lis[0] * lis[1] + lis[2])
+
+def case2(lis):
+    """二次函数 lis[0]: x,lis[1]:a(默认为1), lis[2]:b(默认为0), lis[3]:c(默认为0) 。"""
+    if len(lis) &lt; 2:
+        lis.append(1)
+    if len(lis) &lt; 3:
+        lis.append(0)
+    if len(lis) &lt; 4:
+        lis.append(0)
+    print(lis[1] * math.pow(lis[0], 2) + lis[2] * lis[0] + lis[3])
+
+def case3(lis):
+    """多个数求和 &amp; 多字符串拼接"""
+    print("\n------------数组求和函数-----------\n\n")
+    string = ""
+    number = 0
+    bo = True
+    for i in lis:
+        t = re.match(regular_express_se, i)
+        if t != None and bo:
+            number += int(i)
+        else:
+            bo = False
+        string += i
+    print("{0:{2}&gt;6s}:{1:}\n".format("序列", lis, chr(12288)))
+    if bo:
+        print("{0:{2}&gt;6s}:{1:}\n".format("各项求和结果", str(number), chr(12288)))
+    else:
+        print("{0:{2}&gt;6s}:{1:}\n".format("字符拼接为", string, chr(12288)))
+
+def case4(lis):
+    """数字序列逐项求和"""
+    #  输出模板
+    Template = "前%03d项和为% 13d \n"
+    val = 0
+    for i in lis:
+        val += i
+        print(Template % (lis.index(i) + 1, val))
+
+def case5(lis):
+    """求长方形面积 lis[0]: 长，lis[1]: 宽."""
+    print(
+        """{str1:{space}&gt;7s}={length:&gt;5d} \n{str2:{space}&gt;7s}={width:&gt;5d} \n{str3:{space}&gt;7s}={squr:&gt;5d} \n""".format(
+            str1="此长方形长",
+            str2="此长方形宽",
+            str3="此正方形面积",
+            length=lis[0],
+            width=lis[1],
+            squr=lis[0] * lis[1],
+            space=chr(12288),
+        )
+    )
+
+def case6(lis):
+    return None
+
+switch = {1: case1, 2: case2, 3: case3, 4: case4, 5: case5, 6: case6}
+
+
+def _function(lis, sec_fun):
+    """函数大杂烩
+    lis[0] : x,
+    lis[1] : a=1 or y
+    lis[2] : b=0,
+    lis[3] : c=0,
+    ……
+    lis[n] : ……"""
+
+    #  函数内声明全局变量时不能赋值,
+    #  同时，如果要引用全局变量，全局变量--
+    #  --所在函数必须在此操作之前使用过一次。
+    if len(lis) &lt; 1:
+        print("输入有效数据不足，无法进行运算.")
+        return None
+    
+    else:
+        return switch[sec_fun](lis)
+
+def se_start_input():
+    """开始时的函数选择"""
+
+    #  检查选择是否合法
+    Regular_Express = r"^[1-6]{1}($| +)"
+    
+    st = input(
+        "选择进行几次函数的运算\n"
+        + "1.一次函数\n(依次输入x，a 默认为1，b 默认为1)\n\n"
+        + "2.二次函数\n(依次输入x，a 默认为1，b 默认为0,c 默认为0,)\n\n"
+        + "3.数字或字符串相加\n(依次输入多项)\n\n"
+        + "4.逐项相加\n(依次输入多个数字)\n\n"
+        + "5.长方形求面积\n(依次输入长，宽)\n\n"
+        + "6.结束\n"
+    )
+    
+    result = re.match(Regular_Express, st)
+    if result == None:
+        print("输入错误！只能输入‘1-6’ 呦！")
+        return 0
+    else:
+        return int(st)
+
+# ---------------------------------------------------&lt;#
+
+print("\n\n--------------函数运算-------------\n", "\n")
+
+#  选择玩的函数
+
+sec_fun_ = 0
+sec_fun_ = se_start_input()
+
+if sec_fun_ != 0 and sec_ele_ != 7:
+    print("\n请根据选择运算，输入一系列数据，以空格分隔\n        请输入:")
+    #  输入
+    
+    inp = input()
+    #  分割.-1指分割不限次数
+    lt = inp.split(" ", -1)
+
+    #  空序列，最后传入函数处理
+    lis = []
+    
+    #  case3的正则
+    regular_express_add = r"[^ \n]"
+    #  筛选数字的正则
+    regular_express_se = r"^[0-9]+$"
+    
+    #  按不同函数用不同正则再次筛选
+    if sec_fun_ != 3:
+        #  处理字符串：只录入数字
+        for index, i in enumerate(lt):
+            if re.match(regular_express_se, lt[index]) != None:
+                try:
+                    lis.append(int(i))
+                except:
+                    try:
+                        lis.append(float(i))
+                    except:
+                        print("数字转换有误")
+    else:
+        #  处理字符串：录入非空格字符串
+        for index, i in enumerate(lt):
+            if re.match(regular_express_add, lt[index]) != None:
+                lis.append(i)
+    
+    _function(lis, sec_fun_)
+    print("over")
+
+else:
+    print("over")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="10-2匿名函数"><a href="#10-2匿名函数" class="headerlink" title="10.2匿名函数"></a>10.2匿名函数</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  keyword：“匿名函数”，“关键字参数”，“默认值参数”，
+#  当函数中出现有默认值时必须位于参数集的最后
+
+# encoding:utf-8
+
+def R_S(R, pai=3.14, string=""):
+  """圆求面积"""
+  print(
+    "\n\n"
+    + string
+    + "\n"
+    + "此圆的半径 r={radius: 5d}\n此圆的面积 S= {squr:.3f}".format(
+      radius=R, squr=R * R * pai
+    ),
+  )
+x = int(input("输入圆的半径"))
+
+#  匿名函数 用 lambda 修饰词前缀.
+y = lambda ds: ds * ds * 3.14
+print("\n" + str(y(x)))
+R_S(x, string="R_S(x):")
+R_S(x, 3, "R_S(x, 3):")
+R_S(string="R_S(pai=3.142, R=x):", pai=3.142, R=x)
+
+#  传入数组，或多参数。
+def func(*par):
+  for i in par:
+    print(i)
+    
+#  参数原理为：定义一个变量的列表，用*来传入列表地址
+#  若传入参数类型繁多，则读取时需了解每次读取的数据类型。
+strs = ["语文", "数学", "英语", "物理", "化学"]
+strss = ["Chinese", [12.0, 45.12, 44.11], 45699, bin(423),hex(423)]
+func(*strs)
+print("\n")
+func(*strss)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="11-class"><a href="#11-class" class="headerlink" title="11. class"></a>11. class</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  keyword：“class”，“从序列中取随机元素”，“从字典中取随机元素”
+#           “choice”，
+
+# encoding:utf-8
+
+brand = {"上汽集团": "大众", "东风": "雪铁龙", "奔驰": "Mercedes-Benz", "凯迪拉克": "Cadillac"}
+produce_country = ["China", "American", "India", "European"]
+code = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+# -----------------class----------------&gt;#
+class Car:
+  """ 汽车模型 先生成后赋值 """
+  Name = ""
+  Brand = ""
+  Producer = ""
+  Produce_Country = ""
+  def make_success(self):
+    print(
+      "生成了一辆小汽车",
+      "\n名字:" + self.Name,
+      "\n品牌:" + self.Brand,
+      "\n生产商:" + self.Producer,
+      "\n产地:" + self.Produce_Country,
+      "\n",
+    )
+# 一个类中同一方法只能生效最后一次定义。
+""" 初始化函数与构造函数 括号内不加参数时函数内
+   def __init__():
+     brand = self.carname
+   print("生成了一辆小汽车:222")
+ """
+# -------------------function-----------------------&lt;#
+	#-----------------class-----------------&gt;#
+def mass_produce(number):
+  """ 批量造车 """
+  import random
+  lis = []
+  i = 0
+  while i &lt; number:
+    i = i + 1
+    j = 0
+    name = ""
+    while j &lt;= 10:
+      name += code[random.randint(0, len(code) - 1)]
+      j = j + 1
+    car = Car()
+    car.Name = name
+    car.Brand = random.choice((list(brand)))
+    car.Produce_Country = random.choice(produce_country)
+    car.Producer = brand[car.Brand]
+    lis.append(car)
+  return lis
+# ---------------------function----------------------&lt;#
+numb = int(input("输入生产汽车的数量"))
+t = mass_produce(numb)
+for i in t:
+  i.make_success()
+print("已成功生产", numb, "辆车")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="12-访问限制"><a href="#12-访问限制" class="headerlink" title="12. 访问限制"></a>12. 访问限制</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  keyword：“访问限制”，
+#  没多大用。。。。。。。
+
+# encoding:utf-8
+
+class car:
+  """ produce car """
+# price: ""
+# _brand: ""
+# __color: ""
+  def __init__(self):
+    self.price = 4000
+    self._brand = "asdfa"
+    self.__color = "red"
+vehicle = car()
+print(vehicle.price)
+print(vehicle._brand)
+print(vehicle._car__color)
+vehicle.price = 50
+vehicle._brand = "qqqqqqqqqqq"
+vehicle._car__color = "aaaaaaaaaa"
+print(vehicle.price)
+print(vehicle._brand)
+print(vehicle._car__color)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="13-property"><a href="#13-property" class="headerlink" title="13. property"></a>13. property</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  keyword：“属性变化”，“装饰器”，“property”
+
+# encoding:utf-8
+
+class car:
+  """计算价格"""
+  def __init__(self, door, tie):
+    self.door = door
+    self.tie = tie
+    self.band_price = 5000.0
+#  方法转换为属性
+  @property
+  def total_cost(self):
+    """(door + tie) x 4 + price"""
+    return (self.door + self.tie) * 4 + self.band_price
+spend = car(203, 450)
+print(spend.total_cost)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="14-学习中……"><a href="#14-学习中……" class="headerlink" title="14.学习中……"></a>14.学习中……</h2>
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Zhang-little-white</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://blogofxyz.top/2021/08/21/python%E5%85%A5%E9%97%A8/">https://blogofxyz.top/2021/08/21/python%E5%85%A5%E9%97%A8/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Zhang-little-white</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/python/">
+                                    <span class="chip bg-color">python</span>
+                                </a>
+                            
+                                <a href="/tags/%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8/">
+                                    <span class="chip bg-color">语言入门</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="qq,qzone,wechat,weibo" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid="></script>
+    <div class="addthis_inline_share_toolbox"></div>
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.JPG") 100% 100% no-repeat;
+	    color: white;
+    opacity: 0.8;
+    font-size: 18px;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+	text-indent:2rem;
+        display: list-item;
+        line-height: 2.2rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+	.v[data-class="v"] .vwrap .vheader .vinput {
+		width: 32%;
+		border-bottom: 1px dashed #dedede;
+	}
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+	let metaPlaceholder = {"nick":"昵称/QQ号(必填)","mail":"邮箱(必填)","link":"网址(https://)"} ;
+	
+	new Valine({
+			el: '#vcomments',
+			appId: 'ghConjcbp7CpCRHJFPIRDdd2-gzGzoHsz',
+			appKey: 'XnhsRQe0DKrPj7X8NnqYg6BX',
+			notify: 'true' === 'true',
+			verify: 'true' === 'true',
+			visitor: 'true' === 'true',
+			avatar: 'identicon',
+			pageSize: '10',
+			lang: 'zh-CN',
+			placeholder: '有事不怕打扰，如果较急，可使用右侧反馈快速接受。',
+			meta: ["y-nick", "e-mail", "your-link"],
+			recordIP: 'true' === 'true',
+			enableQQ: 'identicon',
+			requiredFields: ["721850218d5dfa3e2ad5b3ac5a69dad8"],
+			master: ["721850218d5dfa3e2ad5b3ac5a69dad8"],
+			friends: ["4802978b7156ffcf24b571b35c594ad7"],
+			tagMeta: ["发文地", "认识地", "过路地"],
+			metaPlaceholder: metaPlaceholder,
+		});
+</script>
+
+<!--酷Q推送-->
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/08/23/c%E8%AF%AD%E8%A8%80/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="c语言与cmd">
+                        
+                        <span class="card-title">c语言与cmd</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            用C语言启动一些程序，或者执行windows的一些操作。
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-23
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/C/" class="post-category">
+                                    C
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/C%E8%AF%AD%E8%A8%80/">
+                        <span class="chip bg-color">C语言</span>
+                    </a>
+                    
+                    <a href="/tags/cmd/">
+                        <span class="chip bg-color">cmd</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/08/21/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="数据结构">
+                        
+                        <span class="card-title">数据结构</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            简单整理了些常用的数据类型，因为某些的具体会定总是记不住，所以就整理下。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-21
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/" class="post-category">
+                                    计算机原理
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+                        <span class="chip bg-color">数据结构</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: X-Y-Z`s Blog<br />'
+            + '文章作者: Zhang-little-white<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('2'),
+            headingSelector: 'h1,h2, h3, h4, h5'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1,h2, h3, h4, h5').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2021</span>
+            
+            <span id="year">2021</span>
+            <a href="/about" target="_blank">Zhang-little-white</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">22.5k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2021";
+                        var startMonth = "8";
+                        var startDate = "12";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
+            
+            <br>
+            
+                <span id="icp">
+				<img src="/medias/icp.png"豫ICP备2021025736号
+                                    style="vertical-align: text-bottom;"/>
+                <a href="https://beian.miit.gov.cn" target="_blank">豫ICP备2021025736号</a>
+            </span>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/xiaohuixian" class="tooltipped" target="_blank" data-tooltip="visit my GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1970476603@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1970476603" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1970476603" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+<div>
+<a onclick="switchNightMode()" id="sma" title="模式切换">
+    <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i>
+</a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?b3593488200a34a873defcaa11fc888a";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+        <div style="position:fixed;bottom:125px;right:16px;cursor: pointer;">
+            <a title="兔小巢" target="_blank" rel="noopener" href="https://support.qq.com/products/348756"><i class="fa fa-comments fa-3x"  aria-hidden="true"></i></a>
+        </div>
+    
+    
+
+    
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="/libs/background/ribbon-refresh.min.js" async="async"></script>
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+	<script type="text/javascript">
+	//只在桌面版网页启用特效
+	var windowWidth = $(window).width();
+	if (windowWidth > 768) {
+		document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
+	}
+	</script>
+	
+	<script type="text/javascript">
+		var OriginTitile=document.title,st;
+		document.addEventListener("visibilitychange",function(){ document.hidden?(document.title="ヽ(●-`Д´-)ノ110，有人失踪了",clearTimeout(st)):(document.title="(Ő∀Ő3)ノ失踪人口回归！",st=setTimeout(function(){document.title=OriginTitile},3e3))
+		})
+	</script>
+	
+</body>
+
+</html>
