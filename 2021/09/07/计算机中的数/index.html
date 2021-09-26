@@ -552,7 +552,7 @@ var _hmt = _hmt || [];
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-26
+                    2021-09-27
                 </div>
                 
 
@@ -611,7 +611,7 @@ var _hmt = _hmt || [];
 <p>(-3)=(1011) <sub>原</sub> (1100)<sub>反</sub>   (1101) <sub>补</sub> 。</p>
 <p>( 0 )  <sub>D</sub> =  (0000)<sub>原</sub> = (0111)<sub>反</sub>  =  (1000)<sub>原</sub>=(1111)<sub>反</sub>=(0000)<sub>补</sub></p>
 <p>​    等价于： -3 %16  = 13 -&gt; <code>1101</code> <sub>原码</sub></p>
-<h2 id="4-移码"><a href="#4-移码" class="headerlink" title="4.移码"></a>4.移码</h2><p>移码通常用于表示浮点数的阶码，32位浮点数中阶码范围为。先抛个公式，<br>$$<br>[e]移=2^k+e，2^k&gt;e≥-2^k,([e]移为机器码，e为真值，k为数据长度，如此移码为八位)<br>$$<br>在同一前提、环境下，k不变，比如在32位浮点数中，k为7（因为有一位需要表示正负，同时，）。举个计算例子。</p>
+<h2 id="4-移码"><a href="#4-移码" class="headerlink" title="4.移码"></a>4.移码</h2><p>移码通常用于表示浮点数的阶码，32位浮点数中阶码范围为。先抛个公式，<br>$$<br>[e]_移=2^k+e，2^k&gt;e≥-2^k,([e]_移为机器码，e为真值，k为数据长度，如此移码为八位)<br>$$<br>在同一前提、环境下，k不变，比如在32位浮点数中，k为7（因为有一位需要表示正负，同时，）。举个计算例子。</p>
 <p>​            在一八位的移码标准下。(+100110)<sub>真值</sub>=2<sup>8</sup> + 100110=1 010 0110。</p>
 <p>​                                                    (- 110110)<sub>真值</sub>=2<sup>8</sup> -  110110=0 100 1010。       </p>
 <p>其中，最左侧为符号位。正好与其他几种码相反。</p>
@@ -3745,6 +3745,13 @@ var _hmt = _hmt || [];
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
 
 
 
