@@ -143,6 +143,7 @@ body.dark .collapsible-header,
 body.dark .wxgzh,
 body.dark table tr:nth-child(2n),
 body.dark thead,
+#articleContent table td ,
 .toc-widget .card {
   background-color: #282c34;
 }

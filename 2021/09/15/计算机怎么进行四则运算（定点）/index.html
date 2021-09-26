@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-    <meta name="keywords" content="SEM">
+    <meta name="keywords" content="计算机原理,二进制运算">
     <meta name="description" content="C# | Web | html | python |">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -18,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>SEM | X-Y-Z`s Blog</title>
+    <title>计算机怎么计算四则运算(定点) | X-Y-Z`s Blog</title>
 	
     <link rel="icon" type="image/png" href="/favicon.png">
 
@@ -386,12 +386,12 @@ var _hmt = _hmt || [];
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">SEM</h1>
+                    <h1 class="description center-align post-title">计算机怎么计算四则运算(定点)</h1>
                 </div>
             </div>
         </div>
@@ -508,8 +508,16 @@ var _hmt = _hmt || [];
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/SEM/">
-                                <span class="chip bg-color">SEM</span>
+                            <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/">
+                                <span class="chip bg-color">计算机原理</span>
+                            </a>
+                        
+                            <a href="/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%BF%90%E7%AE%97/">
+                                <span class="chip bg-color">二进制运算</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%AE%9A%E7%82%B9%E8%BF%90%E7%AE%97/">
+                                <span class="chip bg-color">定点运算</span>
                             </a>
                         
                     </div>
@@ -520,8 +528,8 @@ var _hmt = _hmt || [];
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/SEM/" class="post-category">
-                                SEM
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/" class="post-category">
+                                计算机原理
                             </a>
                         
                     </div>
@@ -533,21 +541,21 @@ var _hmt = _hmt || [];
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-09-02
+                    2021-09-15
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-02
+                    2021-09-26
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    58
+                    387
                 </div>
                 
 
@@ -582,10 +590,36 @@ var _hmt = _hmt || [];
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-SEM了解"><a href="#1-SEM了解" class="headerlink" title="1. SEM了解"></a>1. <code>SEM</code>了解</h2><ul>
-<li>搜索引擎营销（Search Engine Marketing，简称SEM）是指企业利用用户使用搜索引擎检索信息的机会，尽可能地将信息传递给目标用户的一种营销方式。</li>
+                <h2 id="加-●’◡’●-加"><a href="#加-●’◡’●-加" class="headerlink" title="加 (●’◡’●) 加"></a>加 (●’◡’●) 加</h2><h3 id="1-整数相加。"><a href="#1-整数相加。" class="headerlink" title="1.整数相加。"></a>1.整数相加。</h3><ul>
+<li><p>两个数全为正数，二进制形式数直接相加。</p>
+<p>如：x=10<sub>D</sub>=01010<sub>O</sub>,y=15<sub>D</sub>=01111<sub>O</sub>,计算x+y.</p>
+<p>则直接同位相加,以八位（根据实际数据类型而定）数据位计算，x=0000 1010 ,y=0000 1111</p>
+<pre><code>  0000 1010
+ +0000 1111
+ ----------
+  0001 1001
+</code></pre>
+<p>​    0001 1001<sub>O</sub>=25<sub>D</sub> </p>
+</li>
+<li><p>两数有负数，用补码运算。</p>
+<p>如：x= -10<sub>D</sub>,y=15<sub>D</sub>,计算x+y.</p>
+<p>同样用八位举例。</p>
+<p>[x]<sub>原</sub>=1000 1010, [y]<sub>补</sub>=[y]<sub>原</sub>=0000 1111,</p>
+<p>[x]<sub>补</sub>=1111 0110,</p>
+<pre><code>  1111 0110
+ +0000 1111
+ ----------
+  0000 0101
+</code></pre>
+<p><mark>此时算出结果是补码</mark>&gt;，故需要首先进行求反码的逆运算。即先看首位，如果是 <code>0</code> ,则无需变动。否则末尾减一，除符号位外，其它位求反。</p>
+<p>​    0000 0101<sub>O</sub>=5<sub>D</sub> </p>
+</li>
 </ul>
-
+<hr>
+<h3 id="2-小数相加。"><a href="#2-小数相加。" class="headerlink" title="2. 小数相加。"></a>2. 小数相加。</h3><hr>
+<h2 id="●’◡’●-减-●’◡’●"><a href="#●’◡’●-减-●’◡’●" class="headerlink" title="(●’◡’●) 减 (●’◡’●)"></a>(●’◡’●) 减 (●’◡’●)</h2><h3 id="1-整数减"><a href="#1-整数减" class="headerlink" title="1. 整数减"></a>1. 整数减</h3><p>无论正负，两数相减皆为两数的补码相加。就是这么神奇，不信下边举个例子。</p>
+<h2 id="●’◡’●-乘-●’◡’●-乘-●’◡’●"><a href="#●’◡’●-乘-●’◡’●-乘-●’◡’●" class="headerlink" title="(●’◡’●) 乘 (●’◡’●) 乘 (●’◡’●)"></a>(●’◡’●) 乘 (●’◡’●) 乘 (●’◡’●)</h2><h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p>用原码进行乘法运算。在定点计算机中，用两个原码表示的数相乘，乘积的符号由两数的符号位异或（         ）得到，乘积的数值部分是两数的绝对值相乘之积。即，原码的乘法的实质是两个正数相乘。<br>         其运算规则是： 根据乘数Y绝对值每个数位上的值Yi是“1”还是“0”(从最低位Y0开始)，决定本次部分积是加上被乘数X的绝对值，还是加上全“0”，得到的新部分积右移一位，再重复上面的动作，直到乘法做完为止。</p>
+<h2 id="●’◡’●-除-●’◡’●-除-●’◡’●-除-●’◡’●"><a href="#●’◡’●-除-●’◡’●-除-●’◡’●-除-●’◡’●" class="headerlink" title="(●’◡’●) 除 (●’◡’●) 除 (●’◡’●) 除 (●’◡’●)"></a>(●’◡’●) 除 (●’◡’●) 除 (●’◡’●) 除 (●’◡’●)</h2>
                 
             </div>
             <hr/>
@@ -611,7 +645,7 @@ var _hmt = _hmt || [];
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://blogofxyz.top/2021/09/02/SEM/">https://blogofxyz.top/2021/09/02/SEM/</a>
+                    <a href="https://blogofxyz.top/2021/09/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%80%8E%E4%B9%88%E8%BF%9B%E8%A1%8C%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97%EF%BC%88%E5%AE%9A%E7%82%B9%EF%BC%89/">https://blogofxyz.top/2021/09/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%80%8E%E4%B9%88%E8%BF%9B%E8%A1%8C%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97%EF%BC%88%E5%AE%9A%E7%82%B9%EF%BC%89/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -649,8 +683,16 @@ var _hmt = _hmt || [];
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/SEM/">
-                                    <span class="chip bg-color">SEM</span>
+                                <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/">
+                                    <span class="chip bg-color">计算机原理</span>
+                                </a>
+                            
+                                <a href="/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%BF%90%E7%AE%97/">
+                                    <span class="chip bg-color">二进制运算</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%AE%9A%E7%82%B9%E8%BF%90%E7%AE%97/">
+                                    <span class="chip bg-color">定点运算</span>
                                 </a>
                             
                         </div>
@@ -1113,31 +1155,31 @@ var _hmt = _hmt || [];
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/09/07/%E6%8A%80%E6%9C%AF%E8%83%96%E6%94%B6%E8%97%8F%E5%A4%B9/">
+                <a href="/2021/09/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%80%8E%E4%B9%88%E8%BF%9B%E8%A1%8C%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97%EF%BC%88%E6%B5%AE%E7%82%B9%EF%BC%89/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="前端网站收藏">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="计算机怎么进行四则运算（浮点）">
                         
-                        <span class="card-title">前端网站收藏</span>
+                        <span class="card-title">计算机怎么进行四则运算（浮点）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            B站以为up主分享的自己多年收集的网站。
+                            计算机怎么进行四则运算（浮点）
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-07
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-15
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%BD%91%E7%AB%99%E8%B5%84%E6%BA%90/" class="post-category">
-                                    网站资源
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/" class="post-category">
+                                    计算机原理
                                 </a>
                             
                             
@@ -1147,8 +1189,16 @@ var _hmt = _hmt || [];
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E8%B5%84%E6%BA%90/">
-                        <span class="chip bg-color">资源</span>
+                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/">
+                        <span class="chip bg-color">计算机原理</span>
+                    </a>
+                    
+                    <a href="/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%BF%90%E7%AE%97/">
+                        <span class="chip bg-color">二进制运算</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%AE%9A%E7%82%B9%E8%BF%90%E7%AE%97/">
+                        <span class="chip bg-color">定点运算</span>
                     </a>
                     
                 </div>
@@ -1162,31 +1212,31 @@ var _hmt = _hmt || [];
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/09/02/SEO/">
+                <a href="/2021/09/09/%E6%BA%A2%E5%87%BA%E5%88%A4%E6%96%AD/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="SEO">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="溢出判断">
                         
-                        <span class="card-title">SEO</span>
+                        <span class="card-title">溢出判断</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            大学必修课《SEO搜索引擎优化》学习期间的笔记与心得。
+                            计算机用补码进行加减时怎么判断是否溢出.....
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-02
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-09
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/SEO/" class="post-category">
-                                    SEO
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/" class="post-category">
+                                    计算机原理
                                 </a>
                             
                             
@@ -1196,8 +1246,8 @@ var _hmt = _hmt || [];
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/SEO/">
-                        <span class="chip bg-color">SEO</span>
+                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/">
+                        <span class="chip bg-color">计算机原理</span>
                     </a>
                     
                 </div>

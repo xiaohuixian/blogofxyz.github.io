@@ -18,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>计算机怎么计算四则运算 | X-Y-Z`s Blog</title>
+    <title>计算机怎么进行四则运算（浮点） | X-Y-Z`s Blog</title>
 	
     <link rel="icon" type="image/png" href="/favicon.png">
 
@@ -386,12 +386,12 @@ var _hmt = _hmt || [];
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">计算机怎么计算四则运算</h1>
+                    <h1 class="description center-align post-title">计算机怎么进行四则运算（浮点）</h1>
                 </div>
             </div>
         </div>
@@ -516,6 +516,10 @@ var _hmt = _hmt || [];
                                 <span class="chip bg-color">二进制运算</span>
                             </a>
                         
+                            <a href="/tags/%E5%AE%9A%E7%82%B9%E8%BF%90%E7%AE%97/">
+                                <span class="chip bg-color">定点运算</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -544,14 +548,14 @@ var _hmt = _hmt || [];
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-25
+                    2021-09-26
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    387
+                    242
                 </div>
                 
 
@@ -586,36 +590,18 @@ var _hmt = _hmt || [];
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="加-●’◡’●-加"><a href="#加-●’◡’●-加" class="headerlink" title="加 (●’◡’●) 加"></a>加 (●’◡’●) 加</h2><h3 id="1-整数相加。"><a href="#1-整数相加。" class="headerlink" title="1.整数相加。"></a>1.整数相加。</h3><ul>
-<li><p>两个数全为正数，二进制形式数直接相加。</p>
-<p>如：x=10<sub>D</sub>=01010<sub>O</sub>,y=15<sub>D</sub>=01111<sub>O</sub>,计算x+y.</p>
-<p>则直接同位相加,以八位（根据实际数据类型而定）数据位计算，x=0000 1010 ,y=0000 1111</p>
-<pre><code>  0000 1010
- +0000 1111
- ----------
-  0001 1001
-</code></pre>
-<p>​    0001 1001<sub>O</sub>=25<sub>D</sub> </p>
+                <h2 id="加减"><a href="#加减" class="headerlink" title="加减"></a>加减</h2><ol>
+<li><p>0操作数检查<br>浮点加减运算过程比定点运算过程复杂。如两操作数中有一个数为0,即没有必要再进行后续的一系列操作。</p>
 </li>
-<li><p>两数有负数，用补码运算。</p>
-<p>如：x= -10<sub>D</sub>,y=15<sub>D</sub>,计算x+y.</p>
-<p>同样用八位举例。</p>
-<p>[x]<sub>原</sub>=1000 1010, [y]<sub>补</sub>=[y]<sub>原</sub>=0000 1111,</p>
-<p>[x]<sub>补</sub>=1111 0110,</p>
-<pre><code>  1111 0110
- +0000 1111
- ----------
-  0000 0101
-</code></pre>
-<p><mark>此时算出结果是补码</mark>&gt;，故需要首先进行求反码的逆运算。即先看首位，如果是 <code>0</code> ,则无需变动。否则末尾减一，除符号位外，其它位求反。</p>
-<p>​    0000 0101<sub>O</sub>=5<sub>D</sub> </p>
+<li><p>比较阶码大小并对阶<br>两浮点数加减,首先看两数的小数点位置是否对齐（阶码是否相同）。若阶码相同,表示小数点对齐,可进行尾数的加减运算。反之,若两数阶码不同,表示小数点位置没有对齐,此时必须使两数阶码相同,即对阶。</p>
+<ul>
+<li><p>对阶</p>
+<p>​    先求两阶码差的绝对值，然后使小的阶码增加，其对应尾数右移相应的长度。之所以右移，是因为向左移的话如果最左位发生溢出，对数值影响较大。而向右移溢出时最末位丢失影响较小。<mark style="background-color:#57a2ed;padding:5px;border-radius:5px">想想你在乎你钱包余额的最左位还是最右位。</mark></p>
 </li>
 </ul>
-<hr>
-<h3 id="2-小数相加。"><a href="#2-小数相加。" class="headerlink" title="2. 小数相加。"></a>2. 小数相加。</h3><hr>
-<h2 id="●’◡’●-减-●’◡’●"><a href="#●’◡’●-减-●’◡’●" class="headerlink" title="(●’◡’●) 减 (●’◡’●)"></a>(●’◡’●) 减 (●’◡’●)</h2><h3 id="1-整数减"><a href="#1-整数减" class="headerlink" title="1. 整数减"></a>1. 整数减</h3><p>无论正负，两数相减皆为两数的补码相加。就是这么神奇，不信下边举个例子。</p>
-<h2 id="●’◡’●-乘-●’◡’●-乘-●’◡’●"><a href="#●’◡’●-乘-●’◡’●-乘-●’◡’●" class="headerlink" title="(●’◡’●) 乘 (●’◡’●) 乘 (●’◡’●)"></a>(●’◡’●) 乘 (●’◡’●) 乘 (●’◡’●)</h2><h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p>用原码进行乘法运算。在定点计算机中，用两个原码表示的数相乘，乘积的符号由两数的符号位异或（         ）得到，乘积的数值部分是两数的绝对值相乘之积。即，原码的乘法的实质是两个正数相乘。<br>         其运算规则是： 根据乘数Y绝对值每个数位上的值Yi是“1”还是“0”(从最低位Y0开始)，决定本次部分积是加上被乘数X的绝对值，还是加上全“0”，得到的新部分积右移一位，再重复上面的动作，直到乘法做完为止。</p>
-<h2 id="●’◡’●-除-●’◡’●-除-●’◡’●-除-●’◡’●"><a href="#●’◡’●-除-●’◡’●-除-●’◡’●-除-●’◡’●" class="headerlink" title="(●’◡’●) 除 (●’◡’●) 除 (●’◡’●) 除 (●’◡’●)"></a>(●’◡’●) 除 (●’◡’●) 除 (●’◡’●) 除 (●’◡’●)</h2>
+</li>
+</ol>
+
                 
             </div>
             <hr/>
@@ -641,7 +627,7 @@ var _hmt = _hmt || [];
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://blogofxyz.top/2021/09/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%80%8E%E4%B9%88%E8%BF%9B%E8%A1%8C%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97/">https://blogofxyz.top/2021/09/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%80%8E%E4%B9%88%E8%BF%9B%E8%A1%8C%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97/</a>
+                    <a href="https://blogofxyz.top/2021/09/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%80%8E%E4%B9%88%E8%BF%9B%E8%A1%8C%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97%EF%BC%88%E6%B5%AE%E7%82%B9%EF%BC%89/">https://blogofxyz.top/2021/09/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%80%8E%E4%B9%88%E8%BF%9B%E8%A1%8C%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97%EF%BC%88%E6%B5%AE%E7%82%B9%EF%BC%89/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -685,6 +671,10 @@ var _hmt = _hmt || [];
                             
                                 <a href="/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%BF%90%E7%AE%97/">
                                     <span class="chip bg-color">二进制运算</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%AE%9A%E7%82%B9%E8%BF%90%E7%AE%97/">
+                                    <span class="chip bg-color">定点运算</span>
                                 </a>
                             
                         </div>
@@ -1204,24 +1194,24 @@ var _hmt = _hmt || [];
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/09/09/%E6%BA%A2%E5%87%BA%E5%88%A4%E6%96%AD/">
+                <a href="/2021/09/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%80%8E%E4%B9%88%E8%BF%9B%E8%A1%8C%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97%EF%BC%88%E5%AE%9A%E7%82%B9%EF%BC%89/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="溢出判断">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="计算机怎么计算四则运算(定点)">
                         
-                        <span class="card-title">溢出判断</span>
+                        <span class="card-title">计算机怎么计算四则运算(定点)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            计算机用补码进行加减时怎么判断是否溢出.....
+                            计算机运算加减乘除的原理(定点)。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-15
                             </span>
                         <span class="publish-author">
                             
@@ -1240,6 +1230,14 @@ var _hmt = _hmt || [];
                     
                     <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/">
                         <span class="chip bg-color">计算机原理</span>
+                    </a>
+                    
+                    <a href="/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%BF%90%E7%AE%97/">
+                        <span class="chip bg-color">二进制运算</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%AE%9A%E7%82%B9%E8%BF%90%E7%AE%97/">
+                        <span class="chip bg-color">定点运算</span>
                     </a>
                     
                 </div>
@@ -1427,7 +1425,7 @@ var _hmt = _hmt || [];
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">22.3k</span>
+                        class="white-color">22.5k</span>
             
             
             
