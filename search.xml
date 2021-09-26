@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>git上传后缀名改变</title>
+      <link href="/2021/09/26/git%E4%B8%8A%E4%BC%A0%E5%90%8E%E7%BC%80%E5%90%8D%E6%94%B9%E5%8F%98/"/>
+      <url>/2021/09/26/git%E4%B8%8A%E4%BC%A0%E5%90%8E%E7%BC%80%E5%90%8D%E6%94%B9%E5%8F%98/</url>
+      
+        <content type="html"><![CDATA[<p>刚开始搞blog时遇到的奇葩问题。</p><hr><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>最开始是<code>jpg</code>结尾的图片，结果上传到仓库后发现是<code>JPG</code>。当时给我懵逼的。<br>后来就想着吧。jpg不给搞那就改成png，结果又<code>png</code>与<code>PNG</code>过不去.</p><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>找到 git 所操作仓库的配置文件。就是说，你操作不同的仓库，git会生成许多配置文件集。一般是隐藏的（win），需要开启显示隐藏文件。然后在此启动git命令行，或者启动后路径切换至此。</p><p>切换或打得开成功会如下图</p><img src="https://gitee.com/blogofxyz/blog-photo/raw/master/%E7%AC%94%E8%AE%B0&amp;%E5%BF%83%E5%BE%97/git_png_error.png" alt="image-20210926221312579" style="zoom: 67%;"><p>输入以下命令，回车</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">git config core.ignorecase false<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>git默认是大小写不敏感的。所以在你上传文件之后，如果第一次上传的是<code>abc.jpg</code> 那么，在以后上传<code>abc.JPG</code>时就会认为，这是一个文件。当然，图片文件是会替换的，但文件名是不会改变的。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>进程与线程</title>
       <link href="/2021/09/22/%E8%BF%9B%E7%A8%8B/"/>
       <url>/2021/09/22/%E8%BF%9B%E7%A8%8B/</url>
@@ -571,28 +596,6 @@
     
     
     <entry>
-      <title>交流</title>
-      <link href="/contact/index.html"/>
-      <url>/contact/index.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="欢迎留言"><a href="#欢迎留言" class="headerlink" title="欢迎留言"></a>欢迎留言</h1><p>大家有任何问题，都可以在评论区给我留言，或者加我联系方式：</p><ul><li><strong>Q Q</strong>：<strong>1970476603</strong></li><li><strong>微信</strong>：<strong>i_19-99-666</strong></li></ul><p>欢迎来访<br><strong>当然不介意小jiejie加我~~</strong></p><h1 id="友链交换"><a href="#友链交换" class="headerlink" title="友链交换"></a>友链交换</h1><p>想要交换友链的小伙伴，欢迎在评论区留言，留言格式：</p><ul><li><strong>名称：</strong>你的博客名称</li><li><strong>地址：</strong>你的博客地址</li><li><strong>简介：</strong>一句话简介</li><li><strong>头像：</strong>你的头像地址</li></ul><p>例如我的博客友链，大家可以加到自己博客里哦：</p><ul><li><strong>名称：</strong>张小白</li><li><strong>地址：</strong><a class="selfurl">https://blogofxyz.gitee.io</a> (国内访问快)/<a class="selfurl">https://blogofxyz.top/</a> (github部署)</li><li><strong>简介：</strong>平时没少学没用东西的一个家伙。</li><li><strong>头像：</strong><a class="selfurl">https://blogofxyz.gitee.io/medias/avatar.jpg</a></li></ul>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>关于‘俺’</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>abc123</title>
       <link href="/abc123/index.html"/>
       <url>/abc123/index.html</url>
@@ -604,9 +607,9 @@
     
     
     <entry>
-      <title>成就</title>
-      <link href="/archives/index.html"/>
-      <url>/archives/index.html</url>
+      <title>关于‘俺’</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -626,11 +629,11 @@
     
     
     <entry>
-      <title>导航</title>
-      <link href="/navigate/index.html"/>
-      <url>/navigate/index.html</url>
+      <title>交流</title>
+      <link href="/contact/index.html"/>
+      <url>/contact/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h1 id="欢迎留言"><a href="#欢迎留言" class="headerlink" title="欢迎留言"></a>欢迎留言</h1><p>大家有任何问题，都可以在评论区给我留言，或者加我联系方式：</p><ul><li><strong>Q Q</strong>：<strong>1970476603</strong></li><li><strong>微信</strong>：<strong>i_19-99-666</strong></li></ul><p>欢迎来访<br><strong>当然不介意小jiejie加我~~</strong></p><h1 id="友链交换"><a href="#友链交换" class="headerlink" title="友链交换"></a>友链交换</h1><p>想要交换友链的小伙伴，欢迎在评论区留言，留言格式：</p><ul><li><strong>名称：</strong>你的博客名称</li><li><strong>地址：</strong>你的博客地址</li><li><strong>简介：</strong>一句话简介</li><li><strong>头像：</strong>你的头像地址</li></ul><p>例如我的博客友链，大家可以加到自己博客里哦：</p><ul><li><strong>名称：</strong>张小白</li><li><strong>地址：</strong><a class="selfurl">https://blogofxyz.gitee.io</a> (国内访问快)/<a class="selfurl">https://blogofxyz.top/</a> (github部署)</li><li><strong>简介：</strong>平时没少学没用东西的一个家伙。</li><li><strong>头像：</strong><a class="selfurl">https://blogofxyz.gitee.io/medias/avatar.jpg</a></li></ul>]]></content>
       
     </entry>
     
@@ -642,6 +645,28 @@
       <url>/friends/index.html</url>
       
         <content type="html"><![CDATA[<h1 id="赞赏名单"><a href="#赞赏名单" class="headerlink" title="赞赏名单"></a>赞赏名单</h1><p>感谢所有赞赏过我的小伙伴啦，你们的支持是我最大的动力！</p><h1 id="友链交换"><a href="#友链交换" class="headerlink" title="友链交换"></a>友链交换</h1><p>想要交换友链的小伙伴，欢迎在留言板留言，留言格式：</p><ul><li><strong>名称：</strong>你的博客名称</li><li><strong>地址：</strong>你的博客地址</li><li><strong>简介：</strong>一句话简介</li><li><strong>头像：</strong>你的头像地址</li></ul><p>例如我的博客友链，大家可以加到自己博客里哦：</p><ul><li><p><strong>名称：</strong>Zhang-little-white</p></li><li><p><strong>地址：</strong> <a style="text-decoration:none" class="selfurl">https://blogofxyz.gitee.io</a> (gitee访问快)</p><p><a style="text-decoration:none;    white-space: pre;">   &nbsp; &nbsp; &nbsp;  &nbsp;</a>            <a style="text-decoration:none" class="selfurl">https://blogofxyz.top/ </a>(github部署)</p></li><li><p><strong>简介：</strong>小白一个</p></li><li><p><strong>头像：</strong><a style="text-decoration:none" class="selfurl">https://blogofxyz.gitee.io/medias/avatar.jpg</a></p></li></ul>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>成就</title>
+      <link href="/archives/index.html"/>
+      <url>/archives/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>导航</title>
+      <link href="/navigate/index.html"/>
+      <url>/navigate/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
