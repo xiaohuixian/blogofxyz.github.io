@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-    <meta name="keywords" content="SEM">
+    <meta name="keywords" content="笔记">
     <meta name="description" content="C# | Web | html | python |">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -18,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>SEM | X-Y-Z`s Blog</title>
+    <title>（未完）计算机组成原理 | X-Y-Z`s Blog</title>
 	
     <link rel="icon" type="image/png" href="/favicon.png">
 
@@ -386,12 +386,12 @@ var _hmt = _hmt || [];
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">SEM</h1>
+                    <h1 class="description center-align post-title">（未完）计算机组成原理</h1>
                 </div>
             </div>
         </div>
@@ -510,8 +510,12 @@ var _hmt = _hmt || [];
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/SEM/">
-                                <span class="chip bg-color">SEM</span>
+                            <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">
+                                <span class="chip bg-color">计算机组成原理</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%AC%94%E8%AE%B0-%E5%BF%83%E5%BE%97/">
+                                <span class="chip bg-color">笔记&amp;心得</span>
                             </a>
                         
                     </div>
@@ -522,8 +526,8 @@ var _hmt = _hmt || [];
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/SEM/" class="post-category">
-                                SEM
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/" class="post-category">
+                                计算机原理
                             </a>
                         
                     </div>
@@ -535,28 +539,28 @@ var _hmt = _hmt || [];
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-09-02
+                    2021-08-30
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-02
+                    2021-10-01
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    58
+                    625
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -584,8 +588,71 @@ var _hmt = _hmt || [];
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-SEM了解"><a href="#1-SEM了解" class="headerlink" title="1. SEM了解"></a>1. <code>SEM</code>了解</h2><ul>
-<li>搜索引擎营销（Search Engine Marketing，简称SEM）是指企业利用用户使用搜索引擎检索信息的机会，尽可能地将信息传递给目标用户的一种营销方式。</li>
+                <h2 id="⚪-计算机系统组成"><a href="#⚪-计算机系统组成" class="headerlink" title="⚪. 计算机系统组成"></a>⚪. 计算机系统组成</h2><pre class="mermaid">graph TD
+a[计算机系统]--&gt;aa[硬件系统]
+aa--&gt;aaa[主机]
+aaa--&gt;aaaa[中央处理器]
+aaaa--&gt;aaaaa[运算器]
+aaaa--&gt;aaaab[控制器]
+aaa--&gt;aaab[内存]
+aaab--&gt;aaaba[只读存储器]
+aaab--&gt;aaabb[随机存储器]
+aaab--&gt;aaabc[高速存储器]
+aa--&gt;aab[外设]
+aab--&gt;aaba[I/O设备]
+aab--&gt;aabb[外存]
+aab--&gt;aabc[网络设备]
+a--&gt;ab[软件系统]
+ab--&gt;aba[系统软件]
+aba--&gt;abaa[操作系统]
+aba--&gt;abab[程序设计语言]
+aba--&gt;abac[实用程序]
+ab--&gt;abb[应用软件]</pre>
+
+
+
+<h2 id="1-计算机的结构体系"><a href="#1-计算机的结构体系" class="headerlink" title="1. 计算机的结构体系"></a>1. 计算机的结构体系</h2><h3 id="1-1-冯诺依曼机结构"><a href="#1-1-冯诺依曼机结构" class="headerlink" title="1.1 冯诺依曼机结构"></a>1.1 冯诺依曼机结构</h3><p>特指硬件。</p>
+<ul>
+<li><p>输入设备</p>
+</li>
+<li><p>存储器</p>
+</li>
+<li><p>运算器</p>
+</li>
+<li><p>控制器</p>
+</li>
+<li><p>输出设备</p>
+<p>现在计算机–&gt;微型计算机，一般由CPU（运算器、控制器）、I\O接口（输入输出接口）、存储器（外存）组成。</p>
+</li>
+</ul>
+<h4 id="1-1存储器（外存）"><a href="#1-1存储器（外存）" class="headerlink" title="1.1存储器（外存）"></a>1.1存储器（外存）</h4><p>  存储程序与数据。</p>
+<h4 id="1-2-CPU"><a href="#1-2-CPU" class="headerlink" title="1.2 CPU"></a>1.2 CPU</h4><h5 id="1-2-1-运算器"><a href="#1-2-1-运算器" class="headerlink" title="1.2.1 运算器"></a>1.2.1 运算器</h5><p>功能：进行算数逻辑运算<br>        组成：算术逻辑运算单元（ALU）、累加器、其他寄存器 </p>
+<h5 id="1-2-2-控制器"><a href="#1-2-2-控制器" class="headerlink" title="1.2.2 控制器"></a>1.2.2 控制器</h5><h4 id="1-2-3-…"><a href="#1-2-3-…" class="headerlink" title="1.2.3 ….."></a>1.2.3 …..</h4><h2 id="2-计算机软件系统"><a href="#2-计算机软件系统" class="headerlink" title="2. 计算机软件系统"></a>2. 计算机软件系统</h2><h3 id="2-1-软件"><a href="#2-1-软件" class="headerlink" title="2.1 软件"></a>2.1 软件</h3><p>用于计算机的各种程序统称为软件。</p>
+<h4 id="2-1-1-系统程序"><a href="#2-1-1-系统程序" class="headerlink" title="2.1.1 系统程序"></a>2.1.1 系统程序</h4><p>用来简化程序设计，提高计算机的使用效率，发挥和扩大计算机的功能和用途。</p>
+<ul>
+<li><p>操作系统：用来管理计算机硬件、软件资源，自动调度用户的作业程序，使多个用户能有效地共用一套系统。</p>
+</li>
+<li><p>语言程序。如汇编程序、编译程序等。</p>
+</li>
+<li><p>各种服务性程序。</p>
+</li>
+</ul>
+<h4 id="2-1-2-应用程序"><a href="#2-1-2-应用程序" class="headerlink" title="2.1.2 应用程序"></a>2.1.2 应用程序</h4><p>   用户利用计算机来解决某些问题而编制的程序。</p>
+<h2 id="3-计算机的其他组成"><a href="#3-计算机的其他组成" class="headerlink" title="3. 计算机的其他组成"></a>3. 计算机的其他组成</h2><h3 id="3-1-数据"><a href="#3-1-数据" class="headerlink" title="3.1 数据"></a>3.1 数据</h3><p>能被计算机所能接收、在储、处理的数字、字符、字母、汉字、图片、图形、声音、动画、视频<br>等都称为计算机的数据。</p>
+<h4 id="3-1-1-数"><a href="#3-1-1-数" class="headerlink" title="3.1.1  数"></a>3.1.1  数</h4><p>[传送门]([计算机中的数 | X-Y-Z`s Blog (gitee.io)](<a target="_blank" rel="noopener" href="https://blogofxyz.gitee.io/2021/09/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E6%95%B0/">https://blogofxyz.gitee.io/2021/09/07/计算机中的数/</a>))</p>
+<h5 id="3-1-1-1-数的流通"><a href="#3-1-1-1-数的流通" class="headerlink" title="3.1.1.1 数的流通"></a>3.1.1.1 数的流通</h5><pre class="mermaid">graph LR
+a[输入信息]==转换==&gt;b[二进制形式]==输出==&gt;c[信息]
+a--便于存储,运算--&gt;b
+b--输出--&gt;c</pre>
+
+
+
+<h2 id="4-计算机的发展趋势"><a href="#4-计算机的发展趋势" class="headerlink" title="4. 计算机的发展趋势"></a>4. 计算机的发展趋势</h2><ul>
+<li>微型化。手机，智能手表等。 </li>
+<li>巨型化。超级计算机。</li>
+<li>网络化。通讯网络。</li>
+<li>智能化。机器人。</li>
+<li>多媒体化。声音，视频，动画等媒体的诞生。</li>
 </ul>
 
                 
@@ -613,7 +680,7 @@ var _hmt = _hmt || [];
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://blogofxyz.top/2021/09/02/SEM/">https://blogofxyz.top/2021/09/02/SEM/</a>
+                    <a href="https://blogofxyz.top/2021/08/30/%EF%BC%88%E6%9C%AA%E5%AE%8C%EF%BC%89%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">https://blogofxyz.top/2021/08/30/%EF%BC%88%E6%9C%AA%E5%AE%8C%EF%BC%89%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -651,8 +718,12 @@ var _hmt = _hmt || [];
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/SEM/">
-                                    <span class="chip bg-color">SEM</span>
+                                <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">
+                                    <span class="chip bg-color">计算机组成原理</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%AC%94%E8%AE%B0-%E5%BF%83%E5%BE%97/">
+                                    <span class="chip bg-color">笔记&amp;心得</span>
                                 </a>
                             
                         </div>
@@ -1115,31 +1186,31 @@ var _hmt = _hmt || [];
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/09/07/%E6%8A%80%E6%9C%AF%E8%83%96%E6%94%B6%E8%97%8F%E5%A4%B9/">
+                <a href="/2021/08/30/%EF%BC%88%E6%9C%AA%E5%AE%8C%EF%BC%89Java/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="前端网站收藏">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="（未完）Java">
                         
-                        <span class="card-title">前端网站收藏</span>
+                        <span class="card-title">（未完）Java</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            B站以为up主分享的自己多年收集的网站。
+                            Java选修课与自学期间整理的知识点与心得。
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-07
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-30
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%BD%91%E7%AB%99%E8%B5%84%E6%BA%90/" class="post-category">
-                                    网站资源
+                            <a href="/categories/Java/" class="post-category">
+                                    Java
                                 </a>
                             
                             
@@ -1149,8 +1220,8 @@ var _hmt = _hmt || [];
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E8%B5%84%E6%BA%90/">
-                        <span class="chip bg-color">资源</span>
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
                     </a>
                     
                 </div>
@@ -1164,31 +1235,31 @@ var _hmt = _hmt || [];
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/09/02/SEO/">
+                <a href="/2021/08/29/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%84%E7%90%86%E4%B9%B1%E7%A0%81/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="SEO">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="命令行处理乱码">
                         
-                        <span class="card-title">SEO</span>
+                        <span class="card-title">命令行处理乱码</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            大学必修课《SEO搜索引擎优化》学习期间的笔记与心得。
+                            某些情况下，用命令行打开文件或者输出时出现乱码的处理方法。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-02
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-29
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/SEO/" class="post-category">
-                                    SEO
+                            <a href="/categories/windows/" class="post-category">
+                                    windows
                                 </a>
                             
                             
@@ -1198,8 +1269,12 @@ var _hmt = _hmt || [];
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/SEO/">
-                        <span class="chip bg-color">SEO</span>
+                    <a href="/tags/cmd/">
+                        <span class="chip bg-color">cmd</span>
+                    </a>
+                    
+                    <a href="/tags/windows/">
+                        <span class="chip bg-color">windows</span>
                     </a>
                     
                 </div>
@@ -1387,7 +1462,7 @@ var _hmt = _hmt || [];
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">22.6k</span>
+                        class="white-color">25.1k</span>
             
             
             

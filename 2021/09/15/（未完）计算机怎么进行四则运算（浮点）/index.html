@@ -18,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>计算机怎么进行四则运算（浮点） | X-Y-Z`s Blog</title>
+    <title>(未完)计算机怎么进行四则运算（浮点） | X-Y-Z`s Blog</title>
 	
     <link rel="icon" type="image/png" href="/favicon.png">
 
@@ -386,12 +386,12 @@ var _hmt = _hmt || [];
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">计算机怎么进行四则运算（浮点）</h1>
+                    <h1 class="description center-align post-title">(未完)计算机怎么进行四则运算（浮点）</h1>
                 </div>
             </div>
         </div>
@@ -550,21 +550,21 @@ var _hmt = _hmt || [];
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-26
+                    2021-10-01
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    242
+                    596
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -603,6 +603,23 @@ var _hmt = _hmt || [];
 </ul>
 </li>
 </ol>
+<ol start="3">
+<li></li>
+<li><p>规格化</p>
+<blockquote>
+<p>  参考：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/372880386">浮点数的表示和规格化 - 知乎 </a></p>
+</blockquote>
+<p>  ​    <strong>左规：</strong>当浮点数运算的结果为非规格化时要进行规格化处理，将尾数算术左移一位、阶码减1(基数为2时）的方法称为左规，左归可能要进行多次。</p>
+<p>  ​    <strong>右规：</strong>当浮点数运算的结果尾数出现溢出（双符号位为01或10)时，将尾数算术右移一位、阶码加1（基数为2时）的方法称为右规。需要右归时，只需进行一次。</p>
+<p>  规格化浮点数的尾数M的绝对值应满足条件1/r≤|M|≤1。若r=2，则有1/2≤ |M|≤1。规格化表示的尾数形式如下。</p>
+<p>  ​    <strong>1）原码规格化后。</strong></p>
+<p>  ​        ● 正数为0.1××…×的形式，其最大值表示为0.11…1，最小值表示为0.100…0。尾数的表示范围为1/2≤M≤(1-2)。</p>
+<p>  ​        ● 负数为1.1××…×的形式，其最大值表示为1.10…0，最小值表示为1.11…1。尾数的表示范围为-(1-2)≤M≤-1/2。</p>
+<p>  ​    <strong>2）补码规格化后。</strong></p>
+<p>  ​        ● 正数为0.1××…×的形式，其最大值表示为0.11…1，最小值表示为0.100…0。尾数的表示范围为1/2≤M≤(1-2)。</p>
+<p>  ​        ● 负数为1.0××…×的形式，其最大值表示为1.01…1，最小值表示为1.00…0。尾数的表示范围为-1≤M≤-(1/2＋2)。</p>
+</li>
+</ol>
 
                 
             </div>
@@ -629,7 +646,7 @@ var _hmt = _hmt || [];
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://blogofxyz.top/2021/09/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%80%8E%E4%B9%88%E8%BF%9B%E8%A1%8C%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97%EF%BC%88%E6%B5%AE%E7%82%B9%EF%BC%89/">https://blogofxyz.top/2021/09/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%80%8E%E4%B9%88%E8%BF%9B%E8%A1%8C%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97%EF%BC%88%E6%B5%AE%E7%82%B9%EF%BC%89/</a>
+                    <a href="https://blogofxyz.top/2021/09/15/%EF%BC%88%E6%9C%AA%E5%AE%8C%EF%BC%89%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%80%8E%E4%B9%88%E8%BF%9B%E8%A1%8C%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97%EF%BC%88%E6%B5%AE%E7%82%B9%EF%BC%89/">https://blogofxyz.top/2021/09/15/%EF%BC%88%E6%9C%AA%E5%AE%8C%EF%BC%89%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%80%8E%E4%B9%88%E8%BF%9B%E8%A1%8C%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97%EF%BC%88%E6%B5%AE%E7%82%B9%EF%BC%89/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1139,13 +1156,13 @@ var _hmt = _hmt || [];
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/09/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%80%8E%E4%B9%88%E8%BF%9B%E8%A1%8C%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97%EF%BC%88%E5%AE%9A%E7%82%B9%EF%BC%89/">
+                <a href="/2021/09/15/%EF%BC%88%E6%9C%AA%E5%AE%8C%EF%BC%89%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%80%8E%E4%B9%88%E8%BF%9B%E8%A1%8C%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97%EF%BC%88%E5%AE%9A%E7%82%B9%EF%BC%89/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="计算机怎么计算四则运算(定点)">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="(未完)计算机怎么计算四则运算(定点)">
                         
-                        <span class="card-title">计算机怎么计算四则运算(定点)</span>
+                        <span class="card-title">(未完)计算机怎么计算四则运算(定点)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1196,13 +1213,13 @@ var _hmt = _hmt || [];
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/09/09/%E6%BA%A2%E5%87%BA%E5%88%A4%E6%96%AD/">
+                <a href="/2021/09/09/%EF%BC%88%E6%9C%AA%E5%AE%8C%EF%BC%89%E6%BA%A2%E5%87%BA%E5%88%A4%E6%96%AD/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="溢出判断">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="（未完）溢出判断">
                         
-                        <span class="card-title">溢出判断</span>
+                        <span class="card-title">（未完）溢出判断</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1419,7 +1436,7 @@ var _hmt = _hmt || [];
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">22.6k</span>
+                        class="white-color">25.1k</span>
             
             
             
