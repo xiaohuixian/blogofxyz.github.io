@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-    <meta name="keywords" content="浮点数,二进制">
+    <meta name="keywords" content="操作系统,笔记">
     <meta name="description" content="C# | Web | html | python |">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -18,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>十进制转浮点数 | X-Y-Z`s Blog</title>
+    <title>进程同步笔记 | X-Y-Z`s Blog</title>
 	
     <link rel="icon" type="image/png" href="/favicon.png">
 
@@ -386,12 +386,12 @@ var _hmt = _hmt || [];
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">十进制转浮点数</h1>
+                    <h1 class="description center-align post-title">进程同步笔记</h1>
                 </div>
             </div>
         </div>
@@ -510,16 +510,8 @@ var _hmt = _hmt || [];
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%B5%AE%E7%82%B9%E6%95%B0/">
-                                <span class="chip bg-color">浮点数</span>
-                            </a>
-                        
-                            <a href="/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6/">
-                                <span class="chip bg-color">二进制</span>
-                            </a>
-                        
-                            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                                <span class="chip bg-color">数据结构</span>
+                            <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+                                <span class="chip bg-color">操作系统</span>
                             </a>
                         
                     </div>
@@ -530,8 +522,12 @@ var _hmt = _hmt || [];
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/" class="post-category">
-                                计算机原理
+                            <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="post-category">
+                                操作系统
+                            </a>
+                        
+                            <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                笔记
                             </a>
                         
                     </div>
@@ -543,21 +539,21 @@ var _hmt = _hmt || [];
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-09-02
+                    2021-10-06
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-27
+                    2021-10-08
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    450
+                    548
                 </div>
                 
 
@@ -592,147 +588,23 @@ var _hmt = _hmt || [];
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-浮点数"><a href="#1-浮点数" class="headerlink" title="1. 浮点数"></a>1. 浮点数</h2><h3 id="1-1-优缺点"><a href="#1-1-优缺点" class="headerlink" title="1.1 优缺点"></a>1.1 优缺点</h3><p>优：相对于定点数来说可表达范围更大的数据类型。</p>
-<p>缺：失去了准确性。</p>
-<h3 id="1-2-组成"><a href="#1-2-组成" class="headerlink" title="1.2 组成"></a>1.2 组成</h3><p>浮点数由三部分组成。符号位，偏移位，数据位。</p>
-<p>专业的叫法为：</p>
-<ul>
-<li><p>Sign：符号位，表示浮点数是正数或负数。0正，1负。</p>
+                <h3 id="1-0进程同步机制"><a href="#1-0进程同步机制" class="headerlink" title="1.0进程同步机制"></a>1.0进程同步机制</h3><h4 id="1-1-0概念"><a href="#1-1-0概念" class="headerlink" title="1.1.0概念"></a>1.1.0概念</h4><p><mark style="border-radius:10px;padding:5px;background-color:#47a6e8">异步环境</mark>下一组开发进程因直接制约而互相发送消息，互相合作、互相等待，使得各进程按一定的速度执行的过程。</p>
+<h4 id="1-1-2-目的"><a href="#1-1-2-目的" class="headerlink" title="1.1.2 目的"></a>1.1.2 目的</h4><p>在执行次序上对多个写作进程进行协调，使并发执行的诸多协作进程之间能按照一定的规则（或时序）共享系统资源，并能很好地互相合作，从而使程序的执行具有可再现性。</p>
+<h4 id="1-1-3-进程的制约关系"><a href="#1-1-3-进程的制约关系" class="headerlink" title="1.1.3 进程的制约关系"></a>1.1.3 进程的制约关系</h4><ul>
+<li><p>互斥关系</p>
+<p>  间接相互制约，多程序并发执行，由于共享的系统资源（CPU、I/O设备等），这些并发执行的程序之间会形成相互制约的关系。</p>
+<p>  为保证进程间有序运行，对于系统间的这些资源，必须由系统实施统一分配。</p>
 </li>
-<li><p>Exponent：指数位–阶码。类似于科学技术法 1x10<sup>12</sup> 中的12的部分，但略有不同。这里是以2为底数而不是10。</p>
-<p> ​        当浮点数为32位时，指数位有8位。如0.00001531 之类的数，指数部分将会是负数。为了表示这些数。便将2<sup>8</sup> 平分，但还有<code>0</code>需要表示，所以就是  -(2<sup>7</sup>-1) <del>0 与1</del>2<sup>7</sup> 。但是还有个前提，需要表示正负，所以为了除去符号位就使所有数都偏移一个量，保证所有数为正，这样就可省略符号位。即偏移2<sup>7</sup> -1=127。</p>
-</li>
-<li><p>Mantissa：基数位–尾数。浮点数具体数值的实际表示。</p>
+<li><p>同步关系</p>
+<p>  某些程序执行某些任务时会建立两个或更多的进程。这些进程为了完成同一任务而相互合作。</p>
 </li>
 </ul>
-<div>
-    <div>
-        <style>
-          th {
-              padding: 10px 20px;
-          }td {
-          border-style: inset;
-          border-width: 5px;
-          margin: 10px 15px;
-          padding: 10px 20px;
-      }
-      tr {
-          margin: 10px 15px;
-      }
-        </style>
-    </div>
-      <div>
-        <h3 id="1-3-种类"><a href="#1-3-种类" class="headerlink" title="1.3 种类"></a>1.3 种类</h3><p>目前标准的浮点数有两种 <code>32 bit</code> 与 <code>64 bit</code> 以后定会出现更高的。</p><ul>
-<li><code>32 bit</code></li>
-</ul><div style="text-align:center"><svg width="400" height="80" xmlns="http://www.w3.org/2000/svg">
- <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
- <g>
-  <title>background</title>
-  <rect fill="none" id="canvas_background" height="82" width="402" y="-1" x="-1"></rect>
-  <g display="none" id="canvasGrid">
-   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%" id="svg_7"></rect>
-  </g>
- </g>
- <g>
-  <title>Layer 1</title>
-  <g id="svg_14">
-   <rect id="svg_1" height="40" width="50" y="20.00001" x="36.3" stroke-width="1.5" stroke="#000" fill="#FABA6F"></rect>
-   <rect id="svg_2" height="40" width="100" y="20.00001" x="86.3" stroke-width="1.5" stroke="#000" fill="#FABA6F"></rect>
-   <rect id="svg_3" height="40" width="200" y="20.00001" x="186.3" stroke-width="1.5" stroke="#000" fill="#FABA6F"></rect>
-   <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="16" id="svg_4" y="45.60158" x="40.3" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">s:1位</text>
-   <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="16" id="svg_5" y="45.60158" x="111.3" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">E:8位</text>
-   <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="16" id="svg_6" y="45.60158" x="267.3" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">M:23位</text>
-  </g>
- </g>
-</svg>
-</div><ul>
-<li><code>64bit</code></li>
-</ul><div style="text-align:center">
-  <svg width="400" height="80" xmlns="http://www.w3.org/2000/svg">
-   <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
-   <g>
-    <title>background</title>
-    <rect x="-1" y="-1" width="402" height="82" id="canvas_background" fill="none"></rect>
-    <g id="canvasGrid" display="none">
-     <rect id="svg_7" width="100%" height="100%" x="0" y="0" stroke-width="0" fill="url(#gridpattern)"></rect>
-    </g>
-   </g>
-   <g>
-    <title>Layer 1</title>
-    <rect fill="#FABA6F" stroke="#000" stroke-width="1.5" x="36.3" y="20.00001" width="50" height="40" id="svg_1"></rect>
-    <rect fill="#FABA6F" stroke="#000" stroke-width="1.5" x="86.3" y="20.00001" width="100" height="40" id="svg_2"></rect>
-    <rect fill="#FABA6F" stroke="#000" stroke-width="1.5" x="186.3" y="20.00001" width="200" height="40" id="svg_3"></rect>
-    <text fill="#000000" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="40.3" y="45.60158" id="svg_4" font-size="16" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">s:1位</text>
-    <text style="cursor: move;" fill="#000000" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="111.3" y="45.60158" id="svg_5" font-size="16" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">E:11位</text>
-    <text style="cursor: move;" fill="#000000" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="267.3" y="45.60158" id="svg_6" font-size="16" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">M:52位</text>
-   </g>
-  </svg>    
-</div><p>此文以32位举例说明运算步骤。</p><h2 id="2-十进制转浮点数"><a href="#2-十进制转浮点数" class="headerlink" title="2. 十进制转浮点数"></a>2. 十进制转浮点数</h2><p>具体算法可参考<mark><a target="_blank" rel="noopener" href="https://blogofxyz.gitee.io/2021/09/02/%E5%B0%8F%E6%95%B0%E8%BD%AC%E6%8D%A2%E4%BA%8C%E8%BF%9B%E5%88%B6/">点这里</a></mark> </p><table style="text-align: center;margin:auto;">
-            <tbody><tr>
-            <th colspan="5">浮点数表示范围</th>
-            </tr>
-      <tr>
-          <th colspan="2">单精度32位</th>
-          <th colspan="2">双精度64位</th>
-          <th rowspan="2">表示的对象</th>
-       </tr>
-          <tr>
-      <td>指数</td>
-      <td>位数</td>
-      <td>指数</td>
-      <td>位数</td>
-  </tr>
-  <tr>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>s=0，表示0;s=1,表示-0</td>
-  </tr>
-  <tr>
-      <td>0</td>
-      <td>非0</td>
-      <td>0</td>
-      <td>非0</td>
-      <td>正负规格化数</td>
-  </tr>
-  <tr>
-      <td>1~254</td>
-      <td>任意数</td>
-      <td>1~2046</td>
-      <td>任意数</td>
-      <td>正负浮点数</td>
-  </tr>
-  <tr>
-      <td>255</td>
-      <td>0</td>
-      <td>2047</td>
-      <td>0</td>
-      <td>正负无穷</td>
-  </tr>
-  <tr>
-      <td>非零</td>
-      <td>0</td>
-      <td>非零</td>
-      <td>0</td>
-      <td>NaN(不是数)</td>
-  </tr>
+<blockquote>
+<p>  协作进程间  的制约关系即进程同步。根据上述可分为互斥关系与同步关系，且互斥输入同步。同步强调保证进程之间操作的先后次序的约束，而互斥强调对共享资源的互斥访问。</p>
+</blockquote>
+<h2 id="2-0-软件同步机制"><a href="#2-0-软件同步机制" class="headerlink" title="2.0 软件同步机制"></a>2.0 软件同步机制</h2><h2 id="3-0-硬件同步机制"><a href="#3-0-硬件同步机制" class="headerlink" title="3.0 硬件同步机制"></a>3.0 硬件同步机制</h2><h2 id="4-0-信号量机制"><a href="#4-0-信号量机制" class="headerlink" title="4.0 信号量机制"></a>4.0 信号量机制</h2><h2 id="5-0-管程机制"><a href="#5-0-管程机制" class="headerlink" title="5.0 管程机制"></a>5.0 管程机制</h2><h4 id="5-1-1-定义"><a href="#5-1-1-定义" class="headerlink" title="5.1.1 定义"></a>5.1.1 定义</h4><p>对于系统中的各种硬件资源和软件资源，忽略他们的内部结构和实现细节，利用数据结构抽象地描述他们的资源特性。即用少量信息和对此资源所执行的操作来表征该资源。于是，利用共享数据结构抽象地表示系统中的共享资源，并且将对该共享数据结构实施的特定操作定义为一组过程。</p>
+<h4 id="5-1-2-机理"><a href="#5-1-2-机理" class="headerlink" title="5.1.2 机理"></a>5.1.2 机理</h4><p>进程对共享资源的申请、释放和相关操作，必须通过由这组过程间接地对共享数据结构进行操作加以实现</p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</tbody></table></div></div>
                 
             </div>
             <hr/>
@@ -758,7 +630,7 @@ var _hmt = _hmt || [];
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://blogofxyz.top/2021/09/02/%E5%8D%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%B5%AE%E7%82%B9%E6%95%B0/">https://blogofxyz.top/2021/09/02/%E5%8D%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%B5%AE%E7%82%B9%E6%95%B0/</a>
+                    <a href="https://blogofxyz.top/2021/10/06/%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0/">https://blogofxyz.top/2021/10/06/%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -796,16 +668,8 @@ var _hmt = _hmt || [];
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%B5%AE%E7%82%B9%E6%95%B0/">
-                                    <span class="chip bg-color">浮点数</span>
-                                </a>
-                            
-                                <a href="/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6/">
-                                    <span class="chip bg-color">二进制</span>
-                                </a>
-                            
-                                <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                                    <span class="chip bg-color">数据结构</span>
+                                <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+                                    <span class="chip bg-color">操作系统</span>
                                 </a>
                             
                         </div>
@@ -1264,54 +1128,52 @@ var _hmt = _hmt || [];
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/09/02/%E5%B0%8F%E6%95%B0%E8%BD%AC%E6%8D%A2%E4%BA%8C%E8%BF%9B%E5%88%B6/">
+                <a href="/2021/10/06/%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="小数转换二进制">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="进程同步笔记">
                         
-                        <span class="card-title">小数转换二进制</span>
+                        <span class="card-title">进程同步笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            说明如何把一个小数转换为二进制。
+                            《操作系统》进程同步部分笔记。
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-02
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-06
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/" class="post-category">
-                                    计算机原理
+                            <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="post-category">
+                                    操作系统
+                                </a>
+                            
+                            <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    笔记
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6/">
-                        <span class="chip bg-color">二进制</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E8%BD%AC%E6%8D%A2/">
-                        <span class="chip bg-color">数据转换</span>
-                    </a>
-                    
-                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">
-                        <span class="chip bg-color">计算机组成原理</span>
+                    <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+                        <span class="chip bg-color">操作系统</span>
                     </a>
                     
                 </div>
@@ -1325,31 +1187,31 @@ var _hmt = _hmt || [];
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/08/31/%EF%BC%88%E5%BE%85%E8%A1%A5%E5%85%85%EF%BC%89markdown%E8%BF%9B%E9%98%B6/">
+                <a href="/2021/09/26/git%E4%B8%8A%E4%BC%A0%E5%90%8E%E7%BC%80%E5%90%8D%E6%94%B9%E5%8F%98/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="(待补充)markdown进阶">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="git上传后缀名改变">
                         
-                        <span class="card-title">(待补充)markdown进阶</span>
+                        <span class="card-title">git上传后缀名改变</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            最开始的 markdown 文件自己写完，除了字就是字。为了更美观，更高效简洁的表达自己，就总结了不少知识。
+                            git命令行上传文件至仓库后后缀名不一样
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-31
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-26
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/markdown/" class="post-category">
-                                    markdown
+                            <a href="/categories/git/" class="post-category">
+                                    git
                                 </a>
                             
                             
@@ -1359,12 +1221,8 @@ var _hmt = _hmt || [];
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/markdown/">
-                        <span class="chip bg-color">markdown</span>
-                    </a>
-                    
-                    <a href="/tags/typora/">
-                        <span class="chip bg-color">typora</span>
+                    <a href="/tags/git/">
+                        <span class="chip bg-color">git</span>
                     </a>
                     
                 </div>
