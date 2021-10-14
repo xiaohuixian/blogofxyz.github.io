@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>html设置背景图片透明度(不影响子标签与内容)</title>
+      <link href="/2021/10/14/html%E8%AE%BE%E7%BD%AE%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%E9%80%8F%E6%98%8E%E5%BA%A6-%E4%B8%8D%E5%BD%B1%E5%93%8D%E5%AD%90%E6%A0%87%E7%AD%BE%E4%B8%8E%E5%86%85%E5%AE%B9/"/>
+      <url>/2021/10/14/html%E8%AE%BE%E7%BD%AE%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%E9%80%8F%E6%98%8E%E5%BA%A6-%E4%B8%8D%E5%BD%B1%E5%93%8D%E5%AD%90%E6%A0%87%E7%AD%BE%E4%B8%8E%E5%86%85%E5%AE%B9/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-目前就这一种"><a href="#1-目前就这一种" class="headerlink" title="1.目前就这一种"></a>1.目前就这一种</h2><p>​    通过给子内容添加具有透明效果的背景色，以实现背景透明效果。</p><p>如</p><div>    <div id="apend" style=" background-image:     url(https://gitee.com/blogofxyz/blogofxyz/raw/master/medias/background.JPG);background-size: cover; width: 800px; height: auto;">        <div id="ap" style="width: 800px; height: auto;background: rgba(255, 255, 255, 0.3);">         <h1 style="    margin-left: 80px;  line-height: 100px;">             有的人            </h1>            <h7 style="float: right; margin-right: 20px;">————纪念鲁迅逝世十三周年有感</h7>            <p style="margin-left: 50px; white-space: break-spaces;line-height: 30px; font-family: cursive; font-size: 30px;">有的人活着他已经死了；有的人死了他还活着。有的人骑在人民头上：“啊，我多伟大！”有的人俯下身子给人民当牛马。有的人把名字刻入石头，想“不朽”；有的人情愿作野草，等着地下的火烧。有的人他活着别人就不能活；有的人他活着为了多数人更好地活。骑在人民头上的人民把他摔垮；给人民作牛马的人民永远记住他！把名字刻入石头的名字比尸首烂得更早；只要春风吹到的地方到处是青青的野草。他活着别人就不能活的人，他的下场可以看到；他活着为了多数人更好地活着的人，群众把他抬举得很高，很高。             </p>        </div>    </div></div><p>其代码可简略为</p><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>apend<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span> background-image: url(<span class="token punctuation">"</span></span></span><span class="token attr-name">--图片链接--")"</span><span class="token punctuation">&gt;</span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ap<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">width</span><span class="token punctuation">:</span> 800px<span class="token punctuation">;</span> <span class="token property">height</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span><span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>255<span class="token punctuation">,</span> 255<span class="token punctuation">,</span> 255<span class="token punctuation">,</span> 0.3<span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">&gt;</span></span>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css">--诗题对齐的代码--</span><span class="token punctuation">"</span></span></span><span class="token punctuation">&gt;</span></span>有的人<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h7</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css">引言对齐的代码</span><span class="token punctuation">"</span></span></span><span class="token punctuation">&gt;</span></span>————纪念鲁迅逝世十三周年有感<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h7</span><span class="token punctuation">&gt;</span></span>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css">--设置字体与对齐--</span><span class="token punctuation">"</span></span></span><span class="token punctuation">&gt;</span></span>            ----诗句----        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>最外层 div 设置背景图片，然后下一层 div 设置白色背景并指定透明度，此时的透明部分为内容以外的部分。</p><p>最后实现效果与料想中的一样。</p><blockquote><p>注：也可设置其他颜色的透明效果。rgba(x,y,z,p)。前四位分别为红、绿、蓝值，取值范围为0~255。第四位为透明度，取值范围0~1，值越大，透明效果越明显。当然，事实是用白色rgb(255, 255, 255)覆盖下边图像，所以，当这时底层div非最大层时会露馅。</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> HTML </category>
+          
+          <category> CSS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HTML </tag>
+            
+            <tag> CSS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>进程同步笔记</title>
       <link href="/2021/10/06/%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0/"/>
       <url>/2021/10/06/%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0/</url>
