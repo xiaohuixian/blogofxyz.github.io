@@ -121,6 +121,11 @@ pre {
   box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
 }
 
+div#iframe_xinguan {
+  max-width: 1124px;
+  margin: 0 auto;
+}
+
 code {
   padding: 1px 5px;
   top: 13px !important;
@@ -227,7 +232,7 @@ mark {
 }
 
 .card {
-  border-radius: 10px;
+  border-radius: 0 10px;
   box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07) !important;
 }
 
@@ -269,6 +274,10 @@ mark {
 
 .pd-header {
   margin-top: -64px;
+}
+
+.bg-cover.pd-header.about-cover {
+  border-radius: 0 0 200px 200px;
 }
 
 header .side-nav {
@@ -1279,7 +1288,7 @@ thead {
 }
 
 .chip-container {
-  margin-top: -60px;
+  margin-top: -12px;
 }
 
 .chip-container .tag-title {
