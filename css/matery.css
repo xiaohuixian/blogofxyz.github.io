@@ -1228,7 +1228,7 @@ div#artDetail {
 
 #articleContent table {
   width: 100%;
-  display: block;
+  display: inline-block;
   border-collapse: collapse;
   border-spacing: 0;
   overflow: auto;
