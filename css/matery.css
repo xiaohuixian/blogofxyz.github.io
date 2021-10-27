@@ -121,11 +121,6 @@ pre {
   box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
 }
 
-div#iframe_xinguan {
-  max-width: 1124px;
-  margin: 0 auto;
-}
-
 code {
   padding: 1px 5px;
   top: 13px !important;
