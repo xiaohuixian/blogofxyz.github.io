@@ -4,6 +4,59 @@
   
     
     <entry>
+      <title>连续分配存储管理方式</title>
+      <link href="/2021/10/31/%E8%BF%9E%E7%BB%AD%E5%88%86%E9%85%8D%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86%E6%96%B9%E5%BC%8F/"/>
+      <url>/2021/10/31/%E8%BF%9E%E7%BB%AD%E5%88%86%E9%85%8D%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86%E6%96%B9%E5%BC%8F/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>死锁</title>
+      <link href="/2021/10/30/%E6%AD%BB%E9%94%81/"/>
+      <url>/2021/10/30/%E6%AD%BB%E9%94%81/</url>
+      
+        <content type="html"><![CDATA[<p><em>教材：计算机操作系统（慕课版）</em></p><h2 id="1-死锁概述"><a href="#1-死锁概述" class="headerlink" title="1. 死锁概述"></a>1. 死锁概述</h2><p>一台计算机有两个进程P<sub>1</sub>, P<sub>2</sub> ，两台外设R<sub>1</sub> ,R<sub>2</sub> 。进程P<sub>1</sub> 请求R<sub>1</sub> 成功，进程P<sub>2</sub> 请求R<sub>2</sub> 成功。</p><p>然后P<sub>2</sub> 又需要请求R<sub>1</sub> ，然后P<sub>1</sub> 又需要请求R<sub>2</sub> ，.结果两者都因为被占用无法分配成功，又都希望对方释放自己需要，而对方占有的资源。但它们都会因为无法获取自己所需的资源去继续运行而无法释放自己当下占有的资源。则他们将一直处于这样的僵持状态——死锁。</p><h3 id="1-1资源问题"><a href="#1-1资源问题" class="headerlink" title="1.1资源问题"></a>1.1资源问题</h3><p>可导致死锁的资源是需要<mark style="background-color:#2AA6FD;border-radius:5px;padding:5px">采用互斥访问方法</mark>的、<mark style="border-radius:5px;padding:5px">不可被抢占</mark>的资源。如，打印机，数据文件，队列，信号。</p><h4 id="1-1-1-可重复资源-与-可消耗资源"><a href="#1-1-1-可重复资源-与-可消耗资源" class="headerlink" title="1.1.1 可重复资源 与 可消耗资源"></a>1.1.1 可重复资源 与 可消耗资源</h4><h5 id="1-1-1-1可重复资源"><a href="#1-1-1-1可重复资源" class="headerlink" title="1.1.1.1可重复资源"></a>1.1.1.1可重复资源</h5><p>可供用户重复使用多次的资源。</p><ul><li><p>性质</p><ol><li>每个可重用资源中的单元，职能分配给一个进程使用，而不允许多个进程共享。</li><li>进程若要使用可重复资源，必须按以下流程<ul><li>请求资源，若请求失败，则将会阻塞或循环等待；</li><li>使用资源，进程对资源进行操作。</li><li>释放资源，当进程使用完毕后<mark style="border-radius:5px;padding:5px">自己</mark>将其释放。</li></ul></li><li>系统中每类可重用资源中的单元数量是相对固定的，进程在运行期间既不能创建资源，也不能删除资源。</li></ol><blockquote><p>资源的请求与释放通常都是利用系统调用实现的。另，系统中大多数资源属于可重用资源。</p></blockquote></li></ul><h4 id="1-1-1-2-可消耗资源"><a href="#1-1-1-2-可消耗资源" class="headerlink" title="1.1.1.2 可消耗资源"></a>1.1.1.2 可消耗资源</h4><p>又称临时性资源，在进程运行期间又进程动态创建和消耗。</p><ul><li><p>性质</p><ol><li><p>每类可消耗性资源的单元数目在进程运行期间是可以不断变化的，有时多，有时少（甚至0）。</p></li><li><p>进程运行过程中可不断创造可消耗资源的但愿你，将它们放入该资源类的缓冲区中，以增加该资源类的单元数目</p></li><li><p>进程在运行过程中可以请求若干个可消耗资源单元，用于进程自己消耗，并不把这些返回给该资源类。</p><blockquote><p>可消耗资源通常由生产者进程创建，由消费者进程消耗。如进程间通信的消息。</p></blockquote></li></ol></li></ul><h4 id="1-1-2-可抢占资源-与-不可抢占资源"><a href="#1-1-2-可抢占资源-与-不可抢占资源" class="headerlink" title="1.1.2 可抢占资源 与 不可抢占资源"></a>1.1.2 可抢占资源 与 不可抢占资源</h4><ul><li><p>可抢占资源</p><p>指进程获得这类资源后，这类资源可以在被其他进程或系统抢占。</p><blockquote><p>如    </p><blockquote><p>​    优先级高的进程抢占优先级低的进程的处理机；</p></blockquote><blockquote><p>​    一个进程从一个存储区转移到另一个存储区，在内存紧张时，还可以将一个进程从你内存调回到外存，即抢占进程内存的空间；</p></blockquote><blockquote><blockquote><p>故，处理机与内存都属于可抢占资源。不会引起死锁。</p></blockquote></blockquote><blockquote></blockquote></blockquote></li><li><p>不可抢占资源</p><p>一旦系统把这类资源分配给某进程后，便无法强行收回，只能等待进程运行结束后自行释放。</p><blockquote><p>如</p><blockquote><p>进程开始刻录光盘，如果刻录机被打断分配给其他进程，则光盘将会损坏。因此刻录机只能输入不可抢占资源。</p></blockquote></blockquote></li></ul><h3 id="1-2-计算机系统中的死锁"><a href="#1-2-计算机系统中的死锁" class="headerlink" title="1.2 计算机系统中的死锁"></a>1.2 计算机系统中的死锁</h3><p>起因：通常源于多个进程对资源的争夺，不仅对不可抢占资源进行争夺时会引起死锁，而且对可消耗资源进行那个争夺时也会引起死锁。</p><h4 id="case-1：竞争不可抢占资源引起"><a href="#case-1：竞争不可抢占资源引起" class="headerlink" title="case 1：竞争不可抢占资源引起"></a>case 1：竞争不可抢占资源引起</h4><p>两个进程P<sub>1</sub> ，P<sub>2</sub> 并发执行时。如果两个进程操作的资源存在交叉且顺序相反，则可能出现以下情况。</p><ol><li><p>P<sub>1</sub> 先打开文件F<sub>1</sub> ，P<sub>2</sub> 先打开文件F<sub>2</sub> ，接下来P<sub>1</sub>需要去打看F<sub>2</sub>， P<sub>2</sub> 需要去打开F<sub>1</sub> 。</p></li><li><p>然后 P<sub>1</sub> 经过一段时间或者马上（总之就是P<sub>2</sub> 打开F<sub>2</sub>之后 ）需要去打开文件 F<sub>2</sub> 进行操作 ，此时P<sub>2</sub> 肯定不让，因为此资源是不可抢占资源 ，只能等P<sub>2</sub> 运行结束之后才能交出F<sub>2</sub> 的操作权。</p></li><li><p>P<sub>1</sub> 只能等待P<sub>2</sub> 结束。</p></li><li><p>P<sub>2</sub> 运行至需要操作 F<sub>1</sub> 的环节。但是P<sub>1</sub> 还在等待P<sub>2</sub> 交出F<sub>2</sub>  .</p></li><li><p>因此两进程将无限期地等待下去，进而形成死锁。</p></li></ol><h4 id="case-2：竞争可消耗资源引起"><a href="#case-2：竞争可消耗资源引起" class="headerlink" title="case 2：竞争可消耗资源引起"></a>case 2：竞争可消耗资源引起</h4><p>用一个聊天软件为例，三个用户在互相聊天。用户分别为m<sub>1</sub>、m<sub>2</sub>、m<sub>3</sub> ，m<sub>1</sub> 给m<sub>2</sub> 发送消息，接收m<sub>3</sub> 发送的消息；m<sub>2</sub> 给m<sub>3</sub> 发送消息， 接收m<sub>1</sub> 发出的消息；m<sub>3</sub> 给m<sub>1</sub> 发送消息， 接收m<sub>2</sub> 发出的消息 。</p><blockquote><p>将用户替换为进程即为真实情况。进程之间也存在互相交换信息。</p></blockquote><div style="text-align:center"><svg height="342" width="403" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 403 342.249">    <defs>        <linearGradient y2="100%" id="lg1" y1="0%" x2="0%" x1="0%">            <stop offset="0.35" stop-color="#7fe0ea"></stop>            <stop offset="0.46" stop-color="#4cdae6"></stop>            <stop offset="1.00" stop-color="#44c5d0"></stop>        </linearGradient>        <linearGradient y2="100%" id="lg2" y1="0%" x2="0%" x1="0%">            <stop offset="0.00" stop-color="#7fe0ea"></stop>            <stop offset="0.46" stop-color="#4cdae6"></stop>            <stop offset="1.00" stop-color="#44c5d0"></stop>        </linearGradient>    </defs>    <g id="group1" transform="translate(-25.36,-50.03)">        <g id="group2" transform="translate(190.21,51.02)">            <path fill-rule="nonzero" d="M.0,20.7C.0,20.7,7.7,.1,7.7,.1C21.6,3.0,33.8,.1,33.8,.1L40.6,20.7L35.9,23.3L30.5,8.2L30.5,26.7L37.6,60.5L30.1,60.5L20.9,32.4L11.8,60.5L3.8,60.9L11.5,26.7L11.5,8.8L5.9,23.3L.0,20.7z" id="shape3" fill="url(#lg1)" stroke="#4cdae6" transform="translate(0.00,20.29)"></path>            <path fill-rule="nonzero" d="M.0,8.4C.0,3.8,3.8,.0,8.5,.0C13.1,.0,16.9,3.8,16.9,8.4C16.9,13.1,13.1,16.9,8.5,16.9C3.8,16.9,.0,13.1,.0,8.4z" id="shape4" fill="url(#lg1)" stroke="#4cdae6" transform="translate(11.83,0.01)"></path>            <text style="fill:#000000;font-family:Microsoft YaHei;font-size:14.00pt" xml:space="preserve">                <tspan x="8.9" y="102.1">m</tspan>                <tspan style="font-size:9.10pt" x="26.5" y="106.0" textLength="7.2">1</tspan>            </text>        </g>        <g id="group5" transform="translate(66.71,274.71)">            <path fill-rule="nonzero" d="M.0,20.7C.0,20.7,7.7,.1,7.7,.1C21.6,3.0,33.8,.1,33.8,.1L40.6,20.7L35.9,23.3L30.5,8.2L30.5,26.7L37.6,60.5L30.1,60.5L20.9,32.4L11.8,60.5L3.8,60.9L11.5,26.7L11.5,8.8L5.9,23.3L.0,20.7z" id="shape6" fill="url(#lg2)" stroke="#4cdae6" transform="translate(0.00,20.29)"></path>            <path fill-rule="nonzero" d="M.0,8.4C.0,3.8,3.8,.0,8.5,.0C13.1,.0,16.9,3.8,16.9,8.4C16.9,13.1,13.1,16.9,8.5,16.9C3.8,16.9,.0,13.1,.0,8.4z" id="shape7" fill="url(#lg2)" stroke="#4cdae6" transform="translate(11.83,0.01)"></path>            <text style="fill:#000000;font-family:Microsoft YaHei;font-size:14.00pt" xml:space="preserve">                <tspan x="8.9" y="102.1">m</tspan>                <tspan style="font-size:9.10pt" x="26.5" y="106.0" textLength="7.2">3</tspan>            </text>        </g>        <g id="group8" transform="translate(317.11,271.62)">            <path fill-rule="nonzero" d="M.0,20.7C.0,20.7,7.7,.1,7.7,.1C21.6,3.0,33.8,.1,33.8,.1L40.6,20.7L35.9,23.3L30.5,8.2L30.5,26.7L37.6,60.5L30.1,60.5L20.9,32.4L11.8,60.5L3.8,60.9L11.5,26.7L11.5,8.8L5.9,23.3L.0,20.7z" id="shape9" fill="url(#lg2)" stroke="#4cdae6" transform="translate(0.00,20.29)"></path>            <path fill-rule="nonzero" d="M.0,8.4C.0,3.8,3.8,.0,8.5,.0C13.1,.0,16.9,3.8,16.9,8.4C16.9,13.1,13.1,16.9,8.5,16.9C3.8,16.9,.0,13.1,.0,8.4z" id="shape10" fill="url(#lg2)" stroke="#4cdae6" transform="translate(11.83,0.01)"></path>            <text style="fill:#000000;font-family:Microsoft YaHei;font-size:14.00pt" xml:space="preserve">                <tspan x="8.9" y="102.1">m</tspan>                <tspan style="font-size:9.10pt" x="26.5" y="106.0" textLength="7.2">2</tspan>            </text>        </g>        <path fill-rule="nonzero" d="M.0,.0C.0,.0,17.3,2.0,34.9,9.0C52.5,16.1,70.9,30.0,80.3,40.2C89.2,49.8,97.1,60.8,102.2,70.5C107.2,79.9,113.2,93.7,113.2,93.7L123.0,92.8L112.2,118.6L84.4,97.1L93.8,95.7C93.8,95.7,90.0,85.2,84.9,75.6C79.9,66.2,73.2,54.6,67.0,46.7C60.4,38.1,49.0,25.8,38.0,17.8C21.7,5.9,.9,1.0,.0,.0z" id="shape11" fill="#8e5eef" stroke="#8e5eef" transform="matrix(0.97,0.26,-0.26,0.97,255.6,115.7)"></path>        <g id="shape12" transform="translate(207.71,75.63)">            <text style="fill:#454545;font-family:Microsoft YaHei;font-size:10.00pt" xml:space="preserve">                <tspan x="23.5" y="37.9">发送信息</tspan>            </text>        </g>        <path fill-rule="nonzero" d="M.0,.0C.0,.0,18.3,2.1,36.8,9.5C55.3,17.0,74.7,31.7,84.6,42.4C94.0,52.6,102.4,64.2,107.7,74.4C113.0,84.3,119.3,98.9,119.3,98.9L129.7,98.0L118.2,125.2L88.9,102.5L98.9,101.0C98.9,101.0,94.8,89.9,89.5,79.8C84.3,69.9,77.1,57.7,70.7,49.3C63.7,40.3,51.6,27.3,40.0,18.8C22.8,6.3,.9,1.0,.0,.0z" id="shape13" fill="#8e5eef" stroke="#8e5eef" transform="matrix(-0.77,0.64,-0.64,-0.77,299.4,368.6)"></path>        <g id="shape14" transform="translate(239.66,319.55)">            <text style="fill:#454545;font-family:Microsoft YaHei;font-size:10.00pt" xml:space="preserve">                <tspan x="23.5" y="37.9">发送信息</tspan>            </text>        </g>        <path fill-rule="nonzero" d="M.0,.0C.0,.0,16.1,1.8,32.5,8.4C48.9,15.0,66.0,28.0,74.7,37.5C83.0,46.4,90.4,56.7,95.2,65.7C99.8,74.4,105.4,87.3,105.4,87.3L114.5,86.5L104.4,110.6L78.5,90.5L87.3,89.2C87.3,89.2,83.8,79.4,79.0,70.4C74.4,61.7,68.1,50.9,62.4,43.5C56.3,35.6,45.6,24.1,35.3,16.6C20.2,5.5,.8,.9,.0,.0z" id="shape15" fill="#8e5eef" stroke="#8e5eef" transform="matrix(-0.17,-0.98,0.98,-0.17,85.3,243.4)"></path>        <g id="shape16" transform="translate(26.36,221.55)">            <text style="fill:#454545;font-family:Microsoft YaHei;font-size:10.00pt" xml:space="preserve">                <tspan x="23.5" y="37.9">发送信息</tspan>            </text>        </g>        <g id="shape17" transform="translate(326.34,233.54)">            <text style="fill:#454545;font-family:Microsoft YaHei;font-size:10.00pt" xml:space="preserve">                <tspan x="23.5" y="37.9">接收信息</tspan>            </text>        </g>        <g id="shape18" transform="translate(85.08,299.84)">            <text style="fill:#454545;font-family:Microsoft YaHei;font-size:10.00pt" xml:space="preserve">                <tspan x="23.5" y="37.9">接收信息</tspan>            </text>        </g>        <g id="shape19" transform="translate(93.07,65.77)">            <text style="fill:#454545;font-family:Microsoft YaHei;font-size:10.00pt" xml:space="preserve">                <tspan x="23.5" y="37.9">接收信息</tspan>            </text>        </g>    </g></svg></div><p>当设定每个用户的执行顺序为先发送给下一个用户消息，然后再接受上一位用户的消息，那么可以顺利运行。但是会存在延迟。</p><p>但如果顺序颠倒，先接受，后发送。确实没有了延迟，但是问题就产生了。因为没有第一个发送消息的人。所以这个循环就进行不下去。三个进程就都阻塞在接收操作上。因此产生死锁。</p><h4 id="case-3：进程推进顺序不当引起"><a href="#case-3：进程推进顺序不当引起" class="headerlink" title="case 3：进程推进顺序不当引起"></a>case 3：进程推进顺序不当引起</h4><p>进程在运行过程中，对资源进行申请和释放的顺序是否合法，也是在系统中是否会产生死锁的一个重要因素。</p><p>这种情况可根据<code>case 1</code>理解 。只不过，<code>case 3</code> 与<code>case 1</code> 的区别是：<code>case 1</code> 中进程的顺序是。像 <code>case 1</code> 中没有出现阻塞的情况被称为进程推进顺序合法，出现阻塞的情况称为进程推进顺序非法。</p><h3 id="1-2-死锁-定义"><a href="#1-2-死锁-定义" class="headerlink" title="1.2. 死锁-定义"></a>1.2. 死锁-定义</h3><p>如果一度进程中的每个进程都在等待仅由改组进程中的其他进程才能引发的事件发生，那么改组进程就是死锁的。</p><h3 id="1-3-产生死锁的必要条件"><a href="#1-3-产生死锁的必要条件" class="headerlink" title="1.3. 产生死锁的必要条件"></a>1.3. 产生死锁的必要条件</h3><ul><li>互斥条件。</li><li>请求和保持条件</li><li>不可抢占条件</li><li>循环等待条件</li></ul><h2 id="4-死锁的处理方法"><a href="#4-死锁的处理方法" class="headerlink" title="4. 死锁的处理方法"></a>4. 死锁的处理方法</h2><h2 id="5-死锁的预防"><a href="#5-死锁的预防" class="headerlink" title="5. 死锁的预防"></a>5. 死锁的预防</h2><h2 id="6-死锁的避免"><a href="#6-死锁的避免" class="headerlink" title="6. 死锁的避免"></a>6. 死锁的避免</h2><h2 id="7-死锁的检测与解除"><a href="#7-死锁的检测与解除" class="headerlink" title="7. 死锁的检测与解除"></a>7. 死锁的检测与解除</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 操作系统 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 死锁 </tag>
+            
+            <tag> 操作系统 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>处理机调度</title>
+      <link href="/2021/10/30/%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6/"/>
+      <url>/2021/10/30/%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>vscode运行乱码</title>
       <link href="/2021/10/29/vscode%E8%BF%90%E8%A1%8C%E4%B9%B1%E7%A0%81/"/>
       <url>/2021/10/29/vscode%E8%BF%90%E8%A1%8C%E4%B9%B1%E7%A0%81/</url>
@@ -819,9 +872,9 @@
     
     
     <entry>
-      <title>成就</title>
-      <link href="/archives/index.html"/>
-      <url>/archives/index.html</url>
+      <title>关于‘俺’</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -852,33 +905,33 @@
     
     
     <entry>
-      <title>关于‘俺’</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>导航</title>
-      <link href="/navigate/index.html"/>
-      <url>/navigate/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>交流</title>
       <link href="/contact/index.html"/>
       <url>/contact/index.html</url>
       
         <content type="html"><![CDATA[<h1 id="欢迎留言"><a href="#欢迎留言" class="headerlink" title="欢迎留言"></a>欢迎留言</h1><p>大家有任何问题，都可以在评论区给我留言，或者加我联系方式：</p><ul><li><strong>Q Q</strong>：<strong>1970476603</strong></li><li><strong>微信</strong>：<strong>i_19-99-666</strong></li></ul><p>欢迎来访<br><strong>当然不介意小jiejie加我~~</strong></p><h1 id="友链交换"><a href="#友链交换" class="headerlink" title="友链交换"></a>友链交换</h1><p>想要交换友链的小伙伴，欢迎在评论区留言，留言格式：</p><ul><li><strong>名称：</strong>你的博客名称</li><li><strong>地址：</strong>你的博客地址</li><li><strong>简介：</strong>一句话简介</li><li><strong>头像：</strong>你的头像地址</li></ul><p>例如我的博客友链，大家可以加到自己博客里哦：</p><ul><li><strong>名称：</strong>张小白</li><li><strong>地址：</strong><a class="selfurl">https://blogofxyz.gitee.io</a> (国内访问快)/<a class="selfurl">https://blogofxyz.top/</a> (github部署)</li><li><strong>简介：</strong>平时没少学没用东西的一个家伙。</li><li><strong>头像：</strong><a class="selfurl">https://blogofxyz.gitee.io/medias/avatar.jpg</a></li></ul>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>成就</title>
+      <link href="/archives/index.html"/>
+      <url>/archives/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
@@ -896,9 +949,9 @@
     
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>导航</title>
+      <link href="/navigate/index.html"/>
+      <url>/navigate/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
