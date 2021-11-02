@@ -555,14 +555,14 @@ var _hmt = _hmt || [];
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.1k
+                    3.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    10 分
+                    12 分
                 </div>
                 
 
@@ -823,8 +823,52 @@ var _hmt = _hmt || [];
 </blockquote>
 <h3 id="6-1-系统安全状态"><a href="#6-1-系统安全状态" class="headerlink" title="6.1 系统安全状态"></a>6.1 系统安全状态</h3><p>避免死锁方法中，吧系统状态分为安全状态与不安全状态两种。系统处于安全状态可避免死锁。</p>
 <h4 id="6-1-1-安全状态"><a href="#6-1-1-安全状态" class="headerlink" title="6.1.1 安全状态"></a>6.1.1 安全状态</h4><p>避免死锁方法中，允许进程动态地申请自愿，但系统在进行资源分配之前，应县计算此次资源分配的安全性。分配不会导致系统进入不安全状态，就分配。否则就零进程等待。</p>
-<p><mark style="background-color:#9767F8;border-radius:5px;padding:5px">定义</mark>：系统能按照某种进程推进顺序，为每个进程分配其所需的资源，址址满足每个进程对资源的最大需求，进而是每个进程都能顺利完成的一种系统状态。</p>
-<h2 id="7-死锁的检测与解除"><a href="#7-死锁的检测与解除" class="headerlink" title="7. 死锁的检测与解除"></a>7. 死锁的检测与解除</h2>
+<p><mark style="background-color:#9767F8;border-radius:5px;padding:5px">定义</mark>：系统能按照某种进程推进顺序，为每个进程分配其所需的资源，址址满足每个进程对资源的最大需求，进而是每个进程都能顺利完成的一种系统状态。此推进序列为安全序列。如果系统不能找到这样一种安全状态，则称系统为不安全状态。</p>
+<blockquote>
+<p>不安全状态不一定会导致死锁。安全状态一定不会导致死锁。</p>
+</blockquote>
+<table style="text-align:center;">
+    <tbody><tr>
+        <th>进程</th>
+        <th>最大需求</th>
+        <th>已分配</th>
+        <th>可用</th>
+    </tr>
+    <tr>
+        <td>P1</td>
+        <td>10</td>
+        <td>5</td>
+        <td rowspan="3" style="vertical-align:middle">3</td>
+    </tr>
+    <tr>        
+        <td>P2</td>
+        <td>4</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>P3</td>
+        <td>9</td>
+        <td>2</td>
+    </tr>
+</tbody></table>
+
+<p>假定系统中有三个进程，P1，P2，P3，共有12台磁带机，进程P1共需要用10台磁带机，金策换那个P2和P3分别要用4和9台。某时刻t0，进程P1，P2，P3已分别获得5，2，2台。上有三台为空闲。</p>
+<blockquote>
+<p>经分析的，在t0时刻系统是安全的。因为这是存在一个安全序列（P2，P1，P3），只要按此序列分配资源，就能使进程顺利完成。步骤如下：</p>
+<ol>
+<li>从剩余三台中取两台给P2，使其完成。空闲为5台。</li>
+<li>将5台分给P1，使其完成。空闲为10台。</li>
+<li>将10台分给P3，使其完成。任务全部完成。</li>
+</ol>
+<p>即安全序列为（P2，P1，P3）。<mark style="border-radius:5px;padding:5px">只分存在于不存在，唯一性是不确定的。</mark></p>
+</blockquote>
+<p>一个系统开始时是处于安全状态的，当有进程请求一个可用资源时，系统需对该进程的请求进行计算，若将资源分配给进程后系统仍处于安全状态，则将资源分配给此进程。</p>
+<h4 id="6-1-2-银行家算法"><a href="#6-1-2-银行家算法" class="headerlink" title="6.1.2 银行家算法"></a>6.1.2 银行家算法</h4><h2 id="7-死锁的检测与解除"><a href="#7-死锁的检测与解除" class="headerlink" title="7. 死锁的检测与解除"></a>7. 死锁的检测与解除</h2><h3 id="7-1-死锁的检测"><a href="#7-1-死锁的检测" class="headerlink" title="7.1 死锁的检测"></a>7.1 死锁的检测</h3><p>为了保证死锁是可检测的，系统中必须：</p>
+<ul>
+<li>保存有关资源的请求和分配信息。</li>
+<li>嵌入一种算法，是能够利用这些信息来检测系统时候出于死锁。</li>
+</ul>
+
                 
             </div>
             <hr/>
@@ -1604,7 +1648,7 @@ var _hmt = _hmt || [];
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">36.7k</span>
+                        class="white-color">37.1k</span>
             
             
             
