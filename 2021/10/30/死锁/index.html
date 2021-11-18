@@ -548,21 +548,21 @@ var _hmt = _hmt || [];
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-11-02
+                    2021-11-07
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.5k
+                    4.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    12 分
+                    14 分
                 </div>
                 
 
@@ -863,12 +863,35 @@ var _hmt = _hmt || [];
 <p>即安全序列为（P2，P1，P3）。<mark style="border-radius:5px;padding:5px">只分存在于不存在，唯一性是不确定的。</mark></p>
 </blockquote>
 <p>一个系统开始时是处于安全状态的，当有进程请求一个可用资源时，系统需对该进程的请求进行计算，若将资源分配给进程后系统仍处于安全状态，则将资源分配给此进程。</p>
-<h4 id="6-1-2-银行家算法"><a href="#6-1-2-银行家算法" class="headerlink" title="6.1.2 银行家算法"></a>6.1.2 银行家算法</h4><h2 id="7-死锁的检测与解除"><a href="#7-死锁的检测与解除" class="headerlink" title="7. 死锁的检测与解除"></a>7. 死锁的检测与解除</h2><h3 id="7-1-死锁的检测"><a href="#7-1-死锁的检测" class="headerlink" title="7.1 死锁的检测"></a>7.1 死锁的检测</h3><p>为了保证死锁是可检测的，系统中必须：</p>
+<h4 id="6-1-2-银行家算法"><a href="#6-1-2-银行家算法" class="headerlink" title="6.1.2 银行家算法"></a>6.1.2 银行家算法</h4><hr>
+<h5 id="6-1-2-1-银行家算法中的数据结构"><a href="#6-1-2-1-银行家算法中的数据结构" class="headerlink" title="6.1.2.1 银行家算法中的数据结构"></a>6.1.2.1 银行家算法中的数据结构</h5><ul>
+<li>可利用资源向量Available，含有m个元素的数组，其中的每个元素代表一类可利用的资源数目，其初值是系统中配置的该类全部可用资源的数目，该数目会随对应资源的分配和回收而动态改变。如果Available[i]=K,则表示系统中现有R<sub>j</sub> 类资源K个。</li>
+<li>最大需求量矩阵Max。一个n*m的矩阵，定义了系统中n个进程中的每个进程对m类资源的最大需求。如果Max[i，j]=K，则表示进程i需要R<sub>j</sub> 类资源的最大数目为K。</li>
+<li>分配矩阵Allocation </li>
+</ul>
+<h2 id="7-死锁的检测与解除"><a href="#7-死锁的检测与解除" class="headerlink" title="7. 死锁的检测与解除"></a>7. 死锁的检测与解除</h2><h3 id="7-1-死锁的检测"><a href="#7-1-死锁的检测" class="headerlink" title="7.1 死锁的检测"></a>7.1 死锁的检测</h3><p>为了保证死锁是可检测的，系统中必须：</p>
 <ul>
 <li>保存有关资源的请求和分配信息。</li>
-<li>嵌入一种算法，是能够利用这些信息来检测系统时候出于死锁。</li>
+<li>嵌入一种算法，是能够利用这些信息来检测系统是否出现死锁。</li>
 </ul>
-
+<h4 id="7-1-1-死锁原理"><a href="#7-1-1-死锁原理" class="headerlink" title="7.1.1 死锁原理"></a>7.1.1 死锁原理</h4><p>通过以下步骤可确定系统是否处于死锁状态：</p>
+<ul>
+<li>首先在资源分配表中找到一个既不阻塞又非独立的进程节点P<sub>i</sub> 。P<sub>i</sub> 在顺利情况下可获取所需资源而继续运行，直至运行完毕在释放其所占资源。然后消除其请求边与分配边。</li>
+<li>然后重复上步操作。分离其他所有可分离的节点。</li>
+<li>如果能够消去图中所有边，即使所有进程都成为孤立的进程节点，则称该图是可完全简化的；若不能使该图完全简化，则称该图为不可完全简化的。</li>
+</ul>
+<p>如果有进程节点无法简化，则所有的简化顺序都将获得相同的不可简化图。即：</p>
+<blockquote>
+<p>当且仅当S状态的资源分配图是不可完全简化的，则此进程图的状态为死锁状态。</p>
+</blockquote>
+<h3 id="7-2-死锁的解除"><a href="#7-2-死锁的解除" class="headerlink" title="7.2 死锁的解除"></a>7.2 死锁的解除</h3><h4 id="7-2-1-终止死锁进程的方法"><a href="#7-2-1-终止死锁进程的方法" class="headerlink" title="7.2.1 终止死锁进程的方法"></a>7.2.1 终止死锁进程的方法</h4><ul>
+<li><p>终止所有死锁进程</p>
+</li>
+<li><p>逐个终止死锁进程</p>
+<p>按照某种顺序逐个地终止死锁进程，直至有足够的资源来打破循环等待，吧系统从死锁状态中解脱出来。</p>
+</li>
+</ul>
+<h4 id="7-2-2-付出代价最小的死锁解除算法"><a href="#7-2-2-付出代价最小的死锁解除算法" class="headerlink" title="7.2.2 付出代价最小的死锁解除算法"></a>7.2.2 付出代价最小的死锁解除算法</h4>
                 
             </div>
             <hr/>
@@ -1400,13 +1423,13 @@ var _hmt = _hmt || [];
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/10/31/%E8%BF%9E%E7%BB%AD%E5%88%86%E9%85%8D%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86%E6%96%B9%E5%BC%8F/">
+                <a href="/2021/10/31/%EF%BC%88%E6%9C%AA%E5%AE%8C%EF%BC%89%E8%BF%9E%E7%BB%AD%E5%88%86%E9%85%8D%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86%E6%96%B9%E5%BC%8F/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="连续分配存储管理方式">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="（未完）连续分配存储管理方式">
                         
-                        <span class="card-title">连续分配存储管理方式</span>
+                        <span class="card-title">（未完）连续分配存储管理方式</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1437,13 +1460,13 @@ var _hmt = _hmt || [];
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/10/30/%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6/">
+                <a href="/2021/10/30/%EF%BC%88%E6%9C%AA%E5%AE%8C%EF%BC%89%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="处理机调度">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="（未完）处理机调度">
                         
-                        <span class="card-title">处理机调度</span>
+                        <span class="card-title">（未完）处理机调度</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1648,7 +1671,7 @@ var _hmt = _hmt || [];
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">37.1k</span>
+                        class="white-color">40.9k</span>
             
             
             

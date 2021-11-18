@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-    <meta name="keywords" content="操作系统,笔记">
+    <meta name="keywords" content="CPU">
     <meta name="description" content="C# | Web | html | python |">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -20,7 +20,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>进程同步笔记 | X-Y-Z`s Blog</title>
+    <title>（未完）CPU | X-Y-Z`s Blog</title>
 	
     <link rel="icon" type="image/png" href="/favicon.png">
 
@@ -393,7 +393,7 @@ var _hmt = _hmt || [];
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">进程同步笔记</h1>
+                    <h1 class="description center-align post-title">（未完）CPU</h1>
                 </div>
             </div>
         </div>
@@ -512,8 +512,12 @@ var _hmt = _hmt || [];
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
-                                <span class="chip bg-color">操作系统</span>
+                            <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">
+                                <span class="chip bg-color">计算机组成原理</span>
+                            </a>
+                        
+                            <a href="/tags/CPU/">
+                                <span class="chip bg-color">CPU</span>
                             </a>
                         
                     </div>
@@ -524,12 +528,8 @@ var _hmt = _hmt || [];
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="post-category">
-                                操作系统
-                            </a>
-                        
-                            <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E7%AC%94%E8%AE%B0/" class="post-category">
-                                笔记
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" class="post-category">
+                                计算机组成原理
                             </a>
                         
                     </div>
@@ -541,28 +541,28 @@ var _hmt = _hmt || [];
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-10-06
+                    2021-11-07
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-10-08
+                    2021-11-11
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    548
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    5 分
                 </div>
                 
 
@@ -590,22 +590,87 @@ var _hmt = _hmt || [];
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="1-0进程同步机制"><a href="#1-0进程同步机制" class="headerlink" title="1.0进程同步机制"></a>1.0进程同步机制</h3><h4 id="1-1-0概念"><a href="#1-1-0概念" class="headerlink" title="1.1.0概念"></a>1.1.0概念</h4><p><mark style="border-radius:10px;padding:5px;background-color:#47a6e8">异步环境</mark>下一组开发进程因直接制约而互相发送消息，互相合作、互相等待，使得各进程按一定的速度执行的过程。</p>
-<h4 id="1-1-2-目的"><a href="#1-1-2-目的" class="headerlink" title="1.1.2 目的"></a>1.1.2 目的</h4><p>在执行次序上对多个写作进程进行协调，使并发执行的诸多协作进程之间能按照一定的规则（或时序）共享系统资源，并能很好地互相合作，从而使程序的执行具有可再现性。</p>
-<h4 id="1-1-3-进程的制约关系"><a href="#1-1-3-进程的制约关系" class="headerlink" title="1.1.3 进程的制约关系"></a>1.1.3 进程的制约关系</h4><ul>
-<li><p>互斥关系</p>
-<p>  间接相互制约，多程序并发执行，由于共享的系统资源（CPU、I/O设备等），这些并发执行的程序之间会形成相互制约的关系。</p>
-<p>  为保证进程间有序运行，对于系统间的这些资源，必须由系统实施统一分配。</p>
+                <h2 id="1-CPU-功能"><a href="#1-CPU-功能" class="headerlink" title="1. CPU 功能"></a>1. CPU 功能</h2><ul>
+<li><p>指令控制。</p>
+<p>​        程序的顺序控制。因为程序是一个指令序列，这些指令的相互顺序不能任意颠倒，所以必须严格按照规定的顺序进行。</p>
 </li>
-<li><p>同步关系</p>
-<p>  某些程序执行某些任务时会建立两个或更多的进程。这些进程为了完成同一任务而相互合作。</p>
+<li><p>操作控制</p>
+<p>​        一条指令的功能往往由多个操作信号组合来实现，因此CPU管理并产生由内存取出的每条指令的操作信号，把各种操作信号送往相应的部件，从而控制这些部件按指令的要求进行动作。</p>
+</li>
+<li><p>时间控制</p>
+<p>​        对各种此操作实施时间上的定时。在计算机中，各种指令的操作信号均受到时间的严格定时。其次，每条指令的整个执行过程也受时间的阉割定时。</p>
+</li>
+<li><p>数据加工</p>
+<p>​        对数据进行算术运算和逻辑运算处理。</p>
 </li>
 </ul>
+<h2 id="2-CPU组成"><a href="#2-CPU组成" class="headerlink" title="2. CPU组成"></a>2. CPU组成</h2><p>​    传统CPU由运算器与控制器组成，现代CPU由浮点运算器、cache、存储管理等部件构成。</p>
+<h3 id="2-1-控制器"><a href="#2-1-控制器" class="headerlink" title="2.1 控制器"></a>2.1 控制器</h3><p>​    由程序计数器、指令寄存器、指令译码器、时序产生器和操作控制器组成。</p>
+<p>​    协调和指挥整个计算机系统。</p>
+<p>​    主要功能：</p>
+<ul>
+<li>从指令cache中取出一条指令，并指向下一条指令在cache中的位置。</li>
+<li>对指令进行译码与测试，并产生相应的操作控制信号，以启动规定的动作。</li>
+<li>指挥并控制CPU、数据cache和输入/输出设备之间数据流动的方向。</li>
+</ul>
+<h3 id="2-2-运算器"><a href="#2-2-运算器" class="headerlink" title="2.2 运算器"></a>2.2 运算器</h3><p>​    由 <mark>算术逻辑运算单元（ALU）</mark>、通用寄存器、数据缓冲寄存器（DR）、和程序状态寄存器（状态条件寄存器  PSWR）组成。</p>
+<p>​    主要进行数据加工处理部件。</p>
+<p>​    主要功能：</p>
+<ul>
+<li><p>执行所有的算术运算。</p>
+</li>
+<li><p>执行所有的逻辑运算，并进行逻辑测试。</p>
+</li>
+</ul>
+<h3 id="2-3-CPU中主要寄存器"><a href="#2-3-CPU中主要寄存器" class="headerlink" title="2.3 CPU中主要寄存器"></a>2.3 CPU中主要寄存器</h3><h4 id="2-3-1-数据缓冲寄存器——DR"><a href="#2-3-1-数据缓冲寄存器——DR" class="headerlink" title="2.3.1 数据缓冲寄存器——DR"></a>2.3.1 数据缓冲寄存器——DR</h4><p>功能：暂时存放ALU的运算结果、数据存储器读出一个数据字、来自外部接口的一个数据字。</p>
+<p>作用：</p>
+<ul>
+<li>作为ALU运算结果和通用寄存器之间信息传送中时间上的缓存。</li>
+<li>补偿CPU和内存、外围设备之间在操作速度上的差别。    </li>
+</ul>
+<h4 id="2-3-2-指令寄存器——IR"><a href="#2-3-2-指令寄存器——IR" class="headerlink" title="2.3.2 指令寄存器——IR"></a>2.3.2 指令寄存器——IR</h4><p>保存当前正在执行的一条指令。</p>
 <blockquote>
-<p>  协作进程间  的制约关系即进程同步。根据上述可分为互斥关系与同步关系，且互斥输入同步。同步强调保证进程之间操作的先后次序的约束，而互斥强调对共享资源的互斥访问。</p>
+<p><mark>指令译码器 (ID)</mark></p>
+<p>当执行指令时，先把一条指令从指令存储器读出，然后传送至指令寄存器。执行任何给定的指令，必须对指令中的操作码进行测试和翻译，以识别对应的操作。这些工作就是指令译码器的工作。</p>
 </blockquote>
-<h2 id="2-0-软件同步机制"><a href="#2-0-软件同步机制" class="headerlink" title="2.0 软件同步机制"></a>2.0 软件同步机制</h2><h2 id="3-0-硬件同步机制"><a href="#3-0-硬件同步机制" class="headerlink" title="3.0 硬件同步机制"></a>3.0 硬件同步机制</h2><h2 id="4-0-信号量机制"><a href="#4-0-信号量机制" class="headerlink" title="4.0 信号量机制"></a>4.0 信号量机制</h2><h2 id="5-0-管程机制"><a href="#5-0-管程机制" class="headerlink" title="5.0 管程机制"></a>5.0 管程机制</h2><h4 id="5-1-1-定义"><a href="#5-1-1-定义" class="headerlink" title="5.1.1 定义"></a>5.1.1 定义</h4><p>对于系统中的各种硬件资源和软件资源，忽略他们的内部结构和实现细节，利用数据结构抽象地描述他们的资源特性。即用少量信息和对此资源所执行的操作来表征该资源。于是，利用共享数据结构抽象地表示系统中的共享资源，并且将对该共享数据结构实施的特定操作定义为一组过程。</p>
-<h4 id="5-1-2-机理"><a href="#5-1-2-机理" class="headerlink" title="5.1.2 机理"></a>5.1.2 机理</h4><p>进程对共享资源的申请、释放和相关操作，必须通过由这组过程间接地对共享数据结构进行操作加以实现</p>
+<h3 id="2-3-3-程序（指令）计数器——PC"><a href="#2-3-3-程序（指令）计数器——PC" class="headerlink" title="2.3.3 程序（指令）计数器——PC"></a>2.3.3 程序（指令）计数器——PC</h3><p>程序运行时，用来记录当前指令位置，并确定时下一条指令的位置，以保证程序能够连续执行。</p>
+<p>程序开始执行时指向从指令存储器中提取的第一条指令的地址，当程序运行时，CPU会自动修改PC中的位置。当运行至跳转语句时，PC不再是加一，而是修改为跳转语句中指定的指令地址。</p>
+<h4 id="2-3-4-数据地址寄存器——AR"><a href="#2-3-4-数据地址寄存器——AR" class="headerlink" title="2.3.4 数据地址寄存器——AR"></a>2.3.4 数据地址寄存器——AR</h4><p>保存当前CPU所访问的数据存储器单元的地址。</p>
+<p>对数据存储器的访问需要进行地址译码，故需要使用地址寄存器保存地址信息，直至一次读/写完成。</p>
+<h4 id="2-3-5-通用寄存器"><a href="#2-3-5-通用寄存器" class="headerlink" title="2.3.5 通用寄存器"></a>2.3.5 通用寄存器</h4><p>CPU中通用寄存器有许多，任何一个都可存放源操作数、结果操作数。</p>
+<p>作用：为ALU提供工作区、地址指示器、变址寄存器、堆栈指示器等。</p>
+<h4 id="2-3-6-程序状态字寄存器——PSWR"><a href="#2-3-6-程序状态字寄存器——PSWR" class="headerlink" title="2.3.6 程序状态字寄存器——PSWR"></a>2.3.6 程序状态字寄存器——PSWR</h4><ul>
+<li>保存由算术运算单元和逻辑运算单元指令运算或测试结果简历的各种条件代码。</li>
+</ul>
+<blockquote>
+<p>如，进位标志、溢出标志、为零标志、为负标志等。</p>
+</blockquote>
+<ul>
+<li>保存中断和系统工作状态等信息，以便使CPU和系统性能及时了解机器运行状态和程序运算状态。</li>
+</ul>
+<h3 id="2-4-操作控制器"><a href="#2-4-操作控制器" class="headerlink" title="2.4 操作控制器"></a>2.4 操作控制器</h3><p>各个寄存器之间存在传送信息的通路（<mark>数据通路</mark>），这些通路的建立就是由操作控制器的部件完成的。其功能就是根据指令操作码和时序信号，产生各种操作控制信号，然后正确的选择数据通路，把有关数据存入一个寄存器。从而完成取指令和执行指令的控制。</p>
+<h3 id="2-5-时序控制器"><a href="#2-5-时序控制器" class="headerlink" title="2.5 时序控制器"></a>2.5 时序控制器</h3><p>按设计方法可分为时序逻辑型、存储逻辑型。</p>
+<h4 id="2-5-2-硬布线控制器——时序逻辑型"><a href="#2-5-2-硬布线控制器——时序逻辑型" class="headerlink" title="2.5.2 硬布线控制器——时序逻辑型"></a>2.5.2 硬布线控制器——时序逻辑型</h4><h4 id="2-5-1-微程序控制器——存储逻辑型"><a href="#2-5-1-微程序控制器——存储逻辑型" class="headerlink" title="2.5.1 微程序控制器——存储逻辑型"></a>2.5.1 微程序控制器——存储逻辑型</h4><h2 id="3-指令周期"><a href="#3-指令周期" class="headerlink" title="3. 指令周期"></a>3. 指令周期</h2><p>取出一条指令并执行这条指令的时间。指令周期常常由若干个<mark>CPU</mark>周期组成。</p>
+<h2 id="4-微程序控制器"><a href="#4-微程序控制器" class="headerlink" title="4. 微程序控制器"></a>4. 微程序控制器</h2><h3 id="4-1-微程序控制原理"><a href="#4-1-微程序控制原理" class="headerlink" title="4.1 微程序控制原理"></a>4.1 微程序控制原理</h3><p>仿照通常的阶梯程序的方法，把操作控制信号变成所谓的“微指令”，存放到一个只读存储器里。当机器运行是，一条一条地读出这些微指令，从而产生全机所需要的各种操作控制信号，使相应部件执行所规定的的操作。</p>
+<p>主要由控制存储器、微指令寄存器和地址转移逻辑组成。</p>
+<blockquote>
+<p><mark>微指令寄存器</mark> :由微地址寄存器、微命令寄存器组成。</p>
+</blockquote>
+<h4 id="4-1-1-控制存储器"><a href="#4-1-1-控制存储器" class="headerlink" title="4.1.1 控制存储器"></a>4.1.1 控制存储器</h4><p>用来存放实现全部指令系统的微程序。</p>
+<h3 id="4-2-微命令、微操作"><a href="#4-2-微命令、微操作" class="headerlink" title="4.2 微命令、微操作"></a>4.2 微命令、微操作</h3><ul>
+<li><p>微命令——控制部件通过控制线向执行不见发出的各种控制在命令。</p>
+</li>
+<li><p>微操作——执行不见接受微命令后所进行的操作。</p>
+<blockquote>
+<p><mark>相容性微操作</mark> :在同时或同一个CPU周期内可以并行执行的微操作。</p>
+<p><mark>想斥性微操作</mark> :不能在同时或同一个CPU周期内并行执行的微操作。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="4-3-微指令、微程序"><a href="#4-3-微指令、微程序" class="headerlink" title="4.3 微指令、微程序"></a>4.3 微指令、微程序</h3><ul>
+<li>微指令——在机器的一个CPU周期中，一组实现一定操作程序的微命令的组合。</li>
+<li>微程序——许多微指令组成的序列。</li>
+</ul>
 
                 
             </div>
@@ -632,7 +697,7 @@ var _hmt = _hmt || [];
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://blogofxyz.top/2021/10/06/%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0/">https://blogofxyz.top/2021/10/06/%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0/</a>
+                    <a href="https://blogofxyz.top/2021/11/07/%EF%BC%88%E6%9C%AA%E5%AE%8C%EF%BC%89CPU/">https://blogofxyz.top/2021/11/07/%EF%BC%88%E6%9C%AA%E5%AE%8C%EF%BC%89CPU/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -670,8 +735,12 @@ var _hmt = _hmt || [];
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
-                                    <span class="chip bg-color">操作系统</span>
+                                <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">
+                                    <span class="chip bg-color">计算机组成原理</span>
+                                </a>
+                            
+                                <a href="/tags/CPU/">
+                                    <span class="chip bg-color">CPU</span>
                                 </a>
                             
                         </div>
@@ -1134,35 +1203,31 @@ var _hmt = _hmt || [];
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/10/14/html%E8%AE%BE%E7%BD%AE%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%E9%80%8F%E6%98%8E%E5%BA%A6-%E4%B8%8D%E5%BD%B1%E5%93%8D%E5%AD%90%E6%A0%87%E7%AD%BE%E4%B8%8E%E5%86%85%E5%AE%B9/">
+                <a href="/2021/11/13/%E5%89%8D%E7%AB%AF%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="html设置背景图片透明度(不影响子标签与内容)">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="前端跨域问题">
                         
-                        <span class="card-title">html设置背景图片透明度(不影响子标签与内容)</span>
+                        <span class="card-title">前端跨域问题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            HTML 无法直接设置背景图片的透明度，只能通过其他方法实现相同效果。
+                            前端跨域问题解释与解决
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-14
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-11-13
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/HTML/" class="post-category">
-                                    HTML
-                                </a>
-                            
-                            <a href="/categories/HTML/CSS/" class="post-category">
-                                    CSS
+                            <a href="/categories/web/" class="post-category">
+                                    web
                                 </a>
                             
                             
@@ -1172,12 +1237,8 @@ var _hmt = _hmt || [];
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/HTML/">
-                        <span class="chip bg-color">HTML</span>
-                    </a>
-                    
-                    <a href="/tags/CSS/">
-                        <span class="chip bg-color">CSS</span>
+                    <a href="/tags/%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/">
+                        <span class="chip bg-color">跨域问题</span>
                     </a>
                     
                 </div>
@@ -1191,44 +1252,32 @@ var _hmt = _hmt || [];
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/09/26/git%E4%B8%8A%E4%BC%A0%E5%90%8E%E7%BC%80%E5%90%8D%E6%94%B9%E5%8F%98/">
+                <a href="/2021/10/31/%EF%BC%88%E6%9C%AA%E5%AE%8C%EF%BC%89%E8%BF%9E%E7%BB%AD%E5%88%86%E9%85%8D%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86%E6%96%B9%E5%BC%8F/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="git上传后缀名改变">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="（未完）连续分配存储管理方式">
                         
-                        <span class="card-title">git上传后缀名改变</span>
+                        <span class="card-title">（未完）连续分配存储管理方式</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            git命令行上传文件至仓库后后缀名不一样
+                            
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-26
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-31
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/git/" class="post-category">
-                                    git
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            张小白
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/git/">
-                        <span class="chip bg-color">git</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -1414,7 +1463,7 @@ var _hmt = _hmt || [];
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">37.1k</span>
+                        class="white-color">40.9k</span>
             
             
             

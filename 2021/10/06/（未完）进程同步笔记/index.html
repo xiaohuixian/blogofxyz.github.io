@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-    <meta name="keywords" content="线性表,数据结构,循环链表,单向链表，双向链表">
+    <meta name="keywords" content="操作系统,笔记">
     <meta name="description" content="C# | Web | html | python |">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -20,7 +20,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>线性表 | X-Y-Z`s Blog</title>
+    <title>（未完）进程同步笔记 | X-Y-Z`s Blog</title>
 	
     <link rel="icon" type="image/png" href="/favicon.png">
 
@@ -388,12 +388,12 @@ var _hmt = _hmt || [];
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">线性表</h1>
+                    <h1 class="description center-align post-title">（未完）进程同步笔记</h1>
                 </div>
             </div>
         </div>
@@ -512,12 +512,8 @@ var _hmt = _hmt || [];
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                                <span class="chip bg-color">数据结构</span>
-                            </a>
-                        
-                            <a href="/tags/%E7%BA%BF%E6%80%A7%E8%A1%A8/">
-                                <span class="chip bg-color">线性表</span>
+                            <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+                                <span class="chip bg-color">操作系统</span>
                             </a>
                         
                     </div>
@@ -528,8 +524,12 @@ var _hmt = _hmt || [];
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="post-category">
-                                数据结构
+                            <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="post-category">
+                                操作系统
+                            </a>
+                        
+                            <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                笔记
                             </a>
                         
                     </div>
@@ -541,21 +541,21 @@ var _hmt = _hmt || [];
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-10-29
+                    2021-10-06
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-11-02
+                    2021-11-07
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    391
+                    548
                 </div>
                 
 
@@ -590,9 +590,22 @@ var _hmt = _hmt || [];
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-线性表"><a href="#1-线性表" class="headerlink" title="1. 线性表"></a>1. 线性表</h2><div style="width:100%;text-align:center;overflow: scroll;"><svg xmlns="http://www.w3.org/2000/svg" height="838" viewBox="0 0 1324 838" width="1324" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"><defs></defs><g id="page1" transform="translate(5.5,5.5)"><rect opacity:="" .2;="" fill="#ffffff 0.2" height="828" x="0" y="0" width="1314"></rect><path id="shape1" fill="none" d="M-58.5,37.2C-47.1,-29.1,-2.0,-71.4,61.3,-71.4" stroke="#303030" stroke-width="4" transform="translate(161.01,342.95)" stroke-linecap="round"></path><path id="shape2" fill="none" d="M-12.5,107.9C-12.5,-21.6,-2.5,-107.9,12.5,-107.9" stroke="#303030" stroke-width="4" transform="translate(363.68,163.60)" stroke-linecap="round"></path><path id="shape3" fill="none" d="M-12.5,.0C-12.5,.0,-2.5,.0,12.5,.0" stroke="#303030" stroke-width="4" transform="translate(475.70,55.65)" stroke-linecap="round"></path><path id="shape4" fill="none" d="M-12.5,88.2C-12.5,-17.6,-2.5,-88.2,12.5,-88.2" stroke="#303030" stroke-width="4" transform="translate(363.68,183.35)" stroke-linecap="round"></path><path id="shape5" fill="none" d="M-12.5,.0C-12.5,.0,-2.5,.0,12.5,.0" stroke="#303030" stroke-width="4" transform="translate(462.10,95.15)" stroke-linecap="round"></path><path id="shape6" fill="none" d="M-12.5,68.4C-12.5,-13.7,-2.5,-68.4,12.5,-68.4" stroke="#303030" stroke-width="4" transform="translate(363.68,203.10)" stroke-linecap="round"></path><path id="shape7" fill="none" d="M-12.5,.0C-12.5,.0,-2.5,.0,12.5,.0" stroke="#303030" stroke-width="4" transform="translate(462.10,134.65)" stroke-linecap="round"></path><path id="shape8" fill="none" d="M-12.5,48.7C-12.5,-9.7,-2.5,-48.7,12.5,-48.7" stroke="#303030" stroke-width="4" transform="translate(363.68,222.85)" stroke-linecap="round"></path><path id="shape9" fill="none" d="M-12.5,.0C-12.5,.0,-2.5,.0,12.5,.0" stroke="#303030" stroke-width="4" transform="translate(462.10,174.15)" stroke-linecap="round"></path><path id="shape10" fill="none" d="M-12.5,28.9C-12.5,-5.8,-2.5,-28.9,12.5,-28.9" stroke="#303030" stroke-width="4" transform="translate(363.68,242.60)" stroke-linecap="round"></path><path id="shape11" fill="none" d="M-12.5,.0C-12.5,.0,-2.5,.0,12.5,.0" stroke="#303030" stroke-width="4" transform="translate(475.70,213.65)" stroke-linecap="round"></path><path id="shape12" fill="none" d="M-12.5,9.2C-12.5,-1.8,-2.5,-9.2,12.5,-9.2" stroke="#303030" stroke-width="4" transform="translate(363.68,262.35)" stroke-linecap="round"></path><path id="shape13" fill="none" d="M-12.5,.0C-12.5,.0,-2.5,.0,12.5,.0" stroke="#303030" stroke-width="4" transform="translate(462.10,253.15)" stroke-linecap="round"></path><path id="shape14" fill="none" d="M-12.5,-10.6C-12.5,2.1,-2.5,10.6,12.5,10.6" stroke="#303030" stroke-width="4" transform="translate(363.68,282.10)" stroke-linecap="round"></path><path id="shape15" fill="none" d="M-12.5,-34.9C-12.5,7.0,-2.5,34.9,12.5,34.9" stroke="#303030" stroke-width="4" transform="translate(363.68,306.45)" stroke-linecap="round"></path><path id="shape16" fill="none" d="M-12.5,.0C-12.5,.0,-2.5,.0,12.5,.0" stroke="#303030" stroke-width="4" transform="translate(489.30,292.65)" stroke-linecap="round"></path><path id="shape17" fill="none" d="M-12.5,.0C-12.5,.0,-2.5,.0,12.5,.0" stroke="#303030" stroke-width="4" transform="translate(489.30,341.35)" stroke-linecap="round"></path><path id="shape18" fill="none" d="M-12.5,-63.9C-12.5,12.8,-2.5,63.9,12.5,63.9" stroke="#303030" stroke-width="4" transform="translate(363.68,335.40)" stroke-linecap="round"></path><path id="shape19" fill="none" d="M-12.5,.0C-12.5,.0,-2.5,.0,12.5,.0" stroke="#303030" stroke-width="4" transform="translate(489.30,399.25)" stroke-linecap="round"></path><path id="shape20" fill="none" d="M-12.5,-88.2C-12.5,17.6,-2.5,88.2,12.5,88.2" stroke="#303030" stroke-width="4" transform="translate(363.68,359.75)" stroke-linecap="round"></path><path id="shape21" fill="none" d="M-12.5,.0C-12.5,.0,-2.5,.0,12.5,.0" stroke="#303030" stroke-width="4" transform="translate(475.70,447.95)" stroke-linecap="round"></path><path id="shape22" fill="none" d="M-12.5,-107.9C-12.5,21.6,-2.5,107.9,12.5,107.9" stroke="#303030" stroke-width="4" transform="translate(363.68,379.50)" stroke-linecap="round"></path><path id="shape23" fill="none" d="M-12.5,.0C-12.5,.0,-2.5,.0,12.5,.0" stroke="#303030" stroke-width="4" transform="translate(475.70,487.45)" stroke-linecap="round"></path><g id="shape24" transform="translate(605.32,55.65)"><path fill="none" d="M-12.5,.0C-12.5,.0,-9.2,.0,-3.5,.0" stroke="#303030" stroke-width="4" stroke-linecap="round"></path><path fill="#303030" d="M-3.5,-8.0L12.5,.0L-3.5,8.0L-3.5,-8.0" stroke="#303030" stroke-width="1" stroke-linecap="round"></path></g><g id="shape25" transform="translate(621.32,95.15)"><path fill="none" d="M-12.5,.0C-12.5,.0,-9.2,.0,-3.5,.0" stroke="#303030" stroke-width="4" stroke-linecap="round"></path><path fill="#303030" d="M-3.5,-8.0L12.5,.0L-3.5,8.0L-3.5,-8.0" stroke="#303030" stroke-width="1" stroke-linecap="round"></path></g><g id="shape26" transform="translate(603.72,134.65)"><path fill="none" d="M-12.5,.0C-12.5,.0,-9.2,.0,-3.5,.0" stroke="#303030" stroke-width="4" stroke-linecap="round"></path><path fill="#303030" d="M-3.5,-8.0L12.5,.0L-3.5,8.0L-3.5,-8.0" stroke="#303030" stroke-width="1" stroke-linecap="round"></path></g><g id="shape27" transform="translate(599.72,174.15)"><path fill="none" d="M-12.5,.0C-12.5,.0,-9.2,.0,-3.5,.0" stroke="#303030" stroke-width="4" stroke-linecap="round"></path><path fill="#303030" d="M-3.5,-8.0L12.5,.0L-3.5,8.0L-3.5,-8.0" stroke="#303030" stroke-width="1" stroke-linecap="round"></path></g><g id="shape28" transform="translate(617.32,213.65)"><path fill="none" d="M-12.5,.0C-12.5,.0,-9.2,.0,-3.5,.0" stroke="#303030" stroke-width="4" stroke-linecap="round"></path><path fill="#303030" d="M-3.5,-8.0L12.5,.0L-3.5,8.0L-3.5,-8.0" stroke="#303030" stroke-width="1" stroke-linecap="round"></path></g><g id="shape29" transform="translate(622.12,253.15)"><path fill="none" d="M-12.5,.0C-12.5,.0,-9.2,.0,-3.5,.0" stroke="#303030" stroke-width="4" stroke-linecap="round"></path><path fill="#303030" d="M-3.5,-8.0L12.5,.0L-3.5,8.0L-3.5,-8.0" stroke="#303030" stroke-width="1" stroke-linecap="round"></path></g><g id="shape30" transform="translate(650.12,292.65)"><path fill="none" d="M-12.5,.0C-12.5,.0,-9.2,.0,-3.5,.0" stroke="#303030" stroke-width="4" stroke-linecap="round"></path><path fill="#303030" d="M-3.5,-8.0L12.5,.0L-3.5,8.0L-3.5,-8.0" stroke="#303030" stroke-width="1" stroke-linecap="round"></path></g><g id="shape31" transform="translate(714.92,341.35)"><path fill="none" d="M-12.5,.0C-12.5,.0,-9.2,.0,-3.5,.0" stroke="#303030" stroke-width="4" stroke-linecap="round"></path><path fill="#303030" d="M-3.5,-8.0L12.5,.0L-3.5,8.0L-3.5,-8.0" stroke="#303030" stroke-width="1" stroke-linecap="round"></path></g><g id="shape32" transform="translate(722.12,399.25)"><path fill="none" d="M-12.5,.0C-12.5,.0,-9.2,.0,-3.5,.0" stroke="#303030" stroke-width="4" stroke-linecap="round"></path><path fill="#303030" d="M-3.5,-8.0L12.5,.0L-3.5,8.0L-3.5,-8.0" stroke="#303030" stroke-width="1" stroke-linecap="round"></path></g><g id="shape33" transform="translate(638.92,447.95)"><path fill="none" d="M-12.5,.0C-12.5,.0,-9.2,.0,-3.5,.0" stroke="#303030" stroke-width="4" stroke-linecap="round"></path><path fill="#303030" d="M-3.5,-8.0L12.5,.0L-3.5,8.0L-3.5,-8.0" stroke="#303030" stroke-width="1" stroke-linecap="round"></path></g><g id="shape34" transform="translate(658.12,487.45)"><path fill="none" d="M-12.5,.0C-12.5,.0,-9.2,.0,-3.5,.0" stroke="#303030" stroke-width="4" stroke-linecap="round"></path><path fill="#303030" d="M-3.5,-8.0L12.5,.0L-3.5,8.0L-3.5,-8.0" stroke="#303030" stroke-width="1" stroke-linecap="round"></path></g><g id="shape35" transform="translate(161.01,564.08)"><path fill="none" d="M-60.7,-115.5C-55.3,32.4,-14.7,132.9,45.5,147.8" stroke="#303030" stroke-width="4" stroke-linecap="round"></path><path fill="#303030" d="M46.4,139.9L61.3,149.7L44.5,155.7L46.4,139.9" stroke="#303030" stroke-width="1" stroke-linecap="round"></path></g><path id="shape36" fill="none" d="M-12.5,29.6L-0.3,29.6C1.4,29.6,2.7,28.3,2.7,26.6L2.7,-20.6C2.7,-22.3,2.5,-24.7,3.4,-26.5C4.5,-28.4,6.4,-29.6,8.7,-29.6L12.5,-29.6" stroke="#303030" stroke-width="4" transform="translate(547.68,684.18)" stroke-linecap="round"></path><path id="shape37" fill="none" d="M-12.5,9.9L-0.3,9.9C1.4,9.9,2.7,8.5,2.7,6.9L2.7,-0.9C2.7,-2.5,2.5,-5.0,3.4,-6.8C4.5,-8.6,6.4,-9.9,8.7,-9.9L12.5,-9.9" stroke="#303030" stroke-width="4" transform="translate(547.68,703.93)" stroke-linecap="round"></path><path id="shape38" fill="none" d="M-12.5,-9.9L-0.3,-9.9C1.4,-9.9,2.7,-8.5,2.7,-6.9L2.7,.9C2.7,2.5,2.5,5.0,3.4,6.8C4.5,8.6,6.4,9.9,8.7,9.9L12.5,9.9" stroke="#303030" stroke-width="4" transform="translate(547.68,723.68)" stroke-linecap="round"></path><path id="shape39" fill="none" d="M-12.5,-29.6L-0.3,-29.6C1.4,-29.6,2.7,-28.3,2.7,-26.6L2.7,20.6C2.7,22.3,2.5,24.7,3.4,26.5C4.5,28.4,6.4,29.6,8.7,29.6L12.5,29.6" stroke="#303030" stroke-width="4" transform="translate(547.68,743.43)" stroke-linecap="round"></path><g id="shape40" transform="translate(161.01,492.68)"><path fill="none" d="M-59.0,-44.1C-49.4,24.2,-10.4,70.0,45.4,77.3" stroke="#303030" stroke-width="4" stroke-linecap="round"></path><path fill="#303030" d="M45.9,69.3L61.3,78.3L44.9,85.3L45.9,69.3" stroke="#303030" stroke-width="1" stroke-linecap="round"></path></g><path id="shape41" fill="none" d="M-12.5,9.9L-0.3,9.9C1.4,9.9,2.7,8.5,2.7,6.9L2.7,-0.9C2.7,-2.5,2.5,-5.0,3.4,-6.8C4.5,-8.6,6.4,-9.9,8.7,-9.9L12.5,-9.9" stroke="#303030" stroke-width="4" transform="translate(363.68,561.13)" stroke-linecap="round"></path><path id="shape42" fill="none" d="M-12.5,-9.9L-0.3,-9.9C1.4,-9.9,2.7,-8.5,2.7,-6.9L2.7,.9C2.7,2.5,2.5,5.0,3.4,6.8C4.5,8.6,6.4,9.9,8.7,9.9L12.5,9.9" stroke="#303030" stroke-width="4" transform="translate(363.68,580.88)" stroke-linecap="round"></path><g id="shape43" transform="translate(39.96,380.15)"><path fill="#37888a" d="M4.0,.0L115.4,.0C117.6,.0,119.4,1.8,119.4,4.0L119.4,64.4C119.4,66.6,117.6,68.4,115.4,68.4L4.0,68.4C1.8,68.4,.0,66.6,.0,64.4L.0,4.0C.0,1.8,1.8,.0,4.0,.0z" stroke="#37888a" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#ffffff;font-family:Microsoft YaHei;font-size:18.00pt;font-weight:bold"><tspan x="25.5" y="43.8">线性表</tspan></text></g><g id="shape44" transform="translate(222.36,247.95)"><path fill="#a5efff" d="M23.6,.0L105.2,.0C118.3,.0,128.8,10.6,128.8,23.6C128.8,36.6,118.3,47.2,105.2,47.2L23.6,47.2C10.6,47.2,.0,36.6,.0,23.6C.0,10.6,10.6,.0,23.6,.0z" stroke="#f2e0ed" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#a17798;font-family:Microsoft YaHei;font-size:14.00pt;font-weight:bold"><tspan x="29.4" y="31.2">初级操作</tspan></text></g><g id="shape45" transform="translate(376.18,40.25)"><path fill="#40c1dd" d="M15.4,.0L71.6,.0C80.1,.0,87.0,6.9,87.0,15.4C87.0,23.9,80.1,30.8,71.6,30.8L15.4,30.8C6.9,30.8,.0,23.9,.0,15.4C.0,6.9,6.9,.0,15.4,.0z" stroke="#e3e3e3" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#303030;font-family:Microsoft YaHei;font-size:10.00pt"><tspan x="18.1" y="20.6">初始化表</tspan></text></g><g id="shape46" transform="translate(488.20,40.25)"><path fill="#75a128" d="M15.4,.0L89.2,.0C97.7,.0,104.6,6.9,104.6,15.4C104.6,23.9,97.7,30.8,89.2,30.8L15.4,30.8C6.9,30.8,.0,23.9,.0,15.4C.0,6.9,6.9,.0,15.4,.0z" stroke="#e3e3e3" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#303030;font-family:Microsoft YaHei;font-size:10.00pt"><tspan x="18.1" y="20.6">InitList(&amp;L)</tspan></text></g><g id="shape47" transform="translate(376.18,79.75)"><path fill="#40c1dd" d="M15.4,.0L58.0,.0C66.5,.0,73.4,6.9,73.4,15.4C73.4,23.9,66.5,30.8,58.0,30.8L15.4,30.8C6.9,30.8,.0,23.9,.0,15.4C.0,6.9,6.9,.0,15.4,.0z" stroke="#e3e3e3" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#303030;font-family:Microsoft YaHei;font-size:10.00pt"><tspan x="18.1" y="20.6">销毁表</tspan></text></g><g id="shape48" transform="translate(474.60,79.75)"><path fill="#75a128" d="M15.4,.0L118.8,.0C127.3,.0,134.2,6.9,134.2,15.4C134.2,23.9,127.3,30.8,118.8,30.8L15.4,30.8C6.9,30.8,.0,23.9,.0,15.4C.0,6.9,6.9,.0,15.4,.0z" stroke="#e3e3e3" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#303030;font-family:Microsoft YaHei;font-size:10.00pt"><tspan x="18.1" y="20.6">DestroyList(&amp;L)</tspan></text></g><g id="shape49" transform="translate(376.18,119.25)"><path fill="#40c1dd" d="M15.4,.0L58.0,.0C66.5,.0,73.4,6.9,73.4,15.4C73.4,23.9,66.5,30.8,58.0,30.8L15.4,30.8C6.9,30.8,.0,23.9,.0,15.4C.0,6.9,6.9,.0,15.4,.0z" stroke="#e3e3e3" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#303030;font-family:Microsoft YaHei;font-size:10.00pt"><tspan x="18.1" y="20.6">重置表</tspan></text></g><g id="shape50" transform="translate(474.60,119.25)"><path fill="#75a128" d="M15.4,.0L101.2,.0C109.7,.0,116.6,6.9,116.6,15.4C116.6,23.9,109.7,30.8,101.2,30.8L15.4,30.8C6.9,30.8,.0,23.9,.0,15.4C.0,6.9,6.9,.0,15.4,.0z" stroke="#e3e3e3" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#303030;font-family:Microsoft YaHei;font-size:10.00pt"><tspan x="18.1" y="20.6">ClearList(&amp;L)</tspan></text></g><g id="shape51" transform="translate(376.18,158.75)"><path fill="#40c1dd" d="M15.4,.0L58.0,.0C66.5,.0,73.4,6.9,73.4,15.4C73.4,23.9,66.5,30.8,58.0,30.8L15.4,30.8C6.9,30.8,.0,23.9,.0,15.4C.0,6.9,6.9,.0,15.4,.0z" stroke="#e3e3e3" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#303030;font-family:Microsoft YaHei;font-size:10.00pt"><tspan x="18.1" y="20.6">验证表</tspan></text></g><g id="shape52" transform="translate(474.60,158.75)"><path fill="#75a128" d="M15.4,.0L97.2,.0C105.7,.0,112.6,6.9,112.6,15.4C112.6,23.9,105.7,30.8,97.2,30.8L15.4,30.8C6.9,30.8,.0,23.9,.0,15.4C.0,6.9,6.9,.0,15.4,.0z" stroke="#e3e3e3" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#303030;font-family:Microsoft YaHei;font-size:10.00pt"><tspan x="18.1" y="20.6">ListEmpty(L)</tspan></text></g><g id="shape53" transform="translate(376.18,198.25)"><path fill="#40c1dd" d="M15.4,.0L71.6,.0C80.1,.0,87.0,6.9,87.0,15.4C87.0,23.9,80.1,30.8,71.6,30.8L15.4,30.8C6.9,30.8,.0,23.9,.0,15.4C.0,6.9,6.9,.0,15.4,.0z" stroke="#e3e3e3" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#303030;font-family:Microsoft YaHei;font-size:10.00pt"><tspan x="18.1" y="20.6">读取表长</tspan></text></g><g id="shape54" transform="translate(488.20,198.25)"><path fill="#75a128" d="M15.4,.0L101.2,.0C109.7,.0,116.6,6.9,116.6,15.4C116.6,23.9,109.7,30.8,101.2,30.8L15.4,30.8C6.9,30.8,.0,23.9,.0,15.4C.0,6.9,6.9,.0,15.4,.0z" stroke="#e3e3e3" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#303030;font-family:Microsoft YaHei;font-size:10.00pt"><tspan x="18.1" y="20.6">ListLength(L)</tspan></text></g><g id="shape55" transform="translate(376.18,237.75)"><path fill="#40c1dd" d="M15.4,.0L58.0,.0C66.5,.0,73.4,6.9,73.4,15.4C73.4,23.9,66.5,30.8,58.0,30.8L15.4,30.8C6.9,30.8,.0,23.9,.0,15.4C.0,6.9,6.9,.0,15.4,.0z" stroke="#e3e3e3" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#303030;font-family:Microsoft YaHei;font-size:10.00pt"><tspan x="18.1" y="20.6">表取值</tspan></text></g><g id="shape56" transform="translate(474.60,237.75)"><path fill="#75a128" d="M15.4,.0L119.6,.0C128.1,.0,135.0,6.9,135.0,15.4C135.0,23.9,128.1,30.8,119.6,30.8L15.4,30.8C6.9,30.8,.0,23.9,.0,15.4C.0,6.9,6.9,.0,15.4,.0z" stroke="#e3e3e3" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#303030;font-family:Microsoft YaHei;font-size:10.00pt"><tspan x="18.1" y="20.6">GetElem(L,i,&amp;e)</tspan></text></g><g id="shape57" transform="translate(376.18,277.25)"><path fill="#40c1dd" d="M15.4,.0L85.2,.0C93.7,.0,100.6,6.9,100.6,15.4C100.6,23.9,93.7,30.8,85.2,30.8L15.4,30.8C6.9,30.8,.0,23.9,.0,15.4C.0,6.9,6.9,.0,15.4,.0z" stroke="#e3e3e3" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#303030;font-family:Microsoft YaHei;font-size:10.00pt"><tspan x="18.1" y="20.6">获取值序号</tspan></text></g><g id="shape58" transform="translate(376.18,325.95)"><path fill="#40c1dd" d="M15.4,.0L85.2,.0C93.7,.0,100.6,6.9,100.6,15.4C100.6,23.9,93.7,30.8,85.2,30.8L15.4,30.8C6.9,30.8,.0,23.9,.0,15.4C.0,6.9,6.9,.0,15.4,.0z" stroke="#e3e3e3" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#303030;font-family:Microsoft YaHei;font-size:10.00pt"><tspan x="18.1" y="20.6">获取值前驱</tspan></text></g><g id="shape59" transform="translate(501.80,277.25)"><path fill="#75a128" d="M15.4,.0L120.4,.0C128.9,.0,135.8,6.9,135.8,15.4C135.8,23.9,128.9,30.8,120.4,30.8L15.4,30.8C6.9,30.8,.0,23.9,.0,15.4C.0,6.9,6.9,.0,15.4,.0z" stroke="#e3e3e3" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#303030;font-family:Microsoft YaHei;font-size:10.00pt"><tspan x="18.1" y="20.6">LocateElem(L,e)</tspan></text></g><g id="shape60" transform="translate(501.80,325.95)"><path fill="#75a128" d="M15.4,.0L185.2,.0C193.7,.0,200.6,6.9,200.6,15.4C200.6,23.9,193.7,30.8,185.2,30.8L15.4,30.8C6.9,30.8,.0,23.9,.0,15.4C.0,6.9,6.9,.0,15.4,.0z" stroke="#e3e3e3" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#303030;font-family:Microsoft YaHei;font-size:10.00pt"><tspan x="18.1" y="20.6">PriorElem(L,cur_e,&amp;pre_e)</tspan></text></g><g id="shape61" transform="translate(376.18,383.85)"><path fill="#40c1dd" d="M15.4,.0L85.2,.0C93.7,.0,100.6,6.9,100.6,15.4C100.6,23.9,93.7,30.8,85.2,30.8L15.4,30.8C6.9,30.8,.0,23.9,.0,15.4C.0,6.9,6.9,.0,15.4,.0z" stroke="#e3e3e3" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#303030;font-family:Microsoft YaHei;font-size:10.00pt"><tspan x="18.1" y="20.6">获取值后驱</tspan></text></g><g id="shape62" transform="translate(501.80,383.85)"><path fill="#75a128" d="M15.4,.0L192.4,.0C200.9,.0,207.8,6.9,207.8,15.4C207.8,23.9,200.9,30.8,192.4,30.8L15.4,30.8C6.9,30.8,.0,23.9,.0,15.4C.0,6.9,6.9,.0,15.4,.0z" stroke="#e3e3e3" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#303030;font-family:Microsoft YaHei;font-size:10.00pt"><tspan x="18.1" y="20.6">NextElem(L,cur_e,&amp;next_e)</tspan></text></g><g id="shape63" transform="translate(376.18,432.55)"><path fill="#40c1dd" d="M15.4,.0L71.6,.0C80.1,.0,87.0,6.9,87.0,15.4C87.0,23.9,80.1,30.8,71.6,30.8L15.4,30.8C6.9,30.8,.0,23.9,.0,15.4C.0,6.9,6.9,.0,15.4,.0z" stroke="#e3e3e3" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#303030;font-family:Microsoft YaHei;font-size:10.00pt"><tspan x="18.1" y="20.6">插入元素</tspan></text></g><g id="shape64" transform="translate(488.20,432.55)"><path fill="#75a128" d="M15.4,.0L122.8,.0C131.3,.0,138.2,6.9,138.2,15.4C138.2,23.9,131.3,30.8,122.8,30.8L15.4,30.8C6.9,30.8,.0,23.9,.0,15.4C.0,6.9,6.9,.0,15.4,.0z" stroke="#e3e3e3" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#303030;font-family:Microsoft YaHei;font-size:10.00pt"><tspan x="18.1" y="20.6">ListInsert(&amp;L,i,e)</tspan></text></g><g id="shape65" transform="translate(376.18,472.05)"><path fill="#40c1dd" d="M15.4,.0L71.6,.0C80.1,.0,87.0,6.9,87.0,15.4C87.0,23.9,80.1,30.8,71.6,30.8L15.4,30.8C6.9,30.8,.0,23.9,.0,15.4C.0,6.9,6.9,.0,15.4,.0z" stroke="#e3e3e3" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#303030;font-family:Microsoft YaHei;font-size:10.00pt"><tspan x="18.1" y="20.6">删除元素</tspan></text></g><g id="shape66" transform="translate(488.20,472.05)"><path fill="#75a128" d="M15.4,.0L142.0,.0C150.5,.0,157.4,6.9,157.4,15.4C157.4,23.9,150.5,30.8,142.0,30.8L15.4,30.8C6.9,30.8,.0,23.9,.0,15.4C.0,6.9,6.9,.0,15.4,.0z" stroke="#e3e3e3" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#303030;font-family:Microsoft YaHei;font-size:10.00pt"><tspan x="18.1" y="20.6">ListDelete(&amp;L,i,&amp;e)</tspan></text></g><g id="shape67" transform="translate(617.82,40.25)"><path fill="#19cbb1" d="M15.4,.0L119.6,.0C128.1,.0,135.0,6.9,135.0,15.4C135.0,23.9,128.1,30.8,119.6,30.8L15.4,30.8C6.9,30.8,.0,23.9,.0,15.4C.0,6.9,6.9,.0,15.4,.0z" stroke="#e3e3e3" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#303030;font-family:Microsoft YaHei;font-size:10.00pt"><tspan x="17.1" y="20.6">构造一个空的表L</tspan></text></g><g id="shape68" transform="translate(633.82,79.75)"><path fill="#19cbb1" d="M15.4,.0L65.2,.0C73.7,.0,80.6,6.9,80.6,15.4C80.6,23.9,73.7,30.8,65.2,30.8L15.4,30.8C6.9,30.8,.0,23.9,.0,15.4C.0,6.9,6.9,.0,15.4,.0z" stroke="#e3e3e3" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#303030;font-family:Microsoft YaHei;font-size:10.00pt"><tspan x="17.1" y="20.6">销毁表L</tspan></text></g><g id="shape69" transform="translate(616.22,119.25)"><path fill="#19cbb1" d="M15.4,.0L106.0,.0C114.5,.0,121.4,6.9,121.4,15.4C121.4,23.9,114.5,30.8,106.0,30.8L15.4,30.8C6.9,30.8,.0,23.9,.0,15.4C.0,6.9,6.9,.0,15.4,.0z" stroke="#e3e3e3" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#303030;font-family:Microsoft YaHei;font-size:10.00pt"><tspan x="17.1" y="20.6">将L重置为空表</tspan></text></g><g id="shape70" transform="translate(612.22,158.75)"><path fill="#19cbb1" d="M15.4,.0L212.4,.0C220.9,.0,227.8,6.9,227.8,15.4C227.8,23.9,220.9,30.8,212.4,30.8L15.4,30.8C6.9,30.8,.0,23.9,.0,15.4C.0,6.9,6.9,.0,15.4,.0z" stroke="#e3e3e3" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#303030;font-family:Microsoft YaHei;font-size:10.00pt"><tspan x="18.1" y="20.6">若表存在返回true,否则返回false</tspan></text></g><g id="shape71" transform="translate(629.82,198.25)"><path fill="#19cbb1" d="M15.4,.0L126.0,.0C134.5,.0,141.4,6.9,141.4,15.4C141.4,23.9,134.5,30.8,126.0,30.8L15.4,30.8C6.9,30.8,.0,23.9,.0,15.4C.0,6.9,6.9,.0,15.4,.0z" stroke="#e3e3e3" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#303030;font-family:Microsoft YaHei;font-size:10.00pt"><tspan x="17.1" y="20.6">返回表中元素个数</tspan></text></g><g id="shape72" transform="translate(634.62,237.75)"><path fill="#19cbb1" d="M15.4,.0L172.4,.0C180.9,.0,187.8,6.9,187.8,15.4C187.8,23.9,180.9,30.8,172.4,30.8L15.4,30.8C6.9,30.8,.0,23.9,.0,15.4C.0,6.9,6.9,.0,15.4,.0z" stroke="#e3e3e3" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#303030;font-family:Microsoft YaHei;font-size:10.00pt"><tspan x="17.1" y="20.6">用e返回L中第I个元素的值</tspan></text></g><g id="shape73" transform="translate(662.62,277.25)"><path fill="#19cbb1" d="M15.4,.0L367.6,.0C376.1,.0,383.0,6.9,383.0,15.4C383.0,23.9,376.1,30.8,367.6,30.8L15.4,30.8C6.9,30.8,.0,23.9,.0,15.4C.0,6.9,6.9,.0,15.4,.0z" stroke="#e3e3e3" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#303030;font-family:Microsoft YaHei;font-size:10.00pt"><tspan x="17.1" y="20.6">返回L中第1个与e相等的元素的位置符号.若不存在,则返回0</tspan></text></g><g id="shape74" transform="translate(727.42,316.75)"><path fill="#19cbb1" d="M24.6,.0L514.9,.0C528.5,.0,539.5,11.0,539.5,24.6C539.5,38.2,528.5,49.2,514.9,49.2L24.6,49.2C11.0,49.2,.0,38.2,.0,24.6C.0,11.0,11.0,.0,24.6,.0z" stroke="#e3e3e3" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#303030;font-family:Microsoft YaHei;font-size:10.00pt"><tspan x="23.7" y="20.6">若cur_e是L的数据元素,且不是第一个,则用pre_e返回其前驱,否则操作失败,pre_e无</tspan><tspan x="23.7" y="39.0">定义驱</tspan></text></g><g id="shape75" transform="translate(734.62,374.65)"><path fill="#19cbb1" d="M24.6,.0L514.9,.0C528.5,.0,539.5,11.0,539.5,24.6C539.5,38.2,528.5,49.2,514.9,49.2L24.6,49.2C11.0,49.2,.0,38.2,.0,24.6C.0,11.0,11.0,.0,24.6,.0z" stroke="#e3e3e3" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#303030;font-family:Microsoft YaHei;font-size:10.00pt"><tspan x="23.7" y="20.6">若cur_e是L的数据元素,且不是第一个,则用next_e返回其后继,否则操作失败,pre_e</tspan><tspan x="23.7" y="39.0">无定义驱</tspan></text></g><g id="shape76" transform="translate(651.42,432.55)"><path fill="#19cbb1" d="M15.4,.0L326.8,.0C335.3,.0,342.2,6.9,342.2,15.4C342.2,23.9,335.3,30.8,326.8,30.8L15.4,30.8C6.9,30.8,.0,23.9,.0,15.4C.0,6.9,6.9,.0,15.4,.0z" stroke="#e3e3e3" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#303030;font-family:Microsoft YaHei;font-size:10.00pt"><tspan x="18.1" y="20.6">在L中第i个位置之前插入新的数据元素e,L的长度加1</tspan></text></g><g id="shape77" transform="translate(670.62,472.05)"><path fill="#19cbb1" d="M15.4,.0L316.4,.0C324.9,.0,331.8,6.9,331.8,15.4C331.8,23.9,324.9,30.8,316.4,30.8L15.4,30.8C6.9,30.8,.0,23.9,.0,15.4C.0,6.9,6.9,.0,15.4,.0z" stroke="#e3e3e3" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#303030;font-family:Microsoft YaHei;font-size:10.00pt"><tspan x="18.1" y="20.6">删除L的第i个数据元素,并用e返回其值,L的长度减1</tspan></text></g><g id="shape78" transform="translate(222.36,690.20)"><path fill="#f1c3dc" d="M23.6,.0L289.2,.0C302.3,.0,312.8,10.6,312.8,23.6C312.8,36.6,302.3,47.2,289.2,47.2L23.6,47.2C10.6,47.2,.0,36.6,.0,23.6C.0,10.6,10.6,.0,23.6,.0z" stroke="#f4dbd6" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#a76655;font-family:Microsoft YaHei;font-size:14.00pt;font-weight:bold"><tspan x="29.4" y="31.2">非空的线性表与线性结构的特点</tspan></text></g><g id="shape79" transform="translate(560.18,639.15)"><path fill="#d5865e" d="M15.4,.0L218.8,.0C227.3,.0,234.2,6.9,234.2,15.4C234.2,23.9,227.3,30.8,218.8,30.8L15.4,30.8C6.9,30.8,.0,23.9,.0,15.4C.0,6.9,6.9,.0,15.4,.0z" stroke="#e3e3e3" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#303030;font-family:Microsoft YaHei;font-size:10.00pt"><tspan x="18.1" y="20.6">存在唯一的被成为"第一个"的元素</tspan></text></g><g id="shape80" transform="translate(560.18,678.65)"><path fill="#d5865e" d="M15.4,.0L250.0,.0C258.5,.0,265.4,6.9,265.4,15.4C265.4,23.9,258.5,30.8,250.0,30.8L15.4,30.8C6.9,30.8,.0,23.9,.0,15.4C.0,6.9,6.9,.0,15.4,.0z" stroke="#e3e3e3" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#303030;font-family:Microsoft YaHei;font-size:10.00pt"><tspan x="18.1" y="20.6">存在唯一的被称为i额"最后一个"的元素</tspan></text></g><g id="shape81" transform="translate(560.18,718.15)"><path fill="#d5865e" d="M15.4,.0L346.8,.0C355.3,.0,362.2,6.9,362.2,15.4C362.2,23.9,355.3,30.8,346.8,30.8L15.4,30.8C6.9,30.8,.0,23.9,.0,15.4C.0,6.9,6.9,.0,15.4,.0z" stroke="#e3e3e3" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#303030;font-family:Microsoft YaHei;font-size:10.00pt"><tspan x="18.1" y="20.6">除第一个意外,结构中的每一个数据元素均只有一个前驱</tspan></text></g><g id="shape82" transform="translate(560.18,757.65)"><path fill="#d5865e" d="M15.4,.0L346.8,.0C355.3,.0,362.2,6.9,362.2,15.4C362.2,23.9,355.3,30.8,346.8,30.8L15.4,30.8C6.9,30.8,.0,23.9,.0,15.4C.0,6.9,6.9,.0,15.4,.0z" stroke="#e3e3e3" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#303030;font-family:Microsoft YaHei;font-size:10.00pt"><tspan x="18.1" y="20.6">除最后一个外,结构中的每一个数据元素君之忧一个后继</tspan></text></g><g id="shape83" transform="translate(222.36,547.40)"><path fill="#f5f6ff" d="M23.6,.0L105.2,.0C118.3,.0,128.8,10.6,128.8,23.6C128.8,36.6,118.3,47.2,105.2,47.2L23.6,47.2C10.6,47.2,.0,36.6,.0,23.6C.0,10.6,10.6,.0,23.6,.0z" stroke="#d5e8fa" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#508ab2;font-family:Microsoft YaHei;font-size:14.00pt;font-weight:bold"><tspan x="29.4" y="31.2">高级操作</tspan></text></g><g id="shape84" transform="translate(376.18,535.85)"><path fill="#cecbba" d="M15.4,.0L71.6,.0C80.1,.0,87.0,6.9,87.0,15.4C87.0,23.9,80.1,30.8,71.6,30.8L15.4,30.8C6.9,30.8,.0,23.9,.0,15.4C.0,6.9,6.9,.0,15.4,.0z" stroke="#e3e3e3" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#303030;font-family:Microsoft YaHei;font-size:10.00pt"><tspan x="18.1" y="20.6">表的合并</tspan></text></g><g id="shape85" transform="translate(376.18,575.35)"><path fill="#cecbba" d="M15.4,.0L71.6,.0C80.1,.0,87.0,6.9,87.0,15.4C87.0,23.9,80.1,30.8,71.6,30.8L15.4,30.8C6.9,30.8,.0,23.9,.0,15.4C.0,6.9,6.9,.0,15.4,.0z" stroke="#e3e3e3" fill-rule="nonzero" stroke-width="4"></path><text xml:space="preserve" style="fill:#303030;font-family:Microsoft YaHei;font-size:10.00pt"><tspan x="18.1" y="20.6">表的拆分</tspan></text></g></g></svg></div>
-
-<p>优点：长度可根据需要增长或缩短。</p>
+                <h3 id="1-0进程同步机制"><a href="#1-0进程同步机制" class="headerlink" title="1.0进程同步机制"></a>1.0进程同步机制</h3><h4 id="1-1-0概念"><a href="#1-1-0概念" class="headerlink" title="1.1.0概念"></a>1.1.0概念</h4><p><mark style="border-radius:5px;padding:5px;background-color:#47a6e8">异步环境</mark>下一组开发进程因直接制约而互相发送消息，互相合作、互相等待，使得各进程按一定的速度执行的过程。</p>
+<h4 id="1-1-2-目的"><a href="#1-1-2-目的" class="headerlink" title="1.1.2 目的"></a>1.1.2 目的</h4><p>在执行次序上对多个写作进程进行协调，使并发执行的诸多协作进程之间能按照一定的规则（或时序）共享系统资源，并能很好地互相合作，从而使程序的执行具有可再现性。</p>
+<h4 id="1-1-3-进程的制约关系"><a href="#1-1-3-进程的制约关系" class="headerlink" title="1.1.3 进程的制约关系"></a>1.1.3 进程的制约关系</h4><ul>
+<li><p>互斥关系</p>
+<p>  间接相互制约，多程序并发执行，由于共享的系统资源（CPU、I/O设备等），这些并发执行的程序之间会形成相互制约的关系。</p>
+<p>  为保证进程间有序运行，对于系统间的这些资源，必须由系统实施统一分配。</p>
+</li>
+<li><p>同步关系</p>
+<p>  某些程序执行某些任务时会建立两个或更多的进程。这些进程为了完成同一任务而相互合作。</p>
+</li>
+</ul>
+<blockquote>
+<p>  协作进程间  的制约关系即进程同步。根据上述可分为互斥关系与同步关系，且互斥输入同步。同步强调保证进程之间操作的先后次序的约束，而互斥强调对共享资源的互斥访问。</p>
+</blockquote>
+<h2 id="2-0-软件同步机制"><a href="#2-0-软件同步机制" class="headerlink" title="2.0 软件同步机制"></a>2.0 软件同步机制</h2><h2 id="3-0-硬件同步机制"><a href="#3-0-硬件同步机制" class="headerlink" title="3.0 硬件同步机制"></a>3.0 硬件同步机制</h2><h2 id="4-0-信号量机制"><a href="#4-0-信号量机制" class="headerlink" title="4.0 信号量机制"></a>4.0 信号量机制</h2><h2 id="5-0-管程机制"><a href="#5-0-管程机制" class="headerlink" title="5.0 管程机制"></a>5.0 管程机制</h2><h4 id="5-1-1-定义"><a href="#5-1-1-定义" class="headerlink" title="5.1.1 定义"></a>5.1.1 定义</h4><p>对于系统中的各种硬件资源和软件资源，忽略他们的内部结构和实现细节，利用数据结构抽象地描述他们的资源特性。即用少量信息和对此资源所执行的操作来表征该资源。于是，利用共享数据结构抽象地表示系统中的共享资源，并且将对该共享数据结构实施的特定操作定义为一组过程。</p>
+<h4 id="5-1-2-机理"><a href="#5-1-2-机理" class="headerlink" title="5.1.2 机理"></a>5.1.2 机理</h4><p>进程对共享资源的申请、释放和相关操作，必须通过由这组过程间接地对共享数据结构进行操作加以实现</p>
 
                 
             </div>
@@ -619,7 +632,7 @@ var _hmt = _hmt || [];
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://blogofxyz.top/2021/10/29/%E7%BA%BF%E6%80%A7%E8%A1%A8/">https://blogofxyz.top/2021/10/29/%E7%BA%BF%E6%80%A7%E8%A1%A8/</a>
+                    <a href="https://blogofxyz.top/2021/10/06/%EF%BC%88%E6%9C%AA%E5%AE%8C%EF%BC%89%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0/">https://blogofxyz.top/2021/10/06/%EF%BC%88%E6%9C%AA%E5%AE%8C%EF%BC%89%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5%E7%AC%94%E8%AE%B0/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -657,12 +670,8 @@ var _hmt = _hmt || [];
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                                    <span class="chip bg-color">数据结构</span>
-                                </a>
-                            
-                                <a href="/tags/%E7%BA%BF%E6%80%A7%E8%A1%A8/">
-                                    <span class="chip bg-color">线性表</span>
+                                <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+                                    <span class="chip bg-color">操作系统</span>
                                 </a>
                             
                         </div>
@@ -1125,35 +1134,35 @@ var _hmt = _hmt || [];
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/10/29/%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95/">
+                <a href="/2021/10/14/html%E8%AE%BE%E7%BD%AE%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%E9%80%8F%E6%98%8E%E5%BA%A6-%E4%B8%8D%E5%BD%B1%E5%93%8D%E5%AD%90%E6%A0%87%E7%AD%BE%E4%B8%8E%E5%86%85%E5%AE%B9/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="递归算法">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="html设置背景图片透明度(不影响子标签与内容)">
                         
-                        <span class="card-title">递归算法</span>
+                        <span class="card-title">html设置背景图片透明度(不影响子标签与内容)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            B站的一次活动，做的算法题，突然就想到递归方法，秒解。
+                            HTML 无法直接设置背景图片的透明度，只能通过其他方法实现相同效果。
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-29
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-14
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/C%E8%AF%AD%E8%A8%80/" class="post-category">
-                                    C语言
+                            <a href="/categories/HTML/" class="post-category">
+                                    HTML
                                 </a>
                             
-                            <a href="/categories/C%E8%AF%AD%E8%A8%80/%E7%AE%97%E6%B3%95/" class="post-category">
-                                    算法
+                            <a href="/categories/HTML/CSS/" class="post-category">
+                                    CSS
                                 </a>
                             
                             
@@ -1163,12 +1172,12 @@ var _hmt = _hmt || [];
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/C%E8%AF%AD%E8%A8%80/">
-                        <span class="chip bg-color">C语言</span>
+                    <a href="/tags/HTML/">
+                        <span class="chip bg-color">HTML</span>
                     </a>
                     
-                    <a href="/tags/%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">递归算法</span>
+                    <a href="/tags/CSS/">
+                        <span class="chip bg-color">CSS</span>
                     </a>
                     
                 </div>
@@ -1182,35 +1191,31 @@ var _hmt = _hmt || [];
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/10/26/%EF%BC%88%E8%A1%A5%E5%85%85%E4%B8%AD%EF%BC%89%E7%BD%91%E7%BB%9C&%E8%BD%AF%E4%BB%B6%E7%BC%A9%E5%86%99/">
+                <a href="/2021/09/26/git%E4%B8%8A%E4%BC%A0%E5%90%8E%E7%BC%80%E5%90%8D%E6%94%B9%E5%8F%98/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="（补充中）名词缩写">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="git上传后缀名改变">
                         
-                        <span class="card-title">（补充中）名词缩写</span>
+                        <span class="card-title">git上传后缀名改变</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            对计算机网络、与一些语言中的名词进行的整理。
+                            git命令行上传文件至仓库后后缀名不一样
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-26
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-26
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="post-category">
-                                    计算机网络
-                                </a>
-                            
-                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/" class="post-category">
-                                    软件工程
+                            <a href="/categories/git/" class="post-category">
+                                    git
                                 </a>
                             
                             
@@ -1220,16 +1225,8 @@ var _hmt = _hmt || [];
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%BD%91%E7%BB%9C-%E7%BC%A9%E5%86%99/">
-                        <span class="chip bg-color">网络-缩写</span>
-                    </a>
-                    
-                    <a href="/tags/%E8%BD%AF%E4%BB%B6-%E7%BC%A9%E5%86%99/">
-                        <span class="chip bg-color">软件-缩写</span>
-                    </a>
-                    
-                    <a href="/tags/%E8%AF%AD%E8%A8%80-%E7%BC%A9%E5%86%99/">
-                        <span class="chip bg-color">语言-缩写</span>
+                    <a href="/tags/git/">
+                        <span class="chip bg-color">git</span>
                     </a>
                     
                 </div>
@@ -1417,7 +1414,7 @@ var _hmt = _hmt || [];
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">37.1k</span>
+                        class="white-color">40.9k</span>
             
             
             
