@@ -548,21 +548,21 @@ var _hmt = _hmt || [];
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-12-29
+                    2022-01-08
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    7.2k
+                    7.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    30 分
+                    31 分
                 </div>
                 
 
@@ -1711,7 +1711,48 @@ rf.close()<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
 
 
 
-<h2 id="12-……"><a href="#12-……" class="headerlink" title="12. ……"></a>12. ……</h2>
+<h2 id="12-OS-Path"><a href="#12-OS-Path" class="headerlink" title="12. OS - Path"></a>12. OS - Path</h2><p>引入模块<code>import os</code></p>
+<ul>
+<li><p>判断路径</p>
+<p><code>os.path.exists(path)</code> </p>
+<p>判断路径是否存在。返回bool值</p>
+</li>
+<li><p>创建路径</p>
+<p><code>os.mkdir(path)</code></p>
+<p>创建单级菜单。也就是指定路径的每一级，然后创建最后一层的文件夹。</p>
+<blockquote>
+<p>当最后一级前的部分有不存在的则会报错。所以建议结合<code>exists()</code></p>
+</blockquote>
+<p><code>os.makedirs(path)</code></p>
+<p>创建多级菜单，同样指定路径的每一级，任意一级不存在就会创建，直至创建完最后一级。</p>
+</li>
+<li><p>删除路径</p>
+<p><code>rmdir(path)</code> 删除指定路径，但前提是路径中没有文件。否则会报错。同样，路径不存在也会报错。</p>
+<p>如果需要完全删除可使用下方代码</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">import shutil
+shutil.rmtree(path)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+<li><p>遍历目录</p>
+<p><code>os.walk(top,topdown,onerror,followlinks)</code> </p>
+<ul>
+<li><p>top 为遍历的路径。</p>
+</li>
+<li><p>topdown 布尔值，指定是否为从上到下遍历。默认为true。</p>
+</li>
+<li><p>onerror 遍历出现错误时的处理方式，默认为忽略。</p>
+</li>
+<li><p>followlinks ———……</p>
+</li>
+</ul>
+<p>返回一个元组。</p>
+<p>​       三个元素：dirpath，dirnanes，filenames。</p>
+<ul>
+<li>dirpath– 当前遍历路径。是一个字符串</li>
+<li>dirnames– 遍历时的所有路径。是一个列表。</li>
+<li>filenames– 遍历到的文件。是一个列表。</li>
+</ul>
+</li>
+</ul>
+<h3 id="12-5-删除文件"><a href="#12-5-删除文件" class="headerlink" title="12.5 删除文件"></a>12.5 删除文件</h3><h3 id="12-6-修改路径与文件名"><a href="#12-6-修改路径与文件名" class="headerlink" title="12.6 修改路径与文件名"></a>12.6 修改路径与文件名</h3><h3 id="12-7-获取文件信息"><a href="#12-7-获取文件信息" class="headerlink" title="12.7 获取文件信息"></a>12.7 获取文件信息</h3>
                 
             </div>
             <hr/>
@@ -2519,7 +2560,7 @@ rf.close()<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">45.1k</span>
+                        class="white-color">47.2k</span>
             
             
             
