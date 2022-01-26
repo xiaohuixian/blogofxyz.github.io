@@ -275,6 +275,7 @@ mark {
 
 .bg-cover.pd-header.about-cover {
   border-radius: 0 0 200px 200px;
+  box-shadow: 0px 0px 13px 11px rgb(21 58 108 / 50%);
 }
 
 header .side-nav {
