@@ -548,21 +548,21 @@ var _hmt = _hmt || [];
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-19
+                    2022-01-21
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.7k
+                    2.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    12 分
                 </div>
                 
 
@@ -606,7 +606,7 @@ var _hmt = _hmt || [];
 </blockquote>
 </li>
 </ul>
-<h3 id="1-顺序表"><a href="#1-顺序表" class="headerlink" title="1. 顺序表"></a>1. 顺序表</h3><p>声明一个结构体。结构体内包含一个数组与一个<code>int</code> 型记录数组长度。然后自动初始化，再根据提示进行查找，删除，插入操作。</p>
+<h3 id="1-顺序表-C"><a href="#1-顺序表-C" class="headerlink" title="1. 顺序表 (C)"></a>1. 顺序表 (C)</h3><p>声明一个结构体。结构体内包含一个数组与一个<code>int</code> 型记录数组长度。然后自动初始化，再根据提示进行查找，删除，插入操作。</p>
 <h4 id="1-1-声明区"><a href="#1-1-声明区" class="headerlink" title="1.1 声明区"></a>1.1 声明区</h4><pre class="line-numbers language-c" data-language="c"><code class="language-c">#include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 #include &lt;malloc.h&gt;
@@ -726,7 +726,7 @@ int list_delete(Lnode *l, int index); //删除传入序列对应的值。//函�
 	}
 }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="2-单链表"><a href="#2-单链表" class="headerlink" title="2. 单链表"></a>2. 单链表</h3><ul>
+<h3 id="2-单链表-C"><a href="#2-单链表-C" class="headerlink" title="2. 单链表 (C)"></a>2. 单链表 (C)</h3><ul>
 <li>代码</li>
 </ul>
 <p>查找不想写了，在顺序表中有。</p>
@@ -953,10 +953,208 @@ int main() {
 	}
 	p-&gt;next = b-&gt;next;
 	a-&gt;num += b-&gt;num;
-}
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="3-双向链表…"><a href="#3-双向链表…" class="headerlink" title="3. 双向链表…"></a>3. 双向链表…</h3><p>….</p>
+<h3 id="3-双向链表-Java"><a href="#3-双向链表-Java" class="headerlink" title="3. 双向链表 (Java)"></a>3. 双向链表 (Java)</h3><p>任何操作都需要考虑节点的先驱、后驱。</p>
+<h4 id="3-1-链表结构"><a href="#3-1-链表结构" class="headerlink" title="3.1 链表结构"></a>3.1 链表结构</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java">/**
+    * @param last 上个节点
+    * @param next 下个链表
+    * @param value 节点值
+    */
+public static class BothDirLinkList {
+    BothDirLinkList last;
+    BothDirLinkList next;
+    String value;
+	//无参构造
+    public BothDirLinkList() {
+    }
+	//全参构造
+    public BothDirLinkList(BothDirLinkList last, BothDirLinkList next, String value) {
+        this.last = last;
+        this.next = next;
+        this.value = value;
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="3-2-创建"><a href="#3-2-创建" class="headerlink" title="3.2 创建"></a>3.2 创建</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java">/**
+     * @param n 创建链表节点数
+     * @return 返回第一个节点。
+     */
+static BothDirLinkList createLinkList(int n) {
+    BothDirLinkList head = new BothDirLinkList();
+    BothDirLinkList pTerm;
+    head.value = "我是头";
+    BothDirLinkList qTerm = head;
+    for (int i = 1; i &lt; n; i++) {
+        pTerm = new BothDirLinkList();
+        pTerm.value = Integer.toString(i);
+        pTerm.last = qTerm;
+        qTerm.next = pTerm;
+        qTerm = pTerm;
+    }
+    qTerm.next = head;
+    head.last = qTerm;
+    return head;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="3-3-main"><a href="#3-3-main" class="headerlink" title="3.3 main"></a>3.3 main</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java">public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+
+    printString("创建链表:\n请输入链表节点数：");
+    BothDirLinkList head = createLinkList(sc.nextInt());
+    printLinkList(head, 1, true);
+    //合并
+    BothDirLinkList second=createLinkList(5);
+    combineLinkList(head,second);
+    //插入
+    printString("插入一个值");
+    //插入的值
+    printString("请输入插入的值：");
+    String value=sc.next();
+    //插入位置
+    printString("请输入插入的位置:");
+    int pos=sc.nextInt();
+    //插入
+    insertLinkList(head, value, pos);
+    printLinkList(head, 1, false);
+
+    //删除 BY value
+    printString("请输入删除节点的值(不存在时会忽略):\n");
+    if(deleteLinkList(head,sc.next())){
+        printString("删除成功!");
+        printLinkList(head,1,false);
+    }else{
+        printString("删除失败!");
+    }
+
+    //删除 BY index
+    printString("请输入删除节点的序列:");
+    if(deleteLinkList(head,sc.nextInt())){
+        printString("删除成功！");
+        printLinkList(head,1,false);
+    }else{
+        printString("删除失败!");
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="3-4-插入"><a href="#3-4-插入" class="headerlink" title="3.4 插入"></a>3.4 插入</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java">/**
+     * @param lis 插入数据的链表
+     * @param str 插入的值
+     * @param pos 插入位置 可为负，从 head 开始寻找，负数为逆向寻找。
+     */
+static void insertLinkList(BothDirLinkList lis, String str, int pos) {
+    BothDirLinkList term = lis;
+    if (pos == 0) {
+        printString("序列有问题！");
+        //lis.next.last = new BothDirLinkList(lis, lis.next, str);
+        //lis.next = lis.next.last;
+    } else {
+        int v = pos / Math.abs(pos);
+        // 获取定位节点的移动方向。
+        do {
+            //头指针为 0 序列。所以从lis.next 开始计数。
+            term = (pos &gt; 0) ? term.next : term.last;
+            pos -= v;
+        } while (pos != 0);
+        BothDirLinkList tNode = (v &gt; 0) ? new BothDirLinkList(term.last, term, str) : new BothDirLinkList(term, term.next, str);
+        /* 大于零：插入节点在定位节点之后。
+             * 小于零：插入节点在定位节点之前。
+             * */
+        if (v &gt; 0) {
+            /*正向插入
+                 *
+                 * 定位节点 后节点 的前驱 为 插入节点
+                 * 定位节点 的 后驱      为 插入节点
+                 *   */
+            term.last.next = tNode;
+            term.last = tNode;
+        } else {
+            /* 反向插入
+                 * 原理同上
+                 * */
+            term.next.last = tNode;
+            term.next = tNode;
+        }
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="3-5-删除"><a href="#3-5-删除" class="headerlink" title="3.5 删除"></a>3.5 删除</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java">/**
+     * @param lis   操作数组
+     * @param value 删除节点的值
+     * @return 是否删除成功
+     */
+static boolean deleteLinkList(BothDirLinkList lis, String value) {
+    BothDirLinkList term = lis;
+    do {
+        if (term.value.equals(value)) {
+            //中间截断，返回。
+            term.next.last = term.last;
+            term.last.next = term.next;
+            return true;
+        } else {
+            term = term.next;
+        }
+    } while (term != lis);
+    return false;
+}
+/**
+     * @param lis   操作数组
+     * @param index 删除节点序列 非零整数
+     * @return 是否删除成功
+     */
+static boolean deleteLinkList(BothDirLinkList lis, int index) {
+    BothDirLinkList term = lis;
+    if (index == 0) {
+        return false;
+    } else {
+        int v = index / Math.abs(index);
+        //获取定位节点的移动方向。
+        do {
+            term = (index &gt; 0) ? term.next : term.last;
+            index -= v;
+        } while (index != 0);
+
+        term.next.last = term.last;
+        term.last.next = term.next;
+        return true;
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="3-6-打印链表"><a href="#3-6-打印链表" class="headerlink" title="3.6 打印链表"></a>3.6 打印链表</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java">/**
+     * @param lis       链表第一个元素
+     * @param isReverse 是否为逆序
+     * @param times     循环打印次数
+     */
+static void printLinkList(BothDirLinkList lis, int times, boolean isReverse) {
+    BothDirLinkList tr = lis;
+
+    while (times &gt;= 0) {
+        if (tr == lis) {
+            if (times == 0) {
+                break;
+            }
+            times--;
+        }
+        System.out.println("value = " + tr.value);
+        tr = isReverse ? tr.last : tr.next;
+    }
+    System.out.print("\n");
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="3-7-打印"><a href="#3-7-打印" class="headerlink" title="3.7 打印"></a>3.7 打印</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java">static void printString(String str){
+    System.out.println(str);
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
 
                 
             </div>
@@ -1781,7 +1979,7 @@ int main() {
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">48.3k</span>
+                        class="white-color">49.1k</span>
             
             
             
