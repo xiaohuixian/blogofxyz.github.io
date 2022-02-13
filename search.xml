@@ -4,6 +4,66 @@
   
     
     <entry>
+      <title>二叉树</title>
+      <link href="/2022/02/10/%E9%A1%BA%E5%BA%8F%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+      <url>/2022/02/10/%E9%A1%BA%E5%BA%8F%E4%BA%8C%E5%8F%89%E6%A0%91/</url>
+      
+        <content type="html"><![CDATA[<h2 id="0-先说下"><a href="#0-先说下" class="headerlink" title="0. 先说下"></a>0. 先说下</h2><p>所有源码，是学习<code>java</code>的同时练习数据结构，所以有的地方可能并不高效，安全，考虑的不周全等。即小打小闹，不建议用于实际开发中。</p><p>如果发现问题，请积极联系作者进行修改。</p><blockquote><p><mark>注意：</mark></p><p>​        所有内容中较为复杂的是删除某一个节点，其他的比如遍历，深度，查找，基本属于同一操作。</p><p>除此之外的其他内容都是添枝加叶，不是重点。</p></blockquote><h2 id="1-树的基本操作"><a href="#1-树的基本操作" class="headerlink" title="1. 树的基本操作"></a>1. 树的基本操作</h2><ul><li> 初始化</li><li>添加节点</li><li>查找节点 (按值)</li><li>删除节点的子树</li><li>查看深度</li><li>遍历</li></ul><h2 id="2-源码"><a href="#2-源码" class="headerlink" title="2. 源码"></a>2. 源码</h2><h3 id="2-0-大体代码"><a href="#2-0-大体代码" class="headerlink" title="2.0  大体代码"></a>2.0  大体代码</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java">import java.util.ArrayList;import java.util.List;/** * 日期：2022/1/30 * 时间：2:15 * @author xyz */public class TreeByClass {        /**     * 遍历方法枚举     */    public enum traverseOrder { }    /**     * 树的节点     */    static class Tree {}    /**     * @param tr 树初始化，并添加数据。     */    public static void initTree(Tree tr) {}    /**     * @param father 从此节点开始计算深度。     * @return  father节点开始的深度     */    public static int depthTree(Tree father){}    /**     * @param father    起始节点     * @param treeNodes 一个object类型的列表，用于接收遍历数据     * @param trOr      遍历方法，DLR，LDR，LRD     */    public static void traverseTree(Tree father, List&lt;Object&gt; treeNodes, traverseOrder trOr) {}    /**     * @param father    根节点     * @param nodeValue 查找的值     * @return 返回值所在节点。如果不存在则返回最后null。     */    public static Tree findNode(Tree father, int nodeValue) {}    /**     * @param father 根节点     * @param ele 插入的节点     * @param nodeValue 插入到合适位置的数据     */    public static void insertValue(Tree father, int nodeValue) {}    public static void insertNode(Tree father, Tree ele) {}        /**     * @param father 操作的树     * @param value  根据值删除第一次出现的节点的子树（节点）     */    public static void deleteNode(Tree father, int value) {}    public static void deleteTree(Tree father, int value) {}    public static void main(String[] args) {}}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="2-1-main函数"><a href="#2-1-main函数" class="headerlink" title="2.1 main函数"></a>2.1 <code>main</code>函数</h3><p>过程：</p><p>》初始化-》遍历存入-》删除 <code>(1+10*n,n∈[1,9])</code> -》删除树-》-》遍历存入-》输出初始列表-》输出最终列表-》生成删除节点列表-》输出删除的节点列表</p><pre class="line-numbers language-java" data-language="java"><code class="language-java">public static void main(String[] args){    Tree oneTree = initTree();    //用来保存开始与最后树节点们,以及删除的节点们。    List&lt;Object&gt; nodeData1 = new ArrayList&lt;&gt;();    List&lt;Object&gt; nodeData2 = new ArrayList&lt;&gt;();List&lt;Object&gt; deleteNode= new ArrayList&lt;&gt;();    //遍历数据    traverseTree(oneTree, nodeData1, traverseOrder.LDR);    //删除1~91。    for (int i = 1; i &lt; 100; i += 10) {        deleteNode(oneTree, i);    }    //再删除个子树。    deleteTree(oneTree, 55);    //遍历修改过后的树    traverseTree(oneTree, nodeData2, traverseOrder.LDR);    Object[] arr2 = nodeData2.toArray();    System.out.print("\n最初的数组： ");    for (Object o : nodeData1) {        //遍历输出        System.out.print(String.format("%3d,", o));    }    System.out.print("\n删除后数组： ");    for (Object o : nodeData2) {        //遍历输出        System.out.print(String.format("%3d,", o));    }    System.out.println();    System.out.print("删除数组： ");    deleteNode= nodeData1.stream().filter(elem -&gt; !nodeData2.contains(elem)).collect(Collectors.toList());    for (Object o : deleteNode) {        //遍历输出        System.out.print(String.format("%3d,", o));    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="2-2-方法部分"><a href="#2-2-方法部分" class="headerlink" title="2.2 方法部分"></a>2.2 方法部分</h3><p>如下几部分:</p><ul><li><p>遍历顺序枚举</p></li><li><p>节点类</p></li><li><p>初始化</p></li><li><p>深度</p></li><li><p>遍历</p></li><li><p>查找节点</p></li><li><p>插入</p><ul><li>插入值</li><li>插入节点</li></ul></li><li><p>删除</p><ul><li>删除节点</li><li>删除子树</li></ul></li></ul><h4 id="2-2-1-枚举"><a href="#2-2-1-枚举" class="headerlink" title="2.2.1 枚举"></a>2.2.1 枚举</h4><p>没的说。</p><pre class="line-numbers language-java" data-language="java"><code class="language-java">public enum traverseOrder {    /**    * 先序遍历    */    DLR,    /**    * 中序遍历    */    LDR,    /**    * 后序遍历    */    LRD}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="2-2-2-节点类"><a href="#2-2-2-节点类" class="headerlink" title="2.2.2 节点类"></a>2.2.2 节点类</h4><p>节点的类。</p><p>包含：四个属性（左枝，右枝，父节点，数据），</p><p>一个构造参数（需要导入数据）。</p><blockquote><p>data属性可修改为其他类型，比如类。</p><p>如果修改，记得修改主函数中的列表等地的类型。</p></blockquote><pre class="line-numbers language-java" data-language="java"><code class="language-java">static class Tree {    /**         * L D R 树         */    Tree left;    Tree right;    Tree parNode;    int data;    public Tree(Tree parNode, int data) {        this.left = null;        this.right = null;        this.parNode = parNode;        this.data = data;    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="2-2-3-初始化"><a href="#2-2-3-初始化" class="headerlink" title="2.2.3 初始化"></a>2.2.3 初始化</h4><p>初始化树，添加30个随机的1~99的随机数。获取随机数的方法在下方。</p><pre class="line-numbers language-java" data-language="java"><code class="language-java">/** * @return 返回创建并添加过数据的树 */public static Tree initTree() {    Tree term = new Tree(null, randomInt());    for (int i = 1; i &lt; 30;) {        int tInt = randomInt();        if (findNode(term, tInt) == null) {            insertNode(term, tInt);            i++;        }    }    return term;}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><blockquote><p><code>randomInt</code> 函数</p><pre class="line-numbers language-java" data-language="java"><code class="language-java">&gt;public static int randomInt() {   return Math.round((float) Math.random() * 100);&gt;}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>获取一个随机数 1~99，</p></blockquote><h4 id="2-2-4-树深度"><a href="#2-2-4-树深度" class="headerlink" title="2.2.4 树深度"></a>2.2.4 树深度</h4><p>返回一个树的深度，与遍历极为类似，稍微改点东西。</p><pre class="line-numbers language-java" data-language="java"><code class="language-java">/*** @param father 从此节点开始计算深度。* @return  father节点开始的深度*/public static int depthTree(Tree father) {    if (father.right == null &amp;&amp; father.left == null) {        return 0;    } else {        int left = 1, right = 1;        if (father.left != null) {            left += depthTree(father.left);            //本层加上子树的最大层        }        if (father.right != null) {            right += depthTree(father.right);            //本层加子树的最大层        }        return Math.max(right, left);        //返回左右树中的极大值，如果相等，则返回右值（右值也是一，表示当前层）    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><blockquote><p>节点数统计方法类似，此处偷个懒。</p></blockquote><h4 id="2-2-5-遍历树"><a href="#2-2-5-遍历树" class="headerlink" title="2.2.5 遍历树"></a>2.2.5 遍历树</h4><p>三种方式，先序、中序、后序，这里通过一个枚举类型进行选择。</p><blockquote><p><code>LDR</code>:  从小到大顺序；</p><p>另外两种比较好观察数据树的结构。</p></blockquote><pre class="line-numbers language-java" data-language="java"><code class="language-java">/**     * @param father    起始节点     * @param treeNodes 一个object类型的列表，用于接收遍历数据     * @param trOr      遍历方法，DLR，LDR，LRD      */public static void traverseTree(Tree father, List&lt;Object&gt; treeNodes, traverseOrder trOr) {    switch (trOr) {        case DLR: {            //前序遍历            if (father.data != -1) {                treeNodes.add(father.data);            }            if (father.left != null) {                traverseTree(father.left, treeNodes, trOr);            }            if (father.right != null) {                traverseTree(father.right, treeNodes, trOr);            }            break;        }        case LDR: {            //中序遍历            if (father.left != null) {                traverseTree(father.left, treeNodes, trOr);            }            if (father.data != -1) {                treeNodes.add(father.data);            }            if (father.right != null) {                traverseTree(father.right, treeNodes, trOr);            }            break;        }        case LRD: {            //后序遍历            if (father.left != null) {                traverseTree(father.left, treeNodes, trOr);            }            if (father.right != null) {                traverseTree(father.right, treeNodes, trOr);            }            if (father.data != -1) {                treeNodes.add(father.data);            }            break;        }        default: {            //实际运行不到这里。            System.out.println("遍历方向有误，将默认采用中序遍历");            traverseTree(father, treeNodes, traverseOrder.LDR);            break;        }    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="2-2-6-查找节点"><a href="#2-2-6-查找节点" class="headerlink" title="2.2.6 查找节点"></a>2.2.6 查找节点</h4><p>通过遍历，再根据二叉树的特性，值小向左，值大向右。</p><p>找到时返回节点。</p><p>为了方便对节点的父节点进行操作，为节点设置了父节点属性。</p><blockquote><p>使用比较多，原理也比较简单。</p></blockquote><pre class="line-numbers language-java" data-language="java"><code class="language-java">/** * @param father    根节点 * @param nodeValue 查找的值 * @return 返回值所在节点。如果不存在则返回最后null。 */public static Tree findNode(Tree father, int nodeValue) {    if (father.data == nodeValue) {        return father;    } else {        while (father.left != null || father.right != null) {            if (nodeValue &lt; father.data &amp;&amp; father.left != null) {                father = father.left;            } else if (nodeValue &gt; father.data &amp;&amp; father.right != null) {                father = father.right;            } else {                break;            }        }    }    if (father.data != nodeValue) {        //到底了没找到。        return null;    } else {        return father;    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="2-2-7-插入"><a href="#2-2-7-插入" class="headerlink" title="2.2.7 插入"></a>2.2.7 插入</h4><h5 id="2-2-7-1-插入值"><a href="#2-2-7-1-插入值" class="headerlink" title="2.2.7.1 插入值"></a>2.2.7.1 插入值</h5><p>根据值通过递归找到合适位置。然后新建节点，并连接。</p><p>此处的连接是双向的，因为存在父节点。</p><pre class="line-numbers language-java" data-language="java"><code class="language-java">/**     * @param father 根节点     * @param nodeValue 插入到合适位置的数据     */public static void insertNode(Tree father, int nodeValue) {    if (father.data == -1) {        father.data = nodeValue;    } else {        //非空树        if (father.data &gt; nodeValue) {            //左枝            if (father.left != null) {                //存在节点继续                insertNode(father.left, nodeValue);            } else {                father.left = new Tree(nodeValue);            }        } else {            //右枝            if (father.data &lt; nodeValue) {                if (father.right != null) {                    //同理                    insertNode(father.right, nodeValue);                } else {                    father.right = new Tree(nodeValue);                }            }        }    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h5 id="2-2-7-2-插入节点"><a href="#2-2-7-2-插入节点" class="headerlink" title="2.2.7.2 插入节点"></a>2.2.7.2 插入节点</h5><p><code>public static void insertNode(Tree father, Tree ele) {}</code></p><p><code>father</code> 附加的目的树。</p><p><code>ele</code> 为一个树的根节点，即将一个树附加到另一个树的合适位置上。</p><p>主要操作为：</p><ol><li><p>判断是否为空树。</p><blockquote><p>   为空：</p><ol><li>将节点的数据赋值给目的节点。</li><li>修改附加节点的根节点的父节点（如果存在的话）。</li></ol></blockquote></li><li><p>通过递归根据子节点的值找到合适位置。</p></li><li><p>插入值。</p></li></ol><blockquote><p>在删除一个节点的方法中也有用到此方法。</p></blockquote><pre class="line-numbers language-java" data-language="java"><code class="language-java">/**     * @param father 根节点     * @param ele 插入节点     */public static void insertNode(Tree father, Tree ele) {    if (father.parNode == null &amp;&amp; father.data == -1) {        father.data = ele.data;        father.left = ele.left;        father.right = ele.right;        ele.parNode = father;        if (ele.left != null) {            ele.left.parNode = father;        }        if (ele.right != null) {            ele.right.parNode = father;        }      } else {        //非空树        if (father.data &gt;= ele.data) {            //左枝            if (father.left != null) {                //存在节点继续                insertNode(father.left, ele);            } else {                father.left = ele;                ele.parNode = father;            }        } else {            //右枝            if (father.data &lt; ele.data) {                if (father.right != null) {                    //同理                    insertNode(father.right, ele);                } else {                    father.right = ele;                    ele.parNode = father;                }            }        }    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="2-2-8-删除"><a href="#2-2-8-删除" class="headerlink" title="2.2.8 删除"></a>2.2.8 删除</h4><h5 id="2-2-8-1-删除节点"><a href="#2-2-8-1-删除节点" class="headerlink" title="2.2.8.1 删除节点"></a>2.2.8.1 删除节点</h5><p>比较复杂的操作，难点在于考虑删除节点的上下情况。</p><p>如下为我的分类讨论（熟悉的名词）：</p><blockquote><p>先定义几个量：</p><p><code>deleteNode</code> :要删除的节点。</p><p><code>left</code> ：删除节点的左节点属性。</p><p><code>right</code>： 删除节点的右节点属性。</p><p><code>parNode</code>： 删除节点类的父节点属性。</p><p><code>parentOfNode</code>: 删除节点的父节点。</p></blockquote><p>① 叶节点。</p><p>② 非叶节点</p><ol><li><p>根节点</p><ol><li><p>左子树为空</p></li><li><p>右子树为空或两树都不为空。</p><blockquote><p>​        之所以把 仅右子树为空 与 两树都不为空 放一起，是因为有个操作可以简化过程。</p><p>​        原来过程分三种：</p><ul><li><p><code>deleteNode.left==null</code> ，<code>deleteNode.right!=null</code>。</p><p>操作：用<code>deleteNode.right</code> 的值覆盖<code>deleteNode</code></p></li><li><p><code>deleteNode.left!=null</code>，<code>deleteNode.right==null</code>。</p><p>操作：用<code>deleteNode.left</code> 的值覆盖<code>deleteNode</code></p></li><li><p><code>deleteNode.left!=null</code>，<code>deleteNode.right!=null</code>。</p><p>操作：用<code>deleteNode.left</code> 的值覆盖<code>deleteNode</code>，<mark style="color:yellow">然后将<code>deleteNode.right</code> 子树附加到<code>deleteNode.left</code>上</mark>，附加操作可使用<code>insertNode()</code></p><blockquote><p><code>deleteNode.left==null</code>且 <code>deleteNode.right==null</code> 为叶节点，最开始已排除。</p></blockquote></li></ul></blockquote></li></ol></li><li><p>非根节点</p><ol><li>…同上的分类，但是多一个操作，将父节点向下的连接进行修改（需要判断是左枝到<code>deleteNode</code>，还是右枝）</li></ol></li></ol><p>最后是一个输出此次删除操作消失的节点值，用于调试以及删除树操作的显示。</p><pre class="line-numbers language-java" data-language="java"><code class="language-java">/*** @param father 操作的树* @param value  根据值删除第一次出现的节点*/public static void deleteNode(Tree father, int value) {    //未删除时根元素的全部元素    List&lt;Object&gt; nodeData = new ArrayList&lt;&gt;();    traverseTree(father, nodeData, traverseOrder.LDR);    Tree term = findNode(father, value);    if (term == null) {        System.out.println(String.format("未找到:%3d ", value));        return;    }    if (term.left == null &amp;&amp; term.right == null) {        // 叶节点。 删除节点的左右节点都为空。        term.left = null;        term.right = null;        term.data = -1;    } else {        //非叶节点        if (term.parNode == null) {            //删除根节点            if (term.left == null) {                //左子树为空                term.data = term.right.data;                //根节点的 左树的 左节点，左树的 右节点                Tree rLOfTerm = term.right.left, rROfTerm = term.right.right;                //换子节点                term.right = rROfTerm;                term.left = rLOfTerm;                //换父节点                if (rLOfTerm != null) {                    rLOfTerm.parNode = term;                }                if (rROfTerm != null) {                    rROfTerm.parNode = term;                }                       } else {                //右子树为空,或两子树都在。                //根节点的 左树的 左节点，左树的 右节点                Tree lLOfTerm = term.left.left, lROfTerm = term.left.right;                //换子节点                term.data = term.left.data;                term.left = lLOfTerm;                Tree deleteNodeTermRight = term.right;                term.right = lROfTerm;                if (deleteNodeTermRight != null) {                    insertNode(term, deleteNodeTermRight);                }                if (lLOfTerm != null) {                    //左子树的左枝不为空。                    lLOfTerm.parNode = term;                }                if (lROfTerm != null) {                    //左子树的右枝不为空。                    lROfTerm.parNode = term;                }            }        } else {            //删除非根节点。            //定位节点 父节点 左 右子树            Tree parOfTerm = term.parNode, lNode = term.left, rNode = term.right;            if (term.left == null) {                //删除节点左子树为空。                //换父节点                rNode.parNode = parOfTerm;                if (parOfTerm.left == term) {                    parOfTerm.left = rNode;                } else {                    parOfTerm.right = rNode;                }            } else {                //删除节点左子树为空，或两子树都在                //换父节点                lNode.parNode = term.parNode;                //换子节点                if (parOfTerm.left == term) {                    //当前节点为父节点左枝，赋值                    parOfTerm.left = lNode;                } else {                    //...                    parOfTerm.right = lNode;                }                if (term.right != null) {                    //将 右枝 根节点 插入到左枝中--子节点连带过去。                    insertNode(term.left, term.right);                }            }        }    }    System.out.println(String.format("删除%3d,", value));    //删除后的所有元素    List&lt;Object&gt; newNodeData = new ArrayList&lt;&gt;();    traverseTree(father, newNodeData, traverseOrder.DLR);    System.out.print("\t删除元素: ");    //原树的补集    Object[] arr3 = nodeData.stream().filter(elem -&gt; !newNodeData.contains(elem)).toArray();    for (Object o : arr3) {        //遍历输出        System.out.print(o + " ");    }    System.out.println();}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h5 id="2-2-8-2-删除子树"><a href="#2-2-8-2-删除子树" class="headerlink" title="2.2.8.2 删除子树"></a>2.2.8.2 删除子树</h5><p>较上一个更简单，直接使定位到的节点的各值为空节点即可。</p><pre class="line-numbers language-java" data-language="java"><code class="language-java">/*** @param father 操作的树* @param value  根据值删除第一次出现的节点的子树*/public static void deleteTree(Tree father, int value) {       Tree term = findNode(father, value);    if(term!=null){        //未删除时根元素的全部元素    List&lt;Object&gt; nodeData = new ArrayList&lt;&gt;();    traverseTree(father, nodeData, traverseOrder.LDR);        //存在此子树        term.left = null;        term.right = null;        term.data = -1;        System.out.print(String.format("删除%3d 为根节点的树,", value));        //删除后的所有元素        List&lt;Object&gt; newNodeData = new ArrayList&lt;&gt;();        traverseTree(father, newNodeData, traverseOrder.DLR);        System.out.print("删除的子树节点: ");        //原树的补集        Object[] arr3 = nodeData.stream().filter(elem -&gt; !newNodeData.contains(elem)).toArray();        for (Object o : arr3) {            //遍历输出            System.out.print(o + " ");        }        System.out.println();    }else{        System.out.println(String.format("未找到子树:%3d", value));    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+          <category> 数据结构 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据结构 </tag>
+            
+            <tag> 树 </tag>
+            
+            <tag> tree </tag>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>vue-cli资源问题</title>
+      <link href="/2022/02/05/vue-cli%E8%B5%84%E6%BA%90%E9%97%AE%E9%A2%98/"/>
+      <url>/2022/02/05/vue-cli%E8%B5%84%E6%BA%90%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1-放置资源的路径"><a href="#1-放置资源的路径" class="headerlink" title="1. 放置资源的路径"></a>1. 放置资源的路径</h3><ul><li><p>public</p></li><li><p>assets</p><p>​        <code>public</code>为公共空间，<code>vue-cli</code> 项目构建后会生成一个全新的项目，而这个项目的文件夹就是与<code>public</code>互通的。即未构建前在<code>public</code>中放一个文件，构建后项目的根目录也会有这个文件。</p><p>​        <code>assets</code> 可以说是做题时的草稿纸吧。你的答案先在草稿纸上得出，然后再誊写到答题卡上。assets里的文件在使用时写的路径不能使用   简单的  <mark>相对路径</mark> 与 <mark>绝对路径</mark> 。因为这份答案是跟答题卡上的上下文相关的，而答题卡上的那份是后来誊写的版本。</p><blockquote><p>assets 路径格式如下。</p><p><code>@/assets/filename.xxx</code> <code>@</code> 默认指向 src ，所以可以通过前加<code>@</code>引用<code>assets</code>文件夹内的文件。</p></blockquote></li></ul><p>具体的两者的联系可前往：[<mark>传送门</mark>](<a href="https://cloud.tencent.com/developer/article/1776658">Vue处理静态资源及public/static/assets目录的区别 - 云+社区 - 腾讯云 (tencent.com)</a>)</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Vue </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vue </tag>
+            
+            <tag> vue-cli </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>let与var,还有const</title>
       <link href="/2022/01/16/let/"/>
       <url>/2022/01/16/let/</url>
@@ -205,9 +265,9 @@
       
         <tags>
             
-            <tag> HTML </tag>
-            
             <tag> CSS </tag>
+            
+            <tag> HTML </tag>
             
         </tags>
       
@@ -294,9 +354,9 @@
       
         <tags>
             
-            <tag> HTML </tag>
-            
             <tag> CSS </tag>
+            
+            <tag> HTML </tag>
             
             <tag> 选择器 </tag>
             
@@ -656,9 +716,9 @@
       
         <tags>
             
-            <tag> HTML </tag>
-            
             <tag> CSS </tag>
+            
+            <tag> HTML </tag>
             
         </tags>
       
@@ -928,11 +988,11 @@
       
         <tags>
             
-            <tag> 二进制 </tag>
-            
             <tag> 数据转换 </tag>
             
             <tag> 计算机组成原理 </tag>
+            
+            <tag> 二进制 </tag>
             
         </tags>
       
@@ -959,9 +1019,9 @@
             
             <tag> 数据结构 </tag>
             
-            <tag> 浮点数 </tag>
-            
             <tag> 二进制 </tag>
+            
+            <tag> 浮点数 </tag>
             
         </tags>
       
@@ -1130,9 +1190,9 @@
     
     
     <entry>
-      <title>数据结构</title>
-      <link href="/2021/08/21/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-      <url>/2021/08/21/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
+      <title>数据类型</title>
+      <link href="/2021/08/21/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+      <url>/2021/08/21/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
       
         <content type="html"><![CDATA[<h2 id="常用数据类型"><a href="#常用数据类型" class="headerlink" title="常用数据类型"></a>常用数据类型</h2><hr><p>常见的数据类型有：<br>[byte](#1. byte)，<a href="#char">char</a>，<a href="#short">short</a>，<a href="#int">int</a>，<a href="#float">float</a>，<a href="#long">long</a>，<a href="#double">double</a>，<a href="#date">date</a>，<a href="#date">datetime</a>，<a href="#other">other</a></p><div id="byte"></div><h3 id="1-byte"><a href="#1-byte" class="headerlink" title="1. byte"></a>1. byte</h3><p>​    byte 为字节。有点常识就知道   1字（节）=8位。即用八个二进制位来表示，所以有</p><p>​    (-2<sup>7</sup>)~(2<sup>7</sup>-1)</p><pre class="line-numbers language-c" data-language="c"><code class="language-c">byte a=1;//  -128~127<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>​    <u>？？？为啥整数比负数少一个？？？</u></p><p>​    是因为   -128<del>-1可以用 10000000</del>11111111 来表示</p><p>​    开头的 ‘1’ 表示此数为负，只能用 00000000~01111111来表示0~127，因为再加一就是-128啦。    </p><div id="char"></div><p></p><h3 id="2-char"><a href="#2-char" class="headerlink" title="2. char"></a>2. char</h3><p>​    char 类型占用一字节，8个二进制位。</p><p>​    char为字符型，学过几门语言的人都知道：在程序中大小写英文字母，以及数字的数据大小就是一个字符。与 byte 所占内存一样为一字节。如：</p><pre class="line-numbers language-c" data-language="c"><code class="language-c">char b='a';//也就是ASCII表示的字符。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>就是声明一个字符变量 a，给其赋值为字符 “a”。</p><div id="short"></div><h3 id="3-short"><a href="#3-short" class="headerlink" title="3. short"></a>3. short</h3><p> short 用来定义数字变量。一般很少用，其大小为两个字节，也就是16个二进制位。</p><pre class="line-numbers language-c" data-language="c"><code class="language-c">short c;// -32,768 ~ 32,768-1。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>  可表示 (-2<sup>15</sup>)~(2<sup>15</sup>-1)</p><p>  理解过程看 byte型。</p><div id="int"></div><h3 id="4-int"><a href="#4-int" class="headerlink" title="4. int"></a>4. int</h3><p>  int 类型占用两字节，32个二进制位。<br>  可表示 (-2<sup>31</sup>)~(2<sup>31</sup>-1)</p><pre class="line-numbers language-C" data-language="C"><code class="language-C">int d; //-2,147,483,648 ~ 2,147,483,647    正负2十多亿<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>  int类型较为常用，相比较short，int表示的数更不容易溢出，切占用内存不大。</p><div id="float"></div><h3 id="5-float"><a href="#5-float" class="headerlink" title="5. float"></a>5. float</h3><p>  float类型占用四字节，32个二进制位。</p><p>  可表示 (-3.4x10<sup>38</sup>)~(3.4x10<sup>38</sup>)</p>  <pre class="line-numbers language-c" data-language="c"><code class="language-c">float e;//大概情况为越偏离0，越不精确。32位进制位分别用作字符位（正负），整数位和尾数。建议先了解编程中的多位数科学技术法。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>  <a href="https://blog.csdn.net/albertsh/article/details/92385277">精确度以及表示范围详解（点我！点我！）</a></p><p>​    float类型为唯二的能表示小数的数据类型之一，另一个就是double类型。相比较double的64位，float占的内存更小。</p><div id="long"></div><h3 id="6-long"><a href="#6-long" class="headerlink" title="6. long"></a>6. long</h3><p><span id="long"></span></p><p>  long类型占用64个二进制位。</p><p>可表示 (-2<sup>63</sup>)~(2<sup>63</sup>-1)</p>  <pre class="line-numbers language-c" data-language="c"><code class="language-c">long f;//-9,223,372,036,854,775,8078  ~  9,223,372,036,854,775,807<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>  long类型一般用于特殊用途，毕竟这么大的数生活中不怎么用得到。但是，联想一下，64位。。。<br>  能否想到我们的电脑。同为64位。所以long类型就是我们的64位机的单个读取单位。</p>  <div id="double"></div><h3 id="7-double"><a href="#7-double" class="headerlink" title="7. double"></a>7. double</h3><p>  double类型  8字节，64个二进制位。</p><p>  float的升级版。升级版说明 double 的特点。</p><p>​    一般刚学编程语言的人做题时自己定义 float 型无法通过，可以换成 double 试试。因为 double 的精度更高。所以根据自己的需求选择 double 还是 float 。</p>  <div id="date"></div><h3 id="8-date"><a href="#8-date" class="headerlink" title="8. date"></a>8. date</h3><p>  此类型与datetime，localtime，关系紧密。在各个语言中，有的只有一种，有的都存在。不同语言规定不同。比如在JavaScript 中只有date，没有datetime。date的格式如下</p>  <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> time<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>time<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">2021-08-21T05:12:39.827Z<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>  但在C#中，没有date类型，只有datetime类型。</p>  <pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">using System;namespace ConsoleApp1{    class Program    {        static void Main(string[] args)        {            DateTime time = DateTime.Now;            Console.WriteLine(time);            Console.ReadKey();        }    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>   <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">2021/8/21 13:19:29<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>​    而HTML中，这三种又都存在。特别在input中。</p><ul><li><p>指定为date类型时，只能输入年月日。</p><input type="date" style="width:50%;margin:0 auto"></li><li><p>指定为datetime时，只能输入年月日时分。但现在浏览器已不支持此控件。<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/Input/datetime">详细声明见此</a></p><input type="datetime-local" style="width:50%;margin:0 auto">    </li><li><p>指定为datetime-local时，只能输入年月日时分。</p><input type="datetime-local" style="width:50%;margin:0 auto"></li></ul><p>   具体数据显示格式根据语言不同也不同。</p>  <div id="other"></div><h3 id="9-other"><a href="#9-other" class="headerlink" title="9. other"></a>9. other</h3><p>  other 是指这几种类型可以与 sign，unsign，还有叠加形式。</p><p>如：</p>  <pre class="line-numbers language-c" data-language="c"><code class="language-c">long long g;//128位unsign int h;//无符号整型。划负为正，正数的范围乘2.long int i；//还是int<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>  除此之外，个别语言还有 WORD 型（字，两字节。），DWORD 型，等。</p><hr><p>  不同的语言也有自己特有的，比如数据库一般都有的 datetime类型，text类型，decimal类型（也是表示小数的），imag类型（不错，就是存图片的）等等。 了解每个数据类型，就是为了根据自己的需求定义适合的数据类型。不能计算 1 + 1 就定义两个 long 类型 。养成好习惯，才能更高效合理的利用计算机有限的内存资源。</p>]]></content>
       
@@ -1146,7 +1206,7 @@
       
         <tags>
             
-            <tag> 数据结构 </tag>
+            <tag> 数据类型 </tag>
             
         </tags>
       
@@ -1292,17 +1352,6 @@
     
     
     <entry>
-      <title>关于‘俺’</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>成就</title>
       <link href="/archives/index.html"/>
       <url>/archives/index.html</url>
@@ -1314,9 +1363,42 @@
     
     
     <entry>
+      <title>交流</title>
+      <link href="/contact/index.html"/>
+      <url>/contact/index.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="欢迎留言"><a href="#欢迎留言" class="headerlink" title="欢迎留言"></a>欢迎留言</h1><p>大家有任何问题，都可以在评论区给我留言，或者加我联系方式：</p><ul><li><strong>Q Q</strong>：<strong>1970476603</strong></li><li><strong>微信</strong>：<strong>i_19-99-666</strong></li></ul><p>欢迎来访<br><strong>当然不介意小jiejie加我~~</strong></p><h1 id="友链交换"><a href="#友链交换" class="headerlink" title="友链交换"></a>友链交换</h1><p>想要交换友链的小伙伴，欢迎在评论区留言，留言格式：</p><ul><li><strong>名称：</strong>你的博客名称</li><li><strong>地址：</strong>你的博客地址</li><li><strong>简介：</strong>一句话简介</li><li><strong>头像：</strong>你的头像地址</li></ul><p>例如我的博客友链，大家可以加到自己博客里哦：</p><ul><li><strong>名称：</strong>张小白</li><li><strong>地址：</strong><a class="selfurl">https://blogofxyz.gitee.io</a> (国内访问快)/<a class="selfurl">https://blogofxyz.top/</a> (github部署)</li><li><strong>简介：</strong>平时没少学没用东西的一个家伙。</li><li><strong>头像：</strong><a class="selfurl">https://blogofxyz.gitee.io/medias/avatar.jpg</a></li></ul>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于‘俺’</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>类别</title>
       <link href="/categories/index.html"/>
       <url>/categories/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -1341,28 +1423,6 @@
       <url>/friends/index.html</url>
       
         <content type="html"><![CDATA[<h1 id="赞赏名单"><a href="#赞赏名单" class="headerlink" title="赞赏名单"></a>赞赏名单</h1><p>感谢所有赞赏过我的小伙伴啦，你们的支持是我最大的动力！</p><h1 id="友链交换"><a href="#友链交换" class="headerlink" title="友链交换"></a>友链交换</h1><p>想要交换友链的小伙伴，欢迎在留言板留言，留言格式：</p><ul><li><strong>名称：</strong>你的博客名称</li><li><strong>地址：</strong>你的博客地址</li><li><strong>简介：</strong>一句话简介</li><li><strong>头像：</strong>你的头像地址</li></ul><p>例如我的博客友链，大家可以加到自己博客里哦：</p><ul><li><p><strong>名称：</strong>Zhang-little-white</p></li><li><p><strong>地址：</strong> <a style="text-decoration:none" class="selfurl">https://blogofxyz.gitee.io</a> (gitee访问快)</p><p><a style="text-decoration:none;    white-space: pre;">   &nbsp; &nbsp; &nbsp;  &nbsp;</a>            <a style="text-decoration:none" class="selfurl">https://blogofxyz.top/ </a>(github部署)</p></li><li><p><strong>简介：</strong>小白一个</p></li><li><p><strong>头像：</strong><a style="text-decoration:none" class="selfurl">https://blogofxyz.gitee.io/medias/avatar.jpg</a></p></li></ul>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>交流</title>
-      <link href="/contact/index.html"/>
-      <url>/contact/index.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="欢迎留言"><a href="#欢迎留言" class="headerlink" title="欢迎留言"></a>欢迎留言</h1><p>大家有任何问题，都可以在评论区给我留言，或者加我联系方式：</p><ul><li><strong>Q Q</strong>：<strong>1970476603</strong></li><li><strong>微信</strong>：<strong>i_19-99-666</strong></li></ul><p>欢迎来访<br><strong>当然不介意小jiejie加我~~</strong></p><h1 id="友链交换"><a href="#友链交换" class="headerlink" title="友链交换"></a>友链交换</h1><p>想要交换友链的小伙伴，欢迎在评论区留言，留言格式：</p><ul><li><strong>名称：</strong>你的博客名称</li><li><strong>地址：</strong>你的博客地址</li><li><strong>简介：</strong>一句话简介</li><li><strong>头像：</strong>你的头像地址</li></ul><p>例如我的博客友链，大家可以加到自己博客里哦：</p><ul><li><strong>名称：</strong>张小白</li><li><strong>地址：</strong><a class="selfurl">https://blogofxyz.gitee.io</a> (国内访问快)/<a class="selfurl">https://blogofxyz.top/</a> (github部署)</li><li><strong>简介：</strong>平时没少学没用东西的一个家伙。</li><li><strong>头像：</strong><a class="selfurl">https://blogofxyz.gitee.io/medias/avatar.jpg</a></li></ul>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
