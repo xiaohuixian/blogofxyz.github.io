@@ -80,7 +80,7 @@
       
         <tags>
             
-            <tag> vue </tag>
+            <tag> Vue </tag>
             
             <tag> Vue-cli </tag>
             
@@ -95,7 +95,7 @@
       <link href="/2022/01/16/js%E5%8F%98%E9%87%8F%E4%BF%AE%E9%A5%B0%E7%AC%A6/"/>
       <url>/2022/01/16/js%E5%8F%98%E9%87%8F%E4%BF%AE%E9%A5%B0%E7%AC%A6/</url>
       
-        <content type="html"><![CDATA[<h3 id="1-let-与-var"><a href="#1-let-与-var" class="headerlink" title="1. let 与 var"></a>1. let 与 var</h3><p><code>let</code> 为块作用域声明，即只能在声明的所在层级以及子域中使用。</p><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// part 1 可正常输出aa,bb会报错。</span><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>    <span class="token keyword">var</span> aa <span class="token operator">=</span> <span class="token string">"aaaaa"</span><span class="token punctuation">;</span>    <span class="token keyword">let</span> bb <span class="token operator">=</span> <span class="token string">"qqqq"</span><span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token keyword">try</span> <span class="token punctuation">{</span>    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>aa<span class="token punctuation">)</span><span class="token punctuation">;</span>    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>bb<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token comment">// part 2 输出的为 "dddddc"</span><span class="token keyword">var</span> cc<span class="token operator">=</span><span class="token string">"c"</span><span class="token punctuation">;</span><span class="token keyword">let</span> dd<span class="token operator">=</span><span class="token string">"d"</span><span class="token punctuation">;</span><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">2</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>    <span class="token keyword">var</span> cc <span class="token operator">=</span> <span class="token string">"ccccc"</span><span class="token punctuation">;</span>    <span class="token keyword">let</span> dd <span class="token operator">=</span> <span class="token string">"ddddd"</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>cc<span class="token operator">+</span>dd<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="2-const-与-var"><a href="#2-const-与-var" class="headerlink" title="2. const 与 var"></a>2. const 与 var</h3><p><code>const</code> 与<code>var</code>为全局作用域声明。但是，<code>const</code>定义时必须初始化，且后期的修改会报错。<code>var</code> 则不会。且可以先定义，后赋值。</p><ul><li><p>在子域中定义之后，const 同 let。</p></li><li><p>在最外层定义，<code>let</code> <code>const</code> <code>var</code> 的作用域相同，都是全局。</p><blockquote><p>但。</p><ul><li><p>let在子域中可重新定义此变量，且不影响外部同样变量名的变量。</p><pre class="line-numbers language-js" data-language="js"><code class="language-js"> <span class="token comment">//以下代码输出 "222de".</span> <span class="token keyword">var</span> cc <span class="token operator">=</span> <span class="token string">"c"</span><span class="token punctuation">;</span> <span class="token keyword">let</span> dd <span class="token operator">=</span> <span class="token string">"d"</span><span class="token punctuation">;</span> <span class="token keyword">const</span> ee <span class="token operator">=</span> <span class="token string">"e"</span><span class="token punctuation">;</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">2</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>     <span class="token keyword">let</span> dd <span class="token operator">=</span> <span class="token number">333</span><span class="token punctuation">;</span>     <span class="token keyword">var</span> cc <span class="token operator">=</span> <span class="token number">222</span><span class="token punctuation">;</span>     <span class="token keyword">const</span> ee <span class="token operator">=</span> <span class="token number">111</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>cc <span class="token operator">+</span> dd <span class="token operator">+</span> ee<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li></ul><ul><li><code>const</code>在子域中无法修改值，<code>var</code> <code>let</code> 可以。且修改的都是最外层的值。</li></ul></blockquote></li></ul><blockquote><p>就作用域来说，<code>let</code>与 <code>const</code> 是一样的。</p></blockquote><p>但<code>const</code>一定程度上能保护值不被修改。<code>它没有定义常量值。它定义了对值的常量引用。</code> 我的理解是：再次引用这个变量时，这个变量的值必须是你定义时的值。所以他对对象之类的<mark>变量名指向地址</mark>的数据类型就没有太多的约束性。</p><p>如下代码：</p> <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">const</span> ap <span class="token operator">=</span> <span class="token punctuation">{</span>    name<span class="token operator">:</span> <span class="token string">"Larson"</span><span class="token punctuation">,</span>    sex<span class="token operator">:</span> <span class="token string">"male"</span><span class="token punctuation">,</span><span class="token punctuation">}</span><span class="token punctuation">;</span>ap<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">"Koepp"</span><span class="token punctuation">;</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ap<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p> 以上代码输出的<code>name</code>为<code>Koepp</code>，这就是一定程度。</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="1-let-与-var"><a href="#1-let-与-var" class="headerlink" title="1. let 与 var"></a>1. let 与 var</h3><p><code>let</code> 为块作用域声明，即只能在声明的所在层级以及子域中使用。</p><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// part 1 可正常输出aa,bb会报错。</span><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>    <span class="token keyword">var</span> aa <span class="token operator">=</span> <span class="token string">"aaaaa"</span><span class="token punctuation">;</span>    <span class="token keyword">let</span> bb <span class="token operator">=</span> <span class="token string">"qqqq"</span><span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token keyword">try</span> <span class="token punctuation">{</span>    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>aa<span class="token punctuation">)</span><span class="token punctuation">;</span>    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>bb<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token comment">// part 2 输出的为 "dddddc"</span><span class="token keyword">var</span> cc<span class="token operator">=</span><span class="token string">"c"</span><span class="token punctuation">;</span><span class="token keyword">let</span> dd<span class="token operator">=</span><span class="token string">"d"</span><span class="token punctuation">;</span><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">2</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>    <span class="token keyword">var</span> cc <span class="token operator">=</span> <span class="token string">"ccccc"</span><span class="token punctuation">;</span>    <span class="token keyword">let</span> dd <span class="token operator">=</span> <span class="token string">"ddddd"</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>cc<span class="token operator">+</span>dd<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="2-const-与-var"><a href="#2-const-与-var" class="headerlink" title="2. const 与 var"></a>2. const 与 var</h3><p><code>const</code> 与<code>var</code>为全局作用域声明。但是，<code>const</code>定义时必须初始化，且后期的修改会报错。<code>var</code> 则不会。且可以先定义，后赋值。</p><ul><li><p>在子域中定义之后，const 同 let。</p></li><li><p>在最外层定义，<code>let</code> <code>const</code> <code>var</code> 的作用域相同，都是全局。</p><blockquote><p>但。</p><ul><li><p>let在子域中可重新定义此变量，且不影响外部同样变量名的变量。</p><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">//以下代码输出 "222de".</span><span class="token keyword">var</span> cc <span class="token operator">=</span> <span class="token string">"c"</span><span class="token punctuation">;</span><span class="token keyword">let</span> dd <span class="token operator">=</span> <span class="token string">"d"</span><span class="token punctuation">;</span><span class="token keyword">const</span> ee <span class="token operator">=</span> <span class="token string">"e"</span><span class="token punctuation">;</span><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">2</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>    <span class="token keyword">let</span> dd <span class="token operator">=</span> <span class="token number">333</span><span class="token punctuation">;</span>    <span class="token keyword">var</span> cc <span class="token operator">=</span> <span class="token number">222</span><span class="token punctuation">;</span>    <span class="token keyword">const</span> ee <span class="token operator">=</span> <span class="token number">111</span><span class="token punctuation">;</span><span class="token punctuation">}</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>cc <span class="token operator">+</span> dd <span class="token operator">+</span> ee<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li></ul><ul><li><code>const</code>在子域中无法修改值，<code>var</code> <code>let</code> 可以。且修改的都是最外层的值。</li></ul></blockquote></li></ul><blockquote><p>就作用域来说，<code>let</code>与 <code>const</code> 是一样的。</p></blockquote><p>但<code>const</code>一定程度上能保护值不被修改。<code>它没有定义常量值。它定义了对值的常量引用。</code> 我的理解是：再次引用这个变量时，这个变量的值必须是你定义时的值。所以他对对象之类的<mark>变量名指向地址</mark>的数据类型就没有太多的约束性。</p><p>如下代码：</p> <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">const</span> ap <span class="token operator">=</span> <span class="token punctuation">{</span>    name<span class="token operator">:</span> <span class="token string">"Larson"</span><span class="token punctuation">,</span>    sex<span class="token operator">:</span> <span class="token string">"male"</span><span class="token punctuation">,</span><span class="token punctuation">}</span><span class="token punctuation">;</span>ap<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">"Koepp"</span><span class="token punctuation">;</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ap<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p> 以上代码输出的<code>name</code>为<code>Koepp</code>，这就是一定程度。</p>]]></content>
       
       
       <categories>
@@ -108,8 +108,6 @@
         <tags>
             
             <tag> JavaScript </tag>
-            
-            <tag> 变量作用域 </tag>
             
         </tags>
       
@@ -240,9 +238,9 @@
       
         <tags>
             
-            <tag> HTML </tag>
-            
             <tag> Vue </tag>
+            
+            <tag> HTML </tag>
             
         </tags>
       
@@ -354,9 +352,9 @@
       
         <tags>
             
-            <tag> HTML </tag>
-            
             <tag> Vue </tag>
+            
+            <tag> HTML </tag>
             
         </tags>
       
@@ -494,8 +492,6 @@
             <tag> Java </tag>
             
             <tag> VScode </tag>
-            
-            <tag> 乱码 </tag>
             
             <tag> C </tag>
             
@@ -635,6 +631,8 @@
       
       
         <tags>
+            
+            <tag> CSS </tag>
             
             <tag> HTML </tag>
             
@@ -800,11 +798,11 @@
       
         <tags>
             
-            <tag> 数据结构 </tag>
-            
             <tag> 浮点数 </tag>
             
             <tag> 二进制 </tag>
+            
+            <tag> 数据结构 </tag>
             
         </tags>
       
@@ -856,9 +854,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> CMD </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -885,7 +883,7 @@
             
             <tag> C语言 </tag>
             
-            <tag> cmd </tag>
+            <tag> CMD </tag>
             
         </tags>
       
@@ -911,8 +909,6 @@
         <tags>
             
             <tag> Python </tag>
-            
-            <tag> 语言入门 </tag>
             
         </tags>
       
@@ -950,7 +946,7 @@
       <link href="/2021/08/21/win%E6%B7%BB%E5%8A%A0%E5%8F%B3%E9%94%AE%E6%96%B0%E5%BB%BA%E9%A1%B9/"/>
       <url>/2021/08/21/win%E6%B7%BB%E5%8A%A0%E5%8F%B3%E9%94%AE%E6%96%B0%E5%BB%BA%E9%A1%B9/</url>
       
-        <content type="html"><![CDATA[<h1 id="右键新建菜单添加新项"><a href="#右键新建菜单添加新项" class="headerlink" title="右键新建菜单添加新项"></a>右键新建菜单添加新项</h1><hr><p>​    **<code>|ू･ω･</code> )检查下道具（没有js的添加项）`</p><img src="https://gitee.com/blogofxyz/blog-photo/raw/master/imag1/1.png" style="zoom: 67%;"><hr><h2 id="1-打开注册表编辑器（regedit）"><a href="#1-打开注册表编辑器（regedit）" class="headerlink" title="1. 打开注册表编辑器（regedit）"></a>1. 打开注册表编辑器（regedit）</h2><p>​         win+R召唤“运行”对话框-》输入”regedit”-》回车。或者在开始菜单的搜索框输入“注册表编辑器”or“regedit”。</p><img src="https://gitee.com/blogofxyz/blog-photo/raw/master/imag1/2.png" style="zoom: 67%;"><h2 id="2-找到系统已统计目标后缀名"><a href="#2-找到系统已统计目标后缀名" class="headerlink" title="2. 找到系统已统计目标后缀名"></a>2. 找到系统已统计目标后缀名</h2><p>​        Ctrl+F召唤“搜索对话框”-》输入想要添加的新建文件的后缀名，前加‘.’，（eg：.js）</p><img src="https://gitee.com/blogofxyz/blog-photo/raw/master/imag1/3.png" style="zoom: 50%;"><p>​        如图：</p><img src="https://gitee.com/blogofxyz/blog-photo/raw/master/imag1/4.png" style="zoom:67%;"><h2 id="3-添加右键新建项"><a href="#3-添加右键新建项" class="headerlink" title="3. 添加右键新建项"></a>3. 添加右键新建项</h2><p>​        找到后缀文件夹-》右键新建项（命名为“ShellNew”）-》      ▲！别输入空格</p><img src="https://gitee.com/blogofxyz/blog-photo/raw/master/imag1/5.png" style="zoom:67%;"><p>​          鼠标在“ShellNew”目录上右键-》新建-》字符串值（命名为NullFile）      ▲！别输入空格<br>​    </p><p>​    </p><pre><code>     [==也可以新建成特定样版文件==](#补充) </code></pre><img src="https://gitee.com/blogofxyz/blog-photo/raw/master/imag1/6.png" style="zoom:67%;"><h2 id="4-验证是否成功"><a href="#4-验证是否成功" class="headerlink" title="4. 验证是否成功"></a>4. 验证是否成功</h2><p>​    返回桌面右键查看应该就出现了。</p><img src="https://gitee.com/blogofxyz/blog-photo/raw/master/imag1/7.png" style="zoom:120%;"><ul><li>(命名为“filename”时的效果！！注意文件名：默认还是“新建xxx.js”)</li></ul><img src="https://gitee.com/blogofxyz/blog-photo/raw/master/imag1/8.png" style="zoom:67%;"><p><b>    如果没有显示可能情况：</b></p><ul><li>重命名时输入空格。</li></ul><hr><div id="补充"></div><h1 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h1><p>​    <strong><strong>补充内容</strong></strong>：</p><h2 id="1-新建文件并输入模板。"><a href="#1-新建文件并输入模板。" class="headerlink" title="1. 新建文件并输入模板。"></a>1. 新建文件并输入模板。</h2><p>​    在一个偏僻的位置新建一个与添加的格式后缀相同的文件.(eg：123.js)</p><img src="https://gitee.com/blogofxyz/blog-photo/raw/master/imag1/9.png" style="zoom:67%;"><h2 id="2-指定文件路径。"><a href="#2-指定文件路径。" class="headerlink" title="2. 指定文件路径。"></a>2. 指定文件路径。</h2><p>​    在添加字符串值时重命名为“filename”-》右键filename项修改，填入刚刚新建的文件的path+文件名。</p><img src="https://gitee.com/blogofxyz/blog-photo/raw/master/imag1/10.png" style="zoom:67%;">]]></content>
+        <content type="html"><![CDATA[<h2 id="右键新建菜单添加新项"><a href="#右键新建菜单添加新项" class="headerlink" title="右键新建菜单添加新项"></a>右键新建菜单添加新项</h2><hr><p>​    **<code>|ू･ω･</code> )检查下道具（没有js的添加项）`</p><img src="https://gitee.com/blogofxyz/blog-photo/raw/master/imag1/1.png" style="zoom: 67%;"><hr><h3 id="1-打开注册表编辑器（regedit）"><a href="#1-打开注册表编辑器（regedit）" class="headerlink" title="1. 打开注册表编辑器（regedit）"></a>1. 打开注册表编辑器（regedit）</h3><p>​         win+R召唤“运行”对话框-》输入”regedit”-》回车。或者在开始菜单的搜索框输入“注册表编辑器”or“regedit”。</p><img src="https://gitee.com/blogofxyz/blog-photo/raw/master/imag1/2.png" style="zoom: 67%;"><h3 id="2-找到系统已统计目标后缀名"><a href="#2-找到系统已统计目标后缀名" class="headerlink" title="2. 找到系统已统计目标后缀名"></a>2. 找到系统已统计目标后缀名</h3><p>​        Ctrl+F召唤“搜索对话框”-》输入想要添加的新建文件的后缀名，前加‘.’，（eg：.js）</p><img src="https://gitee.com/blogofxyz/blog-photo/raw/master/imag1/3.png" style="zoom: 50%;"><p>​        如图：</p><img src="https://gitee.com/blogofxyz/blog-photo/raw/master/imag1/4.png" style="zoom:67%;"><h3 id="3-添加右键新建项"><a href="#3-添加右键新建项" class="headerlink" title="3. 添加右键新建项"></a>3. 添加右键新建项</h3><p>​        找到后缀文件夹-》右键新建项（命名为“ShellNew”）-》      ▲！别输入空格</p><img src="https://gitee.com/blogofxyz/blog-photo/raw/master/imag1/5.png" style="zoom:67%;"><p>​          鼠标在“ShellNew”目录上右键-》新建-》字符串值（命名为NullFile）      ▲！别输入空格<br>​    </p><p>​    </p><pre><code>     [==也可以新建成特定样版文件==](#补充) </code></pre><img src="https://gitee.com/blogofxyz/blog-photo/raw/master/imag1/6.png" style="zoom:67%;"><h3 id="4-验证是否成功"><a href="#4-验证是否成功" class="headerlink" title="4. 验证是否成功"></a>4. 验证是否成功</h3><p>​    返回桌面右键查看应该就出现了。</p><img src="https://gitee.com/blogofxyz/blog-photo/raw/master/imag1/7.png" style="zoom:120%;"><ul><li>(命名为“filename”时的效果！！注意文件名：默认还是“新建xxx.js”)</li></ul><img src="https://gitee.com/blogofxyz/blog-photo/raw/master/imag1/8.png" style="zoom:67%;"><p><b>    如果没有显示可能情况：</b></p><ul><li>重命名时输入空格。</li></ul><hr><div id="补充"></div><h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><p>​    <strong><strong>补充内容</strong></strong>：</p><h3 id="1-新建文件并输入模板。"><a href="#1-新建文件并输入模板。" class="headerlink" title="1. 新建文件并输入模板。"></a>1. 新建文件并输入模板。</h3><p>​    在一个偏僻的位置新建一个与添加的格式后缀相同的文件.(eg：123.js)</p><img src="https://gitee.com/blogofxyz/blog-photo/raw/master/imag1/9.png" style="zoom:67%;"><h3 id="2-指定文件路径。"><a href="#2-指定文件路径。" class="headerlink" title="2. 指定文件路径。"></a>2. 指定文件路径。</h3><p>​    在添加字符串值时重命名为“filename”-》右键filename项修改，填入刚刚新建的文件的path+文件名。</p><img src="https://gitee.com/blogofxyz/blog-photo/raw/master/imag1/10.png" style="zoom:67%;">]]></content>
       
       
       <categories>
@@ -1064,17 +1060,6 @@
     
     
     <entry>
-      <title>关于‘俺’</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>成就</title>
       <link href="/archives/index.html"/>
       <url>/archives/index.html</url>
@@ -1086,9 +1071,42 @@
     
     
     <entry>
+      <title>关于‘俺’</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>类别</title>
       <link href="/categories/index.html"/>
       <url>/categories/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>导航</title>
+      <link href="/navigate/index.html"/>
+      <url>/navigate/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -1113,28 +1131,6 @@
       <url>/friends/index.html</url>
       
         <content type="html"><![CDATA[<h1 id="赞赏名单"><a href="#赞赏名单" class="headerlink" title="赞赏名单"></a>赞赏名单</h1><p>感谢所有赞赏过我的小伙伴啦，你们的支持是我最大的动力！</p><h1 id="友链交换"><a href="#友链交换" class="headerlink" title="友链交换"></a>友链交换</h1><p>想要交换友链的小伙伴，欢迎在留言板留言，留言格式：</p><ul><li><strong>名称：</strong>你的博客名称</li><li><strong>地址：</strong>你的博客地址</li><li><strong>简介：</strong>一句话简介</li><li><strong>头像：</strong>你的头像地址</li></ul><p>例如我的博客友链，大家可以加到自己博客里哦：</p><ul><li><p><strong>名称：</strong>Zhang-little-white</p></li><li><p><strong>地址：</strong> <a style="text-decoration:none" class="selfurl">https://blogofxyz.gitee.io</a> (gitee访问快)</p><p><a style="text-decoration:none;    white-space: pre;">   &nbsp; &nbsp; &nbsp;  &nbsp;</a>            <a style="text-decoration:none" class="selfurl">https://blogofxyz.top/ </a>(github部署)</p></li><li><p><strong>简介：</strong>小白一个</p></li><li><p><strong>头像：</strong><a style="text-decoration:none" class="selfurl">https://blogofxyz.gitee.io/medias/avatar.jpg</a></p></li></ul>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>导航</title>
-      <link href="/navigate/index.html"/>
-      <url>/navigate/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
