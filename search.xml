@@ -13,16 +13,16 @@
       
       <categories>
           
-          <category> hexo </category>
+          <category> Hexo </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> hexo </tag>
+            <tag> Hexo </tag>
             
-            <tag> blog </tag>
+            <tag> Blog </tag>
             
         </tags>
       
@@ -49,13 +49,13 @@
       
         <tags>
             
+            <tag> Java </tag>
+            
             <tag> 数据结构 </tag>
             
             <tag> 树 </tag>
             
-            <tag> tree </tag>
-            
-            <tag> java </tag>
+            <tag> Tree </tag>
             
         </tags>
       
@@ -82,7 +82,7 @@
             
             <tag> vue </tag>
             
-            <tag> vue-cli </tag>
+            <tag> Vue-cli </tag>
             
         </tags>
       
@@ -127,14 +127,14 @@
       
       <categories>
           
-          <category> python </category>
+          <category> Python </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> python </tag>
+            <tag> Python </tag>
             
         </tags>
       
@@ -327,7 +327,7 @@
             
             <tag> Vue </tag>
             
-            <tag> axios </tag>
+            <tag> Axios </tag>
             
         </tags>
       
@@ -365,35 +365,6 @@
     
     
     <entry>
-      <title>HTML选择器</title>
-      <link href="/2021/12/10/HTML%E9%80%89%E6%8B%A9%E5%99%A8/"/>
-      <url>/2021/12/10/HTML%E9%80%89%E6%8B%A9%E5%99%A8/</url>
-      
-        <content type="html"><![CDATA[<p>queryselector为选择符合条件的第一个元素</p><p>queryselectorall 为选择符合条件的所有元素</p><h2 id="ID选择器"><a href="#ID选择器" class="headerlink" title="ID选择器"></a>ID选择器</h2><table><thead><tr><th>位置</th><th>代码</th></tr></thead><tbody><tr><td>css</td><td>#myid</td></tr><tr><td>JavaScript</td><td>document.getElementById(“myid”)</td></tr><tr><td></td><td>document.queryselector(“#myid”)</td></tr></tbody></table><p>​    </p><h2 id="标签选择器"><a href="#标签选择器" class="headerlink" title="标签选择器"></a>标签选择器</h2><table><thead><tr><th>位置</th><th>代码</th></tr></thead><tbody><tr><td>css</td><td>div</td></tr><tr><td>JavaScript</td><td>document.getElementByTag(“div”)  //获取到的是集合</td></tr><tr><td></td><td>document.queryselector(“div”) //同样是集合</td></tr></tbody></table><h2 id="类选择器"><a href="#类选择器" class="headerlink" title="类选择器"></a>类选择器</h2><table><thead><tr><th>位置</th><th>代码</th></tr></thead><tbody><tr><td>css</td><td>.myclass</td></tr><tr><td>JavaScript</td><td>document.getElementsByClassName(“myclass”)</td></tr><tr><td></td><td>document.queryselector(“.myclass”)</td></tr></tbody></table><p>​    </p><h2 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h2><table><thead><tr><th>位置</th><th>代码</th></tr></thead><tbody><tr><td>css</td><td>[click=‘ook’]</td></tr><tr><td>JavaScript</td><td>document.querySelector(“button[class=myclass]”)</td></tr></tbody></table><p>​    </p><h2 id="伪-选择器"><a href="#伪-选择器" class="headerlink" title="(伪)选择器"></a>(伪)选择器</h2><table><thead><tr><th>位置</th><th>代码</th></tr></thead><tbody><tr><td>css</td><td>div::after    div:hover</td></tr><tr><td></td><td></td></tr></tbody></table><p>​    </p>]]></content>
-      
-      
-      <categories>
-          
-          <category> HTML </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> CSS </tag>
-            
-            <tag> HTML </tag>
-            
-            <tag> 选择器 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>冒泡排序</title>
       <link href="/2021/12/07/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/"/>
       <url>/2021/12/07/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/</url>
@@ -421,9 +392,9 @@
     
     
     <entry>
-      <title>java连接数据库（MySQL）</title>
-      <link href="/2021/11/14/java%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%88MySQL%EF%BC%89/"/>
-      <url>/2021/11/14/java%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%88MySQL%EF%BC%89/</url>
+      <title>Java连接数据库（MySQL）</title>
+      <link href="/2021/11/14/Java%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%88MySQL%EF%BC%89/"/>
+      <url>/2021/11/14/Java%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%88MySQL%EF%BC%89/</url>
       
         <content type="html"><![CDATA[<h2 id="1-准备数据库连接的jar包"><a href="#1-准备数据库连接的jar包" class="headerlink" title="1. 准备数据库连接的jar包"></a>1. 准备数据库连接的jar包</h2><p><a href="https://www.aliyundrive.com/s/HYFjvqyfriz">传送门</a></p><h2 id="2-添加包"><a href="#2-添加包" class="headerlink" title="2. 添加包"></a>2. 添加包</h2><p>如图，选择项目结构。</p><img src="https://gitee.com/blogofxyz/blog-photo/raw/master/blog/java/java%E6%B7%BB%E5%8A%A0%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E5%8C%85.png" alt="image-20211114230412195" style="zoom:67%;"><p>点击<code>+</code> 选择java，然后选择下载的文件包。</p><img src="https://gitee.com/blogofxyz/blog-photo/raw/master/blog/java/java%E6%B7%BB%E5%8A%A0%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E5%8C%852.png" alt="image-20211114230606459" style="zoom: 33%;"><h2 id="3-连接代码"><a href="#3-连接代码" class="headerlink" title="3. 连接代码"></a>3. 连接代码</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">public class mysql_ex {    static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";    //声明连接数据库的驱动，有两种“com.mysql.cj.jdbc.Driver”，与“com.mysql.jdbc.Driver”    //取决于包的版本，8.0.x用带'.cj.'的    static final String DB_URL = "jdbc:mysql://localhost:3306/test?useSSL=false&amp;serverTimezone=UTC";    //连接字符串，test为数据库名，3306为MySQL使用的端口号。    static final String USER = "root";    //数据库账户名    static final String PASS = "******";    //数据库密码    public static void main(String[] args) throws Exception {        Connection cn = null;        Statement st = null;        //声明连接        Class.forName(JDBC_DRIVER);        //引入连接驱动        cn = DriverManager.getConnection(DB_URL, USER, PASS);        //连接初始化        st = cn.createStatement();        String sql = "select * from students";        ResultSet re = st.executeQuery(sql);        //返回结果        while (re.next()) {            System.out.println(                    String.format("姓名：%s 学号：%d 性别: %s",                            re.getString("name"),re.getInt("no"),re.getString("sex")));        }        re.close();        st.close();        cn.close();        //关闭连接    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
       
@@ -437,7 +408,7 @@
       
         <tags>
             
-            <tag> JAVA </tag>
+            <tag> Java </tag>
             
             <tag> Mysql </tag>
             
@@ -491,7 +462,7 @@
       
         <tags>
             
-            <tag> vscode </tag>
+            <tag> VScode </tag>
             
             <tag> 乱码，C语言乱码 </tag>
             
@@ -685,14 +656,14 @@
       
       <categories>
           
-          <category> git </category>
+          <category> Git </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> git </tag>
+            <tag> Git </tag>
             
         </tags>
       
@@ -757,35 +728,6 @@
     
     
     <entry>
-      <title>小数转换二进制</title>
-      <link href="/2021/09/02/%E5%B0%8F%E6%95%B0%E8%BD%AC%E6%8D%A2%E4%BA%8C%E8%BF%9B%E5%88%B6/"/>
-      <url>/2021/09/02/%E5%B0%8F%E6%95%B0%E8%BD%AC%E6%8D%A2%E4%BA%8C%E8%BF%9B%E5%88%B6/</url>
-      
-        <content type="html"><![CDATA[<h2 id="小数转换为二进制"><a href="#小数转换为二进制" class="headerlink" title="小数转换为二进制"></a>小数转换为二进制</h2><p>直接开干。</p><p>  以<code>0.35</code>为例.</p><p>每次用小数部分乘2，所得积的整数部分作为二进制的一位。</p><ol><li>​      0.35 x 2=0.7–&gt;0</li><li>​      0.70 x 2=1.4–&gt;1</li><li>​      0.40 x 2=0.8–&gt;0</li><li>​      0.80 x 2=1.6–&gt;1</li><li>​      0.60 x 2=1.2–&gt;1</li><li>​      0.20 x 2=0.4–&gt;0<br>   ​    ​    ……</li></ol><p>然后就是<code>3~8</code>不停循环。</p><p>这就是<code>float</code>与<code>double</code>类型的数据不是很准确的原因。</p><p>这里就看是32位浮点数，还是64位浮点数。32位时，加上整数位取23位为止。64位同理。</p><p>所以0.35转换后为 <code>0101 1001 1001 1001 1001 ... </code></p><h3 id="符号位"><a href="#符号位" class="headerlink" title="符号位"></a>符号位</h3><p>然后，此数为正，S 位为0；</p><h3 id="指数位"><a href="#指数位" class="headerlink" title="指数位"></a>指数位</h3><p>此数二进制为1.011011011… x 2<sup>-2</sup>  ，故指数位为  -2 + 127=125<sub>D</sub> –&gt;<code>01111101</code><sub>b</sub></p><p><mark>此处也可先把幂与127转换为真值，然后进行运算。因为一般幂较小，二进制容易求。所以这样算方便计算的概率较大</mark></p><p>具体可参照本博客内“计算机中的数”文章。</p><p>传送门待开启。</p><h3 id="基数位"><a href="#基数位" class="headerlink" title="基数位"></a>基数位</h3><p>循环着取23位即可。即 <code>0110 0110 0110 0110 0110 011</code></p><p>故<code>0.35</code> 转换为二进制为 <code>0 0111 1101  0110 0110 0110 0110 0110 011</code></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 计算机原理 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 计算机组成原理 </tag>
-            
-            <tag> 二进制 </tag>
-            
-            <tag> 数据转换 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>十进制转浮点数</title>
       <link href="/2021/09/02/%E5%8D%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%B5%AE%E7%82%B9%E6%95%B0/"/>
       <url>/2021/09/02/%E5%8D%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%B5%AE%E7%82%B9%E6%95%B0/</url>
@@ -824,16 +766,16 @@
       
       <categories>
           
-          <category> markdown </category>
+          <category> Markdown </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> markdown </tag>
+            <tag> Markdown </tag>
             
-            <tag> typora </tag>
+            <tag> Typora </tag>
             
         </tags>
       
@@ -851,16 +793,16 @@
       
       <categories>
           
-          <category> windows </category>
+          <category> Windows </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> cmd </tag>
+            <tag> Windows </tag>
             
-            <tag> windows </tag>
+            <tag> CMD </tag>
             
         </tags>
       
@@ -896,25 +838,23 @@
     
     
     <entry>
-      <title>（待优化）python入门</title>
-      <link href="/2021/08/21/%EF%BC%88%E5%BE%85%E4%BC%98%E5%8C%96%EF%BC%89python%E5%85%A5%E9%97%A8/"/>
-      <url>/2021/08/21/%EF%BC%88%E5%BE%85%E4%BC%98%E5%8C%96%EF%BC%89python%E5%85%A5%E9%97%A8/</url>
+      <title>Python入门</title>
+      <link href="/2021/08/21/python%E5%85%A5%E9%97%A8/"/>
+      <url>/2021/08/21/python%E5%85%A5%E9%97%A8/</url>
       
         <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>假期自学，代码都是自己看视频时联想敲得，与任何教程无关。为了腾电脑的地方，顺便复习下，学习后边的内容，就整理了下之前敲得。注释与解释不太多（别幻想别人写一大堆注释，有写注释的习惯吗），看的话凑活看，不懂得可以联系me。其他内容持续更新。</p><p>python版本:3.6.6</p><p>python在线运行代码：-&gt;&gt;&gt;&gt; [菜鸟在线 Editor](<a href="https://www.runoob.com/try/runcode.php?filename=HelloWorld&amp;type=python3">菜鸟教程在线编辑器 (runoob.com)</a>)-&gt;&gt;&gt;&gt;</p><h2 id="基本输入输出"><a href="#基本输入输出" class="headerlink" title="基本输入输出"></a>基本输入输出</h2><p>输入  input(string)。string 为提示的语句。</p><p>输出  print(value)。括号内可以是任意变量名，或者值。</p><p>功能很多，后边还有。</p><h2 id="1-if…elif…else"><a href="#1-if…elif…else" class="headerlink" title="1. if…elif…else"></a>1. if…elif…else</h2><ul><li><p>if条件中 且 用‘and’ 或 用‘or’</p></li><li><p> keyword: “产生随机字符串”，</p></li></ul> <pre class="line-numbers language-python" data-language="python"><code class="language-python"> ##  if条件中 且 用‘and’ 或 用‘or’  n = input("输入任意数字")if int(n) % 2 == 0 and n != "0":    print("输入为偶数")elif int(n) % 2 != 0:    print("输入为奇数")else:    print("输入非数字或 “0” ")  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="2-运算符、文件写入、id"><a href="#2-运算符、文件写入、id" class="headerlink" title="2. 运算符、文件写入、id()"></a>2. 运算符、文件写入、id()</h2><h3 id="2-1运算符"><a href="#2-1运算符" class="headerlink" title="2.1运算符"></a>2.1运算符</h3><h4 id="2-1-1-算数与赋值运算符"><a href="#2-1-1-算数与赋值运算符" class="headerlink" title="2.1.1 算数与赋值运算符"></a>2.1.1 算数与赋值运算符</h4><p>​    几个与其他语言不同，或比较特殊的几个。</p><p>​      ** ：幂，如2**5为2^5^ 。</p><p>​      //  ：取整除，“/”，所得结果带小数部分。“//”，结果只有整数部分。</p><p>​      /=、//=、**=：类比理解。</p><h3 id="2-1-2-逻辑运算符"><a href="#2-1-2-逻辑运算符" class="headerlink" title="2.1.2 逻辑运算符"></a>2.1.2 逻辑运算符</h3><p>​    在条件组合时不是其他语言那样  “||”, “&amp;&amp;”,  “!”。</p><ul><li>“||” 用 “or” 替换</li><li>“&amp;&amp;” 用 “and” 替换</li><li>“!” 用 “not” 替换</li></ul><h3 id="2-1-3-位运算符"><a href="#2-1-3-位运算符" class="headerlink" title="2.1.3 位运算符"></a>2.1.3 位运算符</h3><p>​    &amp; <sup>与</sup> ， | <sup>或</sup>， ^ <sup>异或</sup> ， ~ <sup>取反</sup>， &lt;&lt; <sup>左移</sup>， &gt;&gt; <sup>右移</sup>。运算只针对于二进制数，运算逻辑与其他语言相同。</p><p>其中用到  <mark>格式化输出字符串</mark> 。可通过目录前往了解学习。</p><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  encoding:utf-8#  keyword:“input”，“逻辑运算符”，“&gt;&gt;”，“&lt;&lt;”，“|”，“^”,#      “变量地址”from os import errora = input("输入字符串")x = input("输入一个数 X:")# 输入xtry:    x = int(x)except:    print("输入数据有误!")    exit(0)# 输入yy = input("输入一个数Y:")try:    y = int(y)except:    print("输入数据有误!")    exit(0)templea = "% 8s\n% 10d\n"templeb = "{0: &gt;9s}\n{1: &gt;#20b}\n"templec = "{0: &gt;9s}\n{1: &gt;#20b}\n{2: &gt;#20b}\n"a += "\n"prs1 = [    ("原数(x):", x),    ("原数(y):", y),    ("值id(x)：", id(x)),]prs2 = [    ("二进制(x):", x),    ("二进制(y):", y),    ("右，移(x&gt;&gt;2):", x &gt;&gt; 2),    ("左，移(x&lt;&lt;2):", x &lt;&lt; 2),]prs3 = [    ("异或(x^y,y^x):", x ^ y, y ^ x),    ("_或(x|y，y|x):", x | y, y | x),]for item in prs1:    a += templea % itemfor item in prs2:    a += templeb.format(item[0], item[1])for item in prs3:    a += templec.format(item[0], item[1], item[2])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="3-while"><a href="#3-while" class="headerlink" title="3. while"></a>3. while</h2><p>与其他语言没大区别，就是没括号</p><pre class="line-numbers language-python" data-language="python"><code class="language-python">string = "A"#  根据字符取ascll码值a = ord("A")i = 0while i &lt; 60:  #  根据ascll码值取字符  st ring += chr(a)  if i % 3 == 0: print()  print(a, ":" + chr(a), end=" ")  i = i + 1  a = a + 1print(string)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="4-序列"><a href="#4-序列" class="headerlink" title="4. 序列"></a>4. 序列</h2><p>连续内存空间数据存储，每个项都有唯一值（成为索引或位置）指向。</p><p>序列结构有：</p><ul><li><p>列表 [ list,list,list ]。</p></li><li><p>元组 (tuple, tuple, tuple)。</p></li><li><p>字典 { dictionary, dictionary, dictionary }。</p></li><li><p>字符串 string</p><blockquote><p>​        定义时：序列为  [ ] ,元组为 ( ) ,字典为 { } 。每项都可以是其他数据结构，即各项之间没有必要的限制条件。</p></blockquote></li></ul><h3 id="4-1-列表"><a href="#4-1-列表" class="headerlink" title="4.1 列表"></a>4.1 列表</h3><ul><li><p>通过确定值初始化。</p><pre class="line-numbers language-python" data-language="python"><code class="language-python">listname =[ value1,value2 ,value3 ,value4 ,value5 ,value6]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li><p>通过表达式初始化。</p><ol><li><p>生成指定范围列表。</p><p>使用range函数控制生成元素数量，<code>listname =[expression for var in range]</code></p><ul><li><p>expression 。当前生成元素var进行的运算。</p><blockquote><p><code>do0</code>  或</p><p><code>do1 if case1 else if do2 else do3</code></p></blockquote></li><li><p>var 。当前生成元素的变量名。</p></li><li><p>range 。 range函数指定生成数量。</p></li></ul><pre class="line-numbers language-python" data-language="python"><code class="language-python">listname=[i+0.1 for i in range(20)]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li><p>根据列表生成列表。</p><p>就是在 1 的基础上用一个列表替换了range函数。</p><pre class="line-numbers language-python" data-language="python"><code class="language-python">listname=[i for i in range(10)] #先 生成一个列表newList=[ i%5+1 for i in listname]# 根据那个生成这个。全部变为1~5<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li><li><p>添加筛选条件。 </p><pre class="line-numbers language-python" data-language="python"><code class="language-python">listname=[i for i in range(20)] #再 生成一个列表newList=[ i if i%2==0 else i*10 for i in list if i &lt;10]# 根据那个 添加筛选条件并生成新的。首先判断是否小于10，然后再看前边的条件怎么进行运算。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li></ol><p>以上几种操作，等同于</p><pre class="line-numbers language-python" data-language="python"><code class="language-python">list=[]for item in list:if  item... :        #执行操作    elif item... :        #执行操作    else:        #执行操作<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li></ul><h4 id="4-1-1-列表的基本操作"><a href="#4-1-1-列表的基本操作" class="headerlink" title="4.1.1 列表的基本操作"></a>4.1.1 列表的基本操作</h4><ul><li><p>索引（Indexing）。列表可通过索引取值，与其他编程语言数组操作一样。</p><ul><li><p><code>listname.index ( value )</code>。返回指定值第一次出现的索引值。</p><blockquote><p>指定值不存在会报错，所以建议结合 in 操作。（在4.1.2）</p></blockquote></li></ul></li><li><blockquote><p><mark>序列支持负数索引</mark>, 当索引值为负时从右向左数</p></blockquote></li><li><p>切片（Slicing）。取出整个序列的连续一部分。</p><blockquote><p>list ( start , end,step)</p></blockquote><pre class="line-numbers language-python" data-language="python"><code class="language-python">name = ["张三", "张四", "张五", "李四", "李五"]number = [1, 2, 3, 4]namenum = name + numberprint("namenum[1:5:2]", namenum[1:5:2], "")# 切片[ 从第 2 个开始，到第 6 个以前，间隔为 2 ]print("namenum[:5:]", namenum[:5:], "")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li><li><p>加（Adding）。两个序列所有元素直接相加。</p></li><li><p>乘（Multiplying）。序列 乘一个整数，产生一个同样的序列重复整数次的新序列。  </p><pre class="line-numbers language-python" data-language="python"><code class="language-python">print("")name=["张三","张四","张五","李四","李五"]number=[1,2,3,4]#  乘print(name*3)#  加print("name+number", name+number,"")#  切片【从第二个开始，到第六个以前，间隔为2】namenum=name+numberprint("namenum[1:5:2]",namenum[1:5:2],"")print("namenum[:5:]",namenum[:5:],"")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li></ul><h4 id="4-1-2-列表的常见方法"><a href="#4-1-2-列表的常见方法" class="headerlink" title="4.1.2 列表的常见方法"></a>4.1.2 列表的常见方法</h4><ul><li><p>len。 返回列表的长度。<code>len ( list )</code>。</p></li><li><p>max。输出列表中的最大值。</p><blockquote><p>只支持元素全部为数字类型的列表。<code>max ( list )</code></p></blockquote></li><li><p>min。用法同max。</p></li><li><p>in。返回 bool 值。<code>value in list</code>。</p><blockquote><p>只能判断一层，如果子元素为列表或者元组之类的结构，则不会判断其内部值。</p></blockquote></li><li><p>not in 。同上。</p></li></ul><pre class="line-numbers language-python" data-language="python"><code class="language-python">numbers=[1.2,123.1,456,486,456,156,111,222,333]print(numbers)print("最大值",max(numbers))print("最小值",min(numbers))print("长度",len(numbers))x=456print("是否存在",x,x in numbers)y=678print("是否不存在",y,y not in numbers)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="4-1-3-列表的遍历"><a href="#4-1-3-列表的遍历" class="headerlink" title="4.1.3 列表的遍历"></a>4.1.3 列表的遍历</h4><ul><li><p>for <b style="color:brown">item</b> in  <b style="color:brown">list</b>。 依次把list的值赋值给item，然后进行其他操作。对原列表无影响。</p></li><li><p>for <b style="color:brown">index, item</b> in <b style="color:brown">enumerate <b style="color:#E0A418">( list&nbsp;)</b></b>。</p><p>  ​    index为索引值，item为索引值对应的项。</p></li></ul><pre class="line-numbers language-python" data-language="python"><code class="language-python">name = ["dage", "erge", "sange", "laosi", "laowu", "xiaoliu"]print(name)a=0for linshide in name:  if a % 2==0 :    ## 换行    print("\n")  print("\t"+linshide,end="")## 不换行打印  a=a+1 ## python不支持自增|自减运算for xuhao, name in enumerate(name):  if xuhao % 2==0 :    print("")  print("\t序号是：" + str(xuhao), "\t名字是" + name, end="")##不换行输出<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="4-1-4-列表的-增-删-改"><a href="#4-1-4-列表的-增-删-改" class="headerlink" title="4.1.4 列表的 增 删 改"></a>4.1.4 列表的 增 删 改</h4><ul><li><p>增，<code>apend（）</code>。</p></li><li><p>删。</p><ul><li><p><code>del listname[ index ]</code>。直接删除index索引值对应的值，后续元素前移。</p></li><li><p><code>listname.remove( “value” )</code></p><blockquote><p>删除不存在的值会报错。所以可结合 in 操作使用。</p></blockquote></li><li><p>listname.pop()。 删除并返回最后一个元素。</p><blockquote><p>通过与append结合使用，可以模拟栈结构。后进先出</p></blockquote></li></ul></li><li><p>改。 <code>listname [ index ] = value</code></p>  <pre class="line-numbers language-python" data-language="python"><code class="language-python">name = ["dage", "erge", "sange", "laosi", "laowu", "xiaoliu"]print("\n定义的数组为：")print(name)#  添加:name.append("laomo")print("\n添加一个后的数组：" )print(name)#  通过索引获取指定值。直接重新赋值。strint=name[0]="dageda"print("\n添加一个后再修改下的数组：")print(name)# 删除指定“dage” 即 删除name[2]del name[0]print("\n删除 name[0] 的数组：")print(name)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li></ul><h4 id="4-1-5-列表的统计求和"><a href="#4-1-5-列表的统计求和" class="headerlink" title="4.1.5 列表的统计求和"></a>4.1.5 列表的统计求和</h4><ul><li><p>统计。返回指定值在列表中出现的次数。<code>list.count(value)</code></p><blockquote><p>不存在时返回 0，所以不用判断是否存在。</p></blockquote></li><li><p>求和。统计各项的和。可指定统计开始的位置。<code>sum( listname [ index ] )</code> 或<code>sum( listname )</code> </p><blockquote><p>仅限元素全为数字格式时。</p></blockquote>  <pre class="line-numbers language-python" data-language="python"><code class="language-python">nums=[123,456,654,123,987,147,258,654,852,147,741,852]nums_plus=nums*2# 统计某一元素出现次数if 147 in nums_plus :    print("147出现次数为\t:"+ str(nums_plus.count(147)))else:    print(str(147)+"不存在")    print("nums和:"+str(sum(nums))+"\nnums_plus和为\t:"+str(sum(nums_plus)))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li></ul><blockquote><p>str ( value ) ：强行转换为字符串。print操作必须全部为字符串，如果不转换，则会提示数字无法与字符串相加。</p></blockquote><h4 id="4-1-6-列表的排序"><a href="#4-1-6-列表的排序" class="headerlink" title="4.1.6 列表的排序"></a>4.1.6 列表的排序</h4><ul><li><p>sort。在原列表上排序。<code>listname.sort()</code> 或 <code>listname.sort( key=None ,reserve=False)</code></p><blockquote><p>​        后者括号中的两项都可以省略。</p><p>​        第一项为指定排序时是否忽略大小写。<code>key=None</code> 或<code>key=str.functionName</code> 这项的意思是，指定排序时每个列表元素进行的转换。 </p><p>​        第二项为指定排序是否为逆序的。</p></blockquote></li><li><p>sorted。返回已排序的列表。<code>sort(listname)</code> 或 <code>sorted ( listname , key = None ,reserve = False )</code> </p><blockquote><p>规则同上。</p></blockquote>  <pre class="line-numbers language-python" data-language="python"><code class="language-python"># 定义一种排序 keydef sortkey(nu):    return nu%10# 定义俩序列names=["toms","Jone","Tony","alice","obma"]numbers=[123,456,852,147,369,741,963]print("\n原序列names:")print(names)print("\n原序列numbers:")print(numbers)#排序#临时列表，保留原列表term1=namesterm2=numbersterm1.sort()term2.sort()print("\n升序排列names(区分大小写)：")print(term1)#添加keyterm1=namesterm1.sort(key=str.lower) # str.lower 字符串全部转换为小写的方法。print("\n升序排列names(不区分大小写)：")print(term1)print("\n升序排列numbers：")term2=numbersprint(term2)# 原列表term2.sort(key=sortKey)# 按照开头定义的key排序print(term2)# 排序后print("\n降序排列numbers：")term1=numbersterm2= sorted(term1,key=sortKey,reverse=True)print(term2)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li></ul><h3 id="4-2-元组"><a href="#4-2-元组" class="headerlink" title="4.2 元组"></a>4.2 元组</h3><ul><li>元组不能对元素赋值，即修改，不能删除一个或多个元素，只能整个删除。若要修改，可以整个元组重新赋值。</li><li>元组可进行组合，直接进行 + ，*。</li><li>列表的基本操作与常用方法元组也可使用。</li></ul><p>序列为’[]’,元组为’()’,字典为’{}’。</p><pre class="line-numbers language-python" data-language="python"><code class="language-python"># encoding:utf-8empty=()num = 156st = "string_a"one_index = [12, 45, 65, 78]tup1 = ("123456321",)##? 声明一个很复杂的元组tup2 = ( num, st, one_index)print("有一个元组为:",tup2)tup3 = ("ab", "cd", "ef", 98765132, "#$%$&amp;")alltuple = tup1 + tup2 + tup3print("组合后的元组：",alltuple )##? 输出指定序号元素t = input("请输入元组序数" + "1~" + str(len(alltuple)))print(alltuple[int(t) - 1]) # 序号从 0 开始<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="4-3-字典"><a href="#4-3-字典" class="headerlink" title="4.3 字典"></a>4.3 字典</h3><p>类似于我们使用的字典，一个关键字，然后对应一些内容。查找时根据关键字查找。</p><h4 id="4-3-1-字典的生成"><a href="#4-3-1-字典的生成" class="headerlink" title="4.3.1 字典的生成"></a>4.3.1 字典的生成</h4><p>序列为’[]’,元组为’()’,字典为’{}’。</p><ul><li><p>直接赋值。 <code>dicti_b = {"拉丁语": "Latin", "鸟语": "!&amp;*/"}</code> </p></li><li><p>dict 生成。</p><blockquote><p>​        这里有个坑。如果组合的两部分不是元组或者列表，则合成的字典回事乱序的，且是随机组合的。即，用圆括号，或者方括号，别用花括号。</p></blockquote><pre class="line-numbers language-python" data-language="python"><code class="language-python">English = ["Chinese", "English", "Japanese", "Russian", "French", "German", "Korean"]Chinese = ["中文", "英语", "日语", "俄语", "法语", "德语", "韩语"]didi = zip(Chinese, English)dicti= dict(didi)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></li></ul><pre class="line-numbers language-python" data-language="python"><code class="language-python"># 输出 clear 后的字典 d 中的元素及个数print("dicti_c clear()后" + "dicti_c还有" + str(len(dicti_c)) + "个元素")print(dicti_c)# del用于删除对象del dicti_dprint("delete后的 e")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="4-3-2-字典基本操作"><a href="#4-3-2-字典基本操作" class="headerlink" title="4.3.2 字典基本操作"></a>4.3.2 字典基本操作</h4><p>先 生成一个字典。</p><pre class="line-numbers language-python" data-language="python"><code class="language-python">name = ("吴晓咖","刘佳怡","徐之才","单久思","曹侃儿","开俊峰","倪吉本","苗人凤","荣家达","狄俊娥","牛春波","莫桑石",)sign = ("子鼠", "丑牛", "寅虎", "卯兔", "辰龙", "巳蛇", "午马", "未羊", "申猴", "酉鸡", "戌狗", "亥猪")# 生成。roster = dict( zip(name, sign))print(roster)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li><p>取值。直接用 key 获取。或者使用 get() 方法。</p><blockquote><p>​        如果key不存在，则会报错。所以可结合 in 操作。或者get()方法。</p><p>get()方法获取的key不存在时会返回none。</p></blockquote><pre class="line-numbers language-python" data-language="python"><code class="language-python">print(roster["徐之才"])print(roster.get("徐才"))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li><li><p>添加。通过赋值的形式。<code>roster[key_name] = key_value</code></p></li><li><p>删除。使用 del 操作。<code>del roster[ “徐之才” ]</code></p></li><li><p>清除。 clear() 。清除字典里的所有项。<code>dictionaryName.clear()</code>。</p></li><li><p>遍历。</p><pre class="line-numbers language-python" data-language="python"><code class="language-python"># 遍历输出值for xxoo in roster.items():    print(xxoo)# 只输出值，不输出标签的遍历。for ooxx in roster.keys():    print(ooxx)# 值与标签双遍历。for key, value in roster.items():    print("键是：" + key + "值为：" + value)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li></ul><h3 id="4-4-字符串"><a href="#4-4-字符串" class="headerlink" title="4.4 字符串"></a>4.4 字符串</h3><p>定义两个字符串</p><pre class="line-numbers language-python" data-language="python"><code class="language-python">poem_first = "老夫聊发少年狂，左牵黄，右擎苍，锦帽貂裘，千骑卷平冈。为报倾城随太守，亲射虎，看孙郎。"poem_second = "酒酣胸胆尚开张。鬓微霜，又何妨！持节云中，何日遣冯唐？会挽雕弓如满月，西北望，射天狼。"letter = "  \n  Transportation has been greatly changed in the past few years. In ancient days, people used to travel by horse or carriage. \n    \t"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h4 id="4-4-0-字符串读取"><a href="#4-4-0-字符串读取" class="headerlink" title="4.4.0 字符串读取"></a>4.4.0 字符串读取</h4><ul><li>切片操作。</li><li>完全读取，当个变量。</li></ul><h4 id="4-4-1-字符串基本操作"><a href="#4-4-1-字符串基本操作" class="headerlink" title="4.4.1 字符串基本操作"></a>4.4.1 字符串基本操作</h4><ul><li><p>计算字符串长度。<code>len(str) </code></p></li><li><p>拼接。使用+操作。<code>str1+str2</code></p><pre class="line-numbers language-python" data-language="python"><code class="language-python">str_s = poem_first + poem_second<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li><p>去除。</p><ul><li><p>截取。<code>string [start : end : step]</code> </p><pre class="line-numbers language-python" data-language="python"><code class="language-python">print("分片字符串为:", poem_first[0:21:4]) # 0~20，每4个字符截断一次。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><blockquote><p>end 为最后一个字符的后一个索引。即表示到哪个字符之前。</p><p>step 为截断字符串的长度。</p></blockquote></li><li><p>替换。strip()、lstrip()、rstrip()、upper()、lower()、replace()</p><p><code>str.strip([chars])</code>—— 去除字符串左右侧的空格和特殊字符。</p><p><code>str.lstrip([chars])</code>—— 去掉左侧空格和特殊字符。</p><p><code>str.rstrip([chars])</code>—— 去掉右侧空格和特殊字符。</p><p><code>str.upper()</code> —— 全部变大写</p><p><code>str.lower()</code>—— 全部变小写</p><p><code>str.replace(oldchar,newchar)</code> —— 用 newchar 替换 oldchar，返回替换后的字符串。</p><pre class="line-numbers language-python" data-language="python"><code class="language-python"># 去除两侧空格或特殊字符print("\n英语作文去空格:\t", letter.strip(" "))# 去除左侧空格或特殊字符print("\n英语作文去空格:\t", letter.lstrip(" "))letter.replace("@","t")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><blockquote><p>​        str：要操作的字符串，chars可选：要去掉的字符或者字符串，默认去掉换行、空格、回车、制表符。</p><p>​        后两个方法，一个去除左侧的，一个去除右侧的。</p></blockquote></li></ul></li><li><p>转换。</p><ul><li><p>分割。<code>split(sep, maxsplit)</code></p><pre class="line-numbers language-python" data-language="python"><code class="language-python">strs = poem_first.split("。", -1)print("整首诗按句号分割为：")for linshi in strs:    print("@" + linshi)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><blockquote><p>​        sep : 分割的字符或字符串，默认为空格换行符之类的。</p><p>需要注意，sep在分割后狙消失了。</p><p>​        maxsplit：分割的次数。默认为能割几次割几次。<code>-1</code> 效果一样。</p><p>需要注意，<code>maxsplit</code>为分割次数，产生<code>maxsplit +1</code>项</p></blockquote></li></ul></li></ul><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  以 GBK 编码格式输出字符串长度print("\nGBK计数长度为：" + str(len(poem_first.encode("gbk"))))#  以 UTF-8 编码格式输出字符串长度print("\nUTF-8计数长度为：" + str(len(poem_first.encode())))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="4-4-2-字符串检索-amp-索引"><a href="#4-4-2-字符串检索-amp-索引" class="headerlink" title="4.4.2 字符串检索&amp;索引"></a>4.4.2 字符串检索&amp;索引</h4><ul><li><p>定义字符串</p><pre class="line-numbers language-python" data-language="python"><code class="language-python">mulanshi = "唧唧复唧唧，木兰当户织。不闻机杼声，唯闻女叹息。问女何所思，问女何所忆。女亦无所思，女亦无所忆。昨夜见军帖，可汗大点兵，军书十二卷，卷卷有爷名。阿爷无大儿，木兰无长兄，愿为市鞍马，从此替爷征。东市买骏马，西市买鞍鞯，南市买辔头，北市买长鞭。旦辞爷娘去，暮宿黄河边，不闻爷娘唤女声，但闻黄河流水鸣溅溅。旦辞黄河去，暮至黑山头，不闻爷娘唤女声，但闻燕山胡骑鸣啾啾。万里赴戎机，关山度若飞。朔气传金柝，寒光照铁衣。将军百战死，壮士十年归。归来见天子，天子坐明堂。策勋十二转，赏赐百千强。可汗问所欲，木兰不用尚书郎，愿驰千里足，送儿还故乡。爷娘闻女来，出郭相扶将；阿姊闻妹来，当户理红妆；小弟闻姊来，磨刀霍霍向猪羊。开我东阁门，坐我西阁床，脱我战时袍，著我旧时裳。当窗理云鬓，对镜帖花黄。出门看火伴，火伴皆惊忙：同行十二年，不知木兰是女郎。雄兔脚扑朔，雌兔眼迷离；双兔傍地走，安能辨我是雄雌？"# 目标字符串mulan = "木兰"# 操作字符串<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li><li><p>存在？</p><p>in 或 not in 可结合切片操作。</p><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  检测某一字符创是否存在于目标字符串（可以加入切片操作）print(mulan in mulanshi[0:5:])print(mulan in mulanshi[0:10:])print(mulan not in mulanshi)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li><li><p>查找</p><p>find、rfind、index、count、startswith、endswith</p><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  find()   输出指定 “木兰” 在 “木兰诗” 中第一次出现的索引。print(mulanshi.find(mulan, 7, 390))#  rfind()  输出指定 “木兰” 在 “木兰诗” 中最后一次出现的索引。print(mulanshi.rfind(mulan))#  index()  输出“女”第一次出现的位置。print(mulanshi.index("女"))#  count()  输出“木兰”出现次数。print(mulanshi.count("木兰")#  判断是否以指定字符串结尾或者开始。同样可加入切片。print("startswith:唧唧复唧唧",mulanshi.startswith("唧唧复唧唧", 0, 20))print("startswith:雄雌？",mulanshi.endswith("雄雌？"))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><blockquote><p>​        rfind () 为从右开始查找。即返回最后一次出现的索引值。</p><p>所有的索引都是从 0 开 始。</p></blockquote></li></ul><h4 id="4-4-3-格式化字符串"><a href="#4-4-3-格式化字符串" class="headerlink" title="4.4.3 格式化字符串"></a>4.4.3 格式化字符串</h4><h5 id="4-4-3-1-格式"><a href="#4-4-3-1-格式" class="headerlink" title="4.4.3.1 % 格式"></a>4.4.3.1 % 格式</h5><p>% [ - ] [ + ] [ 0 ] [ m ] [ .n ] typecode</p><table><thead><tr><th align="center">符号</th><th align="left">作用</th></tr></thead><tbody><tr><td align="center">-</td><td align="left">左对齐，负数加符号，正数不变</td></tr><tr><td align="center">+</td><td align="left">右对齐，与上一个比，正数加正号。</td></tr><tr><td align="center">0</td><td align="left">右对齐，正不加。负加负号，0填充空白，一般与m同用</td></tr><tr><td align="center">m</td><td align="left">填充后的宽度。</td></tr><tr><td align="center">.n</td><td align="left">小数点后精度</td></tr></tbody></table><table><thead><tr><th align="left">typecode</th><th align="left">含义</th></tr></thead><tbody><tr><td align="left">%r</td><td align="left">字符串 (repr()显示)</td></tr><tr><td align="left">%g</td><td align="left">指数(e)或浮点数 (根据显示长度)</td></tr><tr><td align="left">%s</td><td align="left">字符串(str()显示)</td></tr><tr><td align="left">%G</td><td align="left">指数(E)或浮点数 (根据显示长度)</td></tr><tr><td align="left">%c</td><td align="left">单个字符输出</td></tr><tr><td align="left">% b 、o、d（i）、x</td><td align="left">二、八、十、十六进制整数</td></tr><tr><td align="left">% e（E）</td><td align="left">指数(基底写为e(E))</td></tr><tr><td align="left">% f (F)</td><td align="left">浮点数,与上相同</td></tr><tr><td align="left">%%</td><td align="left">字符”%”</td></tr></tbody></table><h5 id="4-4-3-2-代码"><a href="#4-4-3-2-代码" class="headerlink" title="4.4.3.2 %代码"></a>4.4.3.2 %代码</h5><pre class="line-numbers language-python" data-language="python"><code class="language-python">template_a = "%s \n市值:%07d 亿元\n网站：https://www.%s.com\n老总:%s\n"temps = [    ( "百度",3873, "baidu", "李彦宏"),    ("阿里巴巴",24500,  "alibaba", "马云"),    ("腾讯",44200,  "tencent", "马化腾"),]for ls in temps:    print(template_a % ls)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><blockquote><p>如代码所示，先声明一个模板，然后再套用。</p><ul><li>制作模板。用以上的符号加其他字符串组成。</li><li>套用。模板 % 目标字符串即可。</li></ul><p>提醒，这种方式为最早的方案，目前官方主推下边的format方式。</p></blockquote><h5 id="4-4-3-3-format-格式"><a href="#4-4-3-3-format-格式" class="headerlink" title="4.4.3.3 format 格式"></a>4.4.3.3 format 格式</h5><p>{  [ index ] <b style="color:#EF19E5"> [ <b style="color:#40D72F"> [ :&nbsp;<b style="color:#8417F7">[ fill ] align&nbsp;</b> ] [&nbsp;sign ]&nbsp; [ # ] [&nbsp;width ]&nbsp; [ .precision ] [&nbsp;type ] </b> ]</b>  }</p><table><thead><tr><th align="left">位置符号</th><th align="left">作用</th></tr></thead><tbody><tr><td align="left">index</td><td align="left">默认按顺序自动分配。可选参数，指定索引位置，从0开始。</td></tr><tr><td align="left">fill</td><td align="left">可选参数，空白处填充的字符。</td></tr><tr><td align="left">align</td><td align="left">可选参数， 用于指定对齐方式。</td></tr><tr><td align="left">&lt;</td><td align="left">左对齐。</td></tr><tr><td align="left">&gt;</td><td align="left">右对齐。</td></tr><tr><td align="left">^</td><td align="left">居中对齐。需指定宽度。</td></tr><tr><td align="left">=</td><td align="left">右对齐。只对数字类型有用，尤其用于输出负数。</td></tr><tr><td align="left"><br>sign</td><td align="left">可选参数，用于指定有无符号数<br>‘+’：正数添加‘+’号,负数添加‘-’号。<br>‘-‘：只有负号添加符号。<br>‘ ‘:正数加空格补齐，负数加负号</td></tr><tr><td align="left">#</td><td align="left">可选参数，加#时输出二、八、十六进制会添加  0b  0o  0x 前缀</td></tr></tbody></table><table><thead><tr><th align="left">type</th><th align="left">…….</th></tr></thead><tbody><tr><td align="left">type</td><td align="left">含义</td></tr><tr><td align="left">s</td><td align="left">对字符串格式格式化</td></tr><tr><td align="left">b</td><td align="left">十进制数转换为二进制再格式化；</td></tr><tr><td align="left">d</td><td align="left">十进制数</td></tr><tr><td align="left">o</td><td align="left">十进制数转换为八进制再格式化；</td></tr><tr><td align="left">c</td><td align="left">十进制数转换为对应Unicode字符</td></tr><tr><td align="left">%</td><td align="left">显示百分比(默认小数后六位)</td></tr><tr><td align="left">x,X</td><td align="left">十进制数转换为十六进制再格式化</td></tr><tr><td align="left">e,E</td><td align="left">转换为科学计数法再格式化</td></tr><tr><td align="left">f,F</td><td align="left">转换为浮点数再格式化(默认六位小数)</td></tr><tr><td align="left">g,G</td><td align="left">e与f或E与F之间互换</td></tr></tbody></table><h5 id="4-4-3-4-代码"><a href="#4-4-3-4-代码" class="headerlink" title="4.4.3.4 代码"></a>4.4.3.4 代码</h5><pre class="line-numbers language-python" data-language="python"><code class="language-python">strin1 = "\n马云,\t身价:\t{0:,.2f}".format(13.4567)strin2 = "\n刘强东,\t身价:\t{0:.3f}\n".format(21.5153)strin3 = """\nπ为：{:.3f}\n'101'二进制：{:#b}\n'101'八进制：{:#o}\n'101'十六进制：{:#x}\n""".format(3.14159, 101,101,101 )strin4 = """\nabc：{abc}\nbcd：{bcd:#x}\ncde：{cde:}\n""".format(abc="11211", bcd=121, cde=[123, 456, 789])print(strin1,strin2,strin3,strin4)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><blockquote><p>如上所示，使用方法为字符串后加 “.” 然后 format（）嵌入数值。有演示的两种方法：</p><ul><li>按照顺序，依次列出。</li><li>指定名称，然后根据名称依次赋值。</li></ul></blockquote><h2 id="5-正则表达式"><a href="#5-正则表达式" class="headerlink" title="5. 正则表达式"></a>5. 正则表达式</h2><p>基础正则了解：<a style="font-family:’kaiti’;">[点我]([正则语法整理 | X-Y-Z`s Blog (gitee.io)](https://blogofxyz.gitee.io/2021/08/14/正则语法整理/))</a></p><h3 id="5-1-匹配"><a href="#5-1-匹配" class="headerlink" title="5.1 匹配"></a>5.1 匹配</h3><ul><li><p>match</p><pre class="line-numbers language-python" data-language="python"><code class="language-python">import reelements = [    "15946295618",    "78945631245",    "48651534582@qq.com",    "12348621@163.com" ,    "15648934529@gmail.com",    "萨博隔热垫石膏板",    "调查表身高多少",]regular_express_a = [    r"[0-9]{0,12}@(qq|gmail|163)\.com",    r"1[0-9]{10}",    r"[^0-9a-zA-Z]",]for i in elements:    for index, j in enumerate(regular_express_a):        ret_a = re.match(j, i)        if ret_a != None:            if index == 0:                print("邮箱:", i)                break            elif index == 1:                print("手机号:", i)                break            elif index == 2:                print("其他的合规字符串:", i)                break        else:            pass<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>完全匹配字符串。不考虑换行，即使设置为自动换行也按一行匹配。</p></li><li><p>search</p><pre class="line-numbers language-python" data-language="python"><code class="language-python">import restrs="i have a 98k. other all name it ojbk-.i haven't named it ojbk+.and it have a brother awm.it is a good gun."regular_express_b = r"(awm|ojbk)[-|+]"result = re.search(regular_express_b, strs)if result!=None:    print(result)    print(result.start(),result.end(),result.group(),result.groups())<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><blockquote><p>返回一个类，详细内容，可取官网查看。</p></blockquote><ul><li>官方文档：<a href="https://docs.python.org/zh-cn/3/library/re.html">正则表达式操作 </a>：</li></ul></li><li><p>findall</p><pre class="line-numbers language-python" data-language="python"><code class="language-python">import restrs="i have a 98k. other all name it ojbk-.i haven't named it ojbk+.and it have a brother awm.it is a good gun."regular_express_b = r"(awm|ojbk)[-|+]"result = re.findall(regular_express_b, strs)if result!=None:    print(result)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><blockquote><p>返回所有匹配到的结果，以列表形式。</p></blockquote></li></ul><h3 id="5-2-替换"><a href="#5-2-替换" class="headerlink" title="5.2 替换"></a>5.2 替换</h3><p>re.sub(pattern,string)</p><pre class="line-numbers language-python" data-language="python"><code class="language-python">import restring = "蒹葭苍苍，白露为霜。所谓伊人，在水一方。溯洄从之，道阻且长。溯游从之，宛在水中央。\n蒹葭萋萋，白露未晞。所谓伊人，在水之湄。溯洄从之，道阻且跻。溯游从之，宛在水中坻。\n蒹葭采采，白露未已。所谓伊人，在水之涘。溯洄从之，道阻且右。溯游从之，宛在水中沚。\n"letters = "     Transportation has been greatly changed in the past few years. In ancient days, people used to travel by horse or carriage. The journey was often tiring and tedious. Then people had buses, trains and ships, which could shorten the time of the long-distance trip."regular_express = [r"(蒹葭|伊人)", r"(en|in|an)"]print(re.sub(regular_express[0], "xx", string))print(re.sub(regular_express[1], " --XXXn-- ", letters))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="5-3-分割"><a href="#5-3-分割" class="headerlink" title="5.3 分割"></a>5.3 分割</h3><p>re.split(pattern,string)</p><pre class="line-numbers language-python" data-language="python"><code class="language-python">import renames = "焦英武、杨清双、吕纪领、张建春、焦灵卫、赵现伟\n陈秀荣、郎波、程磊、刘子祥、谢绍明 胡红军、张克龙、戴怀海 戴怀敏、张国勤\n李小璇、李军耐、张文博、赵联、肖鹏、边宪武、李伟、李宇、夏廷堂、韩世民、董燕平、张正银\n魏国琼、肖桂茂、李德安、白建永、张旭贵、李香明\n霍建辉、吴旭峰、陈云祥、丁连奇、王遂现、范小锋\n杨宗兵、向书章、李金民、戴家元、刘传禄、贺炳强、云秀芳\n刘善刚、姚海军、贾天义、李加有、方承、杨涛\n杨天海、王富军、张中华、王成林、秦振贵、尚鲜军、李友强、尚加聪"pattern = r"( |、|\n)"tup = re.split(pattern, names)for index, item in enumerate(tup):    if index % 2 == 0:        print("第", int(index / 2), "项：", item)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>参考 </p><ul><li>官方文档：<a href="https://docs.python.org/zh-cn/3/library/re.html">正则表达式操作 </a>：</li></ul><h2 id="6-函数"><a href="#6-函数" class="headerlink" title="6. 函数"></a>6. 函数</h2><h3 id="6-1普通函数"><a href="#6-1普通函数" class="headerlink" title="6.1普通函数"></a>6.1普通函数</h3><p>函数第一行为描述，在多数IDE中进行函数引用时，可显示。</p><pre class="line-numbers language-python" data-language="python"><code class="language-python">def reckon(x,y):    """求长方形面积 x: 长，y: 宽."""    print(        """{str1:{space}&gt;7s}={length:&gt;5d} \n{str2:{space}&gt;7s}={width:&gt;5d} \n{str3:{space}&gt;7s}={squr:&gt;5d} \n""".format(            str1="此长方形长",            str2="此长方形宽",            str3="此正方形面积",            length=x,            width=y,            squr=x * y,            space=chr(12288),        )    )    reckon(int(input("请输入长")) ,int(input("请输入宽")))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="6-2-函数默认值"><a href="#6-2-函数默认值" class="headerlink" title="6.2 函数默认值"></a>6.2 函数默认值</h3><p> 当函数中出现有默认值时必须位于参数集的最后</p><pre class="line-numbers language-python" data-language="python"><code class="language-python">def R_S(R, pai=3.14, string=""):  """圆求面积"""  print(    "\n\n", string, "\n", "此圆的半径 r={radius: 5d}\n此圆的面积 S= {squr:.3f}".format(      radius=R, squr=R * R * pai ))x = int(input("输入圆的半径"))R_S(x, string="R_S(x):")R_S(x, 3, "R_S(x, 3):")R_S(string="R_S(pai=3.142, R=x):", pai=3.142, R=x)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="6-3-匿名函数"><a href="#6-3-匿名函数" class="headerlink" title="6.3 匿名函数"></a>6.3 匿名函数</h3><p>临时函数，</p><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  匿名函数 用 lambda 修饰词前缀.y = lambda ds: ds * ds * 3.14print("\n" + str(y(x)))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>匿名函数多参</p><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  传入数组，或多参数。def func(*par):  for i in par:    print(i)    #  参数原理为：定义一个变量的列表，用*来传入列表地址strs = ["语文", "数学", "英语", "物理", "化学"]strss = ["Chinese", [12.0, 45.12, 44.11], 45699, bin(423),hex(423)]func(*strs)print("\n")func(*strss)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="7-python数据存储原理"><a href="#7-python数据存储原理" class="headerlink" title="7. python数据存储原理"></a>7. python数据存储原理</h2><blockquote><p>返回对象的“标识值”。该值是一个整数，在此对象的生命周期中保证是唯一且恒定的。两个生命期不重叠的对象可能具有相同的 <a href="https://docs.python.org/zh-cn/3/library/functions.html?highlight=id#id"><code>id()</code></a> 值。</p></blockquote><p>以上为官方关于 id () 函数的解释。一般来说，在其他语言中，变量名地址生命周期内唯一确定不变，对应地址存储的数值可变。但 <code>python </code> 却是变量的值决定地址。</p><pre class="line-numbers language-python" data-language="python"><code class="language-python">x="x"print(id("x"))print(id(x))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>以上代码将会输出同样的值。主要是因为 python 中对<code>对象</code>这一概念的执著。他把每一个数值也视为对象。当你声明一个变量并赋值时，首先python编译器做的是申请内存存储赋的值，然后把这一变量指向这一内存。所以不同的值对应不同的地址。</p><blockquote><p>当赋的值为简单数据类型时，python不会再申请，而是先查找是否申请过，如果申请过，则直接指向这块内存。否则再申请。<br>        复杂数据类型，则不进行检查。因为怕你一个数组存了全个国家的名字，然后接下来几个变量又来赋值，如果检查，那CPU不是要抽两口烟了。</p></blockquote><p>参考： </p><ul><li><a href="https://blog.csdn.net/zhuzuwei/article/details/80554776">python id()函数和内存分配理解</a></li><li><a href="https://blog.csdn.net/tycoon1988/article/details/38850443">Python id() 函数</a></li></ul><h2 id="8-class"><a href="#8-class" class="headerlink" title="8. class"></a>8. class</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  keyword：“class”，“从序列中取随机元素”，“从字典中取随机元素”#           “choice”，# encoding:utf-8brand = {"上汽集团": "大众", "东风": "雪铁龙", "奔驰": "Mercedes-Benz", "凯迪拉克": "Cadillac"}produce_country = ["China", "American", "India", "European"]code = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"# -----------------class----------------&gt;#class Car:  """ 汽车模型 先生成后赋值 """  Name = ""  Brand = ""  Producer = ""  Produce_Country = ""  def make_success(self):    print(      "生成了一辆小汽车",      "\n名字:" + self.Name,      "\n品牌:" + self.Brand,      "\n生产商:" + self.Producer,      "\n产地:" + self.Produce_Country,      "\n",    )# 一个类中同一方法只能生效最后一次定义。""" 初始化函数与构造函数 括号内不加参数时函数内   def __init__():     brand = self.carname   print("生成了一辆小汽车:222") """# -------------------function-----------------------&lt;##-----------------class-----------------&gt;#def mass_produce(number):  """ 批量造车 """  import random  lis = []  i = 0  while i &lt; number:    i = i + 1    j = 0    name = ""    while j &lt;= 10:      name += code[random.randint(0, len(code) - 1)]      j = j + 1    car = Car()    car.Name = name    car.Brand = random.choice((list(brand)))    car.Produce_Country = random.choice(produce_country)    car.Producer = brand[car.Brand]    lis.append(car)  return lis# ---------------------function----------------------&lt;#numb = int(input("输入生产汽车的数量"))t = mass_produce(numb)for i in t:  i.make_success()print("已成功生产", numb, "辆车")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="9-访问限制"><a href="#9-访问限制" class="headerlink" title="9. 访问限制"></a>9. 访问限制</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  keyword：“访问限制”，#  没多大用。。。。。。。# encoding:utf-8class car:  """ produce car """# price: ""# _brand: ""# __color: ""  def __init__(self):    self.price = 4000    self._brand = "asdfa"    self.__color = "red"vehicle = car()print(vehicle.price)print(vehicle._brand)print(vehicle._car__color)vehicle.price = 50vehicle._brand = "qqqqqqqqqqq"vehicle._car__color = "aaaaaaaaaa"print(vehicle.price)print(vehicle._brand)print(vehicle._car__color)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="10-property"><a href="#10-property" class="headerlink" title="10. property"></a>10. property</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">#  keyword：“属性变化”，“装饰器”，“property”# encoding:utf-8class car:  """计算价格"""  def __init__(self, door, tie):    self.door = door    self.tie = tie    self.band_price = 5000.0#  方法转换为属性  @property  def total_cost(self):    """(door + tie) x 4 + price"""    return (self.door + self.tie) * 4 + self.band_pricespend = car(203, 450)print(spend.total_cost)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="11-文件操作—-IO"><a href="#11-文件操作—-IO" class="headerlink" title="11. 文件操作—-IO"></a>11. 文件操作—-IO</h2><p>流程为先打开一个文件 （程序中的一个对象），然后对这个对象进行操作。</p><h3 id="11-1-打开"><a href="#11-1-打开" class="headerlink" title="11.1 打开"></a>11.1 打开</h3><p>通过open方法打开一个文件。对于文件是否存在通过方法的参数指定打开方式。</p><pre class="line-numbers language-python" data-language="python"><code class="language-python">file=open(file, mode,buffering=1,encoding="utf-8")file.close()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><blockquote><p>一定要记得关闭，否则如果是写操作，未关闭则不会写入。如果是读，会一直占用此文件。其他对于此文件的读写操作会被影响，比如删除时会提示文件被占用，无法删除。</p></blockquote><blockquote><ul><li>file 文件路径。可以使用相对路径或者绝对路径。</li><li>mode 文件打开模式。值为以下表所示。</li><li>buffering 指定文件是否进行缓存。</li><li>encoding=“utf-8” 指定此编码格式打开，默认为 GBK格式 打开</li></ul><p>mode 值为以下几种值或者他们的组合。</p></blockquote><p>参数如下。</p><table><thead><tr><th align="center">参数值</th><th align="left">含义</th><th>可组合项</th></tr></thead><tbody><tr><td align="center">w</td><td align="left">指定为写打开。文件存在就覆盖，不存在就创建</td><td>~ +，~ b，~ b+</td></tr><tr><td align="center">r</td><td align="left">指定为只读打开，文件必须已存在。打开后指针在文件开头。</td><td>同上</td></tr><tr><td align="center">+</td><td align="left">扩展 r、w 权限，使 r 可写（从文件头开始覆盖写），使 w 可读（先覆盖，后读写）。</td><td></td></tr><tr><td align="center">a</td><td align="left">以追加形式打开文件操作，打开后指针在文件末尾。</td><td>~ +（读写），~ b<br>，~ b+</td></tr><tr><td align="center">b</td><td align="left">以二进制的形式进行文件读写。一般用于非文本文件。</td><td></td></tr></tbody></table><h3 id="11-2-write"><a href="#11-2-write" class="headerlink" title="11.2 write"></a>11.2 write</h3><p><code>file.write(string)</code></p><p>向file中写入<code>string</code>字符串。</p><blockquote><p>必须以 <code>w</code>及<code>w组合</code> 或者 <code>a</code>及<code>a组合</code> 打开，否则会报错。</p></blockquote><pre class="line-numbers language-python" data-language="python"><code class="language-python">wf=open("./demo.txt","+w")wf.write("sdnakjldnvn435746954u83o2abc123")wf.close()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h3 id="11-2-read"><a href="#11-2-read" class="headerlink" title="11.2 read"></a>11.2 read</h3><p><code>file.read(size)</code></p><p>从file中读取字符串。</p><blockquote><p>size 读取的数据长度。实际指读取指针的移动距离。未指定为完全读取。</p><p>再次使用read会接着上次的位置继续读取。</p></blockquote><p><code>file.seek(offset[,whence])</code> </p><p>指针从whence指定位置开始往后移动offset个字符。</p><blockquote><p>offset 移动的字符长度</p><p>whence 开始的位置，默认为0。0为开头，1为当前位置，2为末尾。如果打开方式不是 <code>rb</code> ，则强制为0。</p></blockquote><p><code>text=file.readline()</code> </p><p>读取一行内容。</p><p><code>texts=file.readlines()</code> </p><p>读取全部行。返回一个列表。行号为索引。</p><pre class="line-numbers language-python" data-language="python"><code class="language-python">rf=open("./demo.txt","r")rf.readline()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h3 id="11-3-代码示例"><a href="#11-3-代码示例" class="headerlink" title="11.3 代码示例"></a>11.3 代码示例</h3><p>以下代码为创建demo.txt文件，然后写入 <code>....</code> ，再然后读取、输出。</p><pre class="line-numbers language-python" data-language="python"><code class="language-python">wf=open("./demo.txt","+w")wf.write("sdnakjldnvn435746954u83o2abc123")wf.close()rf=open("./demo.txt","r",buffering=1)print(rf.read(10))print(rf.read(10))rf.close()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="12-OS-Path"><a href="#12-OS-Path" class="headerlink" title="12. OS - Path"></a>12. OS - Path</h2><p>引入模块<code>import os</code></p><ul><li><p>判断路径</p><p><code>os.path.exists(path)</code> </p><p>判断路径是否存在。返回bool值</p></li><li><p>创建路径</p><p><code>os.mkdir(path)</code></p><p>创建单级菜单。也就是指定路径的每一级，然后创建最后一层的文件夹。</p><blockquote><p>当最后一级前的部分有不存在的则会报错。所以建议结合<code>exists()</code></p></blockquote><p><code>os.makedirs(path)</code></p><p>创建多级菜单，同样指定路径的每一级，任意一级不存在就会创建，直至创建完最后一级。</p></li><li><p>删除路径</p><p><code>rmdir(path)</code> 删除指定路径，但前提是路径中没有文件。否则会报错。同样，路径不存在也会报错。</p><p>如果需要完全删除可使用下方代码</p><pre class="line-numbers language-python" data-language="python"><code class="language-python">import shutilshutil.rmtree(path)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li><li><p>遍历目录</p><p><code>os.walk(top,topdown,onerror,followlinks)</code> </p><ul><li><p>top 为遍历的路径。</p></li><li><p>topdown 布尔值，指定是否为从上到下遍历。默认为true。</p></li><li><p>onerror 遍历出现错误时的处理方式，默认为忽略。</p></li><li><p>followlinks ———……</p></li></ul><p>返回一个元组。</p><p>​       三个元素：dirpath，dirnanes，filenames。</p><ul><li>dirpath– 当前遍历路径。是一个字符串</li><li>dirnames– 遍历时的所有路径。是一个列表。</li><li>filenames– 遍历到的文件。是一个列表。</li></ul></li></ul><h3 id="12-5-删除文件"><a href="#12-5-删除文件" class="headerlink" title="12.5 删除文件"></a>12.5 删除文件</h3><h3 id="12-6-修改路径与文件名"><a href="#12-6-修改路径与文件名" class="headerlink" title="12.6 修改路径与文件名"></a>12.6 修改路径与文件名</h3><h3 id="12-7-获取文件信息"><a href="#12-7-获取文件信息" class="headerlink" title="12.7 获取文件信息"></a>12.7 获取文件信息</h3>]]></content>
       
       
       <categories>
           
-          <category> python </category>
+          <category> Python </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> python </tag>
-            
-            <tag> 语言入门 </tag>
+            <tag> -Python -语言入门 </tag>
             
         </tags>
       
@@ -957,16 +897,16 @@
       
       <categories>
           
-          <category> windows </category>
+          <category> Windows </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> windows </tag>
+            <tag> Windows </tag>
             
-            <tag> win10 </tag>
+            <tag> Win10 </tag>
             
         </tags>
       
@@ -1000,25 +940,6 @@
     
     
     <entry>
-      <title>Hello World</title>
-      <link href="/2021/08/14/hello-world/"/>
-      <url>/2021/08/14/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>欢迎使用 <a href="https://hexo.io/">Hexo</a>! 这是你第一篇文章。去<a href="https://hexo.io/docs/">documentation</a>可查看更多信息。如果你使用hexo时有问题，可以去 <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> 解决疑问，或者到 <a href="https://github.com/hexojs/hexo/issues">GitHub</a>咨询我。</p><h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="创建另一篇文章"><a href="#创建另一篇文章" class="headerlink" title="创建另一篇文章"></a>创建另一篇文章</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new "My New Post"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>了解更多: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="运行服务"><a href="#运行服务" class="headerlink" title="运行服务"></a>运行服务</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>更多信息: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>了解更多: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="部署至远程网站"><a href="#部署至远程网站" class="headerlink" title="部署至远程网站"></a>部署至远程网站</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>了解更多: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> Hello World </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>win添加开机启动</title>
       <link href="/2021/08/14/win%E6%B7%BB%E5%8A%A0%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/"/>
       <url>/2021/08/14/win%E6%B7%BB%E5%8A%A0%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/</url>
@@ -1035,9 +956,9 @@
       
         <tags>
             
-            <tag> windows </tag>
+            <tag> Windows </tag>
             
-            <tag> win10 </tag>
+            <tag> Win10 </tag>
             
         </tags>
       
@@ -1096,11 +1017,11 @@
     
     
     <entry>
-      <title>类别</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>交流</title>
+      <link href="/contact/index.html"/>
+      <url>/contact/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h1 id="欢迎留言"><a href="#欢迎留言" class="headerlink" title="欢迎留言"></a>欢迎留言</h1><p>大家有任何问题，都可以在评论区给我留言，或者加我联系方式：</p><ul><li><strong>Q Q</strong>：<strong>1970476603</strong></li><li><strong>微信</strong>：<strong>i_19-99-666</strong></li></ul><p>欢迎来访<br><strong>当然不介意小jiejie加我~~</strong></p><h1 id="友链交换"><a href="#友链交换" class="headerlink" title="友链交换"></a>友链交换</h1><p>想要交换友链的小伙伴，欢迎在评论区留言，留言格式：</p><ul><li><strong>名称：</strong>你的博客名称</li><li><strong>地址：</strong>你的博客地址</li><li><strong>简介：</strong>一句话简介</li><li><strong>头像：</strong>你的头像地址</li></ul><p>例如我的博客友链，大家可以加到自己博客里哦：</p><ul><li><strong>名称：</strong>张小白</li><li><strong>地址：</strong><a class="selfurl">https://blogofxyz.gitee.io</a> (国内访问快)/<a class="selfurl">https://blogofxyz.top/</a> (github部署)</li><li><strong>简介：</strong>平时没少学没用东西的一个家伙。</li><li><strong>头像：</strong><a class="selfurl">https://blogofxyz.gitee.io/medias/avatar.jpg</a></li></ul>]]></content>
       
     </entry>
     
@@ -1118,22 +1039,22 @@
     
     
     <entry>
-      <title>交流</title>
-      <link href="/contact/index.html"/>
-      <url>/contact/index.html</url>
+      <title>小伙伴与大佬</title>
+      <link href="/friends/index.html"/>
+      <url>/friends/index.html</url>
       
-        <content type="html"><![CDATA[<h1 id="欢迎留言"><a href="#欢迎留言" class="headerlink" title="欢迎留言"></a>欢迎留言</h1><p>大家有任何问题，都可以在评论区给我留言，或者加我联系方式：</p><ul><li><strong>Q Q</strong>：<strong>1970476603</strong></li><li><strong>微信</strong>：<strong>i_19-99-666</strong></li></ul><p>欢迎来访<br><strong>当然不介意小jiejie加我~~</strong></p><h1 id="友链交换"><a href="#友链交换" class="headerlink" title="友链交换"></a>友链交换</h1><p>想要交换友链的小伙伴，欢迎在评论区留言，留言格式：</p><ul><li><strong>名称：</strong>你的博客名称</li><li><strong>地址：</strong>你的博客地址</li><li><strong>简介：</strong>一句话简介</li><li><strong>头像：</strong>你的头像地址</li></ul><p>例如我的博客友链，大家可以加到自己博客里哦：</p><ul><li><strong>名称：</strong>张小白</li><li><strong>地址：</strong><a class="selfurl">https://blogofxyz.gitee.io</a> (国内访问快)/<a class="selfurl">https://blogofxyz.top/</a> (github部署)</li><li><strong>简介：</strong>平时没少学没用东西的一个家伙。</li><li><strong>头像：</strong><a class="selfurl">https://blogofxyz.gitee.io/medias/avatar.jpg</a></li></ul>]]></content>
+        <content type="html"><![CDATA[<h1 id="赞赏名单"><a href="#赞赏名单" class="headerlink" title="赞赏名单"></a>赞赏名单</h1><p>感谢所有赞赏过我的小伙伴啦，你们的支持是我最大的动力！</p><h1 id="友链交换"><a href="#友链交换" class="headerlink" title="友链交换"></a>友链交换</h1><p>想要交换友链的小伙伴，欢迎在留言板留言，留言格式：</p><ul><li><strong>名称：</strong>你的博客名称</li><li><strong>地址：</strong>你的博客地址</li><li><strong>简介：</strong>一句话简介</li><li><strong>头像：</strong>你的头像地址</li></ul><p>例如我的博客友链，大家可以加到自己博客里哦：</p><ul><li><p><strong>名称：</strong>Zhang-little-white</p></li><li><p><strong>地址：</strong> <a style="text-decoration:none" class="selfurl">https://blogofxyz.gitee.io</a> (gitee访问快)</p><p><a style="text-decoration:none;    white-space: pre;">   &nbsp; &nbsp; &nbsp;  &nbsp;</a>            <a style="text-decoration:none" class="selfurl">https://blogofxyz.top/ </a>(github部署)</p></li><li><p><strong>简介：</strong>小白一个</p></li><li><p><strong>头像：</strong><a style="text-decoration:none" class="selfurl">https://blogofxyz.gitee.io/medias/avatar.jpg</a></p></li></ul>]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>小伙伴与大佬</title>
-      <link href="/friends/index.html"/>
-      <url>/friends/index.html</url>
+      <title>类别</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
-        <content type="html"><![CDATA[<h1 id="赞赏名单"><a href="#赞赏名单" class="headerlink" title="赞赏名单"></a>赞赏名单</h1><p>感谢所有赞赏过我的小伙伴啦，你们的支持是我最大的动力！</p><h1 id="友链交换"><a href="#友链交换" class="headerlink" title="友链交换"></a>友链交换</h1><p>想要交换友链的小伙伴，欢迎在留言板留言，留言格式：</p><ul><li><strong>名称：</strong>你的博客名称</li><li><strong>地址：</strong>你的博客地址</li><li><strong>简介：</strong>一句话简介</li><li><strong>头像：</strong>你的头像地址</li></ul><p>例如我的博客友链，大家可以加到自己博客里哦：</p><ul><li><p><strong>名称：</strong>Zhang-little-white</p></li><li><p><strong>地址：</strong> <a style="text-decoration:none" class="selfurl">https://blogofxyz.gitee.io</a> (gitee访问快)</p><p><a style="text-decoration:none;    white-space: pre;">   &nbsp; &nbsp; &nbsp;  &nbsp;</a>            <a style="text-decoration:none" class="selfurl">https://blogofxyz.top/ </a>(github部署)</p></li><li><p><strong>简介：</strong>小白一个</p></li><li><p><strong>头像：</strong><a style="text-decoration:none" class="selfurl">https://blogofxyz.gitee.io/medias/avatar.jpg</a></p></li></ul>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
