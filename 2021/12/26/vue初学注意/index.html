@@ -544,14 +544,14 @@ var _hmt = _hmt || [];
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-02-23
+                    2022-03-27
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.4k
+                    3.5k
                 </div>
                 
 
@@ -572,9 +572,6 @@ var _hmt = _hmt || [];
         </div>
         <hr class="clearfix">
 
-        
-        <!-- 是否加载使用自带的 prismjs. -->
-        <link rel="stylesheet" href="/libs/prism/prism.css">
         
 
         
@@ -598,7 +595,7 @@ var _hmt = _hmt || [];
 
 
 
-<p>vue 运行后调试的话原本可以通过 vm.$加对应项查看变量。如图</p>
+<p>vue 运行后调试的话原本可以通过 vm.$加对应项查看变量。如图)</p>
 <img src="https://gitee.com/blogofxyz/blog-photo/raw/master/blog/Vue/vm.$object.png" alt="image-20211226182226019" style="zoom: 80%;">
 
 <p>但某次我的就莫名其妙没有了。 变成这样</p>
@@ -679,7 +676,7 @@ vm<span class="token punctuation">.</span><span class="token function">mount</sp
 
 
 
-<h3 id="2-计算属性与侦听器"><a href="#2-计算属性与侦听器" class="headerlink" title="2.计算属性与侦听器"></a>2.计算属性与侦听器</h3><p>两种都可检测data里数值的变化。然后做出一些反应。</p>
+<h3 id="2-计算属性-amp-侦听器"><a href="#2-计算属性-amp-侦听器" class="headerlink" title="2.计算属性 &amp; 侦听器"></a>2.计算属性 &amp; 侦听器</h3><h4 id="2-1计算属性-amp-侦听器区别"><a href="#2-1计算属性-amp-侦听器区别" class="headerlink" title="2.1计算属性 &amp; 侦听器区别"></a>2.1计算属性 &amp; 侦听器区别</h4><p>两种都可检测data里数值的变化。然后做出一些反应。</p>
 <p>区别：</p>
 <table>
 <thead>
@@ -705,6 +702,24 @@ vm<span class="token punctuation">.</span><span class="token function">mount</sp
 <td>侦听值发生变化时</td>
 </tr>
 </tbody></table>
+<h4 id="2-2-侦听属性监测对象的属性"><a href="#2-2-侦听属性监测对象的属性" class="headerlink" title="2.2 侦听属性监测对象的属性"></a>2.2 侦听属性监测对象的属性</h4><p>字段：</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span><span class="token operator">:</span><span class="token punctuation">{</span>
+        search<span class="token operator">:</span><span class="token punctuation">{</span>
+            searchPhone<span class="token operator">:</span><span class="token string">""</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>侦听器：</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">watch<span class="token operator">:</span><span class="token punctuation">{</span>
+    <span class="token string">"search.searchPhone"</span><span class="token punctuation">(</span>oldValue<span class="token punctuation">,</span>newValue<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>oldValue<span class="token operator">!==</span>newValue<span class="token punctuation">)</span><span class="token punctuation">{</span>
+			console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"不同"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <h3 id="3-v-if-amp-v-show"><a href="#3-v-if-amp-v-show" class="headerlink" title="3. v-if &amp; v-show"></a>3. v-if &amp; v-show</h3><h4 id="3-1-v-if"><a href="#3-1-v-if" class="headerlink" title="3.1 v-if"></a>3.1 v-if</h4><p>渲染时通过变量或者表达式判断是否渲染绑定的标签或模块。</p>
 <p>当值发生变化后，重新渲染某一模块。</p>
 <h4 id="3-2-v-show"><a href="#3-2-v-show" class="headerlink" title="3.2 v-show"></a>3.2 v-show</h4><p>通过一个bool变量或表达式决定一个标签或者模块的是否显示。</p>
@@ -798,9 +813,12 @@ vm<span class="token punctuation">.</span><span class="token function">mount</sp
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">mount</span><span class="token punctuation">(</span><span class="token string">"#app"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="6-组件间传值问题"><a href="#6-组件间传值问题" class="headerlink" title="6. 组件间传值问题"></a>6. 组件间传值问题</h3><p>父组件可通过属性，参数，传递数据给子组件。也可以通过路由等（我还不会）。</p>
+<h3 id="6-组件传值-props"><a href="#6-组件传值-props" class="headerlink" title="6. 组件传值 (props)"></a>6. 组件传值 (<code>props</code>)</h3><p>父组件可通过属性，参数，传递数据给子组件。也可以通过路由等（我还不会）。</p>
 <p>子组件可以选择接受，或拒收。</p>
-<h4 id="6-1-接收"><a href="#6-1-接收" class="headerlink" title="6.1 接收"></a>6.1 接收</h4><h5 id="6-1-1-参数传值"><a href="#6-1-1-参数传值" class="headerlink" title="6.1.1 参数传值"></a>6.1.1 参数传值</h5><p>父组件调用子组件，可直接在标签内声明属性，并赋值，也可通过参数向子组件传递参数。</p>
+<h4 id="6-1-接收"><a href="#6-1-接收" class="headerlink" title="6.1 接收"></a>6.1 接收</h4><h5 id="6-1-1-参数传值"><a href="#6-1-1-参数传值" class="headerlink" title="6.1.1 参数传值"></a>6.1.1 参数传值</h5><blockquote>
+<div style="color:yellow;whitespace:pre;font-size:1.5rem;line-height:3rem">        html 大小写不敏感，如果组件内参数为驼峰命名法，则需要用横杠替换法（每个大写都替换为横杠加对应的小写。）</div>
+</blockquote>
+<p>父组件调用子组件，可直接在标签内声明属性，并赋值，也可通过参数向子组件传递参数。</p>
 <ul>
 <li><p>通过参数接收。</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>app<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
@@ -1020,10 +1038,13 @@ vm<span class="token punctuation">.</span><span class="token function">mount</sp
 <h3 id="9-emit"><a href="#9-emit" class="headerlink" title="9. emit"></a>9. emit</h3><p>第一次学真的有点懵，不过敲完代码，跑出来效果后，理解的就多了点。</p>
 <p>先说下原理，与<code>props</code> 传参类似。只不过，<code>props</code> 传的是父组件的值，而emit是传递的函数。</p>
 <blockquote>
-<p> 产生这个组件时把父组件的某一个函数指定给它，而它就是通过emits属性接受的，同props接受数值一样。之后子函数就可以<mark>调用</mark>父组件的这个函数了。</p>
-<p>之所以说是调用，是因为，如果你在父组件函数中使用<mark>父组件data的值</mark>，那么，子组件调用仍然可以正常使用。</p>
+<p><b style="color:red">！</b> 父组件传函数时需要跟其他函数一样使用 @ 符号。<b style="color:red">！</b></p>
 </blockquote>
-<p>然后看一个代码实例:</p>
+<blockquote>
+<p>生成这个组件的对象时，把父组件的某一个函数指定给它，而它通过emits属性接受。同props接受变量一样。然后子组件就可以 <mark style="border-radius:10px;padding:3px">调用</mark> 父组件的这个函数了。</p>
+<p>之所以说是调用，是因为，如果你在 父组件这个函数的声明时有使用<mark style="border-radius:10px;padding:3px">父组件data的变量</mark>，那么，子组件调用仍然可以正常使用。</p>
+</blockquote>
+<p>一个代码实例:</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>app<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
     <span class="token keyword">const</span> app <span class="token operator">=</span> Vue<span class="token punctuation">.</span><span class="token function">createApp</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
@@ -1068,9 +1089,15 @@ vm<span class="token punctuation">.</span><span class="token function">mount</sp
     <span class="token keyword">const</span> vm<span class="token operator">=</span>app<span class="token punctuation">.</span><span class="token function">mount</span><span class="token punctuation">(</span><span class="token string">'#app'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<blockquote>
 <p>在这段代码中父组件声明一个<code>child</code> 标签，然后传给他<code>counter</code>，<code>clickAdd</code> ，<code>child</code>分别使用<code>props</code>、<code>emits</code>接收。</p>
+</blockquote>
+<blockquote>
 <p>在父组件中，<code>clickAdd</code>函数是默认把<code>counter</code>字符串加<code>father_Click</code> 。但定义的函数是将一个参数加在<code>counter</code>后边，所以在子组件中，我们就可以传入这个参数。</p>
+</blockquote>
+<blockquote>
 <p>就是在子组件中在声明一个函数——<code>sonToFather</code>。在这个函数体内就可以调用传入的函数——<code>clickAdd</code>，并指定传入这个函数的参数。这样子组件执行<code>sonToFather</code> 就等效是父组件的这个函数了。</p>
+</blockquote>
 <p>以此实现子组件对父组件值得修改。</p>
 <h3 id="10-slot"><a href="#10-slot" class="headerlink" title="10. slot"></a>10. slot</h3><ul>
 <li><p><code>slot</code> 插槽一般写法。</p>
@@ -1161,6 +1188,12 @@ vm<span class="token punctuation">.</span><span class="token function">mount</sp
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">const</span> vm <span class="token operator">=</span> app<span class="token punctuation">.</span><span class="token function">mount</span><span class="token punctuation">(</span><span class="token string">"#app"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="ERROE"><a href="#ERROE" class="headerlink" title="ERROE"></a><mark style="color:red;border-radius:10px;padding:5px">ERROE</mark></h3><h4 id="1-1"><a href="#1-1" class="headerlink" title="1.1"></a>1.1</h4><img src="https://gitee.com/blogofxyz/blog-photo/raw/master/blog/vue/error/error1.jpg" alt="img" style="zoom: 50%;">
+
+<p>问题：子组件试图修改父组件传进来的值。</p>
+<p>解决：可在父组件中声明一个方法，在方法中修改这个值，然后将这个方法通过emit传给子组件。</p>
+<p>图片来源：<a target="_blank" rel="noopener" href="https://blog.csdn.net/github_35549695/article/details/82770044">turboemily的博客-CSDN博客</a></p>
 
                 
             </div>
@@ -1977,7 +2010,7 @@ vm<span class="token punctuation">.</span><span class="token function">mount</sp
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">39.9k</span>
+                        class="white-color">41.5k</span>
             
             
             
