@@ -551,7 +551,7 @@ var _hmt = _hmt || [];
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    595
+                    607
                 </div>
                 
 
@@ -620,28 +620,12 @@ var _hmt = _hmt || [];
 <p>如果函数名为 loopGo()                </p>
 <p>上边两种情况，如果是第一种的话，</p>
 <p>可以直接</p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token function">loopGo</span><span class="token punctuation">(</span><span class="token parameter">ep</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-	<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">...</span><span class="token punctuation">)</span>
-	<span class="token punctuation">{</span>
-       <span class="token keyword">return</span> <span class="token function">loopGo</span><span class="token punctuation">(</span>ep<span class="token punctuation">)</span>
-       <span class="token punctuation">}</span>
-       <span class="token keyword">else</span><span class="token punctuation">{</span>
-           <span class="token operator">...</span>
-       <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs js"><span class="hljs-function"><span class="hljs-title">loopGo</span>(<span class="hljs-params">ep</span>)</span>{<br>	<span class="hljs-keyword">if</span>(...)<br>	{<br>       <span class="hljs-keyword">return</span> loopGo(ep)<br>       }<br>       <span class="hljs-keyword"><code class="language-hljs js"><span class="hljs-function"><span class="hljs-title">loopGo</span>(<span class="hljs-params">ep</span>)</span>{<br>	<span class="hljs-keyword">if</span>(...)<br>	{<br>       <span class="hljs-keyword">return</span> loopGo(ep)<br>       }<br>       <span class="hljs-keyword">else</span>{<br>           ...<br>       }<br>}<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
 
 
 
 <p>而第二种情况的话，就应该这么写。</p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">loopGo</span><span class="token punctuation">(</span><span class="token parameter">ep</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-	<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">...</span><span class="token punctuation">)</span>
-	<span class="token punctuation">{</span>
-       <span class="token function">loopGo</span><span class="token punctuation">(</span>ep<span class="token punctuation">)</span>
-       <span class="token punctuation">}</span>
-       <span class="token keyword">else</span><span class="token punctuation">{</span>
-           <span class="token operator">...</span>
-       <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loopGo</span>(<span class="hljs-params">ep</span>)</span>{<br>	<span class="hljs-keyword">if</span>(...)<br>	{<br>       loopGo(ep)<br>       }<br>       <span class="hljs-keyword"><code class="language-hljs js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loopGo</span>(<span class="hljs-params">ep</span>)</span>{<br>	<span class="hljs-keyword">if</span>(...)<br>	{<br>       loopGo(ep)<br>       }<br>       <span class="hljs-keyword">else</span>{<br>           ...<br>       }<br>}<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
 
 
 
@@ -1460,7 +1444,7 @@ var _hmt = _hmt || [];
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">41.5k</span>
+                        class="white-color">51.1k</span>
             
             
             

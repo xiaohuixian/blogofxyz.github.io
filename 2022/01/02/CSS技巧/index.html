@@ -551,7 +551,7 @@ var _hmt = _hmt || [];
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    233
+                    250
                 </div>
                 
 
@@ -596,7 +596,7 @@ var _hmt = _hmt || [];
 </blockquote>
 </li>
 <li><p>取值。</p>
-  <pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token function">var</span><span class="token punctuation">(</span>custom-property-name<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+  <figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs css"><span class="hljs-selector-tag"><code class="language-hljs css"><span class="hljs-selector-tag">var</span>(custom-property-name, value)<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
 
 <p>  格式如上。</p>
 <pre><code>&gt; custom-property-name：自定义变量的名字。
@@ -612,15 +612,7 @@ var _hmt = _hmt || [];
 <p><code>calc</code> 内的运算符必须前后都有空格。</p>
 </blockquote>
 <p>实例代码。</p>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">:root</span><span class="token punctuation">{</span>
-    <span class="token property">--basic-top</span><span class="token punctuation">:</span>100px<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token selector">a</span><span class="token punctuation">{</span>
-    <span class="token property">margin-left</span><span class="token punctuation">:</span><span class="token function">calc</span><span class="token punctuation">(</span>40% - 50px<span class="token punctuation">)</span>
-<span class="token punctuation">}</span>
-<span class="token selector">div</span><span class="token punctuation">{</span>    
-	<span class="token property">top</span><span class="token punctuation">:</span> <span class="token function">calc</span><span class="token punctuation">(</span><span class="token function">var</span><span class="token punctuation">(</span>--basic-top<span class="token punctuation">)</span> - 50px<span class="token punctuation">)</span><span class="token punctuation">;</span>    
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs css"><span class="hljs-selector-pseudo">:root</span>{<br>    --basic-<span class="hljs-attribute">top</span>:<span class="hljs-number">100px</span>;<br>}<br><span class="hljs-selector-tag">a</span>{<br>    <span class="hljs-attribute">margin-left</span>:<span class="hljs-built_in">calc</span>(<span class="hljs-number">40%</span> - <span class="hljs-number">50px</span>)<br>}<br><span class="hljs-selector-tag">div</span>{    <br>	<span class="hljs-attribute">top</span>: <span class="hljs-built_in">calc</span>(<span class="hljs-built_in">var</span>(--basic-top) - <span class="hljs-number"><code class="language-hljs css"><span class="hljs-selector-pseudo">:root</span>{<br>    --basic-<span class="hljs-attribute">top</span>:<span class="hljs-number">100px</span>;<br>}<br><span class="hljs-selector-tag">a</span>{<br>    <span class="hljs-attribute">margin-left</span>:<span class="hljs-built_in">calc</span>(<span class="hljs-number">40%</span> - <span class="hljs-number">50px</span>)<br>}<br><span class="hljs-selector-tag">div</span>{    <br>	<span class="hljs-attribute">top</span>: <span class="hljs-built_in">calc</span>(<span class="hljs-built_in">var</span>(--basic-top) - <span class="hljs-number">50px</span>);    <br>}<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
 
 
                 
@@ -1434,7 +1426,7 @@ var _hmt = _hmt || [];
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">41.5k</span>
+                        class="white-color">51.1k</span>
             
             
             

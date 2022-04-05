@@ -559,7 +559,7 @@ var _hmt = _hmt || [];
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    477
+                    488
                 </div>
                 
 
@@ -595,7 +595,7 @@ var _hmt = _hmt || [];
 <h2 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h2><p>先说下vscode运行编写代码的原理。用vscode的人都应该知道，vscode 只是一个文本编辑器，如果没有那些拓展，他就是一个好看的记事本。除此之外，以python为例，如果计算机上没有安装python，也是没办法运行python代码的。</p>
 <p>然后先反问下，正在看文章的你是否了解通过命令行运行代码。</p>
 <p>比如如果计算机以安装python，那么在命令行输入</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">python 123.py<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs shell"><code class="language-hljs shell">python 123.py<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
 
 <p>然后回车也是可以运行此文件的。</p>
 <p>所以拓展的作用，这里就指<code>.Run</code>拓展吧。运行你刚刚编写完的文件，就相当于在命令行输入以上代码。</p>
@@ -605,11 +605,10 @@ var _hmt = _hmt || [];
 
 <p>然后找到<code>cpp</code>、或者<code>c</code>或<code>JavaScript</code> 找到对应的项。</p>
 <p>如果是<code>Java</code> 修改为</p>
-<pre class="line-numbers language-json" data-language="json"><code class="language-json">"java": "cd $dir &amp;&amp; javac -encoding utf-8 $fileName &amp;&amp; java $fileNameWithoutExt"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs json"><span class="hljs-string">"java"</span>: <span class="hljs-string"><code class="language-hljs json"><span class="hljs-string">"java"</span>: <span class="hljs-string">"cd $dir && javac -encoding utf-8 $fileName && java $fileNameWithoutExt"</span><br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
 
 <p>如果是<code>C</code>或 <code>C++</code> ，则修改为</p>
-<pre class="line-numbers language-json" data-language="json"><code class="language-json">"c": "cd $dir &amp;&amp;  CHCP 65001 &amp;&amp;  gcc  $fileName -o $fileNameWithoutExt &amp;&amp; $dir$fileNameWithoutExt",
-"cpp": "cd $dir &amp;&amp;  CHCP 65001 &amp;&amp;  g++ $fileName -o $fileNameWithoutExt &amp;&amp; $dir$fileNameWithoutExt"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs json"><span class="hljs-string">"c"</span>: <span class="hljs-string">"cd $dir &amp;&amp;  CHCP 65001 &amp;&amp;  gcc  $fileName -o $fileNameWithoutExt &amp;&amp; $dir$fileNameWithoutExt"</span>,<br><span class="hljs-string">"cpp"</span>: <span class="hljs-string"><code class="language-hljs json"><span class="hljs-string">"c"</span>: <span class="hljs-string">"cd $dir &amp;&amp;  CHCP 65001 &amp;&amp;  gcc  $fileName -o $fileNameWithoutExt &amp;&amp; $dir$fileNameWithoutExt"</span>,<br><span class="hljs-string">"cpp"</span>: <span class="hljs-string">"cd $dir &&  CHCP 65001 &&  g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"</span><br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
 
 
 
@@ -1435,7 +1434,7 @@ var _hmt = _hmt || [];
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">41.5k</span>
+                        class="white-color">51.1k</span>
             
             
             

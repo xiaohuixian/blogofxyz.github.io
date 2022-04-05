@@ -607,32 +607,30 @@ var _hmt = _hmt || [];
 <h2 id="1-0-隐含寻址方式"><a href="#1-0-隐含寻址方式" class="headerlink" title="1.0 隐含寻址方式"></a>1.0 隐含寻址方式</h2><p>常用指令：PUSH,POP,等。</p>
 <p>多体现在一些特定指令。如     PUSH;POP指令等寄存器或地址在指令中不存在，操作的地址为默认的。</p>
 <h2 id="2-0-立即寻址方式"><a href="#2-0-立即寻址方式" class="headerlink" title="2.0 立即寻址方式"></a>2.0 立即寻址方式</h2><p>立即寻址方式的目的就是将操作数紧跟在操作码后面，与操作码一起放在指令代码段中，在程序运行时，程序直接调用该操作数，而不需要到其他地址单元中去取相应的操作数。</p>
-  <pre class="line-numbers language-assembly" data-language="assembly"><code class="language-assembly">MOV AL,18
-MOV AH,80H<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+  <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs assembly"><code class="language-hljs assembly">MOV AL,18<br>MOV AH,80H<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
 
 <p>代码为将18移入AX寄存器低位，80H移入AX寄存器高位。</p>
 <h2 id="3-0-直接寻址方式"><a href="#3-0-直接寻址方式" class="headerlink" title="3.0 直接寻址方式"></a>3.0 直接寻址方式</h2><p>直接寻址方式时操作数地址的偏移量直接包含在指令中，和指令操作码一起放在代码段，而操作数则在数据段中。操作数的地址时数据段寄存器DS中的内容左移4位后，加上指令给定的地址偏移量。</p>
 <p>格式</p>
-  <pre class="line-numbers language-assembly" data-language="assembly"><code class="language-assembly">MOV AX,[400H]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+  <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs assembly"><code class="language-hljs assembly">MOV AX,[400H]<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
 
 <p>当数据寄存器数据 （DS）=1000H，则代码意思为将 10400H 处的地址移至AX寄存器内。<br>10000H（段基地址）+400H（偏移地址）=10400（物理地址）</p>
 <h2 id="4-0-寄存器寻址方式"><a href="#4-0-寄存器寻址方式" class="headerlink" title="4.0 寄存器寻址方式"></a>4.0 寄存器寻址方式</h2><p>寄存器寻址方式中，操作数在CPU的内部寄存器中。执行时，直接操作寄存器中数。</p>
-<pre class="line-numbers language-assembly" data-language="assembly"><code class="language-assembly">MOV AX,BX<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs assembly"><code class="language-hljs assembly">MOV AX,BX<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
 
 <p>上述指令为将BX寄存器中数据移至AX中。</p>
 <h2 id="5-0-寄存器间接寻址方式"><a href="#5-0-寄存器间接寻址方式" class="headerlink" title="5.0 寄存器间接寻址方式"></a>5.0 寄存器间接寻址方式</h2><p> 操作数的有效地址有变址寄存器SI、DIJ或基址寄存器BX、BP提供。</p>
 <blockquote>
 <p>  $物理地址 = 10H*(DS)+(BX、BI或DI)$</p>
 </blockquote>
-<pre class="line-numbers language-assembly" data-language="assembly"><code class="language-assembly">MOV AX,[SI]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs assembly"><code class="language-hljs assembly">MOV AX,[SI]<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
 
 <p> 如上代码，如果（DS）=2000H，（SI）=1500H，<br>$则物理地址:20000H(段基地址)+1500H(偏移地址)=21500H(物理地址)$<br>即运行完，(AX) 为 21500H 处的数据</p>
 <h2 id="6-0-寄存器相对寻址方式"><a href="#6-0-寄存器相对寻址方式" class="headerlink" title="6.0 寄存器相对寻址方式"></a>6.0 寄存器相对寻址方式</h2><p>此寻址方式是以知道那个的寄存器内容，加上指令中给出的位移量（8或16位），并以一个段寄存器位基准，作为操作数的地址。</p>
 <blockquote>
 <p>  $物理地址=10H*(DS) +(BX、SI或DI)+8位(16位)位移量$<br>  ​       $物理地址=10H*(SS) +(BP)+8位(16位)位移量$</p>
 </blockquote>
-<pre class="line-numbers language-assembly" data-language="assembly"><code class="language-assembly">MOV AX,DISP[DI] ;或 
-MOV AX,[DISP + DI]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs assembly"><code class="language-hljs assembly">MOV AX,DISP[DI] ;或 <br>MOV AX,[DISP + DI]<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
 
 <p>DISP 为偏移量的符号地址。</p>
 <p>如果(DS)=3000H,(DI)=2000H,DISP=600H,则</p>
@@ -641,8 +639,7 @@ MOV AX,[DISP + DI]<span aria-hidden="true" class="line-numbers-rows"><span></spa
 <blockquote>
 <p>   $物理地址=10H*(DS)+(BX)+(SI或DI)$<br>          $物理地址=10H*(SS)+(BP)+(SI或DI)$</p>
 </blockquote>
-<pre class="line-numbers language-assembly" data-language="assembly"><code class="language-assembly">MOV AX,[BX][DI];或
-MOV AX,[BX+DI]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs assembly"><code class="language-hljs assembly">MOV AX,[BX][DI];或<br>MOV AX,[BX+DI]<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
 
 <p>若（DS）=1000H,(BX)=2000H,(DI)=3000H,</p>
 <p>$物理地址：10000H(段基地址)+2000H(基址)+3000H(变址)=15000(物理地址)$</p>
@@ -650,7 +647,7 @@ MOV AX,[BX+DI]<span aria-hidden="true" class="line-numbers-rows"><span></span><s
 <blockquote>
 <p>$物理地址=10H*(DS)+(BX)+(SI或DI)+8或16位偏移量$<br>      $物理地址=10H*(SS)+(BP)+(SI或DI)+8或16位偏移量$</p>
 </blockquote>
-  <pre class="line-numbers language-assembly" data-language="assembly"><code class="language-assembly">MOV AX,DISP[BX][SI]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+  <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs assembly"><code class="language-hljs assembly">MOV AX,DISP[BX][SI]<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
 
 <p>若(DS)=4000H,(BX)=2000H,(SI)=1000H,DISP=800H,则</p>
 <p>​    $物理地址：4000H(段基地址)+[2000H(基址)+1000H(变址)+800H(位移量)]=43800H$</p>
@@ -663,9 +660,7 @@ MOV AX,[BX+DI]<span aria-hidden="true" class="line-numbers-rows"><span></span><s
 </ol>
 <p>位移量可以是一个带符号的8位数，段内短程转移。也可以是一个带符号的16位数，段内近程转移。什么都不加，计算机默认为16位。</p>
 <p>且无论是8/16位，地址标号在指令码中都是用补码表示的带符号数。适应于无条件转移或者条件转移，但条件转移只能有8位的位移量。</p>
-<pre class="line-numbers language-assembly" data-language="assembly"><code class="language-assembly">JMP SHORT ADDR2
-JMP ADDR3
-JMP NEAR PTR ADDR1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs assembly"><code class="language-hljs assembly">JMP SHORT ADDR2<br>JMP ADDR3<br>JMP NEAR PTR ADDR1<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
 
 <blockquote>
 <p>ADDR (123) 皆为地址标号。</p>
@@ -683,17 +678,16 @@ JMP NEAR PTR ADDR1<span aria-hidden="true" class="line-numbers-rows"><span></spa
 <blockquote>
 <p>$物理地址: 10H*(CS)+EA$     ，(EA)为有效偏移地址。</p>
 </blockquote>
-<pre class="line-numbers language-assembly" data-language="assembly"><code class="language-assembly">JMP AX;有效地址为一个寄存器
-JMP [BX][SI];有效地址为一个存储单元<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs assembly"><code class="language-hljs assembly">JMP AX;有效地址为一个寄存器<br>JMP [BX][SI];有效地址为一个存储单元<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
 
 <p>如上指令，若(DS)=2000H,(BX)=2000H,(SI)=3000H,(25000H)=3200H,</p>
 <p>则，$(IP)=(10H)*(DS)+(BX)+(SI))=(25000H)=3200H$</p>
 <h3 id="9-3-段间直接寻址方式"><a href="#9-3-段间直接寻址方式" class="headerlink" title="9.3 段间直接寻址方式"></a>9.3 段间直接寻址方式</h3><p>直接提供转向的段地址（16位）和偏移地址（16位）。用指令中指定的偏移地址取代IP寄存器内容，用指定段地址取代CS寄存器内容。</p>
-<pre class="line-numbers language-assembly" data-language="assembly"><code class="language-assembly">JMP FAR PTR ADD1 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs assembly"><code class="language-hljs assembly">JMP FAR PTR ADD1 <br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
 
 <p>将其中的段地址传送给CS,偏移地址传给IP，完成程序控制间的段间转移。ADD1为装箱的符号地址，FAR PTR 则是表示段间转义的操作符。</p>
 <h3 id="9-4段间间接寻址方式"><a href="#9-4段间间接寻址方式" class="headerlink" title="9.4段间间接寻址方式"></a>9.4段间间接寻址方式</h3><p>用存储器中的两个相继字的内容来取代IP和CS。内存单元的地址使用指令指定的除立即寻址和寄存器寻址方式意外的任何一种数据寻址方式取得。</p>
-<pre class="line-numbers language-assembly" data-language="assembly"><code class="language-assembly">JMP DWORD PTR [DISP+BX]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs assembly"><code class="language-hljs assembly">JMP DWORD PTR [DISP+BX]<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
 
 <p>[DISP+BX]说明数据寻址方式位基础年起间接寻址方式，DWORD PRT 为双字操作符。</p>
 
@@ -1519,7 +1513,7 @@ JMP [BX][SI];有效地址为一个存储单元<span aria-hidden="true" class="li
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">41.5k</span>
+                        class="white-color">51.1k</span>
             
             
             
