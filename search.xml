@@ -4,6 +4,89 @@
   
     
     <entry>
+      <title>Java坑</title>
+      <link href="/2022/04/17/Java%E8%B8%A9%E5%9D%91%E6%8C%87%E5%8D%97/"/>
+      <url>/2022/04/17/Java%E8%B8%A9%E5%9D%91%E6%8C%87%E5%8D%97/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-integer-amp-int"><a href="#1-integer-amp-int" class="headerlink" title="1. integer &amp; int"></a>1. <code>integer</code> &amp; <code>int</code></h2><p><code>integer</code>是封装的对象，同<code>String</code>。</p><p><code>int</code>则是基础数据类型。</p><p>比较时，可能<code>integer</code>值相等，却返回<code>false</code>；</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>0-1背包</title>
+      <link href="/2022/04/13/0-1%E8%83%8C%E5%8C%85/"/>
+      <url>/2022/04/13/0-1%E8%83%8C%E5%8C%85/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1-递归方法"><a href="#1-递归方法" class="headerlink" title="1. 递归方法"></a>1. 递归方法</h3><h4 id="1-1例题"><a href="#1-1例题" class="headerlink" title="1.1例题"></a>1.1例题</h4><table>      <tbody><tr>            <th>vi</th>            <td>10</td>            <td>3</td>            <td>4</td>            <td>5</td>            <td>4</td>        </tr>        <tr>            <th>pi</th>            <td>24</td>            <td>2</td>            <td>9</td>            <td>10</td>            <td>9</td>        </tr></tbody></table><p>背包容量为13，求最大价值</p><h5 id="1-1-1-正经计算解题"><a href="#1-1-1-正经计算解题" class="headerlink" title="1.1.1 正经计算解题"></a>1.1.1 正经计算解题</h5><p>需要构建两个表。</p><ul><li><p>价值表——记录当前选择的价值</p>  <table style="text-align: right;">      <tbody><tr>          <th>P[i,c]</th>          <th>c=0          </th><th>1          </th><th>2          </th><th>3          </th><th>4          </th><th>5          </th><th>6          </th><th>7          </th><th>8          </th><th>9          </th><th>10          </th><th>11          </th><th>12          </th><th>13</th>      </tr>      <tr>          <th>i=0</th>          <td>0</td>          <td>0</td>          <td>0</td>          <td>0</td>          <td>0</td>          <td>0</td>          <td>0</td>          <td>0</td>          <td>0</td>          <td>0</td>          <td>0</td>          <td>0</td>          <td>0</td>          <td>0</td>      </tr>      <tr>          <th>1</th>          <td>0</td>          <td>0</td>          <td>0</td>          <td>0</td>          <td>0</td>          <td>0</td>          <td>0</td>          <td>0</td>          <td>0</td>          <td>0</td>          <td>24</td>          <td>24</td>          <td>24</td>          <td>24</td>      </tr>      <tr>          <th>2</th>          <td>0</td>          <td>0</td>          <td>0</td>          <td>0</td>          <td>2</td>          <td>2</td>          <td>2</td>          <td>2</td>          <td>2</td>          <td>2</td>          <td>24</td>          <td>24</td>          <td>24</td>          <td>26</td>      </tr>      <tr>          <th>3</th>          <td>0</td>          <td>0</td>          <td>0</td>          <td>2</td>          <td>9</td>          <td>9</td>          <td>9</td>          <td>11</td>          <td>11</td>          <td>11</td>          <td>24</td>          <td>24</td>          <td>24</td>          <td>26</td>      </tr>      <tr>          <th>4</th>          <td>0</td>          <td>0</td>          <td>0</td>          <td>2</td>          <td>9</td>          <td>9</td>          <td>9</td>          <td>11</td>          <td>12</td>          <td>19</td>          <td>24</td>          <td>24</td>          <td>24</td>          <td>26</td>      </tr>      <tr>          <th>5</th>          <td>0</td>          <td>0</td>          <td>0</td>          <td>2</td>          <td>9</td>          <td>9</td>          <td>9</td>          <td>11</td>          <td>18</td>          <td>19</td>          <td>24</td>          <td>24</td>          <td>24</td>          <td>28</td>      </tr>  </tbody></table></li><li><p>记录表——记录所选的情况。（0为不选，1为选。c为容量，i为商品序号）。</p>  <table style="text-align: right;">        <tbody><tr>            <th>Rec</th>            <td>c=0</td>            <td>1</td>            <td>2</td>            <td>3</td>            <td>4</td>            <td>5</td>            <td>6</td>            <td>7</td>            <td>8</td>            <td>9</td>            <td>10</td>            <td>11</td>            <td>12</td>            <td>13</td>        </tr>        <tr>            <th>i=1</th>            <td>0</td>            <td>0</td>            <td>0</td>            <td>0</td>            <td>0</td>            <td>0</td>            <td>0</td>            <td>0</td>            <td>0</td>            <td>0</td>            <td>1</td>            <td>1</td>            <td>1</td>            <td>1</td>        </tr>        <tr>            <th>2</th>            <td>0</td>            <td>0</td>            <td>0</td>            <td>1</td>            <td>1</td>            <td>1</td>            <td>1</td>            <td>1</td>            <td>1</td>            <td>1</td>            <td>0</td>            <td>0</td>            <td>0</td>            <td>1</td>        </tr>        <tr>            <th>3</th>            <td>0</td>            <td>0</td>            <td>0</td>            <td>0</td>            <td>1</td>            <td>1</td>            <td>1</td>            <td>1</td>            <td>1</td>            <td>1</td>            <td>0</td>            <td>0</td>            <td>0</td>            <td>0</td>        </tr>        <tr>            <th>4</th>            <td>0</td>            <td>0</td>            <td>0</td>            <td>0</td>            <td>0</td>            <td>1</td>            <td>1</td>            <td>0</td>            <td>1</td>            <td>1</td>            <td>0</td>            <td>0</td>            <td>0</td>            <td>0</td>        </tr>        <tr>            <th>5</th>            <td>0</td>            <td>0</td>            <td>0</td>            <td>0</td>            <td>0</td>            <td>0</td>            <td>0</td>            <td>0</td>            <td>1</td>            <td>0</td>            <td>0</td>            <td>0</td>            <td>0</td>            <td>1</td>        </tr>    </tbody></table></li></ul><p>两个表，价值表递归生成，记录表之后根据价值表生成。</p><p>步骤：</p><ul><li><p>声明两个二维数组。一维为容量+1个，二维为物品数+1个。</p></li><li><p>初始化容量为<code>0</code>时的价值、物品为<code>0</code>时的价值</p></li><li><p>以容量与商品编号为量级，进行嵌套循环。即对表一进行遍历。</p><blockquote><p>​        把价值写入表格，把是否选择写入表格。</p></blockquote></li><li><p>根据价值表找到最大值，然后在结合记录表找到所选结构。</p><blockquote><p>​        最大值找到后，每次寻找的格（记录表）为Rec[i-1][c-vi],(i为当前物品序号，c为当前容量，vi为当前序列物品对应的体积)。</p></blockquote></li></ul><h4 id="1-1-2-代码解决"><a href="#1-1-2-代码解决" class="headerlink" title="1.1.2 代码解决"></a>1.1.2 代码解决</h4><ul><li> 带备忘录的递归遍历</li></ul>  <figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs java"><span class="hljs-keyword">import</span> java.util.ArrayList;<br><span class="hljs-keyword">import</span> java.util.List;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 日期：2022/4/11</span><br><span class="hljs-comment"> * 时间：13:26</span><br><span class="hljs-comment"> * 描述：0-1背包</span><br><span class="hljs-comment"> * 项目名：algorithmDesign</span><br><span class="hljs-comment"> * 包名:PACKAGE_NAME</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> xyz</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ZeroOnePackage</span> </span>{<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">v_p</span> </span>{<br>        Integer volume;<br>        Integer value;<br><br>        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">v_p</span> <span class="hljs-params">( Integer volume, Integer value )</span> </span>{<br>            <span class="hljs-keyword">this</span>.volume = volume;<br>            <span class="hljs-keyword">this</span>.value = value;<br>        }<br>    }<br><br>    <span class="hljs-comment">/**</span><br><span class="hljs-comment">     * 价值总和统计</span><br><span class="hljs-comment">     */</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Integer[][] AllValue;<br><br>    <span class="hljs-comment">/**</span><br><span class="hljs-comment">     * v_p类</span><br><span class="hljs-comment">     * 商品价格 &amp; 体积列表</span><br><span class="hljs-comment">     */</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> List&lt;v_p&gt; things = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();<br><br>    <span class="hljs-comment">/**</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@param</span> i 从前 i 个物品中选择,</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@param</span> c 可用容量为 c</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@return</span> 返回在 i，c前提下的最大总价值</span><br><span class="hljs-comment">     */</span><br>    <br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">KnapsackMR</span> <span class="hljs-params">( Integer i, Integer c )</span> </span>{<br>        <span class="hljs-keyword">if</span> ( c &lt; <span class="hljs-number">0</span> ) {<br>            <span class="hljs-keyword">return</span> -<span class="hljs-number">999</span>;<br>        }<br>        <span class="hljs-keyword">if</span> ( i &lt; <span class="hljs-number">0</span> ) {<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>        }<br>        <span class="hljs-keyword">if</span> ( AllValue[ i ][ c ] != <span class="hljs-keyword">null</span> ) {<br>            <span class="hljs-keyword">return</span> AllValue[ i ][ c ];<br>        }<br>        Integer a = KnapsackMR( i - <span class="hljs-number">1</span>, c - things.get( i - <span class="hljs-number">1</span> ).volume ) + things.get( i - <span class="hljs-number">1</span> ).value;<br>        Integer b = KnapsackMR( i - <span class="hljs-number">1</span>, c );<br>        AllValue[ i ][ c ] = Math.max( a, b );<br>        <span class="hljs-keyword">return</span> AllValue[ i ][ c ];<br>    }<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span> <span class="hljs-params">( String[] args )</span> </span>{<br>        Integer weight = <span class="hljs-number">13</span>;<br>        <span class="hljs-comment">/*添加物品*/</span><br>        things.add( <span class="hljs-keyword">new</span> v_p( <span class="hljs-number">10</span>, <span class="hljs-number">24</span> ) );<br>        things.add( <span class="hljs-keyword">new</span> v_p( <span class="hljs-number">3</span>, <span class="hljs-number">2</span> ) );<br>        things.add( <span class="hljs-keyword">new</span> v_p( <span class="hljs-number">4</span>, <span class="hljs-number">9</span> ) );<br>        things.add( <span class="hljs-keyword">new</span> v_p( <span class="hljs-number">5</span>, <span class="hljs-number">10</span> ) );<br>        things.add( <span class="hljs-keyword">new</span> v_p( <span class="hljs-number">4</span>, <span class="hljs-number">9</span> ) );<br>        <span class="hljs-comment">/*定义价值表*/</span><br>        AllValue = <span class="hljs-keyword">new</span> Integer[ things.size() + <span class="hljs-number">1</span> ][ weight + <span class="hljs-number">1</span> ];<br>        <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt;= weight || i &lt;= things.size(); i++ ) {<br>            <span class="hljs-keyword">if</span> ( i &lt;= things.size() ) {<br>                AllValue[ i ][ <span class="hljs-number">0</span> ] = <span class="hljs-number">0</span>;<br>            }<br>            <span class="hljs-keyword">if</span> ( i &lt;= weight ) {<br>                AllValue[ <span class="hljs-number">0</span> ][ i ] = <span class="hljs-number">0</span>;<br>            }<br>        }<br>        <span class="hljs-keyword">int</span> va = <span class="hljs-number">0</span>;<br>        <span class="hljs-comment">/*最大值的坐标*/</span><br>        <span class="hljs-keyword">int</span> max_v = <span class="hljs-number">0</span>, max_index = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= ( things.size() ); i++ ) {<br>            <span class="hljs-keyword">for</span> ( Integer integer = <span class="hljs-number">1</span>; integer &lt;= weight; integer++ ) {<br>                <span class="hljs-keyword">int</span> term = KnapsackMR( i, integer );<br>                <span class="hljs-keyword">if</span> ( term &gt; va ) {<br>                    va = term;<br>                    <span class="hljs-comment">/*记录最大值的坐标,坐标与实际数据相差一*/</span><br>                    max_v = integer;<br>                    max_index = i;<br>                }<br>            }<br>        }<br>        <span class="hljs-comment">/*输出容量行*/</span><br>        System.out.printf( <span class="hljs-string">"%5s "</span>, <span class="hljs-string">"_"</span> );<br>        <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt;= <span class="hljs-number">13</span>; i++ ) {<br>            System.out.printf( <span class="hljs-string">"%5d "</span>, i );<br>        }<br>        <span class="hljs-comment">/*遍历表格输出表中内容*/</span><br>        System.out.println();<br>        <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; AllValue.length; i++ ) {<br>            System.out.printf( <span class="hljs-string">"%5s "</span>, i );<br>            <span class="hljs-keyword">for</span> ( Integer integer : AllValue[ i ] ) {<br>                System.out.printf( <span class="hljs-string">"%5d "</span>, integer );<br>            }<br>            System.out.println();<br>        }<br>        <span class="hljs-comment">/*输出选择结构*/</span><br>        <span class="hljs-keyword">while</span> ( max_index &gt; <span class="hljs-number">0</span> &amp;&amp; max_v &gt; <span class="hljs-number">0</span> ) {<br>            <span class="hljs-keyword">if</span> ( AllValue[ max_index ][ max_v ] - things.get( max_index - <span class="hljs-number">1</span> ).value ==<br>                    AllValue[ max_index - <span class="hljs-number">1</span> ][ max_v - things.get( max_index - <span class="hljs-number">1</span> ).volume ] ) {<br>                System.out.printf( <span class="hljs-string">"选择第%d 个物品，体积减%d \n"</span>, max_index, things.get( max_index - <span class="hljs-number">1</span> ).volume );<br>                max_v -= things.get( max_index - <span class="hljs-number"><code class="language-hljs java"><span class="hljs-keyword">import</span> java.util.ArrayList;<br><span class="hljs-keyword">import</span> java.util.List;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 日期：2022/4/11</span><br><span class="hljs-comment"> * 时间：13:26</span><br><span class="hljs-comment"> * 描述：0-1背包</span><br><span class="hljs-comment"> * 项目名：algorithmDesign</span><br><span class="hljs-comment"> * 包名:PACKAGE_NAME</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> xyz</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ZeroOnePackage</span> </span>{<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">v_p</span> </span>{<br>        Integer volume;<br>        Integer value;<br><br>        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">v_p</span> <span class="hljs-params">( Integer volume, Integer value )</span> </span>{<br>            <span class="hljs-keyword">this</span>.volume = volume;<br>            <span class="hljs-keyword">this</span>.value = value;<br>        }<br>    }<br><br>    <span class="hljs-comment">/**</span><br><span class="hljs-comment">     * 价值总和统计</span><br><span class="hljs-comment">     */</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Integer[][] AllValue;<br><br>    <span class="hljs-comment">/**</span><br><span class="hljs-comment">     * v_p类</span><br><span class="hljs-comment">     * 商品价格 &amp; 体积列表</span><br><span class="hljs-comment">     */</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> List&lt;v_p&gt; things = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();<br><br>    <span class="hljs-comment">/**</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@param</span> i 从前 i 个物品中选择,</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@param</span> c 可用容量为 c</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@return</span> 返回在 i，c前提下的最大总价值</span><br><span class="hljs-comment">     */</span><br>    <br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">KnapsackMR</span> <span class="hljs-params">( Integer i, Integer c )</span> </span>{<br>        <span class="hljs-keyword">if</span> ( c &lt; <span class="hljs-number">0</span> ) {<br>            <span class="hljs-keyword">return</span> -<span class="hljs-number">999</span>;<br>        }<br>        <span class="hljs-keyword">if</span> ( i &lt; <span class="hljs-number">0</span> ) {<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>        }<br>        <span class="hljs-keyword">if</span> ( AllValue[ i ][ c ] != <span class="hljs-keyword">null</span> ) {<br>            <span class="hljs-keyword">return</span> AllValue[ i ][ c ];<br>        }<br>        Integer a = KnapsackMR( i - <span class="hljs-number">1</span>, c - things.get( i - <span class="hljs-number">1</span> ).volume ) + things.get( i - <span class="hljs-number">1</span> ).value;<br>        Integer b = KnapsackMR( i - <span class="hljs-number">1</span>, c );<br>        AllValue[ i ][ c ] = Math.max( a, b );<br>        <span class="hljs-keyword">return</span> AllValue[ i ][ c ];<br>    }<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span> <span class="hljs-params">( String[] args )</span> </span>{<br>        Integer weight = <span class="hljs-number">13</span>;<br>        <span class="hljs-comment">/*添加物品*/</span><br>        things.add( <span class="hljs-keyword">new</span> v_p( <span class="hljs-number">10</span>, <span class="hljs-number">24</span> ) );<br>        things.add( <span class="hljs-keyword">new</span> v_p( <span class="hljs-number">3</span>, <span class="hljs-number">2</span> ) );<br>        things.add( <span class="hljs-keyword">new</span> v_p( <span class="hljs-number">4</span>, <span class="hljs-number">9</span> ) );<br>        things.add( <span class="hljs-keyword">new</span> v_p( <span class="hljs-number">5</span>, <span class="hljs-number">10</span> ) );<br>        things.add( <span class="hljs-keyword">new</span> v_p( <span class="hljs-number">4</span>, <span class="hljs-number">9</span> ) );<br>        <span class="hljs-comment">/*定义价值表*/</span><br>        AllValue = <span class="hljs-keyword">new</span> Integer[ things.size() + <span class="hljs-number">1</span> ][ weight + <span class="hljs-number">1</span> ];<br>        <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt;= weight || i &lt;= things.size(); i++ ) {<br>            <span class="hljs-keyword">if</span> ( i &lt;= things.size() ) {<br>                AllValue[ i ][ <span class="hljs-number">0</span> ] = <span class="hljs-number">0</span>;<br>            }<br>            <span class="hljs-keyword">if</span> ( i &lt;= weight ) {<br>                AllValue[ <span class="hljs-number">0</span> ][ i ] = <span class="hljs-number">0</span>;<br>            }<br>        }<br>        <span class="hljs-keyword">int</span> va = <span class="hljs-number">0</span>;<br>        <span class="hljs-comment">/*最大值的坐标*/</span><br>        <span class="hljs-keyword">int</span> max_v = <span class="hljs-number">0</span>, max_index = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= ( things.size() ); i++ ) {<br>            <span class="hljs-keyword">for</span> ( Integer integer = <span class="hljs-number">1</span>; integer &lt;= weight; integer++ ) {<br>                <span class="hljs-keyword">int</span> term = KnapsackMR( i, integer );<br>                <span class="hljs-keyword">if</span> ( term &gt; va ) {<br>                    va = term;<br>                    <span class="hljs-comment">/*记录最大值的坐标,坐标与实际数据相差一*/</span><br>                    max_v = integer;<br>                    max_index = i;<br>                }<br>            }<br>        }<br>        <span class="hljs-comment">/*输出容量行*/</span><br>        System.out.printf( <span class="hljs-string">"%5s "</span>, <span class="hljs-string">"_"</span> );<br>        <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt;= <span class="hljs-number">13</span>; i++ ) {<br>            System.out.printf( <span class="hljs-string">"%5d "</span>, i );<br>        }<br>        <span class="hljs-comment">/*遍历表格输出表中内容*/</span><br>        System.out.println();<br>        <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; AllValue.length; i++ ) {<br>            System.out.printf( <span class="hljs-string">"%5s "</span>, i );<br>            <span class="hljs-keyword">for</span> ( Integer integer : AllValue[ i ] ) {<br>                System.out.printf( <span class="hljs-string">"%5d "</span>, integer );<br>            }<br>            System.out.println();<br>        }<br>        <span class="hljs-comment">/*输出选择结构*/</span><br>        <span class="hljs-keyword">while</span> ( max_index &gt; <span class="hljs-number">0</span> &amp;&amp; max_v &gt; <span class="hljs-number">0</span> ) {<br>            <span class="hljs-keyword">if</span> ( AllValue[ max_index ][ max_v ] - things.get( max_index - <span class="hljs-number">1</span> ).value ==<br>                    AllValue[ max_index - <span class="hljs-number">1</span> ][ max_v - things.get( max_index - <span class="hljs-number">1</span> ).volume ] ) {<br>                System.out.printf( <span class="hljs-string">"选择第%d 个物品，体积减%d \n"</span>, max_index, things.get( max_index - <span class="hljs-number">1</span> ).volume );<br>                max_v -= things.get( max_index - <span class="hljs-number">1</span> ).volume;<br>            }<br>            max_index--;<br>        }<br>        System.out.println( va );<br>    }<br>}<br><br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 动态规划 </tag>
+            
+            <tag> 0-1背包 </tag>
+            
+            <tag> 算法设计 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>lombok 注解</title>
+      <link href="/2022/04/09/lombok%E6%B3%A8%E8%A7%A3/"/>
+      <url>/2022/04/09/lombok%E6%B3%A8%E8%A7%A3/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1-data"><a href="#1-data" class="headerlink" title="1.@data"></a>1<code>.@data</code></h3><p>相当于面对所有属性创建 <code>getter</code>、<code>setter</code>，</p><h3 id="2-NoArgsConstructor"><a href="#2-NoArgsConstructor" class="headerlink" title="2. @NoArgsConstructor"></a>2. <code>@NoArgsConstructor</code></h3><p>无参构造</p><h3 id="3-AllArgsConstructor"><a href="#3-AllArgsConstructor" class="headerlink" title="3. @AllArgsConstructor"></a>3. <code>@AllArgsConstructor</code></h3><p>全参构造</p><h3 id="4-RequiredArgsConstructor"><a href="#4-RequiredArgsConstructor" class="headerlink" title="4. @RequiredArgsConstructor"></a>4. <code>@RequiredArgsConstructor</code></h3><p>必要参数构造。可与<code>final</code>结合使用，</p><blockquote><p>添加<code>final</code>关键字的属性配合<code>@RequiredArgsConstructor</code>，则在类创建时必须初始化。</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> lombok </tag>
+            
+            <tag> maven </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>个人能力简介</title>
       <link href="/2022/04/04/%E6%89%BE%E9%98%9F%E4%BC%8D/"/>
       <url>/2022/04/04/%E6%89%BE%E9%98%9F%E4%BC%8D/</url>
@@ -319,9 +402,9 @@
       
         <tags>
             
-            <tag> Vue </tag>
-            
             <tag> HTML </tag>
+            
+            <tag> Vue </tag>
             
         </tags>
       
@@ -404,9 +487,9 @@
             
             <tag> Vue </tag>
             
-            <tag> Java </tag>
-            
             <tag> Axios </tag>
+            
+            <tag> Java </tag>
             
         </tags>
       
@@ -433,9 +516,9 @@
       
         <tags>
             
-            <tag> Vue </tag>
-            
             <tag> HTML </tag>
+            
+            <tag> Vue </tag>
             
         </tags>
       
@@ -543,9 +626,9 @@
       
         <tags>
             
-            <tag> 操作系统 </tag>
-            
             <tag> 死锁 </tag>
+            
+            <tag> 操作系统 </tag>
             
         </tags>
       
@@ -850,11 +933,11 @@
       
         <tags>
             
-            <tag> 计算机组成原理 </tag>
-            
             <tag> 二进制 </tag>
             
             <tag> 数据转换 </tag>
+            
+            <tag> 计算机组成原理 </tag>
             
         </tags>
       
@@ -879,11 +962,11 @@
       
         <tags>
             
-            <tag> 数据结构 </tag>
-            
             <tag> 浮点数 </tag>
             
             <tag> 二进制 </tag>
+            
+            <tag> 数据结构 </tag>
             
         </tags>
       
@@ -1152,6 +1235,28 @@
     
     
     <entry>
+      <title>交流</title>
+      <link href="/contact/index.html"/>
+      <url>/contact/index.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="欢迎留言"><a href="#欢迎留言" class="headerlink" title="欢迎留言"></a>欢迎留言</h1><p>大家有任何问题，都可以在评论区给我留言，或者加我联系方式：</p><ul><li><strong>Q Q</strong>：<strong>1970476603</strong></li><li><strong>微信</strong>：<strong>i_19-99-666</strong></li></ul><p>欢迎来访<br><strong>当然不介意小jiejie加我~~</strong></p><h1 id="友链交换"><a href="#友链交换" class="headerlink" title="友链交换"></a>友链交换</h1><p>想要交换友链的小伙伴，欢迎在评论区留言，留言格式：</p><ul><li><strong>名称：</strong>你的博客名称</li><li><strong>地址：</strong>你的博客地址</li><li><strong>简介：</strong>一句话简介</li><li><strong>头像：</strong>你的头像地址</li></ul><p>例如我的博客友链，大家可以加到自己博客里哦：</p><ul><li><strong>名称：</strong>张小白</li><li><strong>地址：</strong><a class="selfurl">https://blogofxyz.gitee.io</a> (国内访问快)/<a class="selfurl">https://blogofxyz.top/</a> (github部署)</li><li><strong>简介：</strong>平时没少学没用东西的一个家伙。</li><li><strong>头像：</strong><a class="selfurl">https://blogofxyz.gitee.io/medias/avatar.jpg</a></li></ul>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>导航</title>
+      <link href="/navigate/index.html"/>
+      <url>/navigate/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>成就</title>
       <link href="/archives/index.html"/>
       <url>/archives/index.html</url>
@@ -1174,17 +1279,6 @@
     
     
     <entry>
-      <title>交流</title>
-      <link href="/contact/index.html"/>
-      <url>/contact/index.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="欢迎留言"><a href="#欢迎留言" class="headerlink" title="欢迎留言"></a>欢迎留言</h1><p>大家有任何问题，都可以在评论区给我留言，或者加我联系方式：</p><ul><li><strong>Q Q</strong>：<strong>1970476603</strong></li><li><strong>微信</strong>：<strong>i_19-99-666</strong></li></ul><p>欢迎来访<br><strong>当然不介意小jiejie加我~~</strong></p><h1 id="友链交换"><a href="#友链交换" class="headerlink" title="友链交换"></a>友链交换</h1><p>想要交换友链的小伙伴，欢迎在评论区留言，留言格式：</p><ul><li><strong>名称：</strong>你的博客名称</li><li><strong>地址：</strong>你的博客地址</li><li><strong>简介：</strong>一句话简介</li><li><strong>头像：</strong>你的头像地址</li></ul><p>例如我的博客友链，大家可以加到自己博客里哦：</p><ul><li><strong>名称：</strong>张小白</li><li><strong>地址：</strong><a class="selfurl">https://blogofxyz.gitee.io</a> (国内访问快)/<a class="selfurl">https://blogofxyz.top/</a> (github部署)</li><li><strong>简介：</strong>平时没少学没用东西的一个家伙。</li><li><strong>头像：</strong><a class="selfurl">https://blogofxyz.gitee.io/medias/avatar.jpg</a></li></ul>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>tags</title>
       <link href="/tags/index.html"/>
       <url>/tags/index.html</url>
@@ -1201,17 +1295,6 @@
       <url>/friends/index.html</url>
       
         <content type="html"><![CDATA[<h1 id="赞赏名单"><a href="#赞赏名单" class="headerlink" title="赞赏名单"></a>赞赏名单</h1><p>感谢所有赞赏过我的小伙伴啦，你们的支持是我最大的动力！</p><h1 id="友链交换"><a href="#友链交换" class="headerlink" title="友链交换"></a>友链交换</h1><p>想要交换友链的小伙伴，欢迎在留言板留言，留言格式：</p><ul><li><strong>名称：</strong>你的博客名称</li><li><strong>地址：</strong>你的博客地址</li><li><strong>简介：</strong>一句话简介</li><li><strong>头像：</strong>你的头像地址</li></ul><p>例如我的博客友链，大家可以加到自己博客里哦：</p><ul><li><p><strong>名称：</strong>Zhang-little-white</p></li><li><p><strong>地址：</strong> <a style="text-decoration:none" class="selfurl">https://blogofxyz.gitee.io</a> (gitee访问快)</p><p><a style="text-decoration:none;    white-space: pre;">   &nbsp; &nbsp; &nbsp;  &nbsp;</a>            <a style="text-decoration:none" class="selfurl">https://blogofxyz.top/ </a>(github部署)</p></li><li><p><strong>简介：</strong>小白一个</p></li><li><p><strong>头像：</strong><a style="text-decoration:none" class="selfurl">https://blogofxyz.gitee.io/medias/avatar.jpg</a></p></li></ul>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>导航</title>
-      <link href="/navigate/index.html"/>
-      <url>/navigate/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
