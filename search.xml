@@ -87,31 +87,6 @@
     
     
     <entry>
-      <title>个人能力简介</title>
-      <link href="/2022/04/04/%E6%89%BE%E9%98%9F%E4%BC%8D/"/>
-      <url>/2022/04/04/%E6%89%BE%E9%98%9F%E4%BC%8D/</url>
-      
-        <content type="html"><![CDATA[<p>​    </p><h3 id="1-找队伍"><a href="#1-找队伍" class="headerlink" title="1. 找队伍"></a>1. 找队伍</h3><p>之前太荒废、没在意比赛的事。目前大三，想参加一些比赛。</p><p>我是昨天才知道的这个比赛，今天（4月4日）学校发的通知，15号就要交自己的作品，</p><blockquote><p>学校，就不会提前一段时间通告下，弄个大赛日程变也不需要多大投入吧？</p></blockquote><h3 id="2-个人能力介绍"><a href="#2-个人能力介绍" class="headerlink" title="2. 个人能力介绍"></a>2. 个人能力介绍</h3><h4 id="2-1-vue2"><a href="#2-1-vue2" class="headerlink" title="2.1 vue2"></a>2.1 vue2</h4><p>跟着网课自学的，目前除了高阶的一些用法与技巧，基本没问题，</p><p>自己写的</p><ul><li><p> <a href="https://blogofxyz.gitee.io/mine-clearance/">扫雷</a>。</p></li><li><p>还有个调用阿里接口查看疫情数据的网页。</p><blockquote><p>api出问题，没法用了。</p></blockquote></li></ul><h4 id="2-2-java"><a href="#2-2-java" class="headerlink" title="2.2 java"></a>2.2 java</h4><ul><li>选修课学的。没划水，认真学的。</li><li>写过一次<code>jsp</code> 期末实践。</li><li>正在跟着网课在写一个<code>Springboot</code>项目。<ul><li>用的 <code>mybatis-plus</code>，但不太熟练。</li><li>前端<code>vue</code>+element-ui.</li><li>后端 <code>maven</code>,</li></ul></li></ul><h4 id="2-3-html-css-js"><a href="#2-3-html-css-js" class="headerlink" title="2.3 html+css+js"></a>2.3 html+css+js</h4><p>都能用，没大问题。</p><h4 id="2-3-C"><a href="#2-3-C" class="headerlink" title="2.3 C#"></a>2.3 C#</h4><p>专业课，如果有需要，我再复习下。</p><p>当时学的还凑活。</p><h4 id="2-4-python"><a href="#2-4-python" class="headerlink" title="2.4 python"></a>2.4 python</h4><p>仅限于基本用法。</p><blockquote><p>有缺队员的，或者认识的人参加比赛缺人的，都可以联系。</p><p>Q：1970476603</p><p>V：19137934629</p><p>这是本人博客，可以逛逛（二次元浓度有点高，受不了的注意点）</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> 简介 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 简介 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>git入门</title>
       <link href="/2022/04/01/git%E5%91%BD%E4%BB%A4/"/>
       <url>/2022/04/01/git%E5%91%BD%E4%BB%A4/</url>
@@ -402,9 +377,9 @@
       
         <tags>
             
-            <tag> HTML </tag>
-            
             <tag> Vue </tag>
+            
+            <tag> HTML </tag>
             
         </tags>
       
@@ -454,9 +429,9 @@
       
         <tags>
             
-            <tag> CSS </tag>
-            
             <tag> HTML </tag>
+            
+            <tag> CSS </tag>
             
         </tags>
       
@@ -516,9 +491,9 @@
       
         <tags>
             
-            <tag> HTML </tag>
-            
             <tag> Vue </tag>
+            
+            <tag> HTML </tag>
             
         </tags>
       
@@ -543,11 +518,11 @@
       
         <tags>
             
-            <tag> CSS </tag>
-            
             <tag> HTML </tag>
             
             <tag> 选择器 </tag>
+            
+            <tag> CSS </tag>
             
         </tags>
       
@@ -796,9 +771,9 @@
       
         <tags>
             
-            <tag> CSS </tag>
-            
             <tag> HTML </tag>
+            
+            <tag> CSS </tag>
             
         </tags>
       
@@ -825,9 +800,9 @@
       
         <tags>
             
-            <tag> CSS </tag>
-            
             <tag> HTML </tag>
+            
+            <tag> CSS </tag>
             
         </tags>
       
@@ -933,11 +908,11 @@
       
         <tags>
             
-            <tag> 二进制 </tag>
-            
             <tag> 数据转换 </tag>
             
             <tag> 计算机组成原理 </tag>
+            
+            <tag> 二进制 </tag>
             
         </tags>
       
@@ -962,11 +937,11 @@
       
         <tags>
             
-            <tag> 浮点数 </tag>
+            <tag> 数据结构 </tag>
             
             <tag> 二进制 </tag>
             
-            <tag> 数据结构 </tag>
+            <tag> 浮点数 </tag>
             
         </tags>
       
@@ -1235,28 +1210,6 @@
     
     
     <entry>
-      <title>交流</title>
-      <link href="/contact/index.html"/>
-      <url>/contact/index.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="欢迎留言"><a href="#欢迎留言" class="headerlink" title="欢迎留言"></a>欢迎留言</h1><p>大家有任何问题，都可以在评论区给我留言，或者加我联系方式：</p><ul><li><strong>Q Q</strong>：<strong>1970476603</strong></li><li><strong>微信</strong>：<strong>i_19-99-666</strong></li></ul><p>欢迎来访<br><strong>当然不介意小jiejie加我~~</strong></p><h1 id="友链交换"><a href="#友链交换" class="headerlink" title="友链交换"></a>友链交换</h1><p>想要交换友链的小伙伴，欢迎在评论区留言，留言格式：</p><ul><li><strong>名称：</strong>你的博客名称</li><li><strong>地址：</strong>你的博客地址</li><li><strong>简介：</strong>一句话简介</li><li><strong>头像：</strong>你的头像地址</li></ul><p>例如我的博客友链，大家可以加到自己博客里哦：</p><ul><li><strong>名称：</strong>张小白</li><li><strong>地址：</strong><a class="selfurl">https://blogofxyz.gitee.io</a> (国内访问快)/<a class="selfurl">https://blogofxyz.top/</a> (github部署)</li><li><strong>简介：</strong>平时没少学没用东西的一个家伙。</li><li><strong>头像：</strong><a class="selfurl">https://blogofxyz.gitee.io/medias/avatar.jpg</a></li></ul>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>导航</title>
-      <link href="/navigate/index.html"/>
-      <url>/navigate/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>成就</title>
       <link href="/archives/index.html"/>
       <url>/archives/index.html</url>
@@ -1268,11 +1221,11 @@
     
     
     <entry>
-      <title>类别</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>交流</title>
+      <link href="/contact/index.html"/>
+      <url>/contact/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h1 id="欢迎留言"><a href="#欢迎留言" class="headerlink" title="欢迎留言"></a>欢迎留言</h1><p>大家有任何问题，都可以在评论区给我留言，或者加我联系方式：</p><ul><li><strong>Q Q</strong>：<strong>1970476603</strong></li><li><strong>微信</strong>：<strong>i_19-99-666</strong></li></ul><p>欢迎来访<br><strong>当然不介意小jiejie加我~~</strong></p><h1 id="友链交换"><a href="#友链交换" class="headerlink" title="友链交换"></a>友链交换</h1><p>想要交换友链的小伙伴，欢迎在评论区留言，留言格式：</p><ul><li><strong>名称：</strong>你的博客名称</li><li><strong>地址：</strong>你的博客地址</li><li><strong>简介：</strong>一句话简介</li><li><strong>头像：</strong>你的头像地址</li></ul><p>例如我的博客友链，大家可以加到自己博客里哦：</p><ul><li><strong>名称：</strong>张小白</li><li><strong>地址：</strong><a class="selfurl">https://blogofxyz.gitee.io</a> (国内访问快)/<a class="selfurl">https://blogofxyz.top/</a> (github部署)</li><li><strong>简介：</strong>平时没少学没用东西的一个家伙。</li><li><strong>头像：</strong><a class="selfurl">https://blogofxyz.gitee.io/medias/avatar.jpg</a></li></ul>]]></content>
       
     </entry>
     
@@ -1295,6 +1248,28 @@
       <url>/friends/index.html</url>
       
         <content type="html"><![CDATA[<h1 id="赞赏名单"><a href="#赞赏名单" class="headerlink" title="赞赏名单"></a>赞赏名单</h1><p>感谢所有赞赏过我的小伙伴啦，你们的支持是我最大的动力！</p><h1 id="友链交换"><a href="#友链交换" class="headerlink" title="友链交换"></a>友链交换</h1><p>想要交换友链的小伙伴，欢迎在留言板留言，留言格式：</p><ul><li><strong>名称：</strong>你的博客名称</li><li><strong>地址：</strong>你的博客地址</li><li><strong>简介：</strong>一句话简介</li><li><strong>头像：</strong>你的头像地址</li></ul><p>例如我的博客友链，大家可以加到自己博客里哦：</p><ul><li><p><strong>名称：</strong>Zhang-little-white</p></li><li><p><strong>地址：</strong> <a style="text-decoration:none" class="selfurl">https://blogofxyz.gitee.io</a> (gitee访问快)</p><p><a style="text-decoration:none;    white-space: pre;">   &nbsp; &nbsp; &nbsp;  &nbsp;</a>            <a style="text-decoration:none" class="selfurl">https://blogofxyz.top/ </a>(github部署)</p></li><li><p><strong>简介：</strong>小白一个</p></li><li><p><strong>头像：</strong><a style="text-decoration:none" class="selfurl">https://blogofxyz.gitee.io/medias/avatar.jpg</a></p></li></ul>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>导航</title>
+      <link href="/navigate/index.html"/>
+      <url>/navigate/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>类别</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
