@@ -592,23 +592,23 @@ var _hmt = _hmt || [];
 <li>草稿</li>
 <li>标签页</li>
 </ul>
-<h2 id="2-1-正文"><a href="#2-1-正文" class="headerlink" title="2.1 正文"></a>2.1 正文</h2><figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs shell"><code class="language-hljs shell">hexo new postname<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
-
+<h2 id="2-1-正文"><a href="#2-1-正文" class="headerlink" title="2.1 正文"></a>2.1 正文</h2><pre class="line-numbers language-shell"><code class="language-shell">hexo new postname
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <blockquote>
 <p>如果在文件命名时遇到特殊符号或者空格问题，可用括号将文件名裹起来。</p>
 <p>提醒：一个及一个以上的空格会被“<code>-</code>”代替。<code>&amp;</code> 会被忽略。但改变仅限于文件名，文章的title仍为命名时名称。</p>
 </blockquote>
 <p>根据<code>.\scaffolds\post.md</code> 模板新建一篇文章，放置于<code>.\source\_posts</code>  </p>
 <p>待文章写完重新渲染、部署后发布至blog。</p>
-<h2 id="2-2-草稿"><a href="#2-2-草稿" class="headerlink" title="2.2 草稿"></a>2.2 草稿</h2><figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs shell"><code class="language-hljs shell">hexo new draft postname<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
-
+<h2 id="2-2-草稿"><a href="#2-2-草稿" class="headerlink" title="2.2 草稿"></a>2.2 草稿</h2><pre class="line-numbers language-shell"><code class="language-shell">hexo new draft postname
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>根据<code>.\scaffolds\draft.md</code> 模板新建一篇草稿，放置于<code>.\source\_drafts</code>  重新渲染时此文章会被忽略。因此这篇文章在blog重新部署后不能被访问到。</p>
 <p>如果文章完成，可执行</p>
-<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs shell"><code class="language-hljs shell">hexo public postname<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
-
+<pre class="line-numbers language-shell"><code class="language-shell">hexo public postname
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>将此草稿转移至<code>.\source\_drafts</code>  ，并在下次渲染部署时，进行渲染部署。</p>
-<h2 id="2-3-标签"><a href="#2-3-标签" class="headerlink" title="2.3 标签"></a>2.3 标签</h2><figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs shell"><code class="language-hljs shell">hexo new page indexname<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
-
+<h2 id="2-3-标签"><a href="#2-3-标签" class="headerlink" title="2.3 标签"></a>2.3 标签</h2><pre class="line-numbers language-shell"><code class="language-shell">hexo new page indexname
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>根据<code>..\scaffolds\page.md</code> 模板新建一个标签页，即blog导航栏指向的页，然后在<code>.\source\ </code> 新建一个文件夹放置。</p>
 
                 
@@ -1442,7 +1442,7 @@ var _hmt = _hmt || [];
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">52.7k</span>
+                        class="white-color">41.8k</span>
             
             
             

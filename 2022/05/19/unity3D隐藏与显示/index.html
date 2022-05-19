@@ -602,7 +602,8 @@ var _hmt = _hmt || [];
 </ul>
 <h4 id="3-1-transform-find"><a href="#3-1-transform-find" class="headerlink" title="3.1 transform.find"></a>3.1 <code>transform.find</code></h4><p>局限：只能逐级寻找。即只能查找当前物体的子对象中的对象。如果需要多级，则需要</p>
 <blockquote>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs c#"><code class="language-hljs c#">transform.Find(“xxxx”).transform.Find(“xxxx”).transform.Find(“xxxxx”).gameObject.setActive(true);<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-c#"><code class="language-c#">transform.Find(“xxxx”).transform.Find(“xxxx”).transform.Find(“xxxxx”).gameObject.setActive(true);
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </blockquote>
 <h4 id="3-2-GameObject-Find"><a href="#3-2-GameObject-Find" class="headerlink" title="3.2 GameObject.Find"></a>3.2 <code>GameObject.Find</code></h4><p>直接指定隐藏的物体的绝对路径。如某一结构为</p>
 <pre class="mermaid">graph LR
@@ -614,8 +615,8 @@ b----e[keyboardPlatform]</pre>
 <blockquote>
 <p>场景为：<code>demo</code><br>        <code>HardWare</code>为场景内一对象。</p>
 <p>最开始设置 <code>keyboardPlatform</code>为隐藏，则可通过</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs c#"><code class="language-hljs c#">GameObject.Find("HardWare/keyboard/keyboardPlatform").SetActive(true);<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
-
+<pre class="line-numbers language-c#"><code class="language-c#">GameObject.Find("HardWare/keyboard/keyboardPlatform").SetActive(true);
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>设置显示。</p>
 </blockquote>
 <blockquote>
@@ -648,7 +649,7 @@ b----e[keyboardPlatform]</pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://blogofxyz.top/2022/05/19/%E8%AE%B0%E5%BE%97%E6%94%B9%E5%90%8D/">https://blogofxyz.top/2022/05/19/%E8%AE%B0%E5%BE%97%E6%94%B9%E5%90%8D/</a>
+                    <a href="https://blogofxyz.top/2022/05/19/unity3D%E9%9A%90%E8%97%8F%E4%B8%8E%E6%98%BE%E7%A4%BA/">https://blogofxyz.top/2022/05/19/unity3D%E9%9A%90%E8%97%8F%E4%B8%8E%E6%98%BE%E7%A4%BA/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1151,7 +1152,7 @@ b----e[keyboardPlatform]</pre>
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2022/05/19/%E8%AE%B0%E5%BE%97%E6%94%B9%E5%90%8D/">
+                <a href="/2022/05/19/unity3D%E9%9A%90%E8%97%8F%E4%B8%8E%E6%98%BE%E7%A4%BA/">
                     <div class="card-image">
                         
                         
@@ -1424,7 +1425,7 @@ b----e[keyboardPlatform]</pre>
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">52.7k</span>
+                        class="white-color">41.8k</span>
             
             
             

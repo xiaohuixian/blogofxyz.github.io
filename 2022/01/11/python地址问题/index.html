@@ -551,7 +551,7 @@ var _hmt = _hmt || [];
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    185
+                    167
                 </div>
                 
 
@@ -589,8 +589,16 @@ var _hmt = _hmt || [];
 <li><p>第一种</p>
 <p>可将地址中的反斜杠都替换为斜杠。windows中反斜杠是地址各级的分隔符，而斜杠是Linux的分隔符，但在windows中斜杠同样可用。所以可以这使用。</p>
 <p>如下代码：</p>
-<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs python"><span class="hljs-keyword">import</span> os<br><span class="hljs-keyword">import</span> re<br><br>path=os.getcwd()<br>regular=<span class="hljs-string">'[^/:]+/'</span><br>path=path.replace(<span class="hljs-string">"\\"</span>, <span class="hljs-string">"/"</span>)<br><span class="hljs-built_in">print</span>(path)<br>st=re.sub(regular,<span class="hljs-string">'./'</span>, path,<span class="hljs-number">0</span>)<br><span class="hljs-built_in">print</span>(st.replace(<span class="hljs-string">"/"</span>, <span class="hljs-string"><code class="language-hljs python"><span class="hljs-keyword">import</span> os<br><span class="hljs-keyword">import</span> re<br><br>path=os.getcwd()<br>regular=<span class="hljs-string">'[^/:]+/'</span><br>path=path.replace(<span class="hljs-string">"\\"</span>, <span class="hljs-string">"/"</span>)<br><span class="hljs-built_in">print</span>(path)<br>st=re.sub(regular,<span class="hljs-string">'./'</span>, path,<span class="hljs-number">0</span>)<br><span class="hljs-built_in">print</span>(st.replace(<span class="hljs-string">"/"</span>, <span class="hljs-string">"\\"</span>))<br><br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> os
+<span class="token keyword">import</span> re
 
+path<span class="token operator">=</span>os<span class="token punctuation">.</span>getcwd<span class="token punctuation">(</span><span class="token punctuation">)</span>
+regular<span class="token operator">=</span><span class="token string">'[^/:]+/'</span>
+path<span class="token operator">=</span>path<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">"\\"</span><span class="token punctuation">,</span> <span class="token string">"/"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span>
+st<span class="token operator">=</span>re<span class="token punctuation">.</span>sub<span class="token punctuation">(</span>regular<span class="token punctuation">,</span><span class="token string">'./'</span><span class="token punctuation">,</span> path<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>st<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">"/"</span><span class="token punctuation">,</span> <span class="token string">"\\"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>当然，最后再转换不转换回去根据实际情况选择。</p>
 </li>
 <li><p>其他的等待补充。</p>
@@ -1400,7 +1408,7 @@ var _hmt = _hmt || [];
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">52.7k</span>
+                        class="white-color">41.8k</span>
             
             
             

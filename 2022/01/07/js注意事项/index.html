@@ -551,7 +551,7 @@ var _hmt = _hmt || [];
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    607
+                    595
                 </div>
                 
 
@@ -620,15 +620,27 @@ var _hmt = _hmt || [];
 <p>如果函数名为 loopGo()                </p>
 <p>上边两种情况，如果是第一种的话，</p>
 <p>可以直接</p>
-<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs js"><span class="hljs-function"><span class="hljs-title">loopGo</span>(<span class="hljs-params">ep</span>)</span>{<br>	<span class="hljs-keyword">if</span>(...)<br>	{<br>       <span class="hljs-keyword">return</span> loopGo(ep)<br>       }<br>       <span class="hljs-keyword"><code class="language-hljs js"><span class="hljs-function"><span class="hljs-title">loopGo</span>(<span class="hljs-params">ep</span>)</span>{<br>	<span class="hljs-keyword">if</span>(...)<br>	{<br>       <span class="hljs-keyword">return</span> loopGo(ep)<br>       }<br>       <span class="hljs-keyword">else</span>{<br>           ...<br>       }<br>}<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
-
-
-
+<pre class="line-numbers language-js"><code class="language-js"><span class="token function">loopGo</span><span class="token punctuation">(</span>ep<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">...</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+       <span class="token keyword">return</span> <span class="token function">loopGo</span><span class="token punctuation">(</span>ep<span class="token punctuation">)</span>
+       <span class="token punctuation">}</span>
+       <span class="token keyword">else</span><span class="token punctuation">{</span>
+           <span class="token operator">...</span>
+       <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>而第二种情况的话，就应该这么写。</p>
-<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loopGo</span>(<span class="hljs-params">ep</span>)</span>{<br>	<span class="hljs-keyword">if</span>(...)<br>	{<br>       loopGo(ep)<br>       }<br>       <span class="hljs-keyword"><code class="language-hljs js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loopGo</span>(<span class="hljs-params">ep</span>)</span>{<br>	<span class="hljs-keyword">if</span>(...)<br>	{<br>       loopGo(ep)<br>       }<br>       <span class="hljs-keyword">else</span>{<br>           ...<br>       }<br>}<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
-
-
-
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">loopGo</span><span class="token punctuation">(</span>ep<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">...</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+       <span class="token function">loopGo</span><span class="token punctuation">(</span>ep<span class="token punctuation">)</span>
+       <span class="token punctuation">}</span>
+       <span class="token keyword">else</span><span class="token punctuation">{</span>
+           <span class="token operator">...</span>
+       <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h4 id="1-2-问题产生"><a href="#1-2-问题产生" class="headerlink" title="1.2 问题产生"></a>1.2 问题产生</h4><p>​            产生区别的地方在于一个是<code>return</code> 产生递归，一个是调用函数产生递归。</p>
 <blockquote>
 <p>​        如果是return的话，会把return后的部分作为函数的结果，然后原函数第一层就没了。如果是调用的话就想运行其他代码。这层函数还是在的。所以我就懵逼了一天，找不到问题。</p>
@@ -1444,7 +1456,7 @@ var _hmt = _hmt || [];
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">52.7k</span>
+                        class="white-color">41.8k</span>
             
             
             

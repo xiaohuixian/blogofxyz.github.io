@@ -551,7 +551,7 @@ var _hmt = _hmt || [];
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    1k
                 </div>
                 
 
@@ -589,33 +589,35 @@ var _hmt = _hmt || [];
 
 <h3 id="1-byte"><a href="#1-byte" class="headerlink" title="1. byte"></a>1. byte</h3><p>​    byte 为字节。有点常识就知道   1字（节）=8位。即用八个二进制位来表示，所以有</p>
 <p>​    (-2<sup>7</sup>)~(2<sup>7</sup>-1)</p>
-<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs c">byte a=<span class="hljs-number">1</span>;<span class="hljs-comment"><code class="language-hljs c">byte a=<span class="hljs-number">1</span>;<span class="hljs-comment">//  -128~127</span><br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
-
+<pre class="line-numbers language-c"><code class="language-c">byte a<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//  -128~127</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>​    <u>？？？为啥整数比负数少一个？？？</u></p>
 <p>​    是因为   -128<del>-1可以用 10000000</del>11111111 来表示</p>
 <p>​    开头的 ‘1’ 表示此数为负，只能用 00000000~01111111来表示0~127，因为再加一就是-128啦。    </p><div id="char"></div><p></p>
 <h3 id="2-char"><a href="#2-char" class="headerlink" title="2. char"></a>2. char</h3><p>​    char 类型占用一字节，8个二进制位。</p>
 <p>​    char为字符型，学过几门语言的人都知道：在程序中大小写英文字母，以及数字的数据大小就是一个字符。与 byte 所占内存一样为一字节。如：</p>
-<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs c"><span class="hljs-keyword">char</span> b=<span class="hljs-string">'a'</span>;<span class="hljs-comment"><code class="language-hljs c"><span class="hljs-keyword">char</span> b=<span class="hljs-string">'a'</span>;<span class="hljs-comment">//也就是ASCII表示的字符。</span><br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">char</span> b<span class="token operator">=</span><span class="token string">'a'</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//也就是ASCII表示的字符。</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>就是声明一个字符变量 a，给其赋值为字符 “a”。</p>
 <div id="short"></div>
 
 <h3 id="3-short"><a href="#3-short" class="headerlink" title="3. short"></a>3. short</h3><p> short 用来定义数字变量。一般很少用，其大小为两个字节，也就是16个二进制位。</p>
-<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs c"><span class="hljs-keyword">short</span> c;<span class="hljs-comment"><code class="language-hljs c"><span class="hljs-keyword">short</span> c;<span class="hljs-comment">// -32,768 ~ 32,768-1。</span><br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">short</span> c<span class="token punctuation">;</span><span class="token comment" spellcheck="true">// -32,768 ~ 32,768-1。</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>  可表示 (-2<sup>15</sup>)~(2<sup>15</sup>-1)</p>
 <p>  理解过程看 byte型。</p>
 <div id="int"></div>
 
 <h3 id="4-int"><a href="#4-int" class="headerlink" title="4. int"></a>4. int</h3><p>  int 类型占用两字节，32个二进制位。<br>  可表示 (-2<sup>31</sup>)~(2<sup>31</sup>-1)</p>
-<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs C"><span class="hljs-keyword">int</span> d; <span class="hljs-comment"><code class="language-hljs C"><span class="hljs-keyword">int</span> d; <span class="hljs-comment">//-2,147,483,648 ~ 2,147,483,647    正负2十多亿</span><br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
-
+<pre class="line-numbers language-C"><code class="language-C">int d; //-2,147,483,648 ~ 2,147,483,647    正负2十多亿
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>  int类型较为常用，相比较short，int表示的数更不容易溢出，切占用内存不大。</p>
 <div id="float"></div>
 
 <h3 id="5-float"><a href="#5-float" class="headerlink" title="5. float"></a>5. float</h3><p>  float类型占用四字节，32个二进制位。</p>
 <p>  可表示 (-3.4x10<sup>38</sup>)~(3.4x10<sup>38</sup>)</p>
-  <figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs c"><span class="hljs-keyword">float</span> e;<span class="hljs-comment"><code class="language-hljs c"><span class="hljs-keyword">float</span> e;<span class="hljs-comment">//大概情况为越偏离0，越不精确。32位进制位分别用作字符位（正负），整数位和尾数。建议先了解编程中的多位数科学技术法。</span><br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
-
+<pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">float</span> e<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//大概情况为越偏离0，越不精确。32位进制位分别用作字符位（正负），整数位和尾数。建议先了解编程中的多位数科学技术法。</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>  <a target="_blank" rel="noopener" href="https://blog.csdn.net/albertsh/article/details/92385277">精确度以及表示范围详解（点我！点我！）</a></p>
 <p>​    float类型为唯二的能表示小数的数据类型之一，另一个就是double类型。相比较double的64位，float占的内存更小。</p>
 <div id="long"></div>
@@ -623,8 +625,8 @@ var _hmt = _hmt || [];
 <h3 id="6-long"><a href="#6-long" class="headerlink" title="6. long"></a>6. long</h3><p><span id="long"></span></p>
 <p>  long类型占用64个二进制位。</p>
 <p>可表示 (-2<sup>63</sup>)~(2<sup>63</sup>-1)</p>
-  <figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs c"><span class="hljs-keyword">long</span> f;<span class="hljs-comment"><code class="language-hljs c"><span class="hljs-keyword">long</span> f;<span class="hljs-comment">//-9,223,372,036,854,775,8078  ~  9,223,372,036,854,775,807</span><br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
-
+<pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">long</span> f<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//-9,223,372,036,854,775,8078  ~  9,223,372,036,854,775,807</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>  long类型一般用于特殊用途，毕竟这么大的数生活中不怎么用得到。但是，联想一下，64位。。。<br>  能否想到我们的电脑。同为64位。所以long类型就是我们的64位机的单个读取单位。</p>
   <div id="double"></div>
 
@@ -634,21 +636,28 @@ var _hmt = _hmt || [];
   <div id="date"></div>
 
 <h3 id="8-date"><a href="#8-date" class="headerlink" title="8. date"></a>8. date</h3><p>  此类型与datetime，localtime，关系紧密。在各个语言中，有的只有一种，有的都存在。不同语言规定不同。比如在JavaScript 中只有date，没有datetime。date的格式如下</p>
-  <figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs javascript"><span class="hljs-keyword">var</span> time=<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>();<br><span class="hljs-built_in"><code class="language-hljs javascript"><span class="hljs-keyword">var</span> time=<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>();<br><span class="hljs-built_in">console</span>.log(time)<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
-
-
-
-  <figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs shell"><code class="language-hljs shell">2021-08-21T05:12:39.827Z<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
-
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">var</span> time<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>time<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-shell"><code class="language-shell">2021-08-21T05:12:39.827Z
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>  但在C#中，没有date类型，只有datetime类型。</p>
-  <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs c#"><code class="language-hljs c#">using System;<br>namespace ConsoleApp1<br>{<br>    class Program<br>    {<br>        static void Main(string[] args)<br>        {<br>            DateTime time = DateTime.Now;<br>            Console.WriteLine(time);<br>            Console.ReadKey();<br>        }<br>    }<br>}<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
-
-
-
-   <figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs shell"><code class="language-hljs shell">2021/8/21 13:19:29<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
-
-
-
+<pre class="line-numbers language-c#"><code class="language-c#">using System;
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            DateTime time = DateTime.Now;
+            Console.WriteLine(time);
+            Console.ReadKey();
+        }
+    }
+}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-shell"><code class="language-shell">  2021/8/21 13:19:29
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>​    而HTML中，这三种又都存在。特别在input中。</p>
 <ul>
 <li><p>指定为date类型时，只能输入年月日。</p>
@@ -663,8 +672,10 @@ var _hmt = _hmt || [];
 
 <h3 id="9-other"><a href="#9-other" class="headerlink" title="9. other"></a>9. other</h3><p>  other 是指这几种类型可以与 sign，unsign，还有叠加形式。</p>
 <p>如：</p>
-  <figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs c"><span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> g;<span class="hljs-comment">//128位</span><br>unsign <span class="hljs-keyword">int</span> h;<span class="hljs-comment">//无符号整型。划负为正，正数的范围乘2.</span><br><span class="hljs-keyword">long</span> <span class="hljs-keyword">int</span> i；<span class="hljs-comment"><code class="language-hljs c"><span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> g;<span class="hljs-comment">//128位</span><br>unsign <span class="hljs-keyword">int</span> h;<span class="hljs-comment">//无符号整型。划负为正，正数的范围乘2.</span><br><span class="hljs-keyword">long</span> <span class="hljs-keyword">int</span> i；<span class="hljs-comment">//还是int</span><br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
-
+<pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">long</span> <span class="token keyword">long</span> g<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//128位</span>
+unsign <span class="token keyword">int</span> h<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//无符号整型。划负为正，正数的范围乘2.</span>
+<span class="token keyword">long</span> <span class="token keyword">int</span> i；<span class="token comment" spellcheck="true">//还是int</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>  除此之外，个别语言还有 WORD 型（字，两字节。），DWORD 型，等。</p>
 <hr>
 <p>  不同的语言也有自己特有的，比如数据库一般都有的 datetime类型，text类型，decimal类型（也是表示小数的），imag类型（不错，就是存图片的）等等。 了解每个数据类型，就是为了根据自己的需求定义适合的数据类型。不能计算 1 + 1 就定义两个 long 类型 。养成好习惯，才能更高效合理的利用计算机有限的内存资源。</p>
@@ -1472,7 +1483,7 @@ var _hmt = _hmt || [];
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">52.7k</span>
+                        class="white-color">41.8k</span>
             
             
             

@@ -555,14 +555,14 @@ var _hmt = _hmt || [];
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    563
+                    480
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -589,23 +589,46 @@ var _hmt = _hmt || [];
             <div id="articleContent">
                 <h2 id="1-C语言执行cmd命令"><a href="#1-C语言执行cmd命令" class="headerlink" title="1. C语言执行cmd命令"></a>1. C语言执行cmd命令</h2><h3 id="1-1-启动程序"><a href="#1-1-启动程序" class="headerlink" title="1. 1   启动程序"></a>1. 1   启动程序</h3><ul>
 <li><p>start  path+.exe /.exe</p>
-<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs c"><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span><br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>{<br>    system(<span class="hljs-string">"start explorer.exe"</span>);<br>    system(<span class="hljs-string">"start S:\\S_Chat\\WeChat\\WeChat.exe"</span>);<br>    <span class="hljs-keyword">return</span> <span class="hljs-number"><code class="language-hljs c"><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span><br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>{<br>    system(<span class="hljs-string">"start explorer.exe"</span>);<br>    system(<span class="hljs-string">"start S:\\S_Chat\\WeChat\\WeChat.exe"</span>);<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>}<br><br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure></li>
+<pre class="line-numbers language-c"><code class="language-c">
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h></span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token function">system</span><span class="token punctuation">(</span><span class="token string">"start explorer.exe"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">system</span><span class="token punctuation">(</span><span class="token string">"start S:\\S_Chat\\WeChat\\WeChat.exe"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
 </ul>
 <h3 id="1-2-关机"><a href="#1-2-关机" class="headerlink" title="1.2 关机"></a>1.2 关机</h3><h4 id="1-2-1-shutdown-s-t-time"><a href="#1-2-1-shutdown-s-t-time" class="headerlink" title="1.2.1  shutdown  -s -t  time"></a>1.2.1  shutdown  -s -t  time</h4><p>  ​    -s 为shutdown命令中关机的指令，还可以是  “-f：强制关机” , “-r：重启”,“-h：休眠”，“-l：注销”。</p>
 <p>  ​    -t 为倒计时形式。</p>
 <p>  ​    time为倒计时的时间，单位为秒。</p>
-  <figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span><br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>{<br>    system(<span class="hljs-string">"shutdown -f -t 300"</span>); <span class="hljs-comment">//五分钟后强制关机</span><br>    <span class="hljs-comment">//system("shutdown -s -t 300");//五分钟后关机</span><br>    <span class="hljs-comment">// system("shutdown -r -t 300");//五分钟后重启</span><br><br>    <span class="hljs-keyword">return</span> <span class="hljs-number"><code class="language-hljs c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span><br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>{<br>    system(<span class="hljs-string">"shutdown -f -t 300"</span>); <span class="hljs-comment">//五分钟后强制关机</span><br>    <span class="hljs-comment">//system("shutdown -s -t 300");//五分钟后关机</span><br>    <span class="hljs-comment">// system("shutdown -r -t 300");//五分钟后重启</span><br><br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>}<br><br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h></span></span>
 
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token function">system</span><span class="token punctuation">(</span><span class="token string">"shutdown -f -t 300"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//五分钟后强制关机</span>
+    <span class="token comment" spellcheck="true">//system("shutdown -s -t 300");//五分钟后关机</span>
+    <span class="token comment" spellcheck="true">// system("shutdown -r -t 300");//五分钟后重启</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h4 id="1-2-2-在某时刻关机"><a href="#1-2-2-在某时刻关机" class="headerlink" title="1.2.2 在某时刻关机"></a>1.2.2 在某时刻关机</h4><p><a target="_blank" rel="noopener" href="https://answers.microsoft.com/zh-hans/windows/forum/all/at%E8%A2%AB%E5%BC%83%E7%94%A8%E5%90%8E%E5%A6%82/f2fd63e0-7f52-49cb-854f-1f505a6edee1">在11:11时刻关机</a></p>
 <h3 id="1-3-取消上边的关机命令"><a href="#1-3-取消上边的关机命令" class="headerlink" title="1.3 取消上边的关机命令"></a>1.3 取消上边的关机命令</h3><p>命令行输入：</p>
-<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs shell"><code class="language-hljs shell">shutdown -a<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
-
+<pre class="line-numbers language-shell"><code class="language-shell"> shutdown -a
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>回车。</p>
 <h2 id="2-有啥用呢？"><a href="#2-有啥用呢？" class="headerlink" title="2. 有啥用呢？"></a>2. 有啥用呢？</h2><p>首先说启动那个。</p>
 <h3 id="2-1-cmd启动命令"><a href="#2-1-cmd启动命令" class="headerlink" title="2.1 cmd启动命令"></a>2.1 cmd启动命令</h3><h4 id="2-1-1-恶搞。"><a href="#2-1-1-恶搞。" class="headerlink" title="2.1.1 恶搞。"></a>2.1.1 恶搞。</h4><p>可以写一个for循环连续打开同一个程序多次。吓唬一下。当然。别弄成百上千次。我没试过，也不敢试。</p>
 <p>但前提是你需要了解他（她）电脑程序安装的布局。如果他（她）没有整理电脑的习惯。那就好说了，每个程序都安装在 C 盘，不需要去了解。</p>
-<figure class="highlight delphi"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs delphi">C:\<span class="hljs-keyword">Program</span> Files<br>C:\<span class="hljs-keyword">Program</span> Files (x86)<br><span class="hljs-comment"><code class="language-hljs delphi">C:\<span class="hljs-keyword">Program</span> Files<br>C:\<span class="hljs-keyword">Program</span> Files (x86)<br><span class="hljs-comment">//懂得都懂</span><br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
-
+<pre><code>C:\Program Files
+C:\Program Files (x86)
+//懂得都懂
+</code></pre>
 <p>QQ，微信，各个视频软件不给他安排上？让他开开眼？</p>
 <h4 id="2-1-2-桌面启动程序"><a href="#2-1-2-桌面启动程序" class="headerlink" title="2.1.2 桌面启动程序"></a>2.1.2 桌面启动程序</h4><p>可以用c++或C语言的桌面开发，写一个自己的桌面启动程序。一个图标，一个点击事件，一个启动就建成了。</p>
 <h3 id="2-2-cmd-关机命令"><a href="#2-2-cmd-关机命令" class="headerlink" title="2.2 cmd 关机命令"></a>2.2 cmd 关机命令</h3><h4 id="2-2-1-恶搞"><a href="#2-2-1-恶搞" class="headerlink" title="2.2.1 恶搞"></a>2.2.1 恶搞</h4><p>也是恶搞。</p>
@@ -1419,7 +1442,7 @@ var _hmt = _hmt || [];
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">52.7k</span>
+                        class="white-color">41.8k</span>
             
             
             

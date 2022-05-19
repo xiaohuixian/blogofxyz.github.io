@@ -563,7 +563,7 @@ var _hmt = _hmt || [];
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    276
+                    268
                 </div>
                 
 
@@ -601,8 +601,10 @@ var _hmt = _hmt || [];
 </blockquote>
 <h2 id="2-解决方法。"><a href="#2-解决方法。" class="headerlink" title="2. 解决方法。"></a>2. 解决方法。</h2><p>给要屏蔽的标签添加<code>id</code>等标识，然后在其父标签（已绑定的标签）的<code>mounted</code>或者<code>created</code>中添加如下代码通过js的方法屏蔽。</p>
 <p>代码如下：</p>
-<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs javascript"><span class="hljs-function"><span class="hljs-title">mounted</span>(<span class="hljs-params"></span>)</span> {<br>    <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"abc"</span>).oncontextmenu =<span class="hljs-function">()=&gt;</span>{<span class="hljs-keyword">return</span> <span class="hljs-literal"><code class="language-hljs javascript"><span class="hljs-function"><span class="hljs-title">mounted</span>(<span class="hljs-params"></span>)</span> {<br>    <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"abc"</span>).oncontextmenu =<span class="hljs-function">()=&gt;</span>{<span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>};<br>},<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
-
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token function">mounted</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"abc"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>oncontextmenu <span class="token operator">=</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span><span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>这里屏蔽的标签<code>id</code>为 <code>abc</code>。后边是一个箭头函数，比较简洁。</p>
 <blockquote>
 <p>可以给body设定id或者其他的唯一标识达到全部屏蔽。</p>
@@ -1416,7 +1418,7 @@ var _hmt = _hmt || [];
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">52.7k</span>
+                        class="white-color">41.8k</span>
             
             
             

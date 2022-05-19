@@ -583,17 +583,26 @@ var _hmt = _hmt || [];
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="1-分支"><a href="#1-分支" class="headerlink" title="1. 分支"></a>1. 分支</h3> <figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs shell"><code class="language-hljs shell">git branch branchName //新建分支<br>git commit //提交修改<br>git checkout recordName // 切换记录<br>git checkout HEAD~2 // 切换至HEAD的前两个记录<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
-
-<h3 id="2-撤销"><a href="#2-撤销" class="headerlink" title="2. 撤销"></a>2. 撤销</h3><figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs shell"><code class="language-hljs shell">git reset HEAD~1 //本地撤销至上一个记录点<br>git revert  //远程仓库撤销至上一个记录点<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
-
-<h3 id="3-修改分支"><a href="#3-修改分支" class="headerlink" title="3. 修改分支"></a>3. 修改分支</h3><figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs shell"><code class="language-hljs shell">git rebase <br>git cherry-pick c1 c2 c5 //<br>git rebase -i HEAD~4 //修改从HEAD所在开始往回的四层记录(删、改)<br>git merge branchName //合并分支<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
-
+                <h3 id="1-分支"><a href="#1-分支" class="headerlink" title="1. 分支"></a>1. 分支</h3><pre class="line-numbers language-shell"><code class="language-shell">git branch branchName //新建分支
+git commit //提交修改
+git checkout recordName // 切换记录
+git checkout HEAD~2 // 切换至HEAD的前两个记录
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="2-撤销"><a href="#2-撤销" class="headerlink" title="2. 撤销"></a>2. 撤销</h3><pre class="line-numbers language-shell"><code class="language-shell">git reset HEAD~1 //本地撤销至上一个记录点
+git revert  //远程仓库撤销至上一个记录点
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="3-修改分支"><a href="#3-修改分支" class="headerlink" title="3. 修改分支"></a>3. 修改分支</h3><pre class="line-numbers language-shell"><code class="language-shell">git rebase 
+git cherry-pick c1 c2 c5 //
+git rebase -i HEAD~4 //修改从HEAD所在开始往回的四层记录(删、改)
+git merge branchName //合并分支
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p><code>git rebase</code></p>
 <p><code>git cherry-pick c1 c2 c3</code> :将c1、c2、c3 记录按顺序添加到当前操作记录上。 </p>
 <p><code>git rebase -i HEAD~4</code> :从head开始，记录回溯四个，进行编辑。 </p>
-<h3 id="4-远程操作"><a href="#4-远程操作" class="headerlink" title="4. 远程操作"></a>4. 远程操作</h3><h4 id="4-1-更新"><a href="#4-1-更新" class="headerlink" title="4.1 更新"></a>4.1 更新</h4><figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs shell"><code class="language-hljs shell">git clone <br>git fetch //远程下载自己没有的最新代码，更新远程仓库指针。<br>git pull //<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
-
+<h3 id="4-远程操作"><a href="#4-远程操作" class="headerlink" title="4. 远程操作"></a>4. 远程操作</h3><h4 id="4-1-更新"><a href="#4-1-更新" class="headerlink" title="4.1 更新"></a>4.1 更新</h4><pre class="line-numbers language-shell"><code class="language-shell">git clone 
+git fetch //远程下载自己没有的最新代码，更新远程仓库指针。
+git pull //
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -1414,7 +1423,7 @@ var _hmt = _hmt || [];
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">52.7k</span>
+                        class="white-color">41.8k</span>
             
             
             
