@@ -601,10 +601,8 @@ var _hmt = _hmt || [];
 <li><code>GameObject.Find</code> ,此时文件名使用绝对路径。</li>
 </ul>
 <h4 id="3-1-transform-find"><a href="#3-1-transform-find" class="headerlink" title="3.1 transform.find"></a>3.1 <code>transform.find</code></h4><p>局限：只能逐级寻找。即只能查找当前物体的子对象中的对象。如果需要多级，则需要</p>
-<blockquote>
-<pre class="line-numbers language-c#"><code class="language-c#">transform.Find(“xxxx”).transform.Find(“xxxx”).transform.Find(“xxxxx”).gameObject.setActive(true);
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</blockquote>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs c#"><code class="language-hljs c#">transform.Find(“xxxx”).transform.Find(“xxxx”).transform.Find(“xxxxx”).gameObject.setActive(true);<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
+
 <h4 id="3-2-GameObject-Find"><a href="#3-2-GameObject-Find" class="headerlink" title="3.2 GameObject.Find"></a>3.2 <code>GameObject.Find</code></h4><p>直接指定隐藏的物体的绝对路径。如某一结构为</p>
 <pre class="mermaid">graph LR
 a[HardWare]----b[keyboard]
@@ -615,13 +613,11 @@ b----e[keyboardPlatform]</pre>
 <blockquote>
 <p>场景为：<code>demo</code><br>        <code>HardWare</code>为场景内一对象。</p>
 <p>最开始设置 <code>keyboardPlatform</code>为隐藏，则可通过</p>
-<pre class="line-numbers language-c#"><code class="language-c#">GameObject.Find("HardWare/keyboard/keyboardPlatform").SetActive(true);
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><code>GameObject.Find("HardWare/keyboard/keyboardPlatform").SetActive(true);</code></p>
 <p>设置显示。</p>
 </blockquote>
 <blockquote>
-<pre><code>    有人说项目启动时不能设置对象隐藏，其实是因为他们不知道怎么获取已经隐藏的对象，所以这么说。亲试，项目启动为隐藏，可通过以上方法显示。
-</code></pre>
+<p>有人说项目启动时不能设置对象隐藏，其实是因为他们不知道怎么获取已经隐藏的对象，所以这么说。亲试，项目启动为隐藏，可通过以上方法显示。</p>
 </blockquote>
 
                 
@@ -1425,7 +1421,7 @@ b----e[keyboardPlatform]</pre>
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">41.8k</span>
+                        class="white-color">52.7k</span>
             
             
             

@@ -559,14 +559,14 @@ var _hmt = _hmt || [];
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    752
+                    951
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
 
@@ -596,49 +596,10 @@ var _hmt = _hmt || [];
 </blockquote>
 <p>emm，很是B站up主的风格。</p>
 <h2 id="解题"><a href="#解题" class="headerlink" title="解题"></a>解题</h2><p>先看代码</p>
-<pre class="line-numbers language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
-<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h></span></span>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span><br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">ret</span><span class="hljs-params">(<span class="hljs-keyword">int</span> *x, <span class="hljs-keyword">int</span> step)</span></span><br><span class="hljs-function"></span>{<br>    <span class="hljs-comment">//第一个参数为成功的记录数，第二个参数为当前处于第几阶阶梯。</span><br>    <span class="hljs-keyword">if</span> (step == <span class="hljs-number">10</span>)<br>    {<br>        <span class="hljs-comment">//到达第十阶记录加一，然后结束递归。</span><br>        (*x)++;<br>        <span class="hljs-keyword">return</span>;<br>    }<br>    <span class="hljs-keyword">if</span> (step == <span class="hljs-number">3</span> || step == <span class="hljs-number">6</span>)<br>    {<br>        <span class="hljs-comment">//如果跳珍宝岛就什么都不执行，然后结束递归。</span><br>    	<span class="hljs-keyword">return</span>;<br>    }<br>    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (step &lt; <span class="hljs-number">10</span>)<br>    {<br>        <span class="hljs-comment">// 条件允许继续往上走。先递归一次走一阶的。如果返回就递归走两阶的。然后第三阶。</span><br>        ret(x, step + <span class="hljs-number">1</span>);<br>        ret(x, step + <span class="hljs-number">2</span>);<br>        ret(x, step + <span class="hljs-number">3</span>);<br>    }<br>    <span class="hljs-keyword">else</span><br>    {<br>        <span class="hljs-comment">//其他情况就直接返回.</span><br>        <span class="hljs-keyword">return</span>;<br>    }<br>}<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>{<br>    <span class="hljs-keyword">int</span> *n = <span class="hljs-literal">NULL</span>;<br>    <span class="hljs-comment">//用来存放已经成功的次数。用指针，传递比较方便。</span><br>    <span class="hljs-keyword">int</span> x = <span class="hljs-number">0</span>;<br>    <span class="hljs-comment">//成功的次数。指针指向的数。</span><br>    n = &amp;x;<br><br>    ret(n, <span class="hljs-number">0</span>);<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string"><code class="language-hljs c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span><br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">ret</span><span class="hljs-params">(<span class="hljs-keyword">int</span> *x, <span class="hljs-keyword">int</span> step)</span></span><br><span class="hljs-function"></span>{<br>    <span class="hljs-comment">//第一个参数为成功的记录数，第二个参数为当前处于第几阶阶梯。</span><br>    <span class="hljs-keyword">if</span> (step == <span class="hljs-number">10</span>)<br>    {<br>        <span class="hljs-comment">//到达第十阶记录加一，然后结束递归。</span><br>        (*x)++;<br>        <span class="hljs-keyword">return</span>;<br>    }<br>    <span class="hljs-keyword">if</span> (step == <span class="hljs-number">3</span> || step == <span class="hljs-number">6</span>)<br>    {<br>        <span class="hljs-comment">//如果跳珍宝岛就什么都不执行，然后结束递归。</span><br>    	<span class="hljs-keyword">return</span>;<br>    }<br>    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (step &lt; <span class="hljs-number">10</span>)<br>    {<br>        <span class="hljs-comment">// 条件允许继续往上走。先递归一次走一阶的。如果返回就递归走两阶的。然后第三阶。</span><br>        ret(x, step + <span class="hljs-number">1</span>);<br>        ret(x, step + <span class="hljs-number">2</span>);<br>        ret(x, step + <span class="hljs-number">3</span>);<br>    }<br>    <span class="hljs-keyword">else</span><br>    {<br>        <span class="hljs-comment">//其他情况就直接返回.</span><br>        <span class="hljs-keyword">return</span>;<br>    }<br>}<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>{<br>    <span class="hljs-keyword">int</span> *n = <span class="hljs-literal">NULL</span>;<br>    <span class="hljs-comment">//用来存放已经成功的次数。用指针，传递比较方便。</span><br>    <span class="hljs-keyword">int</span> x = <span class="hljs-number">0</span>;<br>    <span class="hljs-comment">//成功的次数。指针指向的数。</span><br>    n = &amp;x;<br><br>    ret(n, <span class="hljs-number">0</span>);<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d"</span>, x);<br>}<br><br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
 
-<span class="token keyword">void</span> <span class="token function">ret</span><span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">*</span>x<span class="token punctuation">,</span> <span class="token keyword">int</span> step<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">//第一个参数为成功的记录数，第二个参数为当前处于第几阶阶梯。</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>step <span class="token operator">==</span> <span class="token number">10</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token comment" spellcheck="true">//到达第十阶记录加一，然后结束递归。</span>
-        <span class="token punctuation">(</span><span class="token operator">*</span>x<span class="token punctuation">)</span><span class="token operator">++</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>step <span class="token operator">==</span> <span class="token number">3</span> <span class="token operator">||</span> step <span class="token operator">==</span> <span class="token number">6</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token comment" spellcheck="true">//如果跳珍宝岛就什么都不执行，然后结束递归。</span>
-        <span class="token keyword">return</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>step <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token comment" spellcheck="true">// 条件允许继续往上走。先递归一次走一阶的。如果返回就递归走两阶的。然后第三阶。</span>
-        <span class="token function">ret</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> step <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token function">ret</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> step <span class="token operator">+</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token function">ret</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> step <span class="token operator">+</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">else</span>
-    <span class="token punctuation">{</span>
-        <span class="token comment" spellcheck="true">//其他情况就直接返回.</span>
-        <span class="token keyword">return</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
 
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">int</span> <span class="token operator">*</span>n <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">//用来存放已经成功的次数。用指针，传递比较方便。</span>
-    <span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">//成功的次数。指针指向的数。</span>
-    n <span class="token operator">=</span> <span class="token operator">&amp;</span>x<span class="token punctuation">;</span>
 
-    <span class="token function">ret</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>最后输出  <code>42</code></p>
 <p>然后再说递归。</p>
 <p>第一次接触时是大一的斐波那契数列。不过当时看着就头大，也不怎么理解。但是看到这道题想了一会这算法就跳出来了。</p>
@@ -1475,7 +1436,7 @@ var _hmt = _hmt || [];
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">41.8k</span>
+                        class="white-color">52.7k</span>
             
             
             

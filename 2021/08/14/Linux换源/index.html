@@ -551,7 +551,7 @@ var _hmt = _hmt || [];
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    246
+                    243
                 </div>
                 
 
@@ -589,22 +589,17 @@ var _hmt = _hmt || [];
 <ul>
 <li>可能不同的Linux下文件夹的结构不同，可以通过一级一级向下递进找到sources.list。</li>
 </ul>
-<pre class="line-numbers language-shell"><code class="language-shell">sudo cd /etc/apt/sources.list
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs shell"><code class="language-hljs shell">sudo cd /etc/apt/sources.list<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
 <h2 id="2-找链接"><a href="#2-找链接" class="headerlink" title="2.找链接"></a>2.找链接</h2><p>打开<span class="github-emoji"><span>👉</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f449.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><a target="_blank" rel="noopener" href="https://developer.aliyun.com/mirror/kali?spm=a2c6h.13651102.0.0.1d231b115YDKhc">这个</a><span class="github-emoji"><span>👈</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f448.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>网站，复制源的链接。</p>
 <h2 id="3-修改配置文件"><a href="#3-修改配置文件" class="headerlink" title="3.修改配置文件"></a>3.修改配置文件</h2><p>回到Linux，打开sources.list文件</p>
-<pre class="line-numbers language-shell"><code class="language-shell">sudo vi sources.list
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs shell"><code class="language-hljs shell">sudo vi sources.list<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
+
 <p> 进入插入模式（点击‘i’进入编辑模式）</p>
 <p>如果没有管理员权限会保存失败。</p>
 <p>删除其他源，如果原来就没有的话直接添加进去（Linux命令行中Ctrl+shift+v复制）。</p>
 <h2 id="5-保存"><a href="#5-保存" class="headerlink" title="5.保存"></a>5.保存</h2><p>Esc退出编辑模式，点击‘：’输入‘wq’进行保存并退出（write ，quit）。</p>
 <h2 id="6-更新"><a href="#6-更新" class="headerlink" title="6.更新"></a>6.更新</h2><p>输入下列命令进行一些更新。</p>
-<pre class="line-numbers language-shell"><code class="language-shell">sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get dist-upgrade
-sudo apt-get clean
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs shell"><code class="language-hljs shell">sudo apt-get update<br>sudo apt-get upgrade<br>sudo apt-get dist-upgrade<br>sudo apt-get clean<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
 
                 
             </div>
@@ -1413,7 +1408,7 @@ sudo apt-get clean
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">41.8k</span>
+                        class="white-color">52.7k</span>
             
             
             
