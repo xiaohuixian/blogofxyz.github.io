@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>unity隐藏与显示问题（未回避active为false）</title>
+      <link href="/2022/05/19/%E8%AE%B0%E5%BE%97%E6%94%B9%E5%90%8D/"/>
+      <url>/2022/05/19/%E8%AE%B0%E5%BE%97%E6%94%B9%E5%90%8D/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1-想要实现效果"><a href="#1-想要实现效果" class="headerlink" title="1. 想要实现效果"></a>1. 想要实现效果</h3><p>多个感应区域，当人物靠近感应区域时，某一指定物体显示，当离开感应区域时，物体隐藏。</p><blockquote><p>已知方案：</p><ul><li>设置透明度</li><li>设置是否进行渲染</li><li><code>active</code>为<code>false</code>—有问题。</li></ul></blockquote><h3 id="2-选择方案"><a href="#2-选择方案" class="headerlink" title="2. 选择方案"></a>2. 选择方案</h3><p>方案一，二存在局限性。只是在肉眼上隐藏，实际物体还在。而，我需要隐藏的物体含有碰撞体。所以隐藏后，碰撞体还在。</p><p>只能选择后一种。</p><h3 id="3-存在问题"><a href="#3-存在问题" class="headerlink" title="3. 存在问题"></a>3. 存在问题</h3><p>当物体通过<code>setActive</code> 设置隐藏时，实际为停用此物体。这是，将无法通过 <code>GameObject</code> 的一种方法查找来再次设置<code>active</code>为<code>true</code> ,</p><p>经过好一整查询，发现有两种方法。</p><ul><li><code>transform.find</code></li><li><code>GameObject.Find</code> ,此时文件名使用绝对路径。</li></ul><h4 id="3-1-transform-find"><a href="#3-1-transform-find" class="headerlink" title="3.1 transform.find"></a>3.1 <code>transform.find</code></h4><p>局限：只能逐级寻找。即只能查找当前物体的子对象中的对象。如果需要多级，则需要</p><blockquote><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs c#"><code class="language-hljs c#">transform.Find(“xxxx”).transform.Find(“xxxx”).transform.Find(“xxxxx”).gameObject.setActive(true);<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure></blockquote><h4 id="3-2-GameObject-Find"><a href="#3-2-GameObject-Find" class="headerlink" title="3.2 GameObject.Find"></a>3.2 <code>GameObject.Find</code></h4><p>直接指定隐藏的物体的绝对路径。如某一结构为</p><pre class="mermaid">graph LRa[HardWare]----b[keyboard]a----c[RAM]a----d[Storage]b----e[keyboardPlatform]</pre><blockquote><p>场景为：<code>demo</code><br>        <code>HardWare</code>为场景内一对象。</p><p>最开始设置 <code>keyboardPlatform</code>为隐藏，则可通过</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs c#"><code class="language-hljs c#">GameObject.Find("HardWare/keyboard/keyboardPlatform").SetActive(true);<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure><p>设置显示。</p></blockquote><blockquote><pre><code>    有人说项目启动时不能设置对象隐藏，其实是因为他们不知道怎么获取已经隐藏的对象，所以这么说。亲试，项目启动为隐藏，可通过以上方法显示。</code></pre></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Unity3D </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Unity3D </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Java坑</title>
       <link href="/2022/04/17/Java%E8%B8%A9%E5%9D%91%E6%8C%87%E5%8D%97/"/>
       <url>/2022/04/17/Java%E8%B8%A9%E5%9D%91%E6%8C%87%E5%8D%97/</url>
@@ -429,9 +454,9 @@
       
         <tags>
             
-            <tag> HTML </tag>
-            
             <tag> CSS </tag>
+            
+            <tag> HTML </tag>
             
         </tags>
       
@@ -518,11 +543,11 @@
       
         <tags>
             
+            <tag> CSS </tag>
+            
             <tag> HTML </tag>
             
             <tag> 选择器 </tag>
-            
-            <tag> CSS </tag>
             
         </tags>
       
@@ -701,7 +726,7 @@
       <link href="/2021/10/26/%EF%BC%88%E8%A1%A5%E5%85%85%E4%B8%AD%EF%BC%89%E7%BD%91%E7%BB%9C&amp;%E8%BD%AF%E4%BB%B6%E7%BC%A9%E5%86%99/"/>
       <url>/2021/10/26/%EF%BC%88%E8%A1%A5%E5%85%85%E4%B8%AD%EF%BC%89%E7%BD%91%E7%BB%9C&amp;%E8%BD%AF%E4%BB%B6%E7%BC%A9%E5%86%99/</url>
       
-        <content type="html"><![CDATA[<h2 id="1-硬件"><a href="#1-硬件" class="headerlink" title="1. 硬件"></a>1. 硬件</h2><table><thead><tr><th align="left">缩写</th><th align="left">全称</th><th align="left">中文释义</th></tr></thead><tbody><tr><td align="left">CPU</td><td align="left">central processing unit</td><td align="left"><a href="https://baike.baidu.com/item/%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8/284033?fr=aladdin">中央处理器</a></td></tr><tr><td align="left">HDMI</td><td align="left">High Definition Multimedia Interface</td><td align="left"><a href="https://baike.baidu.com/item/HDMI">高清多媒体接口</a></td></tr><tr><td align="left">USB</td><td align="left">Universal Serial Bus</td><td align="left"><a href="https://baike.baidu.com/item/USB?fromtitle=%E9%80%9A%E7%94%A8%E4%B8%B2%E8%A1%8C%E6%80%BB%E7%BA%BF&amp;fromid=8635470">通用串行总线</a></td></tr><tr><td align="left">GPU</td><td align="left">Graphics Processing Unit</td><td align="left"><a href="https://baike.baidu.com/item/%E5%9B%BE%E5%BD%A2%E5%A4%84%E7%90%86%E5%99%A8">图形处理器</a></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr></tbody></table><h2 id="2-软件"><a href="#2-软件" class="headerlink" title="2. 软件"></a>2. 软件</h2><table><thead><tr><th align="left">缩写</th><th align="left">全称</th><th align="left">中文释义</th></tr></thead><tbody><tr><td align="left">API</td><td align="left">Application Programming Interface</td><td align="left"><a href="https://baike.baidu.com/item/api/10154">应用程序编程接口</a></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr></tbody></table><h2 id="3-计算机网络"><a href="#3-计算机网络" class="headerlink" title="3. 计算机网络"></a>3. 计算机网络</h2><table><thead><tr><th align="left">缩写</th><th align="left">全称</th><th align="left">中文释义</th></tr></thead><tbody><tr><td align="left">HTTP</td><td align="left">Hyper Text Transfer Protocol</td><td align="left"><a href="https://baike.baidu.com/item/HTTP">超文本传输协议</a></td></tr><tr><td align="left">HTTPS</td><td align="left">Hyper Text Transfer Protocol over SecureSocket Layer</td><td align="left"><a href="https://baike.baidu.com/item/HTTPS/285356?fr=aladdin">超文本传输安全协议</a></td></tr><tr><td align="left">IP</td><td align="left">Internet Protocol</td><td align="left"><a href="https://baike.baidu.com/item/IP/224599">网际互连协议</a></td></tr><tr><td align="left">TCP</td><td align="left">Transmission Control Protocol</td><td align="left"><a href="https://baike.baidu.com/item/TCP/33012">传输控制协议</a></td></tr><tr><td align="left">UDP</td><td align="left">User Datagram Protocol</td><td align="left"><a href="https://baike.baidu.com/item/%E7%94%A8%E6%88%B7%E6%95%B0%E6%8D%AE%E6%8A%A5%E5%8D%8F%E8%AE%AE">用户数据报协议</a></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr></tbody></table><h2 id="5-操作系统"><a href="#5-操作系统" class="headerlink" title="5. 操作系统"></a>5. 操作系统</h2><table><thead><tr><th align="left">缩写</th><th align="left">全称</th><th align="left">中文释义</th></tr></thead><tbody><tr><td align="left">OS</td><td align="left">Operating System</td><td align="left"><a href="https://baike.baidu.com/item/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/192?fr=aladdin">操作系统</a></td></tr><tr><td align="left">PCB</td><td align="left">Process Control Block</td><td align="left"><a href="https://baike.baidu.com/item/PCB/16067368">进程管理块</a></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr></tbody></table><h2 id="4-Web"><a href="#4-Web" class="headerlink" title="4. Web"></a>4. Web</h2><table><thead><tr><th align="left">缩写</th><th align="left">全称</th><th align="left">中文释义</th></tr></thead><tbody><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left">SEM</td><td align="left">Search Engine Marketing</td><td align="left"><a href="https://baike.baidu.com/item/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E8%90%A5%E9%94%80/9387327?fromtitle=sem&amp;fromid=2554866">搜索引擎营销</a></td></tr><tr><td align="left">SEO</td><td align="left">Search Engine Optimization</td><td align="left"><a href="https://baike.baidu.com/item/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E4%BC%98%E5%8C%96/3132?fromtitle=SEO&amp;fromid=102990">搜索引擎优化</a></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr></tbody></table>]]></content>
+        <content type="html"><![CDATA[<h2 id="1-硬件"><a href="#1-硬件" class="headerlink" title="1. 硬件"></a>1. 硬件</h2><table><thead><tr><th align="left">缩写</th><th align="left">全称</th><th align="left">中文释义</th></tr></thead><tbody><tr><td align="left">CPU</td><td align="left">central processing unit</td><td align="left"><a href="https://baike.baidu.com/item/%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8/284033?fr=aladdin">中央处理器</a></td></tr><tr><td align="left">HDMI</td><td align="left">High Definition Multimedia Interface</td><td align="left"><a href="https://baike.baidu.com/item/HDMI">高清多媒体接口</a></td></tr><tr><td align="left">USB</td><td align="left">Universal Serial Bus</td><td align="left"><a href="https://baike.baidu.com/item/USB?fromtitle=%E9%80%9A%E7%94%A8%E4%B8%B2%E8%A1%8C%E6%80%BB%E7%BA%BF&amp;fromid=8635470">通用串行总线</a></td></tr><tr><td align="left">GPU</td><td align="left">Graphics Processing Unit</td><td align="left"><a href="https://baike.baidu.com/item/%E5%9B%BE%E5%BD%A2%E5%A4%84%E7%90%86%E5%99%A8">图形处理器</a></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr></tbody></table><h2 id="2-软件"><a href="#2-软件" class="headerlink" title="2. 软件"></a>2. 软件</h2><table><thead><tr><th align="left">缩写</th><th align="left">全称</th><th align="left">中文释义</th></tr></thead><tbody><tr><td align="left">API</td><td align="left">Application Programming Interface</td><td align="left"><a href="https://baike.baidu.com/item/api/10154">应用程序编程接口</a></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr></tbody></table><h2 id="3-计算机网络"><a href="#3-计算机网络" class="headerlink" title="3. 计算机网络"></a>3. 计算机网络</h2><table><thead><tr><th align="left">缩写</th><th align="left">全称</th><th align="left">中文释义</th></tr></thead><tbody><tr><td align="left">HTTP</td><td align="left">Hyper Text Transfer Protocol</td><td align="left"><a href="https://baike.baidu.com/item/HTTP">超文本传输协议</a></td></tr><tr><td align="left">HTTPS</td><td align="left">Hyper Text Transfer Protocol over SecureSocket Layer</td><td align="left"><a href="https://baike.baidu.com/item/HTTPS/285356?fr=aladdin">超文本传输安全协议</a></td></tr><tr><td align="left">IP</td><td align="left">Internet Protocol</td><td align="left"><a href="https://baike.baidu.com/item/IP/224599">网际互连协议</a></td></tr><tr><td align="left">TCP</td><td align="left">Transmission Control Protocol</td><td align="left"><a href="https://baike.baidu.com/item/TCP/33012">传输控制协议</a></td></tr><tr><td align="left">UDP</td><td align="left">User Datagram Protocol</td><td align="left"><a href="https://baike.baidu.com/item/%E7%94%A8%E6%88%B7%E6%95%B0%E6%8D%AE%E6%8A%A5%E5%8D%8F%E8%AE%AE">用户数据报协议</a></td></tr><tr><td align="left">PAN</td><td align="left">personal area network</td><td align="left">个人域网</td></tr><tr><td align="left">LAN</td><td align="left">local area network</td><td align="left">局域网</td></tr><tr><td align="left">MAN</td><td align="left">metropolitan area network</td><td align="left">城域网</td></tr><tr><td align="left">WAN</td><td align="left">wide area network</td><td align="left">广域网</td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr></tbody></table><h2 id="5-操作系统"><a href="#5-操作系统" class="headerlink" title="5. 操作系统"></a>5. 操作系统</h2><table><thead><tr><th align="left">缩写</th><th align="left">全称</th><th align="left">中文释义</th></tr></thead><tbody><tr><td align="left">OS</td><td align="left">Operating System</td><td align="left"><a href="https://baike.baidu.com/item/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/192?fr=aladdin">操作系统</a></td></tr><tr><td align="left">PCB</td><td align="left">Process Control Block</td><td align="left"><a href="https://baike.baidu.com/item/PCB/16067368">进程管理块</a></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr></tbody></table><h2 id="4-Web"><a href="#4-Web" class="headerlink" title="4. Web"></a>4. Web</h2><table><thead><tr><th align="left">缩写</th><th align="left">全称</th><th align="left">中文释义</th></tr></thead><tbody><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left">SEM</td><td align="left">Search Engine Marketing</td><td align="left"><a href="https://baike.baidu.com/item/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E8%90%A5%E9%94%80/9387327?fromtitle=sem&amp;fromid=2554866">搜索引擎营销</a></td></tr><tr><td align="left">SEO</td><td align="left">Search Engine Optimization</td><td align="left"><a href="https://baike.baidu.com/item/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E4%BC%98%E5%8C%96/3132?fromtitle=SEO&amp;fromid=102990">搜索引擎优化</a></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td><td align="left"></td></tr></tbody></table>]]></content>
       
       
       <categories>
@@ -771,9 +796,9 @@
       
         <tags>
             
-            <tag> HTML </tag>
-            
             <tag> CSS </tag>
+            
+            <tag> HTML </tag>
             
         </tags>
       
@@ -800,9 +825,9 @@
       
         <tags>
             
-            <tag> HTML </tag>
-            
             <tag> CSS </tag>
+            
+            <tag> HTML </tag>
             
         </tags>
       
@@ -908,11 +933,11 @@
       
         <tags>
             
+            <tag> 二进制 </tag>
+            
             <tag> 数据转换 </tag>
             
             <tag> 计算机组成原理 </tag>
-            
-            <tag> 二进制 </tag>
             
         </tags>
       
@@ -939,9 +964,9 @@
             
             <tag> 数据结构 </tag>
             
-            <tag> 二进制 </tag>
-            
             <tag> 浮点数 </tag>
+            
+            <tag> 二进制 </tag>
             
         </tags>
       
@@ -1199,17 +1224,6 @@
     
     
     <entry>
-      <title>关于‘俺’</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>成就</title>
       <link href="/archives/index.html"/>
       <url>/archives/index.html</url>
@@ -1232,9 +1246,20 @@
     
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>类别</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于‘俺’</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -1254,9 +1279,9 @@
     
     
     <entry>
-      <title>导航</title>
-      <link href="/navigate/index.html"/>
-      <url>/navigate/index.html</url>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -1265,9 +1290,9 @@
     
     
     <entry>
-      <title>类别</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>导航</title>
+      <link href="/navigate/index.html"/>
+      <url>/navigate/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
