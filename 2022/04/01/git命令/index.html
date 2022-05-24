@@ -33,10 +33,10 @@
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
     <script src="/libs/jquery/jquery.min.js"></script>
+	
 <meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 
@@ -563,11 +563,6 @@ var _hmt = _hmt || [];
                 
 
                 
-                    <div id="busuanzi_container_page_pv" class="info-break-policy">
-                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
-                        <span id="busuanzi_value_page_pv"></span>
-                    </div>
-				
             </div>
         </div>
         <hr class="clearfix">
@@ -583,16 +578,16 @@ var _hmt = _hmt || [];
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="1-分支"><a href="#1-分支" class="headerlink" title="1. 分支"></a>1. 分支</h3> <figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs shell"><code class="language-hljs shell">git branch branchName //新建分支<br>git commit //提交修改<br>git checkout recordName // 切换记录<br>git checkout HEAD~2 // 切换至HEAD的前两个记录<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
+                <h3 id="1-分支"><a href="#1-分支" class="headerlink" title="1. 分支"></a>1. 分支</h3> <figure class="highlight shell"><table><tbody><tr><td class="code"><pre class=" language-hljs shell"><code class="language-hljs shell">git branch branchName //新建分支<br>git commit //提交修改<br>git checkout recordName // 切换记录<br>git checkout HEAD~2 // 切换至HEAD的前两个记录<br></code></pre></td></tr></tbody></table></figure>
 
-<h3 id="2-撤销"><a href="#2-撤销" class="headerlink" title="2. 撤销"></a>2. 撤销</h3><figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs shell"><code class="language-hljs shell">git reset HEAD~1 //本地撤销至上一个记录点<br>git revert  //远程仓库撤销至上一个记录点<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
+<h3 id="2-撤销"><a href="#2-撤销" class="headerlink" title="2. 撤销"></a>2. 撤销</h3><figure class="highlight shell"><table><tbody><tr><td class="code"><pre class=" language-hljs shell"><code class="language-hljs shell">git reset HEAD~1 //本地撤销至上一个记录点<br>git revert  //远程仓库撤销至上一个记录点<br></code></pre></td></tr></tbody></table></figure>
 
-<h3 id="3-修改分支"><a href="#3-修改分支" class="headerlink" title="3. 修改分支"></a>3. 修改分支</h3><figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs shell"><code class="language-hljs shell">git rebase <br>git cherry-pick c1 c2 c5 //<br>git rebase -i HEAD~4 //修改从HEAD所在开始往回的四层记录(删、改)<br>git merge branchName //合并分支<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
+<h3 id="3-修改分支"><a href="#3-修改分支" class="headerlink" title="3. 修改分支"></a>3. 修改分支</h3><figure class="highlight shell"><table><tbody><tr><td class="code"><pre class=" language-hljs shell"><code class="language-hljs shell">git rebase <br>git cherry-pick c1 c2 c5 //<br>git rebase -i HEAD~4 //修改从HEAD所在开始往回的四层记录(删、改)<br>git merge branchName //合并分支<br></code></pre></td></tr></tbody></table></figure>
 
 <p><code>git rebase</code></p>
 <p><code>git cherry-pick c1 c2 c3</code> :将c1、c2、c3 记录按顺序添加到当前操作记录上。 </p>
 <p><code>git rebase -i HEAD~4</code> :从head开始，记录回溯四个，进行编辑。 </p>
-<h3 id="4-远程操作"><a href="#4-远程操作" class="headerlink" title="4. 远程操作"></a>4. 远程操作</h3><h4 id="4-1-更新"><a href="#4-1-更新" class="headerlink" title="4.1 更新"></a>4.1 更新</h4><figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs shell"><code class="language-hljs shell">git clone <br>git fetch //远程下载自己没有的最新代码，更新远程仓库指针。<br>git pull //<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></tbody></table></figure>
+<h3 id="4-远程操作"><a href="#4-远程操作" class="headerlink" title="4. 远程操作"></a>4. 远程操作</h3><h4 id="4-1-更新"><a href="#4-1-更新" class="headerlink" title="4.1 更新"></a>4.1 更新</h4><figure class="highlight shell"><table><tbody><tr><td class="code"><pre class=" language-hljs shell"><code class="language-hljs shell">git clone <br>git fetch //远程下载自己没有的最新代码，更新远程仓库指针。<br>git pull //<br></code></pre></td></tr></tbody></table></figure>
 
 
                 
@@ -1414,23 +1409,11 @@ var _hmt = _hmt || [];
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">52.7k</span>
+                        class="white-color">52.6k</span>
             
             
             
-                
             
-            
-                <span id="busuanzi_container_site_pv">
-                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
-                    <span id="busuanzi_value_site_pv" class="white-color"></span>
-            </span>
-            
-            
-                <span id="busuanzi_container_site_uv">
-                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
-                    <span id="busuanzi_value_site_uv" class="white-color"></span>
-            </span>
             
             <br>
 
@@ -1486,7 +1469,6 @@ var _hmt = _hmt || [];
                             document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
                         }
                     }
-
                     calcSiteTime();
                 </script>
             
@@ -1499,7 +1481,7 @@ var _hmt = _hmt || [];
             </span>
             
         </div>
-        <div class="col s12 m4 l4 social-link social-statis">
+        <div class="col s12 m4 l4 social-link ">
     <a href="https://github.com/xiaohuixian" class="tooltipped" target="_blank" data-tooltip="visit my GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
@@ -1532,17 +1514,7 @@ var _hmt = _hmt || [];
 
 </div>
     </div>
-	
-		
-	 
-	<script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script> 
-	<script>
-		if (window.mermaid) { 
-			mermaid.initialize({theme: 'matery'}); 
-			} 
-	</script> 
-	
-	
+				
 </footer>
 
 <div class="progress-bar"></div>
@@ -1671,6 +1643,7 @@ $(function () {
     <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
     <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
     <script src="/js/matery.js"></script>
+    <script src="/libs/mermaid/dist/mermaid.min.js"></script>
 
     <!-- Baidu Analytics -->
 
@@ -1703,8 +1676,6 @@ $(function () {
     
     <script src="/libs/others/clicklove.js" async="async"></script>
     
-    
-    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
     
 
     

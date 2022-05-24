@@ -91,7 +91,7 @@ body.dark header .side-nav .mobile-head .logo-name,
 body.dark li,
 body.dark p,
 body.dark pre code {
-  color: rgba(255, 255, 255, 0.85); /*.85为透明度，可依据需求修改*/
+  color: rgb(237 237 237); /*.85为透明度，可依据需求修改*/
 }
 /* 背景颜色变黑色 */
 body.dark,
@@ -160,4 +160,3 @@ body.dark .my-projects .info .info-title a {
 .swbk .label {
   color: currentColor;
 }
-
